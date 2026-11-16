@@ -1,0 +1,15 @@
+[
+  {
+    "args": [
+      "admin",
+      "recdb",
+      "recdb",
+      "/tmp/dbpass",
+      "mysql",
+      "localhost",
+      "utf8mb4"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "3"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "99"
+    ],
+    "stdout": "Error: rec.example id 99 doesn't exist\n",
+    "exit": 3
+  }
+]

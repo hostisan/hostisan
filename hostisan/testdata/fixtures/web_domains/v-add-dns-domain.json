@@ -1,0 +1,7 @@
+[
+  {
+    "args": ["*", "dnsfail.example", "*", "", "", "", "", "", "", "", "", "no"],
+    "stdout": "Error: DNS domain dnsfail.example exists\n",
+    "exit": 4
+  }
+]

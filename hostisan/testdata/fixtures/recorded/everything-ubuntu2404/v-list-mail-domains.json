@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"ANTIVIRUS\": \"yes\",\n        \"ANTISPAM\": \"yes\",\n        \"REJECT\": \"yes\",\n        \"RATE_LIMIT\": \"200\",\n        \"DKIM\": \"yes\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"0\",\n        \"U_DISK\": \"0\",\n        \"SSL\": \"no\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:52:16\",\n        \"DATE\": \"2026-10-28\",\n        \"WEBMAIL_ALIAS\": \"webmail\",\n        \"WEBMAIL\": \"roundcube\"\n    },\n    \"example.net\": {\n        \"ANTIVIRUS\": \"no\",\n        \"ANTISPAM\": \"no\",\n        \"REJECT\": \"no\",\n        \"RATE_LIMIT\": \"200\",\n        \"DKIM\": \"no\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"0\",\n        \"U_DISK\": \"0\",\n        \"SSL\": \"no\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"19:52:21\",\n        \"DATE\": \"2026-10-28\",\n        \"WEBMAIL_ALIAS\": \"webmail\",\n        \"WEBMAIL\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"ANTIVIRUS\": \"yes\",\n        \"ANTISPAM\": \"yes\",\n        \"REJECT\": \"yes\",\n        \"RATE_LIMIT\": \"200\",\n        \"DKIM\": \"yes\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"0\",\n        \"U_DISK\": \"0\",\n        \"SSL\": \"no\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:52:16\",\n        \"DATE\": \"2026-10-28\",\n        \"WEBMAIL_ALIAS\": \"webmail\",\n        \"WEBMAIL\": \"roundcube\"\n    },\n    \"example.net\": {\n        \"ANTIVIRUS\": \"no\",\n        \"ANTISPAM\": \"no\",\n        \"REJECT\": \"no\",\n        \"RATE_LIMIT\": \"200\",\n        \"DKIM\": \"no\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"0\",\n        \"U_DISK\": \"0\",\n        \"SSL\": \"no\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"19:52:21\",\n        \"DATE\": \"2026-10-28\",\n        \"WEBMAIL_ALIAS\": \"webmail\",\n        \"WEBMAIL\": \"\"\n    },\n    \"rec.example\": {\n        \"ANTIVIRUS\": \"yes\",\n        \"ANTISPAM\": \"yes\",\n        \"REJECT\": \"yes\",\n        \"RATE_LIMIT\": \"200\",\n        \"DKIM\": \"yes\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"0\",\n        \"U_DISK\": \"0\",\n        \"SSL\": \"no\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"20:09:30\",\n        \"DATE\": \"2026-10-28\",\n        \"WEBMAIL_ALIAS\": \"webmail\",\n        \"WEBMAIL\": \"roundcube\"\n    }\n}\n",
+    "exit": 0
+  }
+]

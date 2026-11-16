@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "Error: exim4 is not running\n",
+    "exit": 1
+  }
+]

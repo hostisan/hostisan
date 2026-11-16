@@ -1,0 +1,74 @@
+#!/bin/bash
+# info: update hestia package/configs
+# options: PACKAGE
+#
+# example: v-update-sys-hestia hestia-php
+#
+# This function runs as apt update trigger. It pulls shell script from hestia
+# server and runs it. (hestia, hestia-nginx and hestia-php are valid options)
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Argument definition
+package=$1
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+# Checking arg number
+check_args '1' "$#" 'PACKAGE'
+# Hostisan: hestia-web-terminal (the Go terminal) is a Hostisan package too
+is_hestia_package "hestia hestia-nginx hestia-php hestia-web-terminal" "$package"
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+# Hostisan: run from the web terminal, the update moves to a unit of its own
+# and this terminal follows its log (run-detached.sh): the hestia postinst
+# restarts the panel, which every terminal session goes through (rc5 P1).
+if [ -z "${HOSTISAN_DETACHED:-}" ] && "$HESTIA/install/common/hostisan/in-terminal.sh" 2> /dev/null; then
+	exec "$HESTIA/install/common/hostisan/run-detached.sh" "$BIN/v-update-sys-hestia" "$package"
+fi
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+# Hostisan: the postinsts' panel, hestia and terminal restarts wait for the end
+# of the update (in-update.sh, restart-unit.sh), so each runs once, after the
+# last package; every one of them hangs up every web terminal (rc7).
+export HOSTISAN_UPDATE=1
+
+# Update repo
+apt-get update -o Dir::Etc::sourcelist="sources.list.d/hestia.list" \
+	-o Dir::Etc::sourceparts="-" -o APT::Get::List-Cleanup="0" -qq
+
+# Update hestia package
+# Hostisan: detached (run-detached.sh), apt's output, the postinst's notices
+# included, goes to the log the terminal follows instead of /dev/null.
+if [ -n "${HOSTISAN_DETACHED:-}" ]; then
+	apt-get install $package -qq
+else
+	apt-get install $package -qq > /dev/null 2>&1
+fi
+check_result $? "$package update failed" "$E_UPDATE"
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+# Logging
+log_event "$OK" "$ARGUMENTS"
+
+exit

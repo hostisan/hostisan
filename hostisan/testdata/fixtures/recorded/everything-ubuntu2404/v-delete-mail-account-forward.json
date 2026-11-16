@@ -1,0 +1,22 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info",
+      "owner@example.org"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info",
+      ":blackhole:"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

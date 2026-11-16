@@ -1,0 +1,47 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "json"
+    ],
+    "stdout": "{\n    \"info\": {\n        \"ALIAS\": \"contact,hello\",\n        \"FWD\": \"\",\n        \"FWD_ONLY\": \"\",\n        \"AUTOREPLY\": \"no\",\n        \"QUOTA\": \"1024\",\n        \"U_DISK\": \"35\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:45:10\",\n        \"DATE\": \"2026-03-14\"\n    },\n    \"sales\": {\n        \"ALIAS\": \"\",\n        \"FWD\": \"owner@gmail.com,archive@example.org\",\n        \"FWD_ONLY\": \"yes\",\n        \"AUTOREPLY\": \"yes\",\n        \"QUOTA\": \"unlimited\",\n        \"U_DISK\": \"2\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"10:12:33\",\n        \"DATE\": \"2026-03-20\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net",
+      "json"
+    ],
+    "stdout": "{\n    \"contact\": {\n        \"ALIAS\": \"\",\n        \"FWD\": \"\",\n        \"FWD_ONLY\": \"\",\n        \"AUTOREPLY\": \"no\",\n        \"QUOTA\": \"512\",\n        \"U_DISK\": \"0\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"11:05:00\",\n        \"DATE\": \"2026-04-01\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "{\n    \"orders\": {\n        \"ALIAS\": \"shop\",\n        \"FWD\": \"\",\n        \"FWD_ONLY\": \"\",\n        \"AUTOREPLY\": \"no\",\n        \"QUOTA\": \"2048\",\n        \"U_DISK\": \"5\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"08:35:00\",\n        \"DATE\": \"2026-05-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: mail domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: mail domain doesn't exist\n",
+    "exit": 3
+  }
+]

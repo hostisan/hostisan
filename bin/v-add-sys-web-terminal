@@ -1,0 +1,64 @@
+#!/bin/bash
+# info: add system web terminal
+# options: NONE
+#
+# example: v-add-sys-web-terminal
+#
+# This function enables the web terminal.
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+if [ "$WEB_TERMINAL" = 'true' ]; then
+	exit
+fi
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+# The terminal is the hestia-web-terminal unit (no Node.js): install the
+# package unless it is fully installed ("apt remove" leaves config-files),
+# then enable and start the unit
+if ! dpkg-query -W -f='${Status}' hestia-web-terminal 2> /dev/null | grep -q '^install ok installed$'; then
+	apt-get -qq update
+	if ! apt-get -qq install hestia-web-terminal -y; then
+		# A server installed with --with-debs has no apt source for it
+		candidate=$(apt-cache policy hestia-web-terminal 2> /dev/null | awk '$1 == "Candidate:" { print $2 }')
+		if [ -z "$candidate" ] || [ "$candidate" = '(none)' ]; then
+			check_result "$E_UPDATE" "hestia-web-terminal installation failed: no apt source has the package. Install the deb built with the other Hostisan packages by hand (dpkg -i hestia-web-terminal_*.deb), then turn the web terminal on again"
+		fi
+		check_result "$E_UPDATE" "hestia-web-terminal installation failed"
+	fi
+fi
+systemctl enable --now hestia-web-terminal
+check_result $? "hestia-web-terminal failed to start" "$E_RESTART"
+
+# Updating WEB_TERMINAL value
+$BIN/v-change-sys-config-value "WEB_TERMINAL" "true"
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+# Logging
+$BIN/v-log-action "system" "Info" "Web Terminal" "Web terminal enabled."
+log_event "$OK" "$ARGUMENTS"
+
+exit

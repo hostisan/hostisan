@@ -1,0 +1,11 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "json"
+    ],
+    "stdout": "{\n    \"rec.example\": {\n\t\t\"RECORD\": \"\",\n\t\t\"KEYTAG\": \"\",\n\t\t\"FLAG\": \"\",\n\t\t\"ALGORITHM\": \"\",\n\t\t\"KEY\": \"\",\n\t\t\"DS\":\"\"\n    }\n}\n",
+    "exit": 0
+  }
+]

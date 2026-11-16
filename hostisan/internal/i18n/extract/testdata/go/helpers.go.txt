@@ -1,0 +1,36 @@
+package fx
+
+import (
+	"os"
+
+	"github.com/hostisan/hostisan/internal/terminal"
+	"github.com/hostisan/hostisan/internal/webapp"
+)
+
+const restoreTitle = "Restore files"
+
+const (
+	plainConst = "Not a message by name."
+	usedConst  = "Used by a sink."
+)
+
+func helpers(w http.ResponseWriter, r *http.Request, sys *sysAPI, p *sysPlanner, ws *websocket.Conn, j *jobs.Job, a, b string) {
+	invalid(w, "Invalid helper message %s.", "x")
+	sysNetInvalid(w, "Network helper message.")
+	sysBadRequest(w, "Bad request helper.")
+	_ = sysReject(400, "invalid", "Reject helper message.")
+	_ = webapp.Fail("Fail helper message.")
+	sys.startJob(w, r, "Job title", nil)
+	sys.step(ctx, j, "Job step", 0, "v-cmd")
+	p.add("Planner add", 0, "v-cmd")
+	p.config("Planner config", "KEY", "v")
+	p.yesNo("Planner yes no", "KEY", nil)
+	p.toggle(nil, false, 0, "Toggle on", "v-on", "Toggle off", "v-off")
+	_ = sysBlank("Blank label")
+	blankFields(w, "First label", a, "Second label", b)
+	_ = jobs.Spec{Key: "k", Title: restoreTitle}
+	WriteError(w, 400, "x", usedConst)
+	_ = ws.Close(1000, terminal.ReasonTooMany)
+	_ = ws.Close(1000, "Literal close reason.")
+	_ = os.Stdout.Close()
+}

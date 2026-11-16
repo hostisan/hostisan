@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"aB3dEfGh1JkLmN0pQrSt\": {\n        \"ACCESS_KEY_ID\": \"aB3dEfGh1JkLmN0pQrSt\",\n        \"USER\": \"admin\",\n        \"PERMISSIONS\": [\n            \"billing\",\n            \"mail-accounts\"\n        ],\n        \"COMMENT\": \"Billing sync\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-14\"\n    },\n    \"Zx9yWv8uTs7rQp6oNm5l\": {\n        \"ACCESS_KEY_ID\": \"Zx9yWv8uTs7rQp6oNm5l\",\n        \"USER\": \"admin\",\n        \"PERMISSIONS\": [],\n        \"COMMENT\": \"\",\n        \"TIME\": \"10:02:55\",\n        \"DATE\": \"2026-03-15\"\n    },\n    \"Kp4Lm7Nq2Rs5Tv8Wx1Yz\": {\n        \"ACCESS_KEY_ID\": \"Kp4Lm7Nq2Rs5Tv8Wx1Yz\",\n        \"USER\": \"admin\",\n        \"PERMISSIONS\": [\n            \"purge-nginx-cache\"\n        ],\n        \"COMMENT\": \"CI deploy\",\n        \"TIME\": \"16:20:00\",\n        \"DATE\": \"2026-09-01\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  }
+]

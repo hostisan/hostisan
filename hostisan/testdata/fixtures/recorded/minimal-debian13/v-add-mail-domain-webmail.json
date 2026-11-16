@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "roundcube",
+      "yes"
+    ],
+    "stdout": "Error: IMAP_SYSTEM is not enabled\n",
+    "exit": 11
+  }
+]

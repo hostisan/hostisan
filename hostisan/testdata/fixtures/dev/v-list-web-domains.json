@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/example.com/public_html/\",\n        \"U_DISK\": \"128\",\n        \"U_BANDWIDTH\": \"45\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"www.example.com,blog.example.com\",\n        \"STATS\": \"awstats\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"yes\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"yes\",\n        \"FTP_USER\": \"admin_dev\",\n        \"FTP_PATH\": \"/public_html\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,htm,html,js,mjs,json,xml,apng,avif,bmp,cur,gif,ico,jfif,jpg,jpeg,png,svg,webp\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    },\n    \"example.net\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/example.net/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,htm,html,js,mjs,json,xml,apng,avif,bmp,cur,gif,ico,jfif,jpg,jpeg,png,svg,webp\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"11:02:55\",\n        \"DATE\": \"2026-04-01\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n        \"IP\": \"10.0.0.5\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/bob/web/bakery.example/public_html/shop/\",\n        \"U_DISK\": \"312\",\n        \"U_BANDWIDTH\": \"2048\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"www.bakery.example\",\n        \"STATS\": \"awstats\",\n        \"STATS_USER\": \"baker\",\n        \"SSL\": \"yes\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_3\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,htm,html,js,mjs,json,xml,apng,avif,bmp,cur,gif,ico,jfif,jpg,jpeg,png,svg,webp\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"14:20:31\",\n        \"DATE\": \"2026-05-11\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{}\n",
+    "exit": 0
+  }
+]

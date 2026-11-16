@@ -1,0 +1,30 @@
+# Commands recorded by tools/record-fixtures.sh on a Hestia VPS.
+# One command per line: <v-command> <args...>. Never list password or hash files.
+# Web (Plan 2d)
+v-list-sys-ips json
+v-list-sys-php json
+v-list-web-templates json
+v-list-web-templates-backend json
+v-list-web-templates-proxy json
+v-list-web-stats json
+v-list-web-domains admin json
+v-list-web-domains bob json
+v-list-web-domain admin example.com json
+v-list-web-domain admin example.net json
+v-list-web-domain bob bakery.example json
+v-list-web-domain-ssl admin example.com json
+v-list-web-domain-ssl admin example.net json
+v-list-web-domain-ssl bob bakery.example json
+v-list-web-domain-accesslog admin example.com
+v-list-web-domain-errorlog admin example.com
+v-list-web-domain-accesslog admin example.net
+v-list-web-domain-errorlog admin example.net
+v-list-web-domain-accesslog bob bakery.example
+v-list-web-domain-errorlog bob bakery.example
+v-list-user-ips admin json
+v-list-user-ips bob json
+v-list-dns-domain admin example.com
+v-list-dns-domain bob bakery.example
+v-list-database-hosts json
+v-run-cli-cmd admin ls -A /home/admin/web/example.com/public_html
+v-run-cli-cmd bob ls -A /home/bob/web/bakery.example/public_html

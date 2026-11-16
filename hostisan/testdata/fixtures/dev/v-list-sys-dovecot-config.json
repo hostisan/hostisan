@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"CONFIG\": {\n        \"config_path\": \"/etc/dovecot/dovecot.conf\",\n        \"config_path1\": \"/etc/dovecot/conf.d/10-auth.conf\",\n        \"config_path2\": \"/etc/dovecot/conf.d/10-logging.conf\",\n        \"config_path3\": \"/etc/dovecot/conf.d/10-mail.conf\",\n        \"config_path4\": \"/etc/dovecot/conf.d/10-master.conf\",\n        \"config_path5\": \"/etc/dovecot/conf.d/10-ssl.conf\",\n        \"config_path6\": \"/etc/dovecot/conf.d/20-imap.conf\",\n        \"config_path7\": \"/etc/dovecot/conf.d/20-pop3.conf\",\n        \"config_path8\": \"/etc/dovecot/conf.d/auth-passwdfile.conf.ext\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "plain"
+    ],
+    "stdout": "/etc/dovecot/dovecot.conf\n",
+    "exit": 0
+  }
+]

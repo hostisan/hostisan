@@ -1,0 +1,36 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "json"
+    ],
+    "stdout": "Error: dns domain rec.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "admin",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: dns domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "admin",
+      "example.com"
+    ],
+    "stdout": "Error: dns domain example.com doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example"
+    ],
+    "stdout": "Error: dns domain bakery.example doesn't exist\n",
+    "exit": 3
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info",
+      "json"
+    ],
+    "stdout": "Error: mail domain rec.example doesn't exist\n",
+    "exit": 3
+  }
+]

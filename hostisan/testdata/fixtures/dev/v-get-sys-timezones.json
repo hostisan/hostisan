@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\"Africa/Abidjan\", \"America/New_York\", \"America/Sao_Paulo\", \"Asia/Tokyo\", \"Australia/Sydney\", \"Europe/Amsterdam\", \"Europe/Berlin\", \"Europe/London\", \"Europe/Paris\", \"UTC\"]\n",
+    "exit": 0
+  }
+]

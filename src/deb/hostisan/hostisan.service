@@ -1,0 +1,32 @@
+[Unit]
+Description=Hostisan control panel
+After=network.target
+
+[Service]
+Type=simple
+User=hestiaweb
+Group=hestiaweb
+EnvironmentFile=-/usr/local/hestia/conf/hostisan.env
+# hestia-nginx (also hestiaweb) proxies to this socket; nothing listens on TCP.
+RuntimeDirectory=hostisan
+RuntimeDirectoryMode=0700
+# /var/lib/hostisan, owned by hestiaweb: jobs.json keeps background jobs
+# (app installs, restores) and sessions.json the signed-in sessions across a
+# restart; serve reads $STATE_DIRECTORY.
+StateDirectory=hostisan
+StateDirectoryMode=0700
+ExecStart=/usr/local/hestia/hostisan/hostisan serve --listen unix:/run/hostisan/hostisan.sock
+# On stop, SIGTERM goes to the panel only: it stops taking requests and waits
+# up to 315 s for running v-* commands (the longest timeout is 300 s) and
+# background jobs (asked to stop after 270 s), so sudo and the scripts are not
+# killed halfway. Only then is the rest killed.
+KillMode=mixed
+TimeoutStopSec=320
+Restart=always
+RestartSec=2
+# No PrivateTmp, NoNewPrivileges, ProtectSystem, RestrictSUIDSGID,
+# CapabilityBoundingSet or SystemCallFilter: every v-* call goes through the
+# setuid sudo, and v-make-tmp-file shares files with the panel through /tmp.
+
+[Install]
+WantedBy=multi-user.target

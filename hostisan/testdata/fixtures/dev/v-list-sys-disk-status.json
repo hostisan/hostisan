@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "Filesystem      Size  Used Avail Use% Mounted on\n/dev/sda1        79G   34G   41G  46% /\ntmpfs           2.0G     0  2.0G   0% /dev/shm\n\n------------------------------------------------------------------------------------------\n\nFilesystem     Inodes IUsed IFree IUse% Mounted on\n/dev/sda1        5.0M  412K  4.6M    9% /\n",
+    "exit": 0
+  }
+]

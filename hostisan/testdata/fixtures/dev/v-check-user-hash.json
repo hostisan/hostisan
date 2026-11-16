@@ -1,0 +1,47 @@
+[
+  {
+    "args": [
+      "admin",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "ops",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "carol",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: password missmatch\n",
+    "exit": 9
+  }
+]

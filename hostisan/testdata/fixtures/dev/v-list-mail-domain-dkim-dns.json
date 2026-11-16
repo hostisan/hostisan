@@ -1,0 +1,47 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "json"
+    ],
+    "stdout": "{\n    \"mail._domainkey\": {\n        \"TTL\": \"3600\",\n        \"TXT\": \"'v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAdevExampleCom...IDAQAB'\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net",
+      "json"
+    ],
+    "stdout": "{\n    \"mail._domainkey\": {\n        \"TTL\": \"3600\",\n        \"TXT\": \"'v=DKIM1; k=rsa; p=DKIM-SUPPORT-IS-NOT-ACTIVATED'\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "{\n    \"mail._domainkey\": {\n        \"TTL\": \"3600\",\n        \"TXT\": \"'v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAdevBakery...IDAQAB'\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: mail domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: mail domain doesn't exist\n",
+    "exit": 3
+  }
+]

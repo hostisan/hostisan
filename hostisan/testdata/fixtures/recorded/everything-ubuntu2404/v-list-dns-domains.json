@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-28\",\n        \"SOA\": \"ns1.hostisan.test\",\n        \"SERIAL\": \"3000000002\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"17\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:52:07\",\n        \"DATE\": \"2026-10-28\"\n    },\n    \"example.org\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"child-ns\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-28\",\n        \"SOA\": \"ns1.hostisan.test\",\n        \"SERIAL\": \"3000000001\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"12\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"19:52:10\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-28\",\n        \"SOA\": \"ns1.hostisan.test\",\n        \"SERIAL\": \"3000000002\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"17\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:52:07\",\n        \"DATE\": \"2026-10-28\"\n    },\n    \"example.org\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"child-ns\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-28\",\n        \"SOA\": \"ns1.hostisan.test\",\n        \"SERIAL\": \"3000000001\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"12\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"19:52:10\",\n        \"DATE\": \"2026-10-28\"\n    },\n    \"rec.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-28\",\n        \"SOA\": \"ns1.rec.example\",\n        \"SERIAL\": \"3000000000\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"15\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"20:08:54\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "[{\"time\":\"2026-10-28T20:03:46.656861138Z\",\"tree\":\"130a2cafb33690812c23d93cc6566ee8aed2c6516c874c5dc2a62c28a0220b52\",\"paths\":[\"/home/admin\"],\"hostname\":\"rec.hostisan.test\",\"username\":\"root\",\"program_version\":\"restic 0.16.4\",\"id\":\"20603581e61eac394f9646ebe6964d981379e2c49493bdd3e8e9cfc3055516e5\",\"short_id\":\"20603581\"}]\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "[{\"time\":\"2026-10-28T20:03:50.830786063Z\",\"tree\":\"0eedf31e321761deae93a09d223ff89ec122710189fe965cc481d4efb11b0de6\",\"paths\":[\"/home/bob\"],\"hostname\":\"rec.hostisan.test\",\"username\":\"root\",\"program_version\":\"restic 0.16.4\",\"id\":\"ef3a61485268ceab1a86d4b56a76f29884c0d3ece97ee30c19341c652214fdb2\",\"short_id\":\"ef3a6148\"}]\n",
+    "exit": 0
+  }
+]

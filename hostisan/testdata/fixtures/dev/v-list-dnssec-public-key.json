@@ -1,0 +1,78 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.org",
+      "json"
+    ],
+    "stdout": "{\n    \"example.org\": {\n\t\t\"RECORD\": \"example.org. IN DNSKEY 257 3 13 mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==\",\n\t\t\"KEYTAG\": \"12345\",\n\t\t\"FLAG\": \"257\",\n\t\t\"ALGORITHM\": \"13\",\n\t\t\"KEY\": \"mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==\",\n\t\t\"DS\":\"example.org. IN DS 12345 13 2 B4BCB2B58C3F0E1A7F1B1B2F6F1F0C0F6B7C6D0B1C0A2E7D5E9F7A1B2C3D4E5F\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n\t\t\"RECORD\": \"\",\n\t\t\"KEYTAG\": \"\",\n\t\t\"FLAG\": \"\",\n\t\t\"ALGORITHM\": \"\",\n\t\t\"KEY\": \"\",\n\t\t\"DS\":\"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n\t\t\"RECORD\": \"\",\n\t\t\"KEYTAG\": \"\",\n\t\t\"FLAG\": \"\",\n\t\t\"ALGORITHM\": \"\",\n\t\t\"KEY\": \"\",\n\t\t\"DS\":\"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: dns domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "admin",
+      "example.org",
+      "json",
+      "*"
+    ],
+    "stdout": "{\n    \"example.org\": {\n\t\t\"RECORD\": \"example.org. IN DNSKEY 257 3 13 mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==\",\n\t\t\"KEYTAG\": \"12345\",\n\t\t\"FLAG\": \"257\",\n\t\t\"ALGORITHM\": \"13\",\n\t\t\"KEY\": \"mdsswUyr3DPW132mOi8V9xESWE8jTo0dxCjjnopKl+GqJxpVXckHAeF+KkxLbxILfDLUT0rAK9iUzy1L53eKGQ==\",\n\t\t\"DS\":\"example.org. IN DS 12345 13 2 B4BCB2B58C3F0E1A7F1B1B2F6F1F0C0F6B7C6D0B1C0A2E7D5E9F7A1B2C3D4E5F\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "json",
+      "*"
+    ],
+    "stdout": "{\n    \"example.com\": {\n\t\t\"RECORD\": \"\",\n\t\t\"KEYTAG\": \"\",\n\t\t\"FLAG\": \"\",\n\t\t\"ALGORITHM\": \"\",\n\t\t\"KEY\": \"\",\n\t\t\"DS\":\"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "json",
+      "*"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n\t\t\"RECORD\": \"\",\n\t\t\"KEYTAG\": \"\",\n\t\t\"FLAG\": \"\",\n\t\t\"ALGORITHM\": \"\",\n\t\t\"KEY\": \"\",\n\t\t\"DS\":\"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "json",
+      "*"
+    ],
+    "stdout": "Error: dns domain missing.example doesn't exist\n",
+    "exit": 3
+  }
+]

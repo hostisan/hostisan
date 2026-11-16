@@ -1,0 +1,22 @@
+[
+  {
+    "args": [
+      "admin",
+      "ls",
+      "-A",
+      "/home/admin/web/example.com/public_html"
+    ],
+    "stdout": "index.html\nrobots.txt\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "ls",
+      "-A",
+      "/home/bob/web/bakery.example/public_html"
+    ],
+    "stdout": "index.html\nrobots.txt\n",
+    "exit": 0
+  }
+]

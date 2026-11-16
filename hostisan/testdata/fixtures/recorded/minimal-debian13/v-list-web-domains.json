@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"rec.hostisan.test\": {\n        \"IP\": \"198.51.100.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/rec.hostisan.test/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"default\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"08:36:15\",\n        \"DATE\": \"2026-10-29\"\n    },\n    \"example.com\": {\n        \"IP\": \"198.51.100.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/example.com/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"blog.example.com,www.example.com\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"default\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"08:37:08\",\n        \"DATE\": \"2026-10-29\"\n    },\n    \"example.net\": {\n        \"IP\": \"198.51.100.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/example.net/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"default\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"08:37:09\",\n        \"DATE\": \"2026-10-29\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n        \"IP\": \"198.51.100.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/bob/web/bakery.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"www.bakery.example\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"default\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"08:37:13\",\n        \"DATE\": \"2026-10-29\"\n    }\n}\n",
+    "exit": 0
+  }
+]

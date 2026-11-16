@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    \"bash\",\n    \"dash\",\n    \"nologin\",\n    \"rbash\",\n    \"sh\",\n    \"zsh\"\n]\n",
+    "exit": 0
+  }
+]

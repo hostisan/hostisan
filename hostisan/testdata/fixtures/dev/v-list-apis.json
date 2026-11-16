@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"billing\": {\n        \"COMMANDS\": [\n            \"v-add-user\",\n            \"v-delete-user\",\n            \"v-suspend-user\",\n            \"v-unsuspend-user\",\n            \"v-change-user-package\",\n            \"v-list-users\"\n        ],\n        \"ROLE\": \"admin\"\n    },\n    \"mail-accounts\": {\n        \"COMMANDS\": [\n            \"v-list-mail-domains\",\n            \"v-list-mail-accounts\",\n            \"v-add-mail-account\",\n            \"v-change-mail-account-password\",\n            \"v-delete-mail-account\"\n        ],\n        \"ROLE\": \"user\"\n    },\n    \"purge-nginx-cache\": {\n        \"COMMANDS\": [\n            \"v-purge-nginx-cache\",\n            \"v-list-web-domains\"\n        ],\n        \"ROLE\": \"user\"\n    }\n}\n",
+    "exit": 0
+  }
+]

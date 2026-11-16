@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com"
+    ],
+    "stdout": "\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net"
+    ],
+    "stdout": "\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example"
+    ],
+    "stdout": "\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,173 @@
+{
+  "_source": "func/remote.sh send_api_cmd (lines 19-34) and send_api_file (58-66), as bin/v-sync-dns-cluster calls them (lines 74-82); replies from web/api/index.php api_legacy (lines 182-209), code mode",
+  "steps": [
+    {
+      "name": "domain",
+      "contentType": "application/x-www-form-urlencoded",
+      "form": [
+        [
+          "user",
+          "admin"
+        ],
+        [
+          "password",
+          "pw"
+        ],
+        [
+          "returncode",
+          "yes"
+        ],
+        [
+          "cmd",
+          "v-insert-dns-domain"
+        ],
+        [
+          "arg1",
+          "dns-cluster"
+        ],
+        [
+          "arg2",
+          "DOMAIN='example.com' IP='203.0.113.10' TPL='default' TTL='14400' EXP='' SOA='ns1.example.com' SERIAL='2026102801' SRC='' RECORDS='3' DNSSEC='no' KEY='' SLAVE='yes' MASTER='203.0.113.10' SUSPENDED='no' TIME='12:00:00' DATE='2026-10-28'"
+        ],
+        [
+          "arg3",
+          "server1.acme-hosting.net"
+        ],
+        [
+          "arg4",
+          " "
+        ],
+        [
+          "arg5",
+          "no"
+        ],
+        [
+          "arg6",
+          ""
+        ],
+        [
+          "arg7",
+          ""
+        ],
+        [
+          "arg8",
+          ""
+        ]
+      ],
+      "calls": [
+        "v-check-user-password admin <tmp> 127.0.0.1 yes",
+        "v-check-user-hash admin <tmp> 127.0.0.1",
+        "v-insert-dns-domain dns-cluster DOMAIN='example.com' IP='203.0.113.10' TPL='default' TTL='14400' EXP='' SOA='ns1.example.com' SERIAL='2026102801' SRC='' RECORDS='3' DNSSEC='no' KEY='' SLAVE='yes' MASTER='203.0.113.10' SUSPENDED='no' TIME='12:00:00' DATE='2026-10-28' server1.acme-hosting.net  no   "
+      ],
+      "status": 200,
+      "exitCode": "",
+      "replyType": "text/html; charset=UTF-8",
+      "reply": "0"
+    },
+    {
+      "name": "records file",
+      "contentType": "application/x-www-form-urlencoded",
+      "form": [
+        [
+          "user",
+          "admin"
+        ],
+        [
+          "password",
+          "pw"
+        ],
+        [
+          "returncode",
+          "yes"
+        ],
+        [
+          "cmd",
+          "v-make-tmp-file"
+        ],
+        [
+          "arg1",
+          "ID='1' RECORD='@' TYPE='NS' PRIORITY='' VALUE='ns1.example.com.' SUSPENDED='no' TIME='12:00:00' DATE='2026-10-28' TTL='14400'\nID='2' RECORD='@' TYPE='NS' PRIORITY='' VALUE='ns2.example.com.' SUSPENDED='no' TIME='12:00:00' DATE='2026-10-28' TTL='14400'\nID='3' RECORD='www' TYPE='A' PRIORITY='' VALUE='203.0.113.10' SUSPENDED='no' TIME='12:00:00' DATE='2026-10-28' TTL='14400'"
+        ],
+        [
+          "arg2",
+          "/tmp/vst-sync.example.com"
+        ]
+      ],
+      "calls": [
+        "v-check-user-password admin <tmp> 127.0.0.1 yes",
+        "v-check-user-hash admin <tmp> 127.0.0.1"
+      ],
+      "tmpFile": {
+        "name": "vst-sync.example.com",
+        "content": "ID='1' RECORD='@' TYPE='NS' PRIORITY='' VALUE='ns1.example.com.' SUSPENDED='no' TIME='12:00:00' DATE='2026-10-28' TTL='14400'\nID='2' RECORD='@' TYPE='NS' PRIORITY='' VALUE='ns2.example.com.' SUSPENDED='no' TIME='12:00:00' DATE='2026-10-28' TTL='14400'\nID='3' RECORD='www' TYPE='A' PRIORITY='' VALUE='203.0.113.10' SUSPENDED='no' TIME='12:00:00' DATE='2026-10-28' TTL='14400'\n"
+      },
+      "status": 200,
+      "exitCode": "",
+      "replyType": "text/html; charset=UTF-8",
+      "reply": ""
+    },
+    {
+      "name": "records",
+      "contentType": "application/x-www-form-urlencoded",
+      "form": [
+        [
+          "user",
+          "admin"
+        ],
+        [
+          "password",
+          "pw"
+        ],
+        [
+          "returncode",
+          "yes"
+        ],
+        [
+          "cmd",
+          "v-insert-dns-records"
+        ],
+        [
+          "arg1",
+          "dns-cluster"
+        ],
+        [
+          "arg2",
+          "example.com"
+        ],
+        [
+          "arg3",
+          "/tmp/vst-sync.example.com"
+        ],
+        [
+          "arg4",
+          "no"
+        ],
+        [
+          "arg5",
+          ""
+        ],
+        [
+          "arg6",
+          ""
+        ],
+        [
+          "arg7",
+          ""
+        ],
+        [
+          "arg8",
+          ""
+        ]
+      ],
+      "calls": [
+        "v-check-user-password admin <tmp> 127.0.0.1 yes",
+        "v-check-user-hash admin <tmp> 127.0.0.1",
+        "v-insert-dns-records dns-cluster example.com /tmp/vst-sync.example.com no    "
+      ],
+      "status": 200,
+      "exitCode": "",
+      "replyType": "text/html; charset=UTF-8",
+      "reply": "0"
+    }
+  ]
+}

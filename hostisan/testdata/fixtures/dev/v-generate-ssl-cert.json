@@ -1,0 +1,50 @@
+[
+  {
+    "args": [
+      "example.com",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"CRT\": \"-----BEGIN CERTIFICATE-----\\nMIIBdevSelfSigned\\n-----END CERTIFICATE-----\",\n        \"KEY\": \"-----BEGIN PRIVATE KEY-----\\nMIGHdevGeneratedKeyNotSecret\\n-----END PRIVATE KEY-----\",\n        \"CSR\": \"-----BEGIN CERTIFICATE REQUEST-----\\nMIIBdevRequest\\n-----END CERTIFICATE REQUEST-----\",\n        \"DIR\": \"/tmp/tmp.devSSLgen\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bakery.example",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n        \"CRT\": \"-----BEGIN CERTIFICATE-----\\nMIIBdevSelfSigned\\n-----END CERTIFICATE-----\",\n        \"KEY\": \"-----BEGIN PRIVATE KEY-----\\nMIGHdevGeneratedKeyNotSecret\\n-----END PRIVATE KEY-----\",\n        \"CSR\": \"-----BEGIN CERTIFICATE REQUEST-----\\nMIIBdevRequest\\n-----END CERTIFICATE REQUEST-----\",\n        \"DIR\": \"/tmp/tmp.devSSLgen\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "{\n    \"self-signed.example\": {\n        \"CRT\": \"-----BEGIN CERTIFICATE-----\\nMIIBdevSelfSigned\\n-----END CERTIFICATE-----\",\n        \"KEY\": \"-----BEGIN PRIVATE KEY-----\\nMIGHdevGeneratedKeyNotSecret\\n-----END PRIVATE KEY-----\",\n        \"CSR\": \"-----BEGIN CERTIFICATE REQUEST-----\\nMIIBdevRequest\\n-----END CERTIFICATE REQUEST-----\",\n        \"DIR\": \"/tmp/tmp.devSSLgen\"\n    }\n}\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "json"
+    ],
+    "stdout": "{\n\t\"example.com\": {\n        \"CRT\": \"\",\n        \"KEY\": \"\",\n        \"CA\": \"\",\n        \"SUBJECT\": \"\",\n        \"ALIASES\": \"\",\n        \"NOT_BEFORE\": \"\",\n        \"NOT_AFTER\": \"\",\n        \"SIGNATURE\": \"\",\n        \"PUB_KEY\": \"\",\n        \"ISSUER\": \"\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net",
+      "json"
+    ],
+    "stdout": "{\n\t\"example.net\": {\n        \"CRT\": \"\",\n        \"KEY\": \"\",\n        \"CA\": \"\",\n        \"SUBJECT\": \"\",\n        \"ALIASES\": \"\",\n        \"NOT_BEFORE\": \"\",\n        \"NOT_AFTER\": \"\",\n        \"SIGNATURE\": \"\",\n        \"PUB_KEY\": \"\",\n        \"ISSUER\": \"\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "{\n\t\"bakery.example\": {\n        \"CRT\": \"\",\n        \"KEY\": \"\",\n        \"CA\": \"\",\n        \"SUBJECT\": \"\",\n        \"ALIASES\": \"\",\n        \"NOT_BEFORE\": \"\",\n        \"NOT_AFTER\": \"\",\n        \"SIGNATURE\": \"\",\n        \"PUB_KEY\": \"\",\n        \"ISSUER\": \"\"\n\t}\n}\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,5 @@
+[
+  {"args": ["/etc/httpd/conf/httpd.conf"], "stdout": "ServerRoot \"/etc/httpd\"\nListen 8080\nTimeout 30\n", "exit": 0},
+  {"args": ["/etc/exim/exim.conf"], "stdout": "primary_hostname = server1.acme-hosting.net\nsmtp_accept_max = 100\n", "exit": 0},
+  {"args": ["/etc/named.conf"], "stdout": "options {\n\tdirectory \"/var/named\";\n};\n", "exit": 0}
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    \"eth0\",\n    \"eth1\"\n]\n",
+    "exit": 0
+  }
+]

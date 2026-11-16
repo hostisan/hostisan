@@ -1,0 +1,207 @@
+[
+  {
+    "args": [
+      "*",
+      "bad.example"
+    ],
+    "stdout": "Error: can't login to sftp host bad.example\n",
+    "exit": 15
+  },
+  {
+    "args": [
+      "*",
+      "bad.example",
+      "*"
+    ],
+    "stdout": "Error: can't login to sftp host bad.example\n",
+    "exit": 15
+  },
+  {
+    "args": [
+      "*",
+      "bad.example",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: can't login to sftp host bad.example\n",
+    "exit": 15
+  },
+  {
+    "args": [
+      "*",
+      "bad.example",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: can't login to sftp host bad.example\n",
+    "exit": 15
+  },
+  {
+    "args": [
+      "*",
+      "bad.example",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: can't login to sftp host bad.example\n",
+    "exit": 15
+  },
+  {
+    "args": [],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

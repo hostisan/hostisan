@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"blacklist\": {\n        \"IP_VERSION\": \"v4\",\n        \"AUTOUPDATE\": \"yes\",\n        \"SUSPENDED\": \"no\",\n        \"SOURCE\": \"script:/usr/local/hestia/install/common/firewall/ipset/blacklist.sh\",\n        \"TIME\": \"04:00:30\",\n        \"DATE\": \"2026-10-21\"\n    },\n    \"country-nl6\": {\n        \"IP_VERSION\": \"v6\",\n        \"AUTOUPDATE\": \"yes\",\n        \"SUSPENDED\": \"no\",\n        \"SOURCE\": \"https://raw.githubusercontent.com/ipverse/rir-ip/master/country/nl/ipv6-aggregated.txt\",\n        \"TIME\": \"04:00:31\",\n        \"DATE\": \"2026-10-21\"\n    },\n    \"paused\": {\n        \"IP_VERSION\": \"v4\",\n        \"AUTOUPDATE\": \"no\",\n        \"SUSPENDED\": \"yes\",\n        \"SOURCE\": \"https://example.com/paused.txt\",\n        \"TIME\": \"04:00:32\",\n        \"DATE\": \"2026-10-21\"\n    }\n}\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"acme-hosting.net\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"U_DISK\": \"12\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"\",\n        \"DOCUMENT_ROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:00:00\",\n        \"DATE\": \"2026-09-01\"\n    },\n    \"shop.acme-hosting.net\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"U_DISK\": \"12\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"custom-PHP-8_3\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"\",\n        \"DOCUMENT_ROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:00:00\",\n        \"DATE\": \"2026-09-01\"\n    },\n    \"static.acme-hosting.net\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"U_DISK\": \"12\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"\",\n        \"DOCUMENT_ROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:00:00\",\n        \"DATE\": \"2026-09-01\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"bob.example.net\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"U_DISK\": \"12\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"\",\n        \"DOCUMENT_ROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:00:00\",\n        \"DATE\": \"2026-09-01\"\n    },\n    \"legacy.example.net\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"U_DISK\": \"12\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-7_4\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"\",\n        \"DOCUMENT_ROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:00:00\",\n        \"DATE\": \"2026-09-01\"\n    }\n}\n",
+    "exit": 0
+  }
+]

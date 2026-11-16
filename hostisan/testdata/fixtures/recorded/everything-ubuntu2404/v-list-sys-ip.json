@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "203.0.113.10",
+      "json"
+    ],
+    "stdout": "{\n    \"203.0.113.10\": {\n        \"OWNER\": \"admin\",\n        \"STATUS\": \"shared\",\n        \"NAME\": \"\",\n        \"U_SYS_USERS\": \"admin,bob\",\n        \"U_WEB_DOMAINS\": \"4\",\n        \"INTERFACE\": \"eth0\",\n        \"NETMASK\": \"255.255.252.0\",\n        \"NAT\": \"\",\n        \"TIME\": \"19:32:51\",\n        \"DATE\": \"2026-10-28\"\n        }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "192.0.2.1",
+      "json"
+    ],
+    "stdout": "Error: IP 192.0.2.1 doesn't exist\n",
+    "exit": 3
+  }
+]

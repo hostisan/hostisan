@@ -1,0 +1,232 @@
+[
+  {
+    "args": [
+      "/etc/nginx/nginx.conf"
+    ],
+    "stdout": "user www-data;\nworker_processes auto;\nworker_rlimit_nofile 65535;\nerror_log /var/log/nginx/error.log;\npid /run/nginx.pid;\ninclude /etc/nginx/modules-enabled/*.conf;\n\nevents {\n\tworker_connections 1024;\n\tuse epoll;\n\tmulti_accept on;\n}\n\nhttp {\n\t# Main settings\n\tsendfile on;\n\ttcp_nopush on;\n\ttcp_nodelay on;\n\tclient_max_body_size 256m;\n\tsend_timeout 60;\n\tkeepalive_timeout 30s;\n\tserver_tokens off;\n\tcharset utf-8;\n\n\t# Proxy settings\n\tproxy_redirect off;\n\tproxy_set_header Host $host;\n\tproxy_set_header X-Real-IP $remote_addr;\n\tproxy_connect_timeout 30;\n\tproxy_send_timeout 180;\n\tproxy_read_timeout 300;\n\n\t# Compression\n\tgzip on;\n\tgzip_vary on;\n\tgzip_comp_level 6;\n\tgzip_min_length 1024;\n\n\tinclude /etc/nginx/conf.d/*.conf;\n\tinclude /etc/nginx/conf.d/domains/*.conf;\n}\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/apache2/apache2.conf"
+    ],
+    "stdout": "# Global configuration\nDefaultRuntimeDir ${APACHE_RUN_DIR}\nPidFile ${APACHE_PID_FILE}\nTimeout 30\nKeepAlive Off\nMaxKeepAliveRequests 100\nKeepAliveTimeout 10\n\nUser ${APACHE_RUN_USER}\nGroup ${APACHE_RUN_GROUP}\n\nHostnameLookups Off\nErrorLog ${APACHE_LOG_DIR}/error.log\nLogLevel warn\n\nIncludeOptional mods-enabled/*.load\nIncludeOptional mods-enabled/*.conf\nInclude ports.conf\n\n<Directory />\n\tOptions FollowSymLinks\n\tAllowOverride None\n\tRequire all denied\n</Directory>\n\nAccessFileName .htaccess\n<FilesMatch \"^\\.ht\">\n\tRequire all denied\n</FilesMatch>\n\nIncludeOptional conf-enabled/*.conf\nIncludeOptional conf.d/*.conf\nIncludeOptional conf.d/domains/*.conf\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/php/8.2/fpm/php.ini"
+    ],
+    "stdout": "[PHP]\nengine = On\nshort_open_tag = Off\nprecision = 14\noutput_buffering = 4096\nzend.enable_gc = On\nexpose_php = Off\nmax_execution_time = 30\nmax_input_time = 60\nmemory_limit = 256M\nerror_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT\ndisplay_errors = Off\ndisplay_startup_errors = Off\nlog_errors = On\npost_max_size = 100M\ndefault_charset = \"UTF-8\"\nfile_uploads = On\nupload_max_filesize = 100M\nmax_file_uploads = 20\nallow_url_fopen = On\n\n[Date]\ndate.timezone = UTC\n\n; PHP 8.2 FPM\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/php/8.3/fpm/php.ini"
+    ],
+    "stdout": "[PHP]\nengine = On\nshort_open_tag = Off\nprecision = 14\noutput_buffering = 4096\nzend.enable_gc = On\nexpose_php = Off\nmax_execution_time = 30\nmax_input_time = 60\nmemory_limit = 256M\nerror_reporting = E_ALL & ~E_DEPRECATED & ~E_STRICT\ndisplay_errors = Off\ndisplay_startup_errors = Off\nlog_errors = On\npost_max_size = 100M\ndefault_charset = \"UTF-8\"\nfile_uploads = On\nupload_max_filesize = 100M\nmax_file_uploads = 20\nallow_url_fopen = On\n\n[Date]\ndate.timezone = UTC\n\n; PHP 8.3 FPM\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/mysql/my.cnf"
+    ],
+    "stdout": "[client]\nport = 3306\nsocket = /run/mysqld/mysqld.sock\n\n[mysqld]\nuser = mysql\nsocket = /run/mysqld/mysqld.sock\nport = 3306\nbasedir = /usr\ndatadir = /var/lib/mysql\ntmpdir = /tmp\nbind-address = 127.0.0.1\nskip-external-locking\n\nkey_buffer_size = 256M\nmax_allowed_packet = 128M\ntable_open_cache = 256\nsort_buffer_size = 1M\nmax_connections = 300\nmax_user_connections = 100\nwait_timeout = 28800\ninteractive_timeout = 28800\n\n[mysqldump]\nquick\nmax_allowed_packet = 16M\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/postgresql/16/main/pg_hba.conf"
+    ],
+    "stdout": "# TYPE  DATABASE        USER            ADDRESS                 METHOD\nlocal   all             postgres                                peer\nlocal   all             all                                     md5\nhost    all             all             127.0.0.1/32            md5\nhost    all             all             ::1/128                 md5\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/postgresql/16/main/postgresql.conf"
+    ],
+    "stdout": "data_directory = '/var/lib/postgresql/16/main'\nhba_file = '/etc/postgresql/16/main/pg_hba.conf'\nident_file = '/etc/postgresql/16/main/pg_ident.conf'\nlisten_addresses = 'localhost'\nport = 5432\nmax_connections = 100\nshared_buffers = 128MB\ndynamic_shared_memory_type = posix\nlog_timezone = 'UTC'\ndatestyle = 'iso, mdy'\ntimezone = 'UTC'\ndefault_text_search_config = 'pg_catalog.english'\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/bind/named.conf.options"
+    ],
+    "stdout": "options {\n\tdirectory \"/var/cache/bind\";\n\tdnssec-validation auto;\n\tlisten-on-v6 { any; };\n\tallow-recursion { 127.0.0.1; ::1; };\n\tallow-transfer { \"none\"; };\n\tversion \"unknown\";\n\tstatistics-file \"/var/cache/bind/named.stats\";\n};\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/bind/named.conf"
+    ],
+    "stdout": "// This is the primary configuration file for the BIND DNS server named.\ninclude \"/etc/bind/named.conf.options\";\ninclude \"/etc/bind/named.conf.local\";\ninclude \"/etc/bind/named.conf.default-zones\";\n\nzone \"example.com\" {type master; file \"/home/admin/conf/dns/example.com.db\";};\nzone \"acme-bakery.com\" {type master; file \"/home/bob/conf/dns/acme-bakery.com.db\";};\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/exim4/exim4.conf.template"
+    ],
+    "stdout": "######################################################################\n#                  Runtime configuration file for Exim 4             #\n######################################################################\n\ndomainlist local_domains = dsearch;/etc/exim4/domains/\ndomainlist relay_to_domains = dsearch;/etc/exim4/domains/\nhostlist relay_from_hosts = 127.0.0.1\n\nsmtp_banner = $smtp_active_hostname ESMTP $tod_full\nsmtp_accept_max = 100\nsmtp_accept_max_per_host = 20\nmessage_size_limit = 100M\n\ndaemon_smtp_ports = 25 : 465 : 587\ntls_on_connect_ports = 465\ntls_advertise_hosts = *\n\nbegin acl\nacl_check_rcpt:\n  accept  hosts = :\n  accept  authenticated = *\n  require verify = sender\n  accept\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/fail2ban/jail.local"
+    ],
+    "stdout": "[ssh-iptables]\nenabled  = true\nfilter   = sshd\naction   = hestia[name=SSH]\nlogpath  = /var/log/auth.log\nmaxretry = 5\n\n[hestia-iptables]\nenabled  = true\nfilter   = hestia\naction   = hestia[name=HESTIA]\nlogpath  = /var/log/hestia/auth.log\nmaxretry = 5\n\n[exim-iptables]\nenabled  = true\nfilter   = exim\naction   = hestia[name=MAIL]\nlogpath  = /var/log/exim4/mainlog\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/spamassassin/local.cf"
+    ],
+    "stdout": "rewrite_header Subject *****SPAM*****\nreport_safe 0\nrequired_score 5.0\nuse_bayes 1\nbayes_auto_learn 1\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/clamav/clamd.conf"
+    ],
+    "stdout": "LocalSocket /run/clamav/clamd.ctl\nFixStaleSocket true\nLocalSocketGroup clamav\nLocalSocketMode 666\nUser clamav\nScanMail true\nScanArchive true\nMaxThreads 12\nReadTimeout 180\nLogFile /var/log/clamav/clamav.log\nDatabaseDirectory /var/lib/clamav\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/vsftpd.conf"
+    ],
+    "stdout": "listen=YES\nlisten_ipv6=NO\nanonymous_enable=NO\nlocal_enable=YES\nwrite_enable=YES\nlocal_umask=022\ndirmessage_enable=YES\nxferlog_enable=YES\nchroot_local_user=YES\nallow_writeable_chroot=YES\npasv_enable=YES\npasv_min_port=12000\npasv_max_port=12100\nssl_enable=YES\nrsa_cert_file=/usr/local/hestia/ssl/certificate.crt\nrsa_private_key_file=/usr/local/hestia/ssl/certificate.key\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/proftpd/proftpd.conf"
+    ],
+    "stdout": "ServerName \"FTP\"\nServerType standalone\nDefaultServer on\nPort 21\nPassivePorts 12000 12100\nUmask 022\nMaxInstances 30\nDefaultRoot ~\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/ssh/sshd_config"
+    ],
+    "stdout": "Include /etc/ssh/sshd_config.d/*.conf\nPort 22\nPermitRootLogin prohibit-password\nPasswordAuthentication yes\nKbdInteractiveAuthentication no\nUsePAM yes\nX11Forwarding no\nPrintMotd no\nAcceptEnv LANG LC_*\nSubsystem sftp internal-sftp\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/crontab"
+    ],
+    "stdout": "SHELL=/bin/sh\nPATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin\n\n# m h dom mon dow user\tcommand\n17 *\t* * *\troot\tcd / && run-parts --report /etc/cron.hourly\n25 6\t* * *\troot\ttest -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.daily; }\n47 6\t* * 7\troot\ttest -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.weekly; }\n52 6\t1 * *\troot\ttest -x /usr/sbin/anacron || { cd / && run-parts --report /etc/cron.monthly; }\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/var/spool/cron/crontabs/hestiaweb"
+    ],
+    "stdout": "MAILTO=\"\"\nCONTENT_TYPE=\"text/plain; charset=utf-8\"\n*/2 * * * * sudo /usr/local/hestia/bin/v-update-sys-queue restart\n10 00 * * * sudo /usr/local/hestia/bin/v-update-sys-queue daily\n15 02 * * * sudo /usr/local/hestia/bin/v-update-sys-queue disk\n10 00 * * * sudo /usr/local/hestia/bin/v-update-sys-queue traffic\n30 03 * * * sudo /usr/local/hestia/bin/v-update-sys-queue webstats\n*/5 * * * * sudo /usr/local/hestia/bin/v-update-sys-queue backup\n10 05 * * * sudo /usr/local/hestia/bin/v-backup-users\n20 00 * * * sudo /usr/local/hestia/bin/v-update-user-stats\n*/5 * * * * sudo /usr/local/hestia/bin/v-update-sys-rrd\n15 4 * * * sudo /usr/local/hestia/bin/v-update-sys-hestia-all\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/dovecot/dovecot.conf"
+    ],
+    "stdout": "protocols = imap pop3\nlisten = *, ::\nbase_dir = /var/run/dovecot/\n!include conf.d/*.conf\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/dovecot/conf.d/10-auth.conf"
+    ],
+    "stdout": "disable_plaintext_auth = no\nauth_mechanisms = plain login\n!include auth-passwdfile.conf.ext\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/dovecot/conf.d/10-logging.conf"
+    ],
+    "stdout": "log_path = /var/log/dovecot.log\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/dovecot/conf.d/10-mail.conf"
+    ],
+    "stdout": "mail_privileged_group = mail\nmail_location = maildir:%h/mail/%d/%n\nmail_access_groups = mail\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/dovecot/conf.d/10-master.conf"
+    ],
+    "stdout": "service auth {\n  unix_listener auth-client {\n    group = Debian-exim\n    mode = 0660\n  }\n}\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/dovecot/conf.d/10-ssl.conf"
+    ],
+    "stdout": "ssl = yes\nssl_cert = </usr/local/hestia/ssl/certificate.crt\nssl_key = </usr/local/hestia/ssl/certificate.key\nssl_min_protocol = TLSv1.2\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/dovecot/conf.d/20-imap.conf"
+    ],
+    "stdout": "protocol imap {\n  mail_plugins = $mail_plugins quota imap_quota\n}\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/dovecot/conf.d/20-pop3.conf"
+    ],
+    "stdout": "pop3_uidl_format = %08Xu%08Xv\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/dovecot/conf.d/auth-passwdfile.conf.ext"
+    ],
+    "stdout": "passdb {\n  driver = passwd-file\n  args = scheme=MD5-CRYPT username_format=%n /etc/exim4/domains/%d/passwd\n}\nuserdb {\n  driver = passwd-file\n  args = /etc/exim4/domains/%d/passwd\n}\n",
+    "exit": 127,
+    "stderr": "/usr/local/hestia/bin/v-open-fs-config: line 60: /v-log-action: No such file or directory\n"
+  },
+  {
+    "args": [
+      "/etc/shadow"
+    ],
+    "stdout": "Error: invalid source path /etc/shadow\n",
+    "exit": 2
+  },
+  {
+    "args": [
+      "*"
+    ],
+    "stdout": "Error: file doesn't exist\n",
+    "exit": 3
+  }
+]

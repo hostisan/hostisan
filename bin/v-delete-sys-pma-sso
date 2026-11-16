@@ -1,0 +1,83 @@
+#!/bin/bash
+# info: disables support for single sign on PHPMYADMIN
+# options: [mode]
+#
+# example: v-delete-sys-pma-sso
+#
+# Disables support for SSO to phpMyAdmin
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+MODE=$1
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+PMA_INSTALL="/usr/share/phpmyadmin"
+PMA_CONFIG="/etc/phpmyadmin"
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+if [ "x$(id -u)" != 'x0' ]; then
+	echo "Error: Script can be run executed only by root"
+	exit 10
+fi
+
+if [ ! -e "$PMA_INSTALL/hestia-sso.php" ]; then
+	echo 'Error:  PMA Single Sign On already disabled'
+	exit 1
+fi
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+# Hostisan: hestia-sso.php holds define("API_KEY", "…"); the old pattern only knew
+# 'API_KEY', '…', so the access key was never deleted.
+apikey=$(grep -Po "define\(\"API_KEY\", \"\K[^\"]*|'API_KEY', '\K[^']*" "$PMA_INSTALL/hestia-sso.php" | head -n1)
+
+# An access key that is already gone is skipped: deleting it only printed
+# "Error: key <id> doesn't exist" (setup.sh refreshes such an SSO on upgrade).
+if [[ "$apikey" == *:* ]]; then
+	if [ -e "$HESTIA/data/access-keys/${apikey%%:*}" ]; then
+		$BIN/v-delete-access-key "${apikey%%:*}"
+	fi
+elif [ -n "$apikey" ]; then
+	$BIN/v-revoke-api-key "$apikey"
+fi
+
+#remove new files
+rm /usr/share/phpmyadmin/hestia-sso.php
+rm /etc/phpmyadmin/hestia-sso.inc.php
+
+#revert config
+sed -i "/hestia-sso.inc.php/d" $PMA_CONFIG/config.inc.php
+
+# disable key
+$BIN/v-change-sys-config-value 'PHPMYADMIN_KEY' ""
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+if [ "$MODE" != "quiet" ]; then
+	echo "PMA Hestia-SSO plugin has been successfully removed/disabled"
+fi
+
+# Logging
+$BIN/v-log-action "system" "Info" "Plugins" "phpMyAdmin Single Sign-On (SSO) disabled."
+log_event "$OK" "$ARGUMENTS"
+
+exit

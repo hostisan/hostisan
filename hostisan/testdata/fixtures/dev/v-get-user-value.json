@@ -1,0 +1,34 @@
+[
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "admin",
+      "RKEYEXP"
+    ],
+    "stdout": "1792576800\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "RKEYEXP"
+    ],
+    "stdout": "1792576800\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*"
+    ],
+    "stdout": "\n",
+    "exit": 0
+  }
+]

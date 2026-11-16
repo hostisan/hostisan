@@ -1,0 +1,50 @@
+[
+  {
+    "args": [
+      "*",
+      "starter-plus"
+    ],
+    "stdout": "Error: package starter-plus exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "*",
+      "starter"
+    ],
+    "stdout": "Error: package starter exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "*",
+      "default"
+    ],
+    "stdout": "Error: package default exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "*",
+      "system"
+    ],
+    "stdout": "Error: package system exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: package missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

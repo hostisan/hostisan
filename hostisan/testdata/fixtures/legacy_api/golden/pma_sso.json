@@ -1,0 +1,93 @@
+{
+  "_source": "install/deb/phpmyadmin/hestia-sso.php create_temp_user (lines 43-52) and delete_temp_user (64-74); replies from web/api/index.php api_connection (lines 335-351)",
+  "steps": [
+    {
+      "name": "login",
+      "contentType": "application/x-www-form-urlencoded",
+      "form": [
+        [
+          "hash",
+          "Zx9yWv8uTs7rQp6oNm5l:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        [
+          "returncode",
+          "no"
+        ],
+        [
+          "cmd",
+          "v-add-database-temp-user"
+        ],
+        [
+          "arg1",
+          "bob"
+        ],
+        [
+          "arg2",
+          "bob_db"
+        ],
+        [
+          "arg3",
+          "mysql"
+        ],
+        [
+          "arg4",
+          "localhost"
+        ]
+      ],
+      "calls": [
+        "v-check-access-key Zx9yWv8uTs7rQp6oNm5l <tmp:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa> v-add-database-temp-user 127.0.0.1 json",
+        "v-add-database-temp-user bob bob_db mysql localhost"
+      ],
+      "status": 200,
+      "exitCode": "0",
+      "replyType": "application/json; charset=utf-8",
+      "reply": "{\n    \"login\": {\n        \"user\": \"hestia_sso_Xq7Lm2Pz9K\",\n        \"password\": \"Fh3-x9Q@kd2_Lw8Z\"\n    }\n}"
+    },
+    {
+      "name": "logout",
+      "contentType": "application/x-www-form-urlencoded",
+      "form": [
+        [
+          "hash",
+          "Zx9yWv8uTs7rQp6oNm5l:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        ],
+        [
+          "returncode",
+          "yes"
+        ],
+        [
+          "cmd",
+          "v-delete-database-temp-user"
+        ],
+        [
+          "arg1",
+          "bob"
+        ],
+        [
+          "arg2",
+          "bob_db"
+        ],
+        [
+          "arg3",
+          "hestia_sso_Xq7Lm2Pz9K"
+        ],
+        [
+          "arg4",
+          "mysql"
+        ],
+        [
+          "arg5",
+          "localhost"
+        ]
+      ],
+      "calls": [
+        "v-check-access-key Zx9yWv8uTs7rQp6oNm5l <tmp:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa> v-delete-database-temp-user 127.0.0.1 json",
+        "v-delete-database-temp-user bob bob_db hestia_sso_Xq7Lm2Pz9K mysql localhost"
+      ],
+      "status": 200,
+      "exitCode": "0",
+      "replyType": "text/html; charset=UTF-8",
+      "reply": "0"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "args": [
+      "*",
+      "missing_db",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: database missing_db doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "/backup/admin_admin_wordpress_mysql_2026-10-17_10-00-00.sql.gz\n",
+    "exit": 0
+  }
+]

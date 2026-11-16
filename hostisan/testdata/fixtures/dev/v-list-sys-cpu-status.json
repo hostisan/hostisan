@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "top - 12:40:02 up 29 days,  0:03,  1 user,  load average: 0.42, 0.51, 0.47\nTasks: 214 total,   1 running, 213 sleeping,   0 stopped,   0 zombie\n%Cpu(s):  4.1 us,  1.3 sy,  0.0 ni, 94.2 id,  0.3 wa,  0.0 hi,  0.1 si,  0.0 st\n\n    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND\n   1873 mysql     20   0 2381044 319488  23116 S   3.0   3.9 512:41.08 mariadbd\n   1402 www-data  20   0   58920  18772   6400 S   1.0   0.2  84:12.55 nginx\n\n------------------------------------------------------------------------------------------\n\nsystemd-+-cron\n        |-nginx---4*[nginx]\n        `-sshd---sshd---bash---pstree\n\n------------------------------------------------------------------------------------------\n\nIntel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz\nIntel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz\n\nArchitecture:            x86_64\nCPU(s):                  2\n",
+    "exit": 0
+  }
+]

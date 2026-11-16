@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "2",
+      "json"
+    ],
+    "stdout": "{\n    \"2\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"TCP\",\n        \"PORT\": \"8083\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"HESTIA\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"07:40:16\",\n        \"DATE\": \"2014-05-25\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "10",
+      "json"
+    ],
+    "stdout": "{\n    \"10\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"TCP\",\n        \"PORT\": \"22\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"SSH\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"17:14:41\",\n        \"DATE\": \"2014-09-16\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "999",
+      "json"
+    ],
+    "stdout": "Error: rules rule 999 doesn't exist\n",
+    "exit": 3
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "               total        used        free      shared  buff/cache   available\nMem:            7942        2421        1013          11        4710        5520\nSwap:           4096        1282        2813\nTotal:         12038        3703        3827\n\n------------------------------------------------------------------------------------------\n\n         8328 m total memory\n         2539 m used memory\n         4447 m active memory\n         1648 m inactive memory\n         1062 m free memory\n          612 m buffer memory\n         4326 m swap cache\n         4294 m total swap\n         1344 m used swap\n         2950 m free swap\n      4349808 non-nice user cpu ticks\n       295162 nice user cpu ticks\n      1161313 system cpu ticks\n     18389928 idle cpu ticks\n        56848 IO-wait cpu ticks\n            0 IRQ cpu ticks\n       397058 softirq cpu ticks\n            0 stolen cpu ticks\n            0 non-nice guest cpu ticks\n            0 nice guest cpu ticks\n     42239635 K paged in\n     61138132 K paged out\n       260508 pages swapped in\n      1336007 pages swapped out\n    150070414 interrupts\n    199770341 CPU context switches\n   1793201423 boot time\n      1015237 forks\n\n------------------------------------------------------------------------------------------\n\n# dmidecode 3.6\nScanning /dev/mem for entry point.\n# No SMBIOS nor DMI entry point found, sorry.\n",
+    "exit": 0
+  }
+]

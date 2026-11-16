@@ -1,0 +1,44 @@
+package fx
+
+import (
+	"fmt"
+	"net/http"
+
+	"github.com/hostisan/hostisan/internal/i18n"
+	"github.com/hostisan/hostisan/internal/jobs"
+)
+
+const searchMissingMsg = "Search needs a query."
+
+var (
+	alphaMsg    = "Alpha " + "message."
+	notAMessage = "Not a message."
+)
+
+const (
+	groupedMsg, otherMsg = "Grouped message.", "Other message."
+)
+
+func f(w http.ResponseWriter, j *jobs.Job, s *server, lang, svc, name string) {
+	WriteError(w, 400, "invalid", "Write error message.")
+	httpapi.WriteError(w, 400, "invalid", "Qualified write error.")
+	WriteError(w, 400, "invalid", "")
+	_ = jobs.Failure{Code: "x", Message: "Failure message %s."}
+	_ = &jobs.Failure{Message: "Pointer failure message."}
+	j.Step("Step message")
+	s.acctTranslate(lang, "Account message")
+	_ = i18n.N("Marked message")
+	_ = fmt.Sprintf(i18n.N("Check %s"), svc)
+	j.Step("Check " + svc)
+	_ = i18n.N(name)
+	fmt.Println("Not extracted")
+	_ = ErrorBody{Code: "x", Message: "Error body message."}
+	_ = APIError{Error: ErrorBody{Message: "Nested error body."}}
+	_ = BulkFailure{Name: name, Message: "Bulk failure message."}
+	WriteError(w, 400, "invalid", "Error: invalid domain format :: "+name)
+}
+
+const (
+	coreMsg     = "Error: core output is shown as sent."
+	pkgUsedMsgid = "Msgid-named message."
+)

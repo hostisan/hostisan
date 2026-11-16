@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "dns-cluster",
+      "example.com",
+      "/tmp/vst-sync.example.com",
+      "no",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "               total        used        free      shared  buff/cache   available\nMem:            3912        1204         812          34        1895        2490\nSwap:           2047           0        2047\nTotal:          5959        1204        2859\n\n------------------------------------------------------------------------------------------\n\n      3912 M total memory\n      1204 M used memory\n       812 M free memory\n",
+    "exit": 0
+  }
+]

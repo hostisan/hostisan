@@ -1,0 +1,54 @@
+# Commands recorded by tools/record-fixtures.sh on a Hestia VPS.
+# One command per line: <v-command> <args...>. Never list password or hash files.
+# Accounts (Plan 3)
+v-list-sys-themes json
+v-get-sys-timezone
+# Plan 3 Task 1: the read commands behind the hand-written dev fixtures, recorded on a
+# disposable VPS with the dev users (admin, bob, susp, ops) and packages created first.
+# Reads only: no reset codes, password or hash files, and no access-key creation (its
+# output holds the secret). "missing" is the sentinel for the exit-3 cases. Plan 3's
+# own commands only: frozen or shared fixtures (v-list-users, v-list-user, v-list-sys-*
+# lists) are never re-recorded here, so a run can't rewrite them or capture RKEY/TWOFA.
+v-list-user-packages json
+v-list-user-package default json
+v-list-user-package system json
+v-list-user-package starter json
+v-list-user-package starter-plus json
+v-list-user-package missing json
+v-list-sys-shells json
+v-get-user-value admin RKEYEXP
+v-list-user-ssh-key admin json
+v-list-user-ssh-key bob json
+v-list-access-keys admin json
+v-list-access-keys bob json
+v-list-apis json
+v-list-user-notifications admin json
+v-list-user-log admin json
+v-list-user-log system json
+v-list-user-log bob json
+v-list-user-auth-log admin json
+v-list-user-stats admin json
+v-list-user-stats bob json
+v-list-user-stats missing json
+v-list-users-stats json
+v-list-cron-jobs admin json
+v-list-cron-jobs admin plain
+v-list-cron-jobs bob json
+v-list-cron-jobs bob plain
+v-list-cron-job admin 1 json
+v-list-cron-job admin 99 json
+v-list-user-backups admin json
+v-list-user-backups bob json
+v-list-user-backup admin missing json
+v-list-user-backup-exclusions admin json
+v-list-user-backup-exclusions bob json
+v-list-user-backups-restic admin json
+v-list-user-backups-restic bob json
+v-list-user-backup-restic admin missing json
+# Plan 6 A6: real backup and snapshot ids from the recording box, taken after its first
+# classic and restic backups (P3 Task 1). Replace them with the box's own on a new box.
+v-list-user-backup admin admin.2026-10-28_19-57-56.tar json
+v-list-user-backup-restic admin 20603581 json
+v-list-user-files-restic admin 20603581 /home/admin
+v-list-user-backup-restic bob ef3a6148 json
+v-list-user-files-restic bob ef3a6148 /home/bob

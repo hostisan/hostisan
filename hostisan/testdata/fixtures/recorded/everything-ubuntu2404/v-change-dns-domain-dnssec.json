@@ -1,0 +1,11 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "no"
+    ],
+    "stdout": "Error: DNSSEC is not supported when DNS_CLUSTER_SYSTEM is not set to hestia-zone\n",
+    "exit": 11
+  }
+]

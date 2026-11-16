@@ -1,0 +1,62 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "info",
+      "json"
+    ],
+    "stdout": "{\n    \"info\": {\n        \"ALIAS\": \"contact,hello\",\n        \"FWD\": \"\",\n        \"FWD_ONLY\": \"\",\n        \"AUTOREPLY\": \"no\",\n        \"QUOTA\": \"1024\",\n        \"RATE_LIMIT\": \"\",\n        \"U_DISK\": \"35\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:45:10\",\n        \"DATE\": \"2026-03-14\",\n        \"WEBMAIL_ALIAS\": \"webmail.example.com\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "sales",
+      "json"
+    ],
+    "stdout": "{\n    \"sales\": {\n        \"ALIAS\": \"\",\n        \"FWD\": \"owner@gmail.com,archive@example.org\",\n        \"FWD_ONLY\": \"yes\",\n        \"AUTOREPLY\": \"yes\",\n        \"QUOTA\": \"unlimited\",\n        \"RATE_LIMIT\": \"200\",\n        \"U_DISK\": \"2\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"10:12:33\",\n        \"DATE\": \"2026-03-20\",\n        \"WEBMAIL_ALIAS\": \"webmail.example.com\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net",
+      "contact",
+      "json"
+    ],
+    "stdout": "{\n    \"contact\": {\n        \"ALIAS\": \"\",\n        \"FWD\": \"\",\n        \"FWD_ONLY\": \"\",\n        \"AUTOREPLY\": \"no\",\n        \"QUOTA\": \"512\",\n        \"RATE_LIMIT\": \"\",\n        \"U_DISK\": \"0\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"11:05:00\",\n        \"DATE\": \"2026-04-01\",\n        \"WEBMAIL_ALIAS\": \"webmail.example.net\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "orders",
+      "json"
+    ],
+    "stdout": "{\n    \"orders\": {\n        \"ALIAS\": \"shop\",\n        \"FWD\": \"\",\n        \"FWD_ONLY\": \"\",\n        \"AUTOREPLY\": \"no\",\n        \"QUOTA\": \"2048\",\n        \"RATE_LIMIT\": \"\",\n        \"U_DISK\": \"5\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"08:35:00\",\n        \"DATE\": \"2026-05-02\",\n        \"WEBMAIL_ALIAS\": \"webmail.bakery.example\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: mail domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: mail account doesn't exist\n",
+    "exit": 3
+  }
+]

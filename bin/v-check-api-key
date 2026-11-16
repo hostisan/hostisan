@@ -1,0 +1,62 @@
+#!/bin/bash
+# info: check api key
+# options: KEY [IP]
+#
+# example: v-check-api-key random_key 127.0.0.1
+#
+# This function checks a key file in $HESTIA/data/keys/
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+new_timestamp
+
+abort_missmatch() {
+	echo "Error: key missmatch"
+	echo "$date $time api $ip failed to login" >> $HESTIA/log/auth.log
+	exit "$E_PASSWORD"
+}
+
+ip=${2-127.0.0.1}
+time_n_date=$(date +'%T %F')
+time=$(echo "$time_n_date" | cut -f 1 -d \ )
+date=$(echo "$time_n_date" | cut -f 2 -d \ )
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+key_arg=$1
+# Hostisan: the key may come in a /tmp file so it stays out of argv
+# (the is_password_valid rule).
+if [[ "$key_arg" =~ ^/tmp/ && "$key_arg" != *../* && -f "$key_arg" ]]; then
+	key_arg="$(head -n1 "$key_arg")"
+fi
+# Hostisan: bash only from here, so no other process ever sees the key in argv.
+key=${key_arg##*/}
+
+# Exit if Key is unset, to short, or names a folder
+[[ -z $key || $key == . || $key == .. || ${#key} -lt 16 ]] && abort_missmatch
+
+# Key file must be a plain file in the key store, not a link
+[[ -f "${HESTIA}/data/keys/${key}" && ! -L "${HESTIA}/data/keys/${key}" ]] || abort_missmatch
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+echo "$date $time api $ip successfully launched" >> $HESTIA/log/auth.log
+
+exit

@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "MySQL localhost status\nUptime: 2592000\nThreads: 3\nQuestions: 911223\nSlow queries: 0\nOpens: 412\n\n+------+------+-----------+------+---------+------+-------+------------------+\n| Id   | User | Host      | db   | Command | Time | State | Info             |\n| 9221 | root | localhost | NULL | Query   |    0 | init  | show processlist |\n+------+------+-----------+------+---------+------+-------+------------------+\n\n------------------------------------------------------------------------------------------\n\nPostgreSQL localhost status\n datid | datname | pid  | state\n-------+---------+------+--------\n     5 | postgres| 2211 | active\n(1 row)\n\n------------------------------------------------------------------------------------------\n\n",
+    "exit": 0
+  }
+]

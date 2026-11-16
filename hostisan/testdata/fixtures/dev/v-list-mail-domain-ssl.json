@@ -1,0 +1,47 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"CRT\": \"-----BEGIN CERTIFICATE-----\\nMIIBdevCertificateForExampleCom\\n-----END CERTIFICATE-----\",\n        \"KEY\": \"-----BEGIN PRIVATE KEY-----\\nMIGHdevKeyNotSecret\\n-----END PRIVATE KEY-----\",\n        \"CA\": \"-----BEGIN CERTIFICATE-----\\nMIICdevIntermediate\\n-----END CERTIFICATE-----\",\n        \"SUBJECT\": \"mail.example.com\",\n        \"ALIASES\": \"mail.example.com,webmail.example.com\",\n        \"NOT_BEFORE\": \"Mar 14 09:41:07 2026 GMT\",\n        \"NOT_AFTER\": \"Jun 12 09:41:06 2026 GMT\",\n        \"SIGNATURE\": \"ecdsa-with-SHA384\",\n        \"PUB_KEY\": \"256 bit\",\n        \"ISSUER\": \"C=US, O=Let's Encrypt, CN=E6\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net",
+      "json"
+    ],
+    "stdout": "{\n    \"example.net\": {\n        \"CRT\": \"\",\n        \"KEY\": \"\",\n        \"CA\": \"\",\n        \"SUBJECT\": \"\",\n        \"ALIASES\": \"\",\n        \"NOT_BEFORE\": \"\",\n        \"NOT_AFTER\": \"\",\n        \"SIGNATURE\": \"\",\n        \"PUB_KEY\": \"\",\n        \"ISSUER\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n        \"CRT\": \"\",\n        \"KEY\": \"\",\n        \"CA\": \"\",\n        \"SUBJECT\": \"\",\n        \"ALIASES\": \"\",\n        \"NOT_BEFORE\": \"\",\n        \"NOT_AFTER\": \"\",\n        \"SIGNATURE\": \"\",\n        \"PUB_KEY\": \"\",\n        \"ISSUER\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: mail domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: mail domain doesn't exist\n",
+    "exit": 3
+  }
+]

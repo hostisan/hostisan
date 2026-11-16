@@ -1,0 +1,6951 @@
+# Hostisan messages that Hestia's catalogue (web/locale/hestiacp.pot) lacks.
+# Generated from the code by "make i18n-extract": do not edit. "#. Hestia:"
+# names the Hestia msgid that differs only in case: its translation is used
+# until the language's hostisan.po translates the message.
+msgid ""
+msgstr ""
+"Project-Id-Version: Hostisan\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ui/src/designs/backup/BackupTabs.tsx
+#: ui/src/designs/server/format.ts
+msgid "%d days"
+msgstr ""
+
+#: ui/src/designs/backup/BackupTabs.tsx
+#: ui/src/designs/server/format.ts
+msgid "%d hours"
+msgstr ""
+
+#: ui/src/designs/backup/BackupTabs.tsx
+#: ui/src/designs/server/format.ts
+msgid "%d minutes"
+msgstr ""
+
+#: ui/src/designs/server/UpdatesPage.tsx
+msgid "%d packages have an update available."
+msgstr ""
+
+#: hostisan/internal/webapp/host.go
+#: hostisan/internal/webapp/install.go
+msgid "%s"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "%s DNS records"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "%s DNS zones"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid "%s accounts"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "%s administrators, %s suspended"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "%s applied to %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "%s at %s"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "%s backups"
+msgstr ""
+
+#: hostisan/internal/httpapi/restore_files.go
+msgid "%s can't be checked on the server, so it can't be restored."
+msgstr ""
+
+#: ui/src/components/CopyBlock.tsx
+msgid "%s copied"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "%s databases"
+msgstr ""
+
+#: ui/src/components/useListConfirm.tsx
+msgid "%s deleted"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "%s done for %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/restore_files.go
+msgid "%s goes through a link on the server and can't be restored."
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "%s has been deleted"
+msgstr ""
+
+#: hostisan/internal/httpapi/restore_files.go
+msgid "%s holds too many files to check; restore a smaller folder."
+msgstr ""
+
+#: hostisan/internal/httpapi/restore_files.go
+msgid "%s is not in this snapshot."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "%s mail accounts"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "%s mail domains"
+msgstr ""
+
+#: ui/src/designs/backup/BackupDetailPage.tsx
+msgid "%s may have been rotated out or deleted."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "%s of %s"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "%s of unlimited"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "%s packages"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "%s packages deleted"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "%s records"
+msgstr ""
+
+#: ui/src/components/table/TableToolbar.tsx
+msgid "%s selected"
+msgstr ""
+
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "%s selected items"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "%s snapshots"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "%s suspended"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "%s unbanned"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/users/UserEditPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "%s unsuspended"
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "%s usage"
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "%s usage on %s"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "%s used"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "%s users"
+msgstr ""
+
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid "%s uses this server's DNS"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "%s web domains"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "%s web · %s DNS · %s mail · %s DB"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "%s with SSL · %s aliases"
+msgstr ""
+
+#: ui/src/designs/users/UserEditPage.tsx
+msgid "%s · created %s"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "%s: %s"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+msgid "%s: %s of %s"
+msgstr ""
+
+#: ui/src/designs/users/fields.tsx
+msgid "%s: %s used"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "%snd"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "%srd"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "%sst"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "%sth"
+msgstr ""
+
+#: ui/src/components/table/TableCard.tsx
+msgid "%s–%s of %s"
+msgstr ""
+
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid "(everything)"
+msgstr ""
+
+#: ui/src/components/table/TableCard.tsx
+msgid "(of %s)"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "1 administrator, %s suspended"
+msgstr ""
+
+#: ui/src/designs/server/UpdatesPage.tsx
+msgid "1 package has an update available."
+msgstr ""
+
+#. Hestia: "2FA QR Code"
+#: ui/src/designs/users/TwoFactorDialog.tsx
+msgid "2FA QR code"
+msgstr ""
+
+#. Hestia: "2FA Token"
+#: ui/src/designs/auth/LoginPage.tsx
+msgid "2FA token"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "301 (permanent)"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "302 (temporary)"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "A MySQL database for the application."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "A code from an authenticator app, asked for after the password."
+msgstr ""
+
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "A named list of addresses, loaded from a URL or the blocklist script."
+msgstr ""
+
+#: hostisan/internal/httpapi/restore_files.go
+msgid "A restore is already running."
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "A short name shown when assigning the package to a user."
+msgstr ""
+
+#: hostisan/internal/httpapi/keys.go
+msgid "API %s not allowed"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "API credentials for scripts and integrations."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "APIs this key may call."
+msgstr ""
+
+#: ui/src/components/PageAside.tsx
+msgid "About %s"
+msgstr ""
+
+#. Hestia: "Access Key"
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Access key"
+msgstr ""
+
+#. Hestia: "Access Key ID"
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Access key ID"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Access key deleted"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Access key not found"
+msgstr ""
+
+#. Hestia: "Access Keys"
+#: ui/src/designs/account/AccessKeysPage.tsx
+#: ui/src/designs/tools/EmptyPackagePage.tsx
+#: ui/src/designs/users/UserEditPage.tsx
+#: ui/src/layout/Topbar.tsx
+#: ui/src/layout/commands/accounts.ts
+#: ui/src/layout/nav.ts
+msgid "Access keys"
+msgstr ""
+
+#: ui/src/designs/web/WebLogsPage.tsx
+msgid "Access log"
+msgstr ""
+
+#. Hestia: "Account Unlocked"
+#: ui/src/designs/auth/ResetTwofaPage.tsx
+msgid "Account unlocked"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Accounts on this server, their packages and how much of it they use."
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Across all users"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+#: ui/src/designs/account/SshKeysPage.tsx
+#: ui/src/designs/backup/BackupsPage.tsx
+#: ui/src/designs/backup/IncrementalPages.tsx
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+#: ui/src/designs/server/FirewallRulesPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+#: ui/src/designs/tools/NotificationsPage.tsx
+#: ui/src/layout/CommandMenu.tsx
+msgid "Actions"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+#: ui/src/designs/backup/BackupsPage.tsx
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+#: ui/src/designs/server/ServicesPage.tsx
+#: ui/src/designs/tools/NotificationsPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Actions for %s"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Actions for %s in %s"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Actions for job %s"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Actions for record %s"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Actions for rule %s"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Actions for snapshot %s"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid ""
+"Actions on this account, like adding domains or changing passwords, will "
+"show up here."
+msgstr ""
+
+#: ui/src/components/StatusBadge.tsx
+#: ui/src/designs/cron/CronAside.tsx
+#: ui/src/designs/cron/CronJobsPage.tsx
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/server/FirewallRulesPage.tsx
+#: ui/src/designs/tools/SearchPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Active"
+msgstr ""
+
+#. Hestia: "Add DNS Domain"
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Add DNS domain"
+msgstr ""
+
+#. Hestia: "Add DNS Record"
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Add DNS record"
+msgstr ""
+
+#. Hestia: "Add DNS Zone"
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+#: ui/src/layout/CommandMenu.tsx
+msgid "Add DNS zone"
+msgstr ""
+
+#. Hestia: "Add IP Address"
+#: hostisan/internal/httpapi/sys_ips.go
+#: ui/src/designs/server/IpFormPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+#: ui/src/layout/commands/server.ts
+msgid "Add IP address"
+msgstr ""
+
+#. Hestia: "Add IP Address to Banlist"
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "Add IP address to banlist"
+msgstr ""
+
+#. Hestia: "Add IPset IP List for Firewall"
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "Add IPset IP list for firewall"
+msgstr ""
+
+#. Hestia: "Add SSH Key"
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "Add SSH key"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Add a DNS domain to start serving records for it from this server."
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid ""
+"Add a country list or a blocklist, then reference it from a firewall rule."
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Add a domain to start hosting a website on this server."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Add a mail domain to create mailboxes, aliases and forwarders for it."
+msgstr ""
+
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "Add a public key to sign in over SSH without a password."
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Add a user to give someone their own hosting account."
+msgstr ""
+
+#. Hestia: "Add Access Key"
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Add access key"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Add an A, MX or TXT record to start answering queries for this domain."
+msgstr ""
+
+#: ui/src/components/fields/NameServersField.tsx
+msgid "Add at least %d name servers."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Add at least one address, or turn the allow list off."
+msgstr ""
+
+#. Hestia: "Add Cron Job"
+#: ui/src/designs/cron/CronFormPage.tsx
+#: ui/src/designs/cron/CronJobsPage.tsx
+#: ui/src/layout/commands/accounts.ts
+msgid "Add cron job"
+msgstr ""
+
+#. Hestia: "Add Database"
+#: ui/src/designs/db/DatabaseFormPage.tsx
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/layout/CommandMenu.tsx
+msgid "Add database"
+msgstr ""
+
+#. Hestia: "Add Firewall Rule"
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+#: ui/src/layout/commands/server.ts
+msgid "Add firewall rule"
+msgstr ""
+
+#. Hestia: "Add Mail Account"
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Add mail account"
+msgstr ""
+
+#. Hestia: "Add Mail Domain"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/layout/CommandMenu.tsx
+msgid "Add mail domain"
+msgstr ""
+
+#. Hestia: "Add Package"
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Add package"
+msgstr ""
+
+#. Hestia: "Add Record"
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Add record"
+msgstr ""
+
+#. Hestia: "Add Rule"
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Add rule"
+msgstr ""
+
+#: ui/src/designs/server/IpListPage.tsx
+msgid "Add the address configured on your network interface to start hosting."
+msgstr ""
+
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid ""
+"Add these records at the DNS provider for %s so mail is delivered and passes "
+"SPF, DKIM and DMARC checks."
+msgstr ""
+
+#. Hestia: "Add User"
+#: ui/src/designs/db/DatabaseFormPage.tsx
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/users/UserEditPage.tsx
+#: ui/src/designs/users/UserForm.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/AddWebDomainPage.tsx
+#: ui/src/layout/commands/accounts.ts
+msgid "Add user"
+msgstr ""
+
+#. Hestia: "Add Web Domain"
+#: ui/src/designs/web/AddWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+#: ui/src/layout/commands/web.ts
+msgid "Add web domain"
+msgstr ""
+
+#: ui/src/designs/server/IpFormPage.tsx
+msgid "Address"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Addresses blocked by fail2ban or by hand, per service chain."
+msgstr ""
+
+#: ui/src/designs/server/IpListPage.tsx
+msgid ""
+"Addresses configured on this server's network interfaces, and who can use "
+"them."
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Addresses that fail too many logins appear here automatically."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Admin"
+msgstr ""
+
+#: ui/src/layout/nav.ts
+msgid "Administration"
+msgstr ""
+
+#: ui/src/designs/users/UsersAside.tsx
+msgid "Administrators"
+msgstr ""
+
+#. Hestia: "Advanced Details"
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "Advanced details"
+msgstr ""
+
+#. Hestia: "Advanced Options"
+#: ui/src/designs/db/DatabaseFormPage.tsx
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+#: ui/src/designs/server/ServiceEditPage.tsx
+#: ui/src/designs/users/UserForm.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Advanced options"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+#: ui/src/designs/server/FirewallRulesPage.tsx
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "All"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid ""
+"All %s notifications will be removed, including unread ones. This cannot be "
+"undone."
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "All (%s)"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "All attempts"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "All categories"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "All chains"
+msgstr ""
+
+#: ui/src/components/fields/DateRangeFilter.tsx
+msgid "All dates"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "All levels"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "All locations"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "All notifications marked as read"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid ""
+"All ports are open. Turn the firewall on to enforce rules, bans and IP lists."
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid ""
+"All rules, bans and IP lists stop being enforced and every port on the "
+"server becomes reachable."
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "All types"
+msgstr ""
+
+#: hostisan/internal/httpapi/profile.go
+#: ui/src/designs/users/UserForm.tsx
+msgid "Allowed IP addresses"
+msgstr ""
+
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "An http(s) URL, or choose one of the lists below."
+msgstr ""
+
+#: hostisan/internal/httpapi/web_apps.go
+msgid "An installation is already running for this domain."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys.go
+msgid "Another server task is still running."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "Answer every incoming message automatically, e.g. while on holiday."
+msgstr ""
+
+#. Hestia: "Anti-Virus"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Anti-virus"
+msgstr ""
+
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "Anyone using it can no longer sign in."
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "App not found"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Application"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Application Key"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Application key"
+msgstr ""
+
+#. Hestia: "Application Name"
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Application name"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Applied before the failure"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Applied changes"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Are you sure you want to delete %d cron jobs?"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Are you sure you want to delete IP address %s from the %s banlist?"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Are you sure you want to delete snapshot %s?"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Are you sure you want to delete the login history for %s?"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Are you sure you want to delete the logs for %s?"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid ""
+"Are you sure you want to delete the selected IP addresses from the banlist?"
+msgstr ""
+
+#: ui/src/designs/server/IpListPage.tsx
+msgid ""
+"Are you sure you want to delete the selected IP addresses? Domains using "
+"them must be moved first."
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid ""
+"Are you sure you want to delete the selected IP lists? Rules that use them "
+"stop matching."
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Are you sure you want to delete the selected firewall rules?"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Are you sure you want to move rule #%s down?"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Are you sure you want to move rule #%s up?"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Are you sure you want to rebuild %s?"
+msgstr ""
+
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "Are you sure you want to restore cron jobs?"
+msgstr ""
+
+#: ui/src/designs/backup/BackupDetailPage.tsx
+msgid ""
+"Are you sure you want to restore everything in %s? Existing web domains, "
+"mail, databases, cron jobs and user directories will be overwritten."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid ""
+"Are you sure you want to restore everything in snapshot %s? Existing data "
+"will be overwritten."
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Are you sure you want to suspend %d cron jobs?"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Are you sure you want to suspend record %s?"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Are you sure you want to unsuspend %d cron jobs?"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Are you sure you want to unsuspend record %s?"
+msgstr ""
+
+#. Hestia: "Assigned Domain"
+#: ui/src/designs/server/IpFormPage.tsx
+msgid "Assigned domain"
+msgstr ""
+
+#. Hestia: "Assigned User"
+#: ui/src/designs/server/IpFormPage.tsx
+msgid "Assigned user"
+msgstr ""
+
+#: ui/src/designs/server/IpFormPage.tsx
+msgid "Assignment"
+msgstr ""
+
+#. Hestia: "Auth Log"
+#: ui/src/layout/nav.ts
+msgid "Auth log"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid ""
+"Authoritative DNS zones served by this server, with their records and DNSSEC "
+"keys."
+msgstr ""
+
+#. Hestia: "Auto Reply"
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Auto reply"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "Auto reply is off."
+msgstr ""
+
+#. Hestia: "Auto Update"
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "Auto update"
+msgstr ""
+
+#: ui/src/designs/server/UpdatesPage.tsx
+msgid "Automatic updates"
+msgstr ""
+
+#: hostisan/internal/httpapi/mail_accounts.go
+msgid "Autoreply message is too long."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Back to access keys"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Back to apps"
+msgstr ""
+
+#: ui/src/designs/backup/BackupDetailPage.tsx
+msgid "Back to backups"
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Back to domain"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Back to packages"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Back to services"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Back to snapshots"
+msgstr ""
+
+#: ui/src/designs/users/UserEditPage.tsx
+msgid "Back to users"
+msgstr ""
+
+#: ui/src/designs/web/shared.tsx
+msgid "Back to web domains"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Backend"
+msgstr ""
+
+#. Hestia: "Backend Template"
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Backend template"
+msgstr ""
+
+#. Hestia: "BACKUP"
+#: ui/src/designs/backup/BackupDetailPage.tsx
+msgid "Backup"
+msgstr ""
+
+#: ui/src/designs/backup/BackupDetailPage.tsx
+msgid "Backup contents"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Backup deleted"
+msgstr ""
+
+#. Hestia: "Backup Exclusions"
+#: ui/src/designs/backup/BackupTabs.tsx
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid "Backup exclusions"
+msgstr ""
+
+#: ui/src/designs/backup/BackupDetailPage.tsx
+msgid "Backup not found"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Backup not scheduled"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Backup scheduled"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Backups are kept on this server only."
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Backups deleted"
+msgstr ""
+
+#: ui/src/designs/backup/BackupAside.tsx
+msgid "Backups kept"
+msgstr ""
+
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "Ban"
+msgstr ""
+
+#. Hestia: "Ban IP Address"
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "Ban IP address"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Bandwidth this month"
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "Bandwidth usage %s"
+msgstr ""
+
+#. Hestia: "Banned IP Addresses"
+#: ui/src/designs/server/FirewallListFormPages.tsx
+#: ui/src/designs/server/FirewallNav.tsx
+msgid "Banned IP addresses"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Banned IP addresses are not available"
+msgstr ""
+
+#. Hestia: "Basic Options"
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Basic options"
+msgstr ""
+
+#: ui/src/components/fields/NameServersField.tsx
+msgid "Between %d and %d host names. Press Enter or comma after each one."
+msgstr ""
+
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "Block an address from reaching one service chain."
+msgstr ""
+
+#: ui/src/designs/server/IpsetCountryMap.tsx
+msgid "Blocked by a DROP rule"
+msgstr ""
+
+#: ui/src/designs/server/IpsetCountryMap.tsx
+msgid "Blocked: %s"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid ""
+"Blocks phpMyAdmin's own login form; only reachable via the phpMyAdmin link "
+"inside the panel (requires SSO above)."
+msgstr ""
+
+#: ui/src/designs/server/IpFormPage.tsx
+msgid "Bring up a new address on a network interface."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Browse files"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Browse snapshot"
+msgstr ""
+
+#: ui/src/designs/db/DbAside.tsx
+msgid "Browse tables and run queries."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Bucket"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Built-in"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Built-in packages (default, system) can’t be deleted."
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Built-in packages can't be deleted"
+msgstr ""
+
+#: ui/src/components/table/TableToolbar.tsx
+msgid "Bulk actions"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Business"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "CMS"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid ""
+"CPUQuotaPeriodSec=10ms requests that the CPU quota is measured in periods of "
+"10ms."
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "CRM"
+msgstr ""
+
+#: ui/src/designs/web/RequestFlow.tsx
+msgid "Cache"
+msgstr ""
+
+#. Hestia: "Cache Duration"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Cache duration"
+msgstr ""
+
+#: ui/src/designs/auth/ServerUnreachable.tsx
+msgid "Can't reach the server"
+msgstr ""
+
+#: ui/src/components/ConfirmDialog.tsx
+#: ui/src/components/DeleteResource.tsx
+#: ui/src/components/FormPage.tsx
+#: ui/src/designs/server/ServicesPage.tsx
+#: ui/src/designs/users/TwoFactorDialog.tsx
+#: ui/src/i18n/I18nProvider.tsx
+msgid "Cancel"
+msgstr ""
+
+#. Hestia: "Catch-All Email"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Catch-all email"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Catch-all: %s"
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Certificate and signing request generated"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Certificate details"
+msgstr ""
+
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Certificate files"
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid ""
+"Certificate signing request. Submit it to a certificate authority to get a "
+"trusted certificate."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Certificate used for IMAP, POP3 and SMTP on %s."
+msgstr ""
+
+#: ui/src/designs/web/WebAside.tsx
+msgid "Certificates issued and renewed automatically."
+msgstr ""
+
+#: ui/src/designs/auth/AuthLayout.tsx
+msgid "Change"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change API access"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change API allowed IP addresses"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change CSRF protection"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change DNS template policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change Quick App Installer"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change account details policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change administrator protection"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change administrator visibility"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change backup compression"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change backup compression level"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change database root password"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change debug mode"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change error document sync policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change hostname"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change inactive session timeout"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change language"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change legacy API access"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change log deletion policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change log view policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change login screen style"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change panel SSL certificate"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change password reset policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change phpMyAdmin alias"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change phpPgAdmin alias"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change preview features"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change read-only access for suspended users"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change server settings access"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change skeleton sync policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change subdomain ownership policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change suspended user backup policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change system PHP version"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Change templates"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change theme"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change theme policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change time zone"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change update log emails"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change update notifications"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change web template policy"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Change webmail alias"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Changes apply to every user on this package."
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid ""
+"Changes have been saved, but nothing tested the new configuration. Restart "
+"the service to check that it starts."
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Changes made to %s's account, newest first."
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Changes made to the server, newest first."
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Changes made to your account, newest first."
+msgstr ""
+
+#: hostisan/internal/httpapi/steps.go
+msgid "Check %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_services.go
+msgid "Check services"
+msgstr ""
+
+#: ui/src/components/table/TableCard.tsx
+msgid "Check the spelling or try a shorter search."
+msgstr ""
+
+#: ui/src/designs/auth/ResetPasswordPage.tsx
+msgid "Choose a new password for your account."
+msgstr ""
+
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "Choose a preset list"
+msgstr ""
+
+#. Hestia: "City / Locality"
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "City / locality"
+msgstr ""
+
+#: ui/src/components/table/TableCard.tsx
+msgid "Clear search"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Clear the stale phpMyAdmin restriction"
+msgstr ""
+
+#: ui/src/components/DeleteResource.tsx
+#: ui/src/i18n/I18nProvider.tsx
+#: ui/src/layout/CommandMenu.tsx
+#: ui/src/shortcuts/ShortcutsDialog.tsx
+msgid "Close"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Cloud"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Cluster"
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+msgid "Code from your app"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Commands that run on a schedule under this account."
+msgstr ""
+
+#. Hestia: "Common Account Settings"
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "Common account settings"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Common directives from the configuration file."
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Community"
+msgstr ""
+
+#. Hestia: "Compression Level"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Compression level"
+msgstr ""
+
+#: ui/src/layout/nav.ts
+msgid "Configuration"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Configuration file"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Configuration files"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Configure %s"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Configure PHP"
+msgstr ""
+
+#. Hestia: "Configure Server"
+#: ui/src/designs/server/PreviewPage.tsx
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Configure server"
+msgstr ""
+
+#. Hestia: "Confirm Password"
+#: ui/src/designs/auth/ResetPasswordPage.tsx
+msgid "Confirm password"
+msgstr ""
+
+#: ui/src/designs/tools/TerminalPage.tsx
+msgid "Connecting…"
+msgstr ""
+
+#: ui/src/designs/tools/terminalSocket.ts
+msgid "Connection closed."
+msgstr ""
+
+#: hostisan/internal/httpapi/terminal.go
+#: ui/src/designs/tools/terminalSocket.ts
+msgid "Connection error."
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid "Consider using a standard user account"
+msgstr ""
+
+#. Hestia: "Contact Name"
+#: ui/src/designs/users/UserForm.tsx
+msgid "Contact name"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Contents"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid "Copied"
+msgstr ""
+
+#: ui/src/components/CopyBlock.tsx
+#: ui/src/components/PasswordInput.tsx
+msgid "Copy"
+msgstr ""
+
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid "Copy %s"
+msgstr ""
+
+#: ui/src/components/DeleteResource.tsx
+msgid "Copy %s to clipboard"
+msgstr ""
+
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid "Copy %s value"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Copy every backup to a remote host after it's created."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid ""
+"Copy it now and store it somewhere safe. You won't be able to see it again "
+"after leaving this page."
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Copy package"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Copy password"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Could not load the DNS records"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_editors.go
+msgid "Could not read %s."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Could not restore %s"
+msgstr ""
+
+#: ui/src/designs/tools/SearchPage.tsx
+msgid "Couldn't open this object"
+msgstr ""
+
+#: ui/src/designs/server/IpsetCountryMap.tsx
+msgid "Countries covered by country-based IP lists."
+msgstr ""
+
+#: ui/src/designs/server/IpsetCountryMap.tsx
+msgid "Country lists"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Create a MySQL or PostgreSQL database for your applications."
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Create a backup to get a downloadable archive of this account."
+msgstr ""
+
+#: ui/src/designs/users/UserEditPage.tsx
+msgid "Create a hosting account and assign it a package."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid ""
+"Create a key to use the API from billing systems, deploy scripts or a DNS "
+"cluster."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Create a mailbox such as %s to start receiving mail."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Create a snapshot to keep an incremental copy of your home directory."
+msgstr ""
+
+#: ui/src/designs/web/AddWebDomainPage.tsx
+msgid "Create a website. DNS and mail domains can be created alongside it."
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "Create a zone and populate it from a DNS template."
+msgstr ""
+
+#. Hestia: "Create Backup"
+#: ui/src/designs/backup/BackupsPage.tsx
+#: ui/src/layout/commands/accounts.ts
+msgid "Create backup"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Create database"
+msgstr ""
+
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid ""
+"Create each record below at your registrar or DNS provider. Changes can take "
+"a few hours to propagate."
+msgstr ""
+
+#: ui/src/designs/web/AddWebDomainPage.tsx
+msgid "Create matching zones on this server."
+msgstr ""
+
+#. Hestia: "Create Snapshot"
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Create snapshot"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+#: ui/src/designs/cron/CronJobsPage.tsx
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Created"
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid ""
+"Creates a private key, a certificate signing request (CSR) and a self-signed "
+"certificate."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Credentials"
+msgstr ""
+
+#. Hestia: "CRON"
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Cron"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Cron job deleted"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Cron job suspended"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Cron job unsuspended"
+msgstr ""
+
+#. Hestia: "Cron Jobs"
+#: ui/src/designs/account/StatsPage.tsx
+#: ui/src/designs/backup/ExclusionsPages.tsx
+#: ui/src/designs/backup/RestoreTable.tsx
+#: ui/src/designs/cron/CronAside.tsx
+#: ui/src/designs/cron/CronFormPage.tsx
+#: ui/src/designs/cron/CronJobsPage.tsx
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+#: ui/src/designs/users/UserForm.tsx
+#: ui/src/layout/nav.ts
+msgid "Cron jobs"
+msgstr ""
+
+#: ui/src/designs/cron/CronAside.tsx
+msgid "Cron jobs (%s suspended)"
+msgstr ""
+
+#: ui/src/designs/cron/CronAside.tsx
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Cron notifications"
+msgstr ""
+
+#: hostisan/internal/httpapi/profile.go
+msgid "Current Password"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Current certificate"
+msgstr ""
+
+#. Hestia: "Current Number of Databases"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Current number of databases"
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+#: ui/src/designs/users/UserForm.tsx
+msgid "Current password"
+msgstr ""
+
+#: ui/src/designs/web/shared.tsx
+msgid "Custom"
+msgstr ""
+
+#. Hestia: "Custom Logo"
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Custom logo"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "Custom schedule"
+msgstr ""
+
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid ""
+"DKIM is disabled for this domain, so no DKIM record is listed. Enable DKIM "
+"support on the mail domain to sign outgoing mail."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "DKIM selector"
+msgstr ""
+
+#: ui/src/designs/mail/MailAside.tsx
+msgid "DKIM signed"
+msgstr ""
+
+#. Hestia: "DKIM Support"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "DKIM support"
+msgstr ""
+
+#. Hestia: "DNS Cluster"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "DNS cluster"
+msgstr ""
+
+#. Hestia: "DNS Domain"
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "DNS domain"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "DNS domain %s doesn't exist"
+msgstr ""
+
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid "DNS is hosted elsewhere"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "DNS record"
+msgstr ""
+
+#. Hestia: "DNS Records"
+#: ui/src/designs/account/StatsPage.tsx
+#: ui/src/designs/dns/DnsAside.tsx
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDnsPage.tsx
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+#: ui/src/layout/nav.ts
+msgid "DNS records"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "DNS records per domain"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "DNS records required"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "DNS records · template %s · SOA %s · serial %s"
+msgstr ""
+
+#. Hestia: "DNS Server"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "DNS server"
+msgstr ""
+
+#. Hestia: "DNS Support"
+#: ui/src/designs/web/AddWebDomainPage.tsx
+msgid "DNS support"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "DNS sync"
+msgstr ""
+
+#. Hestia: "DNS Template"
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "DNS template"
+msgstr ""
+
+#. Hestia: "DNS Zone"
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "DNS zone"
+msgstr ""
+
+#. Hestia: "DNS Zones"
+#: ui/src/designs/account/StatsPage.tsx
+#: ui/src/designs/backup/ExclusionsPages.tsx
+#: ui/src/designs/backup/RestoreTable.tsx
+#: ui/src/designs/dns/DnsAside.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+#: ui/src/designs/users/UserForm.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/layout/CommandMenu.tsx
+msgid "DNS zones"
+msgstr ""
+
+#: ui/src/designs/dns/DnsAside.tsx
+msgid "DNS zones (%s suspended)"
+msgstr ""
+
+#. Hestia: "DNSKEY Record"
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "DNSKEY record"
+msgstr ""
+
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "DNSSEC is disabled for this zone"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "DNSSEC key"
+msgstr ""
+
+#: ui/src/designs/dns/DnsAside.tsx
+msgid "DNSSEC signed"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "DNSSEC signing, expiry and default TTL."
+msgstr ""
+
+#. Hestia: "DS Record"
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "DS record"
+msgstr ""
+
+#: ui/src/layout/Topbar.tsx
+msgid "Dark"
+msgstr ""
+
+#: ui/src/designs/account/AccountPage.tsx
+msgid "Dashboard"
+msgstr ""
+
+#. Hestia: "Data Loss Warning!"
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Data loss warning!"
+msgstr ""
+
+#. Hestia: "Data Source"
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "Data source"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Database host"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Database name"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Database password"
+msgstr ""
+
+#: ui/src/designs/db/DbAside.tsx
+msgid "Database tools"
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Database user"
+msgstr ""
+
+#: ui/src/designs/db/DbAside.tsx
+msgid "Databases (%s suspended)"
+msgstr ""
+
+#: ui/src/components/fields/DateRangeFilter.tsx
+msgid "Date range: %s"
+msgstr ""
+
+#. Hestia: "Day of Week"
+#: ui/src/designs/cron/CronFormPage.tsx
+msgid "Day of week"
+msgstr ""
+
+#: ui/src/designs/server/IpListPage.tsx
+msgid "Dedicated"
+msgstr ""
+
+#. Hestia: "Default Language"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Default language"
+msgstr ""
+
+#. Hestia: "Default List Sort Order"
+#: ui/src/designs/users/UserForm.tsx
+msgid "Default list sort order"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "Default time to live for records in this zone, in seconds."
+msgstr ""
+
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Default: %s"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Define limits and templates you can assign to users."
+msgstr ""
+
+#: ui/src/components/DeleteResource.tsx
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "Delete %s"
+msgstr ""
+
+#: ui/src/designs/server/IpListPage.tsx
+msgid "Delete %s IP addresses?"
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid "Delete %s IP lists?"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Delete %s notifications?"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Delete %s rules?"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Delete DNS record"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Delete DNS records"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Delete DNS zones"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_ips.go
+msgid "Delete IP address"
+msgstr ""
+
+#: ui/src/designs/server/IpFormPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+msgid "Delete IP address?"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_ips.go
+msgid "Delete IP addresses"
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid "Delete IP list?"
+msgstr ""
+
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "Delete SSH key"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Delete access key"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Delete all"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Delete all notifications?"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Delete databases"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Delete logs"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Delete mail accounts"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Delete mail domains"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Delete package"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Delete packages"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Delete rule?"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Delete user"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Delete users"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Delete web domain"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Delete web domains"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Delivery"
+msgstr ""
+
+#: ui/src/designs/DesignPending.tsx
+msgid "Design pending"
+msgstr ""
+
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid "Directories inside the home folder, relative to it."
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Dirs"
+msgstr ""
+
+#. Hestia: "Disable Notifications"
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Disable notifications"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Disk / quota"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Disk and traffic allowances, and how many backups are kept."
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Disk usage"
+msgstr ""
+
+#: ui/src/designs/db/DbAside.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/WebAside.tsx
+msgid "Disk used"
+msgstr ""
+
+#. Hestia: "Do not allow other administrators to access Server Settings"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Do not allow other administrators to access server settings"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Document root: %s"
+msgstr ""
+
+#: ui/src/layout/AppFooter.tsx
+msgid "Documentation"
+msgstr ""
+
+#: ui/src/designs/web/WebAside.tsx
+msgid "Domains serving HTTPS with any certificate."
+msgstr ""
+
+#: ui/src/designs/server/IpListPage.tsx
+msgid "Domains using it must be moved to another address first."
+msgstr ""
+
+#: ui/src/designs/mail/MailAside.tsx
+msgid "Domains with SpamAssassin filtering incoming mail."
+msgstr ""
+
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid "Domains, databases and directories left out of this account's backups."
+msgstr ""
+
+#: ui/src/components/fields/DateRangeFilter.tsx
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Done"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Download %s"
+msgstr ""
+
+#: ui/src/designs/web/WebLogsPage.tsx
+msgid "Download access log"
+msgstr ""
+
+#. Hestia: "Download Database"
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Download database"
+msgstr ""
+
+#: ui/src/designs/web/WebLogsPage.tsx
+msgid "Download error log"
+msgstr ""
+
+#: ui/src/designs/backup/BackupTabs.tsx
+msgid "Download failed"
+msgstr ""
+
+#: ui/src/designs/backup/BackupTabs.tsx
+msgid "Download scheduled"
+msgstr ""
+
+#. Hestia: "Download Site"
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Download site"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Duplicate %s"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "E-commerce"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "ECDSA P-256 (recommended)"
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "ECDSA keys are smaller and faster; RSA works with older clients."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "ERROR: Specified PHP version is not installed."
+msgstr ""
+
+#. Hestia: "Edit DNS Domain"
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "Edit DNS domain"
+msgstr ""
+
+#. Hestia: "Edit DNS Record"
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Edit DNS record"
+msgstr ""
+
+#. Hestia: "Edit IP Address"
+#: ui/src/designs/server/IpFormPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+msgid "Edit IP address"
+msgstr ""
+
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Edit SSL settings"
+msgstr ""
+
+#: ui/src/designs/tools/EmptyPackagePage.tsx
+#: ui/src/layout/Topbar.tsx
+#: ui/src/layout/commands/accounts.ts
+msgid "Edit account"
+msgstr ""
+
+#. Hestia: "Edit Backup Exclusions"
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid "Edit backup exclusions"
+msgstr ""
+
+#: ui/src/components/table/ColumnsMenu.tsx
+msgid "Edit columns"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Edit configuration"
+msgstr ""
+
+#. Hestia: "Edit Cron Job"
+#: ui/src/designs/cron/CronFormPage.tsx
+msgid "Edit cron job"
+msgstr ""
+
+#. Hestia: "Edit Database"
+#: ui/src/designs/db/DatabaseFormPage.tsx
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Edit database"
+msgstr ""
+
+#. Hestia: "Edit Domain"
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Edit domain"
+msgstr ""
+
+#. Hestia: "Edit Firewall Rule"
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Edit firewall rule"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+msgid "Edit firewall rule #%s"
+msgstr ""
+
+#. Hestia: "Edit Mail Account"
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Edit mail account"
+msgstr ""
+
+#. Hestia: "Edit Mail Domain"
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Edit mail domain"
+msgstr ""
+
+#. Hestia: "Edit Package"
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Edit package"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Edit package %s"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Edit rule %s"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid ""
+"Edit the file directly. Invalid syntax can stop the service from starting."
+msgstr ""
+
+#: ui/src/designs/users/UserEditPage.tsx
+msgid "Edit user %s"
+msgstr ""
+
+#. Hestia: "Edit Web Domain"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Edit web domain"
+msgstr ""
+
+#. Hestia: "Email Subject"
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Email subject"
+msgstr ""
+
+#: ui/src/designs/cron/CronAside.tsx
+msgid "Email the output of every job to %s."
+msgstr ""
+
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "Enable DNSSEC on the DNS domain to generate a signing key."
+msgstr ""
+
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Enable SSL"
+msgstr ""
+
+#. Hestia: "Enable Notifications"
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Enable notifications"
+msgstr ""
+
+#. Hestia: "Enabled PHP Versions"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Enabled PHP versions"
+msgstr ""
+
+#: ui/src/designs/auth/LoginPage.tsx
+msgid "Enter the 6-digit token from your authenticator app."
+msgstr ""
+
+#: ui/src/designs/auth/ResetPasswordPage.tsx
+msgid "Enter the reset code from the email we sent you."
+msgstr ""
+
+#: ui/src/designs/auth/ResetTwofaPage.tsx
+msgid "Enter the unlock code from the email we sent you."
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+msgid ""
+"Enter your current password to confirm. Signing in will need only your "
+"password."
+msgstr ""
+
+#: ui/src/designs/auth/LoginPage.tsx
+msgid "Enter your password to continue."
+msgstr ""
+
+#: ui/src/designs/auth/ResetPasswordPage.tsx
+msgid ""
+"Enter your username and the email address on your account. We will send you "
+"a reset code."
+msgstr ""
+
+#: ui/src/designs/web/WebLogsPage.tsx
+msgid "Entries appear here as soon as the website receives requests."
+msgstr ""
+
+#: hostisan/internal/webapp/grav.go
+#: hostisan/internal/webapp/host.go
+msgid "Error creating temp file"
+msgstr ""
+
+#: hostisan/internal/webapp/host.go
+msgid "Error extracting archive: missing target folder"
+msgstr ""
+
+#. Hestia: "Error Log"
+#: ui/src/designs/web/WebLogsPage.tsx
+msgid "Error log"
+msgstr ""
+
+#: hostisan/internal/webapp/host.go
+msgid "Error writing to temp file"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "Every %s at %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "Every %s hours at minute %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "Every day at %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "Every hour at minute %s"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid ""
+"Every website, mailbox and database on this server will be unavailable until "
+"it boots again."
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "Every weekday at %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "Every weekend at %s"
+msgstr ""
+
+#: ui/src/designs/backup/BackupAside.tsx
+#: ui/src/layout/nav.ts
+msgid "Exclusions"
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "Exim usage"
+msgstr ""
+
+#. Hestia: "Expiration Date"
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "Expiration date"
+msgstr ""
+
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Expired"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Expires"
+msgstr ""
+
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Expires in %s days"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "Expiry, start of authority and default TTL."
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Expression"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Extra FTP logins limited to a folder of this domain."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "FTP #%s"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "FTP accounts"
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "FTP usage"
+msgstr ""
+
+#: hostisan/internal/webapp/registry.go
+msgid "Failed to extract \"%s\""
+msgstr ""
+
+#: hostisan/internal/webapp/registry.go
+msgid "Failed to load installed PHP versions"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Fair"
+msgstr ""
+
+#: ui/src/designs/server/PreviewPage.tsx
+msgid "Features that are still being ported and what works so far."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+#: hostisan/internal/httpapi/sys_ips.go
+#: hostisan/internal/httpapi/sys_network.go
+msgid "Field \"%s\" is invalid."
+msgstr ""
+
+#. Hestia: "File Name"
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "File name"
+msgstr ""
+
+#. Hestia: "File System Disk Quota"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "File system disk quota"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Files are served from %s"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid ""
+"Files with spaces or special characters in their names can't be restored "
+"from here."
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Filter by action"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Filter by category"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Filter by chain"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Filter by level"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Filter by location"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Filter by record type"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+#: ui/src/designs/cron/CronJobsPage.tsx
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+#: ui/src/designs/server/ServicesPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Filter by status"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Filter by type"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Filtering on incoming mail and signing on outgoing mail."
+msgstr ""
+
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "Fingerprint"
+msgstr ""
+
+#: ui/src/designs/backup/BackupAside.tsx
+msgid "Finished backups are announced by email and in your notifications."
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Firewall rules deleted"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Firewall running"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Firewall stopped"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Flags, tag and value, e.g. 0 issue \"letsencrypt.org\""
+msgstr ""
+
+#: ui/src/designs/backup/BackupAside.tsx
+msgid "Folders, databases and mailboxes left out of every backup."
+msgstr ""
+
+#: ui/src/layout/AppFooter.tsx
+msgid "Footer"
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "For %s. Copy these now; the private key is not stored."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "For example: %s"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "For example: 30s, 10m or 1d"
+msgstr ""
+
+#: ui/src/designs/auth/LoginPage.tsx
+msgid "Forgot token?"
+msgstr ""
+
+#: ui/src/designs/auth/LoginPage.tsx
+#: ui/src/designs/auth/ResetPasswordPage.tsx
+msgid "Forgot your password?"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Forum"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Forward only"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Framework"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Frameworks"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Free text. Quotes are added automatically when missing."
+msgstr ""
+
+#: ui/src/components/fields/DateRangeFilter.tsx
+msgid "From %s"
+msgstr ""
+
+#: ui/src/designs/dns/DnsAside.tsx
+msgid "From cluster"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Full account backups."
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid ""
+"Full account backups. Keeps the latest %s backups; older ones are rotated "
+"out."
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Generate a strong password"
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Generate again"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Generate password"
+msgstr ""
+
+#. Hestia: "Generate Self-Signed SSL Certificate"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Generate self-signed SSL certificate"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "Give these to the mailbox owner to set up their mail app."
+msgstr ""
+
+#. Hestia: "Global SMTP Relay"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Global SMTP relay"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Global settings for this server and every account on it."
+msgstr ""
+
+#: ui/src/layout/CommandMenu.tsx
+msgid "Go to"
+msgstr ""
+
+#. Hestia: "Go to BACKUP list"
+#: ui/src/shortcuts/ShortcutsDialog.tsx
+msgid "Go to backup list"
+msgstr ""
+
+#. Hestia: "Go to CRON list"
+#: ui/src/shortcuts/ShortcutsDialog.tsx
+msgid "Go to cron list"
+msgstr ""
+
+#. Hestia: "Go to MAIL list"
+#: ui/src/shortcuts/ShortcutsDialog.tsx
+msgid "Go to mail list"
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid "Go to the firewall"
+msgstr ""
+
+#. Hestia: "Go to WEB list"
+#: ui/src/shortcuts/ShortcutsDialog.tsx
+msgid "Go to web list"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Go up one level"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Good"
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+#: ui/src/designs/server/ServerInfoPage.tsx
+#: ui/src/designs/server/ServicesPage.tsx
+#: ui/src/layout/nav.ts
+msgid "Graphs"
+msgstr ""
+
+#: ui/src/designs/web/RequestFlow.tsx
+msgid "HTTP only"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Helpdesk"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Helps you recognise the key later."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Hidden. Secret keys are only shown once, when the key is created."
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid "Hide advanced options"
+msgstr ""
+
+#. Hestia: "Hide Certificate"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Hide certificate"
+msgstr ""
+
+#. Hestia: "Hide link to Documentation"
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Hide link to documentation"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Hide password"
+msgstr ""
+
+#: ui/src/designs/web/WebAside.tsx
+msgid "Home"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Host #%s"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Host name this address points back to"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Hosted objects"
+msgstr ""
+
+#: ui/src/layout/nav.ts
+msgid "Hosting"
+msgstr ""
+
+#: ui/src/designs/web/WebAside.tsx
+msgid "Hosting details"
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Hostnames"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "How people sign in to the panel."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "How requests are served"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "How the web server, PHP and the NGINX proxy handle this domain."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "How this user signs in to the control panel."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "How you sign in to the control panel."
+msgstr ""
+
+#. Hestia: "IMAP Settings"
+#: ui/src/designs/mail/EmailSettingsPanel.tsx
+msgid "IMAP settings"
+msgstr ""
+
+#. Hestia: "IP Address"
+#: ui/src/designs/account/LogsPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/dns/shared.tsx
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+#: ui/src/designs/server/FirewallListFormPages.tsx
+#: ui/src/designs/server/FirewallRulesPage.tsx
+#: ui/src/designs/server/IpFormPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+#: ui/src/designs/web/AddWebDomainPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "IP address"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+msgid "IP address / IP list"
+msgstr ""
+
+#. Hestia: "IP Addresses"
+#: ui/src/designs/account/StatsPage.tsx
+#: ui/src/designs/server/IpFormPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/WebAside.tsx
+#: ui/src/layout/nav.ts
+msgid "IP addresses"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "IP addresses unbanned"
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "IP list"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+msgid "IP list %s must exist, be IPv4 and not be suspended."
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid "IP list deleted"
+msgstr ""
+
+#. Hestia: "IP List Name"
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "IP list name"
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+#: ui/src/layout/nav.ts
+msgid "IP lists"
+msgstr ""
+
+#. Hestia: "IP or Value"
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid "IP or value"
+msgstr ""
+
+#. Hestia: "IP Version"
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+#: ui/src/designs/server/FirewallListFormPages.tsx
+msgid "IP version"
+msgstr ""
+
+#. Hestia: "IPset IP Lists"
+#: ui/src/designs/server/FirewallListFormPages.tsx
+#: ui/src/designs/server/FirewallNav.tsx
+msgid "IPset IP lists"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "IPv4 address, e.g. 203.0.113.24"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "IPv6 address, e.g. 2001:db8::25"
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Identifies who the certificate was issued to."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "If the aliases change, Let's Encrypt will obtain a new SSL certificate."
+msgstr ""
+
+#: ui/src/designs/auth/ResetTwofaPage.tsx
+msgid ""
+"If the details are correct, an unlock code has been sent to the email "
+"address on your account."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid ""
+"Incoming mail for this account is accepted and deleted without being stored."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid ""
+"Incoming mail is rejected and accounts can't sign in until it is unsuspended."
+msgstr ""
+
+#: ui/src/layout/nav.ts
+msgid "Incremental"
+msgstr ""
+
+#. Hestia: "Incremental Backups"
+#: ui/src/designs/backup/BackupTabs.tsx
+#: ui/src/designs/backup/IncrementalPages.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Incremental backups"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Incremental backups are turned off."
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Install"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Install File Manager"
+msgstr ""
+
+#: hostisan/internal/httpapi/steps.go
+msgid "Install PHP %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Install Web Terminal"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Install a firewall extension such as fail2ban to ban addresses."
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid ""
+"Install an application into %s. The installer creates the database and sets "
+"the right web template."
+msgstr ""
+
+#: ui/src/designs/server/UpdatesPage.tsx
+msgid "Install it with apt, or turn on automatic updates."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid ""
+"Install or remove PHP-FPM versions. Versions in use by a web domain can't be "
+"removed."
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Installation progress"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Installation status is unknown"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Integrations using it stop working immediately."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+#: hostisan/internal/httpapi/sys_ips.go
+#: hostisan/internal/httpapi/sys_network.go
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Invalid IP address: %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/mail_domains.go
+msgid "Invalid Password contains quotes (\" or ' or | )"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+msgid "Invalid comment: %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/cron.go
+msgid "Invalid cron command format"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+msgid "Invalid data source: %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/web_ssl.go
+msgid "Invalid key algorithm selected."
+msgstr ""
+
+#: hostisan/internal/webapp/install.go
+msgid "Invalid path \"%s\""
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+msgid "Invalid port: %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/search.go
+msgid "Invalid search query"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+#: hostisan/internal/httpapi/sys_updates.go
+#: hostisan/internal/httpapi/web_apps.go
+msgid "Invalid value contains forbidden characters"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_editors.go
+msgid "Invalid value for %s"
+msgstr ""
+
+#. Hestia: "Issued By"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Issued by"
+msgstr ""
+
+#. Hestia: "Issued To"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Issued to"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+msgid ""
+"It can't be changed, suspended, moved or deleted from here. Use SSH if you "
+"really need to."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid ""
+"It can't receive mail or sign in. Unsuspend it from the accounts list before "
+"editing."
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "It may have been deleted or renamed."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "It may have been deleted."
+msgstr ""
+
+#: ui/src/designs/users/UserEditPage.tsx
+msgid ""
+"It may have been deleted. Go back to the user list to pick another account."
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "It may have been removed or renamed. Pick a service from the list."
+msgstr ""
+
+#: ui/src/designs/server/UpdatesPage.tsx
+msgid "It will be installed during the next automatic update run."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid ""
+"Its accounts can't receive mail or sign in until the domain is unsuspended."
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Its records are kept but not served. Unsuspend the domain to edit them."
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Key"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Key ID"
+msgstr ""
+
+#. Hestia: "Key Size"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Key size"
+msgstr ""
+
+#. Hestia: "Key Tag"
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "Key tag"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Key type"
+msgstr ""
+
+#. Hestia: "Key Type / Flag"
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "Key type / flag"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid ""
+"Keys that let scripts and integrations call the Hostisan API on your behalf."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Language and how lists are shown in the panel."
+msgstr ""
+
+#: ui/src/designs/backup/BackupAside.tsx
+msgid "Last backup"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Latest"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Learn more"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Leave blank to keep the current password."
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Leave empty to generate one automatically."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Leave empty to keep the current key"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Leave empty to keep the current password."
+msgstr ""
+
+#: ui/src/shortcuts/ShortcutsDialog.tsx
+msgid "Leave form without saving"
+msgstr ""
+
+#: ui/src/unsaved/UnsavedChangesDialog.tsx
+msgid "Leave page"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid ""
+"Let's Encrypt has failed %s times for this domain. Check that every alias "
+"points to %s."
+msgstr ""
+
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid ""
+"Let's Encrypt renews this certificate automatically 30 days before it "
+"expires."
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Level"
+msgstr ""
+
+#: ui/src/layout/Topbar.tsx
+msgid "Light"
+msgstr ""
+
+#. Hestia: "Limit System Resources"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Limit system resources"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Limits and the templates new web domains start with."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid ""
+"Limits on what other administrators can see and change. Only the system "
+"administrator sees these."
+msgstr ""
+
+#: ui/src/designs/server/IpsetCountryMap.tsx
+msgid "Listed only: %s"
+msgstr ""
+
+#: ui/src/designs/server/IpsetCountryMap.tsx
+msgid "Listed, not used in a rule"
+msgstr ""
+
+#: ui/src/designs/server/ServerInfoPage.tsx
+msgid "Live status output from this server."
+msgstr ""
+
+#. Hestia: "Load Average"
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "Load average"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Load average (1m / 5m / 15m)"
+msgstr ""
+
+#: ui/src/components/RequestState.tsx
+msgid "Loading"
+msgstr ""
+
+#. Hestia: "Local Backup"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Local backup"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Log in as %s"
+msgstr ""
+
+#: ui/src/designs/auth/LoginPage.tsx
+msgid "Log in to manage your websites, mail and databases."
+msgstr ""
+
+#. Hestia: "Login History"
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Login history"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Login history deleted"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Logins to the control panel will appear here."
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Logs deleted"
+msgstr ""
+
+#: ui/src/designs/auth/ResetTwofaPage.tsx
+msgid ""
+"Lost your authenticator? Enter your username and password and we will email "
+"you an unlock code."
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Lower values are tried first."
+msgstr ""
+
+#. Hestia: "Mail Accounts"
+#: ui/src/designs/account/StatsPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailAside.tsx
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Mail accounts"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Mail accounts per domain"
+msgstr ""
+
+#: ui/src/designs/mail/MailAside.tsx
+msgid "Mail client settings"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Mail clients connect to this domain without a dedicated certificate."
+msgstr ""
+
+#. Hestia: "Mail Domain"
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Mail domain"
+msgstr ""
+
+#. Hestia: "Mail Domains"
+#: ui/src/designs/account/StatsPage.tsx
+#: ui/src/designs/backup/ExclusionsPages.tsx
+#: ui/src/designs/backup/RestoreTable.tsx
+#: ui/src/designs/mail/MailAside.tsx
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+#: ui/src/designs/users/UserForm.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/layout/CommandMenu.tsx
+msgid "Mail domains"
+msgstr ""
+
+#: ui/src/designs/mail/MailAside.tsx
+msgid "Mail domains (%s suspended)"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid ""
+"Mail domains on this server, with their spam, virus and DKIM protection."
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Mail domains, mailboxes and outgoing rate limits."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Mail is delivered directly from this server."
+msgstr ""
+
+#. Hestia: "Mail Server"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Mail server"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Mail server host name ending with a dot, e.g. mail.acme-bakery.com."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Mail software, webmail address and outbound relay."
+msgstr ""
+
+#. Hestia: "Mail Support"
+#: ui/src/designs/web/AddWebDomainPage.tsx
+msgid "Mail support"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "Mailbox"
+msgstr ""
+
+#. Hestia: "Manage SSH Keys"
+#: ui/src/designs/users/UserEditPage.tsx
+msgid "Manage SSH keys"
+msgstr ""
+
+#: ui/src/designs/backup/BackupAside.tsx
+msgid "Manage exclusions"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Mark all as read"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Mark as read"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Marked as read"
+msgstr ""
+
+#. Hestia: "Maximum Number of Databases"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Maximum number of databases"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Maximum number of emails each account can send per hour."
+msgstr ""
+
+#. Hestia: "Memory Limit"
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Memory limit"
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "Memory usage"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Minute, hour, day, month, day of week"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Monthly bandwidth"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Monthly breakdown"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Monthly counts of web domains, DNS zones, mail domains and databases"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Monthly disk usage by type"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "Monthly on the %s at %s"
+msgstr ""
+
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "Most registrars ask for the DS record"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Move down"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Move rule down?"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Move rule up?"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Move up"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+#: ui/src/designs/account/AccountPage.tsx
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "My account"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid ""
+"MySQL and PostgreSQL databases, their users and the servers they live on."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "MySQL root password"
+msgstr ""
+
+#. Hestia: "MySQL Support"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "MySQL support"
+msgstr ""
+
+#. Hestia: "NAT IP Association"
+#: ui/src/designs/server/IpFormPage.tsx
+msgid "NAT IP association"
+msgstr ""
+
+#: ui/src/designs/server/IpListPage.tsx
+msgid "NAT to"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Name server host name ending with a dot"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Name server software and cluster replication."
+msgstr ""
+
+#. Hestia: "Name Servers"
+#: ui/src/components/fields/NameServersField.tsx
+#: ui/src/designs/dns/DnsAside.tsx
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "Name servers"
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid ""
+"Named lists of addresses that firewall rules can match with ipset:<name>."
+msgstr ""
+
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Names shown in the browser, on the login screen and in emails."
+msgstr ""
+
+#: ui/src/layout/CommandMenu.tsx
+msgid "Navigate"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Needed to confirm that it's you changing the password."
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+#: ui/src/layout/NotificationsTray.tsx
+#: ui/src/layout/nav.ts
+msgid "New"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "New mailbox on %s."
+msgstr ""
+
+#. Hestia: "New Password"
+#: ui/src/designs/auth/ResetPasswordPage.tsx
+#: ui/src/designs/users/UserForm.tsx
+msgid "New password"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid ""
+"New password generated. Copy it now; it won’t be shown again after saving."
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "New record in the %s zone."
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+msgid "New rules are added to the end of the list."
+msgstr ""
+
+#: ui/src/components/table/TableCard.tsx
+msgid "No %s match your search"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "No APIs available"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "No DNS zones yet"
+msgstr ""
+
+#: ui/src/designs/web/AddWebDomainPage.tsx
+msgid "No IP address available"
+msgstr ""
+
+#: ui/src/designs/server/IpListPage.tsx
+msgid "No IP addresses yet"
+msgstr ""
+
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "No SSH keys yet"
+msgstr ""
+
+#: ui/src/designs/web/shared.tsx
+msgid "No SSL"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "No access keys yet"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "No apps match your search"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "No backups yet"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "No comment"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "No cron jobs yet"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "No databases yet"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "No firewall rules"
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "No graphs yet"
+msgstr ""
+
+#: hostisan/internal/httpapi/backup.go
+msgid "No items were selected to restore."
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "No log entries"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "No mail accounts yet"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "No mail domains yet"
+msgstr ""
+
+#: ui/src/components/fields/ComboboxField.tsx
+msgid "No matches"
+msgstr ""
+
+#: ui/src/designs/tools/SearchPage.tsx
+msgid "No objects found"
+msgstr ""
+
+#: ui/src/designs/server/UpdatesPage.tsx
+msgid "No packages found"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "No packages yet"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "No permissions"
+msgstr ""
+
+#: ui/src/designs/server/PreviewPage.tsx
+msgid "No preview features"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "No services found"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "No sign-in attempts recorded"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "No snapshots yet"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "No statistics in this range"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "No statistics yet"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "No supported PHP version is installed"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "No unread notifications"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "No users yet"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "No web domains yet"
+msgstr ""
+
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "No web domains, mail, databases or cron jobs were included."
+msgstr ""
+
+#: ui/src/designs/server/IpsetCountryMap.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "None"
+msgstr ""
+
+#. Hestia: "Not After"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Not after"
+msgstr ""
+
+#. Hestia: "Not Before"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Not before"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Nothing changed: the files are already as typed."
+msgstr ""
+
+#: ui/src/layout/CommandMenu.tsx
+msgid "Nothing found"
+msgstr ""
+
+#: ui/src/designs/tools/SearchPage.tsx
+msgid "Nothing is named like that. Check the spelling or try a shorter search."
+msgstr ""
+
+#: ui/src/designs/tools/EmptyPackagePage.tsx
+#: ui/src/layout/nav.ts
+msgid "Nothing to manage yet"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Nothing was stored under %s in this snapshot."
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid ""
+"Nothing will test the new configuration if the service is not restarted. A "
+"mistake can stop it from starting the next time it restarts."
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Notification"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Notification deleted"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Notifications deleted"
+msgstr ""
+
+#: ui/src/layout/NotificationsTray.tsx
+msgid "Notifications, unread"
+msgstr ""
+
+#: ui/src/designs/cron/CronAside.tsx
+msgid "Now"
+msgstr ""
+
+#. Hestia: "Old Style"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Old style"
+msgstr ""
+
+#: ui/src/components/FormWithToc.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "On this page"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "One IP address per line."
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "One domain per line."
+msgstr ""
+
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid ""
+"One entry per line. Excluded items are skipped by every scheduled and manual "
+"backup."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "One or more email addresses. Press Enter or comma after each one."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Only the owner of a domain can add its subdomains."
+msgstr ""
+
+#: ui/src/layout/CommandMenu.tsx
+msgid "Open"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Open %s in %s"
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Open in %s"
+msgstr ""
+
+#. Hestia: "Open Webmail"
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Open webmail"
+msgstr ""
+
+#. Hestia: "Operating System"
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Operating system"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Optional panel features and system-wide limits."
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+msgid "Or enter this secret key by hand"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Order"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Outgoing mail is delivered directly from this server."
+msgstr ""
+
+#: ui/src/designs/mail/MailAside.tsx
+msgid "Outgoing mail is signed, which helps it reach the inbox."
+msgstr ""
+
+#: ui/src/designs/server/ServerInfoPage.tsx
+msgid "Output of %s"
+msgstr ""
+
+#: ui/src/designs/users/UsersAside.tsx
+msgid "Overview"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "PHP %s is in use and can't be removed."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings.go
+msgid "PHP %s was not installed."
+msgstr ""
+
+#. Hestia: "PHP CLI Version"
+#: ui/src/designs/users/UserForm.tsx
+msgid "PHP CLI version"
+msgstr ""
+
+#: ui/src/designs/web/RequestFlow.tsx
+msgid "PHP disabled"
+msgstr ""
+
+#. Hestia: "PHP Interpreter"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "PHP interpreter"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "PHP version"
+msgstr ""
+
+#. Hestia: "POP3 Settings"
+#: ui/src/designs/mail/EmailSettingsPanel.tsx
+msgid "POP3 settings"
+msgstr ""
+
+#: hostisan/internal/httpapi/users.go
+msgid "Package %s can't be deleted while package %s has users."
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Package %s created"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Package %s deleted"
+msgstr ""
+
+#: hostisan/internal/httpapi/users.go
+msgid "Package %s is built in and can't be deleted."
+msgstr ""
+
+#. Hestia: "Package Name"
+#: ui/src/designs/server/UpdatesPage.tsx
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Package name"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Package not found"
+msgstr ""
+
+#: ui/src/designs/server/UpdatesPage.tsx
+msgid ""
+"Packages installed on this server and whether a newer version is available."
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Packages set the limits and templates for the users assigned to them."
+msgstr ""
+
+#: ui/src/designs/DesignPending.tsx
+msgid "Page not found"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Panel cron jobs"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Password and login"
+msgstr ""
+
+#: ui/src/designs/auth/ResetPasswordPage.tsx
+msgid "Password changed"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Password requirements"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Password strength:"
+msgstr ""
+
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "Paste a public key. Never paste your private key."
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid ""
+"Paste the certificate and private key into the SSL section of the domain to "
+"use the self-signed certificate, or send the CSR to a certificate authority."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Paths"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Permissions in the panel and the resource limits that apply."
+msgstr ""
+
+#: ui/src/components/fields/DateField.tsx
+msgid "Pick a date"
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid "Pick a different database server or character set."
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Pick a wider date range to see more months."
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Podcasting"
+msgstr ""
+
+#: ui/src/designs/dns/DnsAside.tsx
+msgid "Point your domains at these name servers at your registrar."
+msgstr ""
+
+#. Hestia: "PostgreSQL Support"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "PostgreSQL support"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Preferences"
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid ""
+"Prefix %s is added automatically. Leave the password empty to keep the "
+"current one."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid ""
+"Press Enter or comma after each address. Logins from any other address are "
+"rejected."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Press Enter or comma after each domain. Paste a list to add several."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Preview feature."
+msgstr ""
+
+#. Hestia: "Preview Features"
+#: ui/src/designs/server/PreviewPage.tsx
+#: ui/src/layout/nav.ts
+msgid "Preview features"
+msgstr ""
+
+#: ui/src/layout/AppFooter.tsx
+msgid "Privacy policy"
+msgstr ""
+
+#. Hestia: "Production Release"
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Production release"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Programmatic access to the panel."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Protection"
+msgstr ""
+
+#. Hestia: "Proxy Extensions"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Proxy extensions"
+msgstr ""
+
+#. Hestia: "Proxy Server"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Proxy server"
+msgstr ""
+
+#. Hestia: "Proxy Support"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Proxy support"
+msgstr ""
+
+#. Hestia: "Proxy Template"
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Proxy template"
+msgstr ""
+
+#. Hestia: "Public Key"
+#: ui/src/designs/account/SshKeysPage.tsx
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "Public key"
+msgstr ""
+
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "Public keys allowed to sign in over SSH and SFTP as this user."
+msgstr ""
+
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "Publish these values at your registrar so resolvers can validate %s."
+msgstr ""
+
+#. Hestia: "Purge NGINX Cache"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Purge NGINX cache"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Purge cache"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Purge the NGINX cache for %s?"
+msgstr ""
+
+#: ui/src/layout/nav.ts
+msgid "Quick install"
+msgstr ""
+
+#. Hestia: "Quick Install App"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/SetupWebAppPage.tsx
+#: ui/src/designs/web/WebAppsPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Quick install app"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Quick install is turned off"
+msgstr ""
+
+#. Hestia: "Rate Limit"
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Rate limit"
+msgstr ""
+
+#: ui/src/designs/tools/FilesPage.tsx
+msgid "Read-only sessions can't use the file manager."
+msgstr ""
+
+#: ui/src/designs/tools/TerminalPage.tsx
+msgid "Read-only sessions can't use the web terminal."
+msgstr ""
+
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Rebrand the panel and the emails it sends."
+msgstr ""
+
+#. Hestia: "Rebuild DNS Zones"
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Rebuild DNS zones"
+msgstr ""
+
+#. Hestia: "Rebuild All"
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Rebuild all"
+msgstr ""
+
+#. Hestia: "Rebuild Cron Jobs"
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Rebuild cron jobs"
+msgstr ""
+
+#. Hestia: "Rebuild Databases"
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Rebuild databases"
+msgstr ""
+
+#. Hestia: "Rebuild Mail Domains"
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Rebuild mail domains"
+msgstr ""
+
+#. Hestia: "Rebuild User Profile"
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Rebuild user profile"
+msgstr ""
+
+#. Hestia: "Rebuild Web Domains"
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Rebuild web domains"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Receive and send email for a domain hosted on this server."
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Received"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Receives mail sent to addresses that don't exist on this domain."
+msgstr ""
+
+#: ui/src/designs/tools/TerminalPage.tsx
+msgid "Reconnect"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Record %s deleted"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Record %s suspended"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Record %s unsuspended"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Redirect visitors to"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Redirection"
+msgstr ""
+
+#. Hestia: "Refresh IP Addresses"
+#: hostisan/internal/httpapi/sys_ips.go
+#: ui/src/designs/server/IpListPage.tsx
+msgid "Refresh IP addresses"
+msgstr ""
+
+#: ui/src/designs/server/UpdatesPage.tsx
+msgid "Refresh package list"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Refuse spam at SMTP time instead of delivering it to the spam folder."
+msgstr ""
+
+#. Hestia: "Reject Spam"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Reject spam"
+msgstr ""
+
+#: ui/src/designs/web/AddWebDomainPage.tsx
+msgid "Related services"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Release channel and how you hear about installed updates."
+msgstr ""
+
+#: ui/src/layout/RootError.tsx
+msgid "Reload"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Reload file"
+msgstr ""
+
+#: ui/src/layout/RootError.tsx
+msgid "Reload the page to try again."
+msgstr ""
+
+#. Hestia: "Remote Backup"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Remote backup"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Remote backup password"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Remove File Manager"
+msgstr ""
+
+#: hostisan/internal/httpapi/steps.go
+msgid "Remove PHP %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Remove Web Terminal"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid ""
+"Remove every cached page for %s? Visitors get fresh content from PHP on "
+"their next request."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Remove remote backup host"
+msgstr ""
+
+#: ui/src/layout/AppFooter.tsx
+msgid "Report a security issue"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Request flow"
+msgstr ""
+
+#: hostisan/internal/httpapi/web_apps.go
+#: hostisan/internal/webapp/install.go
+msgid "Required PHP version is not supported"
+msgstr ""
+
+#. Hestia: "Reset Code"
+#: ui/src/designs/auth/ResetPasswordPage.tsx
+msgid "Reset code"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Resolves as %s"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid ""
+"Resource limits and templates applied to the users assigned to each package."
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "Resource usage collected by rrdtool every five minutes."
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "Resource usage is collected every five minutes. Check back shortly."
+msgstr ""
+
+#: hostisan/internal/httpapi/steps.go
+msgid "Restart %s"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Restart %s?"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_services.go
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Restart server"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Restart server?"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_services.go
+msgid "Restart services"
+msgstr ""
+
+#: ui/src/designs/server/parts.tsx
+msgid "Restart the service after saving"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid ""
+"Restic snapshots of your home directory. Each snapshot only stores what "
+"changed since the last one."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Restore %s"
+msgstr ""
+
+#. Hestia: "Restore All"
+#: ui/src/designs/backup/BackupDetailPage.tsx
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Restore all"
+msgstr ""
+
+#: ui/src/designs/backup/BackupDetailPage.tsx
+#: ui/src/designs/backup/IncrementalPages.tsx
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "Restore failed"
+msgstr ""
+
+#. Hestia: "Restore Files"
+#: hostisan/internal/httpapi/restore_files.go
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Restore files"
+msgstr ""
+
+#: ui/src/designs/backup/BackupDetailPage.tsx
+msgid "Restore from backup"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Restore from snapshot"
+msgstr ""
+
+#: ui/src/designs/backup/BackupDetailPage.tsx
+#: ui/src/designs/backup/IncrementalPages.tsx
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "Restore scheduled"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Restore selected"
+msgstr ""
+
+#. Hestia: "Restore Snapshot"
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Restore snapshot"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid ""
+"Restore whole web domains, mail domains, DNS zones, databases or cron jobs. "
+"Individual files can be browsed but not restored."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Restored %s files"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Restored 1 file"
+msgstr ""
+
+#: ui/src/designs/backup/BackupDetailPage.tsx
+msgid ""
+"Restoring an item overwrites its current files, records or data with the "
+"copy from this backup."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Restoring files"
+msgstr ""
+
+#: hostisan/internal/httpapi/restore_files.go
+msgid "Restoring single files is turned off on this server."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Restrict phpMyAdmin"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Restrict phpMyAdmin to panel login"
+msgstr ""
+
+#: ui/src/designs/tools/FilesPage.tsx
+msgid "Retry"
+msgstr ""
+
+#: ui/src/layout/AppLayout.tsx
+msgid "Return to %s"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Role and package"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+msgid "Rule"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Rule #%s deleted"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Rule #%s moved down"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Rule #%s moved up"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Rule #%s suspended"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Rule #%s unsuspended"
+msgstr ""
+
+#: ui/src/designs/server/FirewallNav.tsx
+msgid "Rules"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Rules are applied in this order"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Rules for adding domains across accounts."
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid "Rules that use it stop matching."
+msgstr ""
+
+#. Hestia: "Run Command"
+#: ui/src/designs/cron/CronFormPage.tsx
+msgid "Run command"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Running"
+msgstr ""
+
+#: ui/src/designs/cron/CronFormPage.tsx
+msgid "Runs as this account's system user, from its home directory."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid ""
+"SFTP keys can't be pasted here. Copy the key file to the server over SSH and "
+"add the backup host with v-add-backup-host."
+msgstr ""
+
+#. Hestia: "SMTP Relay"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "SMTP relay"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "SMTP relay password"
+msgstr ""
+
+#. Hestia: "SMTP Settings"
+#: ui/src/designs/mail/EmailSettingsPanel.tsx
+msgid "SMTP settings"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "SPF policy, e.g. v=spf1 a mx -all"
+msgstr ""
+
+#. Hestia: "SSH Access"
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+#: ui/src/designs/users/UserForm.tsx
+msgid "SSH access"
+msgstr ""
+
+#. Hestia: "SSH Key"
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "SSH key"
+msgstr ""
+
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "SSH key %s deleted"
+msgstr ""
+
+#: hostisan/internal/httpapi/keys.go
+msgid ""
+"SSH key options are not supported. Paste only the key, starting with its "
+"type."
+msgstr ""
+
+#. Hestia: "SSH Keys"
+#: ui/src/designs/account/SshKeysPage.tsx
+#: ui/src/designs/tools/EmptyPackagePage.tsx
+#: ui/src/layout/Topbar.tsx
+#: ui/src/layout/commands/accounts.ts
+#: ui/src/layout/nav.ts
+msgid "SSH keys"
+msgstr ""
+
+#: ui/src/designs/server/GraphsPage.tsx
+msgid "SSH usage"
+msgstr ""
+
+#. Hestia: "SSL Certificate"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/GenerateSslPage.tsx
+#: ui/src/designs/web/SslCertificatePage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+#: ui/src/layout/nav.ts
+msgid "SSL certificate"
+msgstr ""
+
+#. Hestia: "SSL Certificate Authority / Intermediate"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "SSL certificate authority / intermediate"
+msgstr ""
+
+#. Hestia: "SSL Domains"
+#: ui/src/designs/account/StatsPage.tsx
+msgid "SSL domains"
+msgstr ""
+
+#: ui/src/designs/web/WebAside.tsx
+msgid "SSL enabled"
+msgstr ""
+
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "SSL is not enabled for this domain"
+msgstr ""
+
+#. Hestia: "SSL Private Key"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/GenerateSslPage.tsx
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "SSL private key"
+msgstr ""
+
+#: ui/src/designs/web/RequestFlow.tsx
+msgid "SSL · custom certificate"
+msgstr ""
+
+#: hostisan/internal/httpapi/steps.go
+msgid "Save %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/steps.go
+msgid "Save %s configuration"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Save your changes before switching between basic and advanced options."
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid "Saved as %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_editors.go
+msgid ""
+"Saving would overwrite every php.ini on this server. Edit this file over SSH."
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+msgid ""
+"Scan the code with your authenticator app, then enter the 6-digit code it "
+"shows. Two-factor authentication is only turned on once the code is "
+"confirmed."
+msgstr ""
+
+#: ui/src/designs/cron/CronFormPage.tsx
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Schedule"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Schedule a command to run every few minutes, daily, weekly or monthly."
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Scheduled tasks and shell access."
+msgstr ""
+
+#: ui/src/designs/cron/CronAside.tsx
+msgid "Schedules run in the server's time zone."
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Search DNS zones"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+msgid "Search IP addresses"
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid "Search IP lists"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Search IPs or browsers"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Search access keys"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Search accounts, aliases or forwards"
+msgstr ""
+
+#: ui/src/designs/server/IpListPage.tsx
+msgid "Search addresses, interfaces or owners"
+msgstr ""
+
+#: ui/src/layout/Topbar.tsx
+msgid "Search all objects"
+msgstr ""
+
+#: ui/src/layout/CommandMenu.tsx
+msgid "Search all objects for {%s}"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Search apps"
+msgstr ""
+
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "Search backup contents"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Search backups"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Search banned IP addresses"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Search by file name or date"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Search by snapshot ID or date"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Search commands"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Search cron jobs"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Search databases"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Search databases, users or hosts"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Search domains or catch-all addresses"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Search domains, aliases or IPs"
+msgstr ""
+
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "Search domains, databases or directories"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Search firewall rules"
+msgstr ""
+
+#: ui/src/designs/tools/SearchPage.tsx
+msgid ""
+"Search for a domain, a database, a mail account, a DNS record or a cron job "
+"by name."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Search keys or comments"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Search languages"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Search mail accounts"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Search mail domains"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Search messages"
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid "Search names or sources"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Search names or values"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Search notifications"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Search packages"
+msgstr ""
+
+#: ui/src/layout/CommandMenu.tsx
+msgid "Search pages, domains, users or actions…"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Search ports, IPs or comments"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Search records"
+msgstr ""
+
+#. Hestia: "Search Results"
+#: ui/src/designs/tools/SearchPage.tsx
+msgid "Search results"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Search services"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Search services or roles"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Search snapshots"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Search this folder"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Search time zones"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Search usernames, contact names or emails"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Search users"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Search web domains"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Search zones, IPs or templates"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Seconds. Leave empty to use the zone default (%s)."
+msgstr ""
+
+#. Hestia: "Secret Key"
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Secret key"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+#: ui/src/designs/backup/BackupsPage.tsx
+#: ui/src/designs/backup/IncrementalPages.tsx
+#: ui/src/designs/backup/RestoreTable.tsx
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+#: ui/src/designs/server/ServicesPage.tsx
+#: ui/src/designs/tools/NotificationsPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Select %s"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Select %s in %s"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Select all DNS zones"
+msgstr ""
+
+#: ui/src/designs/server/IpListPage.tsx
+msgid "Select all IP addresses"
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid "Select all IP lists"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Select all access keys"
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "Select all backups"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Select all banned IP addresses"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Select all cron jobs"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Select all databases"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "Select all items"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Select all mail accounts"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Select all mail domains"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Select all notifications"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Select all packages"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Select all records"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Select all rules"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Select all services"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Select all snapshots"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Select all users"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Select all web domains"
+msgstr ""
+
+#: hostisan/internal/httpapi/errors.go
+msgid "Select between 1 and %s items."
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "Select job %s"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Select record %s"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Select rule %s"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Select snapshot %s"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Selects the PHP version for this domain."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "Send a copy of incoming mail to other addresses."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Send all outgoing mail from this server through another SMTP server."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "Send both values with every API request."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Send every visitor to one canonical address."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Send outgoing mail for this domain through an external SMTP server."
+msgstr ""
+
+#. Hestia: "Sender Email Address"
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Sender email address"
+msgstr ""
+
+#. Hestia: "Sender Name"
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Sender name"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "Sends the address, password and client settings to this email."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Serve the site over HTTPS with a Let's Encrypt or your own certificate."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid ""
+"Serve this domain from another domain's folder, or a sub-folder of its own."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Served at %s"
+msgstr ""
+
+#: ui/src/designs/mail/MailAside.tsx
+#: ui/src/layout/nav.ts
+msgid "Server"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Server configuration"
+msgstr ""
+
+#: ui/src/designs/web/RequestFlow.tsx
+msgid "Server default PHP"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Server events and alerts will show up here."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Server identity and the defaults new users start with."
+msgstr ""
+
+#: ui/src/designs/server/ServerInfoPage.tsx
+msgid "Server information"
+msgstr ""
+
+#: ui/src/layout/AppFooter.tsx
+msgid "Server status"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Server summary"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Server templates"
+msgstr ""
+
+#: ui/src/designs/cron/CronAside.tsx
+msgid "Server time"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Server-wide usage, recorded on the first day of each month."
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Service not found"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "Service state: %s"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Set by your administrator."
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+#: ui/src/designs/users/UserForm.tsx
+msgid "Set up two-factor authentication"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Settings passed to the %s installer."
+msgstr ""
+
+#: ui/src/designs/server/IpFormPage.tsx
+msgid ""
+"Shared addresses can be used by every user. A dedicated address belongs to "
+"one user."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid ""
+"Shell access, the PHP version used on the command line, and default name "
+"servers for new DNS zones."
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid "Show advanced options"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+#: ui/src/designs/db/DatabasesPage.tsx
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/server/FirewallRulesPage.tsx
+#: ui/src/designs/server/IpListPage.tsx
+#: ui/src/designs/server/ServicesPage.tsx
+#: ui/src/designs/tools/NotificationsPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Show all"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Show all apps"
+msgstr ""
+
+#: ui/src/designs/tools/SearchPage.tsx
+msgid "Show all owners"
+msgstr ""
+
+#. Hestia: "Show Certificate"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Show certificate"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Show logs for user"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Show password"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Sign-in attempts to the control panel, newest first."
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Sign-in attempts to the control panel, newest first. %s failed."
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+msgid "Signing in as %s will need only a password."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Signing in needs a code from your app."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Signing in needs only the password."
+msgstr ""
+
+#: hostisan/internal/httpapi/backup.go
+msgid "Single directories can't be restored from this backup."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Snapshot %s"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Snapshot contents"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Snapshot deleted"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Snapshot not found"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Snapshot not scheduled"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Snapshot scheduled"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid ""
+"Snapshot-based backups with restic, in addition to the full backups above."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Snapshots deleted"
+msgstr ""
+
+#: ui/src/components/useListConfirm.tsx
+msgid "Some items failed"
+msgstr ""
+
+#: ui/src/designs/server/ServerInfoPage.tsx
+msgid "Some tabs may be missing: the installed systems could not be read."
+msgstr ""
+
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid ""
+"Some, mostly for ccTLDs, ask for the DNSKEY record or the public key with "
+"its flag and algorithm instead."
+msgstr ""
+
+#: ui/src/api/errors.ts
+#: ui/src/designs/auth/LoginPage.tsx
+msgid "Something went wrong. Try again."
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Sort by: %s"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Space used by web files, mail, databases and the home directory."
+msgstr ""
+
+#. Hestia: "Spam Filter"
+#: ui/src/designs/mail/MailAside.tsx
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/mail/MailDomainsPage.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Spam filter"
+msgstr ""
+
+#: hostisan/internal/httpapi/steps.go
+msgid "Start %s"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Start %s?"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_services.go
+msgid "Start services"
+msgstr ""
+
+#: hostisan/internal/httpapi/profile.go
+msgid "Start setting up two-factor authentication again."
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Starting the installer"
+msgstr ""
+
+#. Hestia: "State / Province"
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "State / province"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Static files with these extensions are served by NGINX directly."
+msgstr ""
+
+#. Hestia: "Statistics Authorization"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Statistics authorization"
+msgstr ""
+
+#: ui/src/unsaved/UnsavedChangesDialog.tsx
+msgid "Stay on page"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_services.go
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Stop \"%s\" from its own row."
+msgstr ""
+
+#: hostisan/internal/httpapi/steps.go
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Stop %s"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Stop %s?"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Stop firewall"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_services.go
+msgid "Stop services"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Stop the firewall?"
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Stopped"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid ""
+"Stopping this service can lock you out of the server or leave it unprotected."
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Storage and backups"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "Storage limit and other addresses that deliver to this mailbox."
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Strength"
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Strong"
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Subject"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "Successful"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid ""
+"Suffix with K, M, G or T for kilobytes, megabytes, gigabytes or terabytes "
+"(base 1024)."
+msgstr ""
+
+#: ui/src/layout/AppLayout.tsx
+msgid "Summary"
+msgstr ""
+
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "Supported types: %s."
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Suspend DNS domain"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Suspend DNS record"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Suspend DNS records"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Suspend DNS zones"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Suspend database"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Suspend databases"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Suspend mail account"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Suspend mail accounts"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Suspend mail domain"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Suspend mail domains"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Suspend rule?"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Suspend user"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Suspend users"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Suspend web domain"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Suspend web domains"
+msgstr ""
+
+#. Hestia: "Swap Limit"
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Swap limit"
+msgstr ""
+
+#. Hestia: "Sync Error document templates on user rebuild"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Sync error document templates on user rebuild"
+msgstr ""
+
+#. Hestia: "Sync Skeleton templates"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Sync skeleton templates"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Synced from %s"
+msgstr ""
+
+#. Hestia: "System PHP Version"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "System PHP version"
+msgstr ""
+
+#. Hestia: "System Administrator account"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "System administrator account"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+#: ui/src/designs/users/UserForm.tsx
+msgid "System default"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "System default version"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "System log"
+msgstr ""
+
+#. Hestia: "System Protection"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "System protection"
+msgstr ""
+
+#. Hestia: "System Resources"
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "System resources"
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "System services running on this server, with their resource use."
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Target host name ending with a dot, e.g. acme-bakery.com."
+msgstr ""
+
+#: ui/src/layout/AppFooter.tsx
+msgid "Terms of use"
+msgstr ""
+
+#: hostisan/internal/httpapi/backup.go
+msgid "The %s exclusion list is not valid."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "The APIs this key may call. Each API allows a fixed set of commands."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+msgid ""
+"The IP address was not banned: it is a server address, excluded, or already "
+"banned."
+msgstr ""
+
+#: hostisan/internal/httpapi/keys.go
+msgid "The SSH key contains characters that are not allowed."
+msgstr ""
+
+#: hostisan/internal/httpapi/keys.go
+msgid "The SSH key must be on one line. Paste the key as a single line."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid ""
+"The SSH port can't be determined, so this change can't be checked against it."
+msgstr ""
+
+#: ui/src/designs/web/WebLogsPage.tsx
+msgid "The access log is empty"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid ""
+"The account owner can always reach these files with their main FTP and SFTP "
+"login."
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid "The account your application uses to connect."
+msgstr ""
+
+#: ui/src/designs/server/IpFormPage.tsx
+msgid ""
+"The address and interface can't be changed. Delete and re-add it instead."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "The address and the password used to sign in."
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid ""
+"The administrator has disabled the application installer on this server."
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "The certificate covers the domain and every alias."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "The certificate used by the control panel, mail and FTP services."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid ""
+"The chain a request takes on this server. It follows your SSL and template "
+"choices before you save."
+msgstr ""
+
+#: hostisan/internal/httpapi/profile.go
+msgid "The code is not correct."
+msgstr ""
+
+#: hostisan/internal/httpapi/keys.go
+msgid "The comment contains characters that are not allowed."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid "The comments HESTIA and SSH are reserved for the panel and SSH rules."
+msgstr ""
+
+#: ui/src/designs/auth/ServerUnreachable.tsx
+msgid ""
+"The control panel did not respond. It may be restarting; try again in a "
+"moment."
+msgstr ""
+
+#: hostisan/internal/httpapi/profile.go
+msgid "The current password is not correct."
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "The database below must already exist and be owned by you."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "The domain name and the webmail client served at its webmail alias."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "The domain name cannot be changed."
+msgstr ""
+
+#: ui/src/designs/web/WebLogsPage.tsx
+msgid "The error log is empty"
+msgstr ""
+
+#: ui/src/designs/tools/FilesPage.tsx
+msgid "The file manager couldn't be opened."
+msgstr ""
+
+#: ui/src/designs/tools/FilesPage.tsx
+msgid "The file manager is not available"
+msgstr ""
+
+#: ui/src/designs/tools/FilesPage.tsx
+msgid "The file manager is not turned on for this account."
+msgstr ""
+
+#: ui/src/designs/tools/FilesPage.tsx
+msgid "The file manager isn't available for this account."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+#: hostisan/internal/httpapi/types_sys.go
+msgid ""
+"The firewall can't be turned on because %s is not installed. Install the "
+"iptables and ipset packages over SSH first."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys.go
+#: hostisan/internal/httpapi/sys_lockout.go
+#: hostisan/internal/httpapi/types_sys.go
+msgid ""
+"The firewall can't be turned on until active ACCEPT rules keep the panel and "
+"SSH ports open."
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "The firewall is disabled"
+msgstr ""
+
+#: ui/src/designs/server/firewallShared.ts
+msgid "The firewall was changed elsewhere. The list has been reloaded."
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "The host name inside the zone and the record type."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_services.go
+msgid "The hostname doesn't match this server."
+msgstr ""
+
+#: hostisan/internal/webapp/host.go
+msgid "The installer page \"%s\" answered with HTTP status %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/keys.go
+msgid "The key comment %s is reserved for the file manager."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "The live file will be overwritten by the version in this snapshot."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "The live files will be overwritten by the versions in this snapshot."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "The name, extra hostnames and the IP address it listens on."
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid "The name, type, host and charset can't be changed after creation."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_editors.go
+msgid ""
+"The new configuration failed to start, so the previous file was restored."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_editors.go
+msgid "The new configuration has errors, so the previous file was restored."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_editors.go
+msgid ""
+"The new configuration has errors, so the previous file was restored.\n"
+"%s"
+msgstr ""
+
+#: ui/src/designs/backup/BackupAside.tsx
+msgid "The newest backup of this account."
+msgstr ""
+
+#: ui/src/designs/server/UpdatesPage.tsx
+msgid "The package list could not be read from apt."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid "The panel and SSH rules can't be deleted, suspended, moved or changed."
+msgstr ""
+
+#: hostisan/internal/jobs/persist.go
+msgid ""
+"The panel restarted before this task finished. It was stopped; check what it "
+"changed and run it again."
+msgstr ""
+
+#: ui/src/designs/server/IpFormPage.tsx
+msgid "The public address when this server sits behind NAT."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "The remote name from rclone config."
+msgstr ""
+
+#: hostisan/internal/httpapi/auth.go
+#: hostisan/internal/httpapi/errors.go
+#: hostisan/internal/httpapi/keys.go
+#: hostisan/internal/httpapi/recovery.go
+#: hostisan/internal/httpapi/resource.go
+#: hostisan/internal/httpapi/stats.go
+#: hostisan/internal/httpapi/sys_firewall.go
+#: hostisan/internal/httpapi/sys_services.go
+msgid "The request could not be read."
+msgstr ""
+
+#: hostisan/internal/httpapi/errors.go
+#: hostisan/internal/httpapi/resource.go
+msgid "The request is too large."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+msgid "The rule has changed since the page was loaded. Reload and try again."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+msgid "The rule is already at the bottom of the list."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_firewall.go
+msgid "The rule is already at the top of the list."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid ""
+"The rules that let you reach the panel can't be identified, so a rule that "
+"may open it can't be deleted, suspended or changed here."
+msgstr ""
+
+#: hostisan/internal/httpapi/search.go
+msgid ""
+"The search stopped on an object it could not read. Try a more specific "
+"search."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "The secret key is shown once, right after you create the key."
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "The selected notifications will be removed. This cannot be undone."
+msgstr ""
+
+#: ui/src/api/errors.ts
+msgid "The server took too long to respond. Try again."
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "The service list could not be read from this server."
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid ""
+"The signed-in admin and the root account can’t be suspended or deleted."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "The site is served over plain HTTP only."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid ""
+"The stored password can't be kept. Type it again whenever you change the "
+"host, port or username."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "The web stack installed on this server."
+msgstr ""
+
+#: ui/src/designs/tools/TerminalPage.tsx
+msgid "The web terminal is not available"
+msgstr ""
+
+#: ui/src/designs/tools/TerminalPage.tsx
+msgid "The web terminal is not turned on for this account."
+msgstr ""
+
+#: ui/src/designs/tools/TerminalPage.tsx
+msgid "The web terminal isn't available for this account."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "The website will be served again."
+msgstr ""
+
+#: ui/src/designs/web/AddWebDomainPage.tsx
+msgid "The www. prefix is removed automatically and added as an alias."
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "The zone is not served until it is unsuspended."
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "The zone name and the IP address its default records point to."
+msgstr ""
+
+#: ui/src/designs/users/UserEditPage.tsx
+msgid ""
+"Their websites, mail, databases and cron jobs are disabled until the account "
+"is unsuspended."
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "There is no installer called %s."
+msgstr ""
+
+#: ui/src/designs/server/ServiceEditPage.tsx
+msgid "There is no service called %s"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "There is no snapshot %s in this account's restic repository."
+msgstr ""
+
+#: ui/src/designs/web/shared.tsx
+msgid "There is no web domain named %s on this account."
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "There's no access key “%s”"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "There's no package named “%s”"
+msgstr ""
+
+#: ui/src/designs/users/UserEditPage.tsx
+msgid "There's no user named “%s”"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "These files were restored before it stopped:"
+msgstr ""
+
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid ""
+"These records were added to the zone automatically. You only need them if "
+"the domain's DNS is hosted elsewhere."
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "This DNS domain is suspended"
+msgstr ""
+
+#: ui/src/designs/web/AddWebDomainPage.tsx
+msgid ""
+"This account has no IP address to host a website on. Ask your administrator "
+"to assign one."
+msgstr ""
+
+#: ui/src/layout/AppLayout.tsx
+msgid ""
+"This account is read-only. You can look around, but changes are disabled."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "This account's role can't be changed."
+msgstr ""
+
+#: ui/src/components/DeleteResource.tsx
+msgid "This action cannot be undone. This will permanently delete the %s %s."
+msgstr ""
+
+#: hostisan/internal/httpapi/web_apps.go
+msgid "This app needs a database. Fill in the database details."
+msgstr ""
+
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "This backup is empty"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid "This ban would block your own IP address (%s)."
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "This can't be undone."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid ""
+"This change would leave no active rule that opens the SSH port (%s) to you."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid ""
+"This change would leave no active rule that opens the panel port (%s) to you."
+msgstr ""
+
+#: ui/src/designs/cron/CronFormPage.tsx
+msgid "This cron job is suspended"
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid "This database is suspended"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "This folder is empty"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid ""
+"This is the current Let's Encrypt certificate. It will no longer renew "
+"automatically."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "This mail account is suspended"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "This mail domain is suspended"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "This record is suspended"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+msgid "This rule keeps SSH reachable"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+msgid "This rule keeps the panel reachable"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid "This rule would block all traffic to the server."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid "This rule would block the SSH port (%s)."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid "This rule would block the panel port (%s)."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid "This rule would block your own IP address (%s)."
+msgstr ""
+
+#: ui/src/designs/DesignPending.tsx
+msgid "This section hasn't been designed yet."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid ""
+"This user can still use SSH, FTP and mail, but can't sign in to the control "
+"panel."
+msgstr ""
+
+#: ui/src/designs/users/UserEditPage.tsx
+msgid "This user is suspended"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "This web domain is suspended"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "This zone has no records"
+msgstr ""
+
+#. Hestia: "Time Zone"
+#: ui/src/designs/cron/CronAside.tsx
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Time zone"
+msgstr ""
+
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid "To exclude specific accounts use %s"
+msgstr ""
+
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid "To exclude specific directories use %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/terminal.go
+msgid "Too many terminals are open. Close one and try again."
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Too weak"
+msgstr ""
+
+#: ui/src/layout/nav.ts
+msgid "Tools"
+msgstr ""
+
+#: ui/src/designs/web/WebAside.tsx
+msgid "Total across all web domains."
+msgstr ""
+
+#: ui/src/designs/backup/BackupAside.tsx
+msgid "Total size"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Traffic reports published at /vstats/ on this domain."
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Traffic served each month."
+msgstr ""
+
+#: ui/src/designs/auth/ServerUnreachable.tsx
+msgid "Try again"
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Try another name, or look in a different category."
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+#: ui/src/designs/users/UserForm.tsx
+msgid "Turn off"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn off SMTP relay"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn off disk quota"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn off firewall"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn off incremental backups"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn off local backup"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn off phpMyAdmin Single Sign On"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn off phpMyAdmin restriction"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn off read-only access for suspended users"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn off resource limits"
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+msgid "Turn off two-factor authentication"
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+msgid "Turn on"
+msgstr ""
+
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid ""
+"Turn on SSL in the domain settings to request a Let's Encrypt certificate or "
+"upload your own."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn on disk quota"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Turn on firewall"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn on incremental backups"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn on local backup"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn on phpMyAdmin Single Sign On"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "Turn on resource limits"
+msgstr ""
+
+#: ui/src/designs/server/FirewallIpsetsPage.tsx
+msgid "Turn the firewall on to manage IP lists."
+msgstr ""
+
+#. Hestia: "Two-factor Authentication"
+#: ui/src/designs/auth/LoginPage.tsx
+#: ui/src/designs/users/UserForm.tsx
+msgid "Two-factor authentication"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Two-factor authentication can only be set up by the account's own user."
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+msgid "Two-factor authentication disabled."
+msgstr ""
+
+#: ui/src/designs/users/TwoFactorDialog.tsx
+msgid "Two-factor authentication enabled."
+msgstr ""
+
+#: ui/src/designs/auth/ResetTwofaPage.tsx
+msgid ""
+"Two-factor authentication is now turned off for your account. You may now "
+"proceed to log in."
+msgstr ""
+
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "Type %s to confirm"
+msgstr ""
+
+#: ui/src/components/DeleteResource.tsx
+msgid "Type %s to confirm deletion"
+msgstr ""
+
+#: ui/src/components/DeleteResource.tsx
+msgid "Type %s to confirm:"
+msgstr ""
+
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid "Type directory name, one per line. To exclude all dirs use *"
+msgstr ""
+
+#: ui/src/designs/tools/SearchPage.tsx
+msgid "Type something to search for"
+msgstr ""
+
+#: ui/src/designs/cron/CronFormPage.tsx
+msgid ""
+"Type the cron fields directly, or use the generator to fill them in from a "
+"preset."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid ""
+"Type the key again when you change the bucket or key ID. Leave empty to keep "
+"the stored one."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid ""
+"Type the password again when you change the host, username, port or "
+"directory. Leave empty to keep the stored one."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid ""
+"Type the password again whenever you change the relay settings. Leave empty "
+"to keep the stored one."
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_services.go
+msgid "Type the service name to confirm."
+msgstr ""
+
+#: hostisan/internal/httpapi/web_apps.go
+msgid "Unable to install %s, required php version is not available."
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Unban %s IP addresses?"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "Unban IP address?"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Unchanged"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_editors.go
+msgid "Unknown directive: %s"
+msgstr ""
+
+#: hostisan/internal/webapp/install.go
+msgid "Unknown resource type \"%s\""
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_editors.go
+#: hostisan/internal/httpapi/sys_services.go
+msgid "Unknown service."
+msgstr ""
+
+#. Hestia: "Unlock Account"
+#: ui/src/designs/auth/ResetTwofaPage.tsx
+msgid "Unlock account"
+msgstr ""
+
+#: ui/src/designs/auth/ResetTwofaPage.tsx
+msgid "Unlock code"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "Unread (%s)"
+msgstr ""
+
+#: ui/src/unsaved/UnsavedChangesDialog.tsx
+msgid "Unsaved changes"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Unsuspend DNS domain"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Unsuspend DNS record"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordsPage.tsx
+msgid "Unsuspend DNS records"
+msgstr ""
+
+#: ui/src/designs/dns/DnsZonesPage.tsx
+msgid "Unsuspend DNS zones"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Unsuspend database"
+msgstr ""
+
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "Unsuspend databases"
+msgstr ""
+
+#: ui/src/designs/cron/CronFormPage.tsx
+msgid "Unsuspend it from the cron jobs list before editing."
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid ""
+"Unsuspend it from the databases list before changing its user or password."
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Unsuspend it from the records list before editing."
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Unsuspend mail account"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "Unsuspend mail accounts"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Unsuspend mail domain"
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "Unsuspend mail domains"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "Unsuspend rule?"
+msgstr ""
+
+#: ui/src/designs/users/UserEditPage.tsx
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Unsuspend user"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Unsuspend users"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Unsuspend web domain"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Unsuspend web domains"
+msgstr ""
+
+#: ui/src/components/fields/DateRangeFilter.tsx
+msgid "Until %s"
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Up one level"
+msgstr ""
+
+#: ui/src/components/fields/NameServersField.tsx
+msgid "Up to %d name servers are allowed."
+msgstr ""
+
+#: hostisan/internal/httpapi/dns.go
+#: hostisan/internal/httpapi/profile.go
+#: hostisan/internal/httpapi/users.go
+msgid "Up to 8 name servers are allowed."
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "Up to eight authoritative name servers for the zone's NS records."
+msgstr ""
+
+#. Hestia: "Update Usage Counters"
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Update usage counters"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid ""
+"Updates, backups, certificate renewals and quota warnings from the server."
+msgstr ""
+
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "Upload the files to %s, then tick Update logo and save."
+msgstr ""
+
+#: ui/src/designs/backup/BackupAside.tsx
+#: ui/src/designs/cron/CronAside.tsx
+#: ui/src/designs/db/DbAside.tsx
+#: ui/src/designs/dns/DnsAside.tsx
+#: ui/src/designs/mail/MailAside.tsx
+#: ui/src/designs/web/WebAside.tsx
+#: ui/src/layout/AppSidebar.tsx
+msgid "Usage"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Usage for %s, recorded on the first day of each month."
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Usage is recorded on the first day of each month."
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Usage recorded on the first day of each month."
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Usage, selector, matching type and certificate data"
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Use %s for the zone apex."
+msgstr ""
+
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "Use a two-letter code, like US or DE."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Use a-z, 0-9, hyphen; no leading, trailing or consecutive hyphens"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+msgid "Use an IP list"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "Use letters, numbers, dots, hyphens or underscores"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "Use local-part without domain name, e.g. info for info@%s."
+msgstr ""
+
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid "Use the full database name, including the user prefix."
+msgstr ""
+
+#: ui/src/designs/mail/MailAside.tsx
+msgid "Use these in Outlook, Apple Mail or a phone."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Used by %s (%s)"
+msgstr ""
+
+#: ui/src/designs/server/IpFormPage.tsx
+msgid "Used by %s on %s web domains."
+msgstr ""
+
+#: ui/src/designs/server/IpFormPage.tsx
+msgid "Used by %s on 1 web domain."
+msgstr ""
+
+#: hostisan/internal/httpapi/users.go
+msgid "User %s is not suspended."
+msgstr ""
+
+#: ui/src/designs/backup/BackupsPage.tsx
+#: ui/src/designs/backup/ExclusionsPages.tsx
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "User directories"
+msgstr ""
+
+#. Hestia: "User Directory"
+#: ui/src/designs/account/StatsPage.tsx
+#: ui/src/designs/backup/ExclusionsPages.tsx
+msgid "User directory"
+msgstr ""
+
+#: ui/src/designs/users/UserEditPage.tsx
+msgid "User not found"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "User {%s} has been created successfully."
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+#: ui/src/designs/account/StatsPage.tsx
+msgid "User: %s"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Usernames can't be changed after the account is created."
+msgstr ""
+
+#: ui/src/designs/account/SshKeysPage.tsx
+msgid "Usually found in %s. The comment at the end becomes the key's ID."
+msgstr ""
+
+#: ui/src/designs/web/SslCertificatePage.tsx
+msgid "Valid for %s more days"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Version %s into %s"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "Versions supported by %s and installed on this server."
+msgstr ""
+
+#: ui/src/designs/mail/MailDnsPage.tsx
+msgid "View DNS zone"
+msgstr ""
+
+#: ui/src/layout/NotificationsTray.tsx
+msgid "View all notifications"
+msgstr ""
+
+#. Hestia: "View Logs"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "View logs"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "View preview features"
+msgstr ""
+
+#. Hestia: "View Public DNSSEC Key"
+#: ui/src/designs/dns/DnsZonesPage.tsx
+#: ui/src/designs/dns/DnssecPage.tsx
+msgid "View public DNSSEC key"
+msgstr ""
+
+#: ui/src/designs/web/RequestFlow.tsx
+msgid "Visitor"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Visitors reach the site on whichever alias they typed."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid ""
+"Visitors see the suspended page. You can still change its settings; they "
+"take effect once it is unsuspended."
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "Visitors will see the suspended page until it is unsuspended."
+msgstr ""
+
+#: ui/src/components/PasswordInput.tsx
+msgid "Weak"
+msgstr ""
+
+#. Hestia: "Web Aliases"
+#: ui/src/designs/account/StatsPage.tsx
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Web aliases"
+msgstr ""
+
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "Web aliases per domain"
+msgstr ""
+
+#: ui/src/designs/web/shared.tsx
+msgid "Web domain not found"
+msgstr ""
+
+#: hostisan/internal/httpapi/web_apps.go
+msgid "Web domain path \"%s\" not found for domain \"%s\""
+msgstr ""
+
+#. Hestia: "Web Domains"
+#: ui/src/designs/account/StatsPage.tsx
+#: ui/src/designs/backup/ExclusionsPages.tsx
+#: ui/src/designs/backup/RestoreTable.tsx
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+#: ui/src/designs/users/UserForm.tsx
+#: ui/src/designs/users/UsersPage.tsx
+#: ui/src/designs/web/AddWebDomainPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebAside.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+#: ui/src/designs/web/WebLogsPage.tsx
+#: ui/src/layout/commands/web.ts
+msgid "Web domains"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "Web domains, DNS zones, mail domains and databases over time."
+msgstr ""
+
+#: ui/src/designs/web/WebLogsPage.tsx
+msgid "Web logs"
+msgstr ""
+
+#. Hestia: "Web Server"
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/designs/web/WebAside.tsx
+msgid "Web server"
+msgstr ""
+
+#. Hestia: "Web Statistics"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Web statistics"
+msgstr ""
+
+#. Hestia: "Web Template"
+#: ui/src/designs/users/PackageFormPage.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "Web template"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "Web, DNS, mail and databases"
+msgstr ""
+
+#. Hestia: "Webmail Alias"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Webmail alias"
+msgstr ""
+
+#. Hestia: "Webmail Client"
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Webmail client"
+msgstr ""
+
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid ""
+"Websites hosted on this server, with their SSL, PHP and traffic settings."
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "Weight, port and target, e.g. 0 993 mail.acme-bakery.com."
+msgstr ""
+
+#: ui/src/designs/auth/LoginPage.tsx
+msgid "Welcome %s!"
+msgstr ""
+
+#: ui/src/designs/web/EditWebDomainPage.tsx
+msgid "What is HSTS?"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "What regular users are allowed to do."
+msgstr ""
+
+#: ui/src/designs/dns/DnsRecordFormPage.tsx
+msgid "What the record answers with, and for how long resolvers may cache it."
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "When the domain registration expires."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "Where and how user backups are written on this server."
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "Where the zone's default records point."
+msgstr ""
+
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "Where unmatched mail goes and how much each account may send."
+msgstr ""
+
+#: ui/src/designs/server/FirewallRuleFormPage.tsx
+msgid "Which traffic this rule matches and what happens to it."
+msgstr ""
+
+#. Hestia: "White Label"
+#: ui/src/designs/server/ServerConfigPage.tsx
+#: ui/src/layout/nav.ts
+msgid "White label"
+msgstr ""
+
+#. Hestia: "White Label Options"
+#: ui/src/designs/server/WhiteLabelPage.tsx
+msgid "White label options"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Who this account belongs to and where notices are sent."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "Whole items can still be restored from the snapshot page."
+msgstr ""
+
+#: ui/src/designs/web/WebAppsPage.tsx
+msgid "Wiki"
+msgstr ""
+
+#: ui/src/designs/db/DatabaseFormPage.tsx
+msgid "Will be created as %s"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid ""
+"Without rules every port is closed except those opened by default. Add a "
+"rule to allow traffic."
+msgstr ""
+
+#: ui/src/designs/web/AddWebDomainPage.tsx
+msgid "You are adding a web domain to the admin account"
+msgstr ""
+
+#: hostisan/internal/httpapi/terminal.go
+msgid "You are not authenticated."
+msgstr ""
+
+#: ui/src/layout/AppLayout.tsx
+msgid "You are viewing the panel as %s."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "You can restore up to %s files at once."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "You can't change your own role."
+msgstr ""
+
+#: ui/src/api/errors.ts
+msgid "You don't have permission to view this page."
+msgstr ""
+
+#: hostisan/internal/httpapi/terminal.go
+msgid "You have no shell access."
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "You're all caught up."
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "You're on the %s package."
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+#: ui/src/designs/mail/MailDomainFormPage.tsx
+msgid "You're signed in as admin"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_lockout.go
+msgid ""
+"Your IP address can't be determined, so this change can't be checked against "
+"it."
+msgstr ""
+
+#: ui/src/designs/tools/EmptyPackagePage.tsx
+msgid "Your account"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "Your administrator has turned off changing your name and email."
+msgstr ""
+
+#: ui/src/designs/account/AccountPage.tsx
+msgid "Your contact details, password, sign-in security and panel preferences."
+msgstr ""
+
+#: ui/src/designs/tools/EmptyPackagePage.tsx
+msgid ""
+"Your package (%s) doesn't include web domains, DNS zones, mail domains, "
+"databases, cron jobs or backups. Ask your administrator to change it."
+msgstr ""
+
+#: ui/src/designs/auth/ResetPasswordPage.tsx
+msgid "Your password has been changed. You may now log in with it."
+msgstr ""
+
+#: hostisan/internal/httpapi/tools.go
+msgid "Your session has expired."
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "Zone limits, the zone template, and the name servers new zones use."
+msgstr ""
+
+#: ui/src/designs/dns/DnsZoneFormPage.tsx
+msgid "Zone settings"
+msgstr ""
+
+#: ui/src/designs/dns/DnsAside.tsx
+msgid "Zones signed with DNSSEC. Publish the DS record at your registrar."
+msgstr ""
+
+#: ui/src/designs/dns/DnsAside.tsx
+msgid "Zones synced from another server in the DNS cluster."
+msgstr ""
+
+#. Hestia: "Access Key"
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "access key"
+msgstr ""
+
+#. Hestia: "Access Keys"
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "access keys"
+msgstr ""
+
+#: ui/src/designs/account/AccessKeysPage.tsx
+msgid "and %s more"
+msgstr ""
+
+#: ui/src/designs/web/SetupWebAppPage.tsx
+msgid "auto"
+msgstr ""
+
+#. Hestia: "BACKUP"
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "backup"
+msgstr ""
+
+#. Hestia: "Backups"
+#: ui/src/designs/backup/BackupsPage.tsx
+msgid "backups"
+msgstr ""
+
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "banned IP address"
+msgstr ""
+
+#. Hestia: "Banned IP Addresses"
+#: ui/src/designs/server/FirewallBanlistPage.tsx
+msgid "banned IP addresses"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "bytes or units like 2G"
+msgstr ""
+
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "cron job"
+msgstr ""
+
+#. Hestia: "Cron Jobs"
+#: ui/src/designs/cron/CronJobsPage.tsx
+msgid "cron jobs"
+msgstr ""
+
+#. Hestia: "Database"
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "database"
+msgstr ""
+
+#. Hestia: "Databases"
+#: ui/src/designs/db/DatabasesPage.tsx
+msgid "databases"
+msgstr ""
+
+#. Hestia: "Every %s days"
+#: ui/src/designs/cron/describeCron.ts
+msgid "every %s days"
+msgstr ""
+
+#. Hestia: "Every %s months"
+#: ui/src/designs/cron/describeCron.ts
+msgid "every %s months"
+msgstr ""
+
+#: ui/src/designs/server/PreviewPage.tsx
+msgid "features"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "in %"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "in %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "in even months"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "in months %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "in odd months"
+msgstr ""
+
+#: hostisan/internal/httpapi/cron.go
+#: hostisan/internal/httpapi/errors.go
+#: hostisan/internal/httpapi/sys_settings_steps.go
+#: hostisan/internal/httpapi/users.go
+msgid "invalid %s format :: %s"
+msgstr ""
+
+#: hostisan/internal/httpapi/errors.go
+#: hostisan/internal/httpapi/resource.go
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "invalid value :: %s"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid ""
+"iptables rules applied to incoming traffic, in order from top to bottom."
+msgstr ""
+
+#: ui/src/designs/backup/IncrementalPages.tsx
+#: ui/src/designs/backup/RestoreTable.tsx
+msgid "items"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountFormPage.tsx
+msgid "leave empty to keep current"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "log entries"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "log entry"
+msgstr ""
+
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "mail account"
+msgstr ""
+
+#. Hestia: "Mail Accounts"
+#: ui/src/designs/mail/MailAccountsPage.tsx
+msgid "mail accounts"
+msgstr ""
+
+#. Hestia: "Mail Domain"
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "mail domain"
+msgstr ""
+
+#. Hestia: "Mail Domains"
+#: ui/src/designs/mail/MailDomainsPage.tsx
+msgid "mail domains"
+msgstr ""
+
+#. Hestia: "Minutes"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "minutes"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "months"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid "ms or s"
+msgstr ""
+
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "notification"
+msgstr ""
+
+#. Hestia: "Notifications"
+#: ui/src/designs/tools/NotificationsPage.tsx
+msgid "notifications"
+msgstr ""
+
+#: ui/src/designs/tools/SearchPage.tsx
+msgid "object"
+msgstr ""
+
+#: ui/src/designs/tools/SearchPage.tsx
+msgid "objects"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "of %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "on %s"
+msgstr ""
+
+#: ui/src/designs/account/StatsPage.tsx
+msgid "on %s mail domains"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "on days %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "on even days"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "on odd days"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "on the %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "on weekdays"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "on weekdays %s"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "on weekends"
+msgstr ""
+
+#. Hestia: "Optional"
+#: ui/src/components/fields/Optional.tsx
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/GenerateSslPage.tsx
+msgid "optional"
+msgstr ""
+
+#. Hestia: "Package"
+#: ui/src/designs/server/UpdatesPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "package"
+msgstr ""
+
+#. Hestia: "Packages"
+#: ui/src/designs/server/UpdatesPage.tsx
+#: ui/src/designs/users/PackagesPage.tsx
+msgid "packages"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "phpMyAdmin access and the database hosts users can create databases on."
+msgstr ""
+
+#. Hestia: "phpMyAdmin Alias"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "phpMyAdmin alias"
+msgstr ""
+
+#: hostisan/internal/httpapi/sys_settings_steps.go
+msgid "phpMyAdmin can only be restricted with Single Sign On enabled."
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "phpMyAdmin single sign-on"
+msgstr ""
+
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "phpPgAdmin access and PostgreSQL hosts."
+msgstr ""
+
+#. Hestia: "phpPgAdmin Alias"
+#: ui/src/designs/server/ServerConfigPage.tsx
+msgid "phpPgAdmin alias"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "rule"
+msgstr ""
+
+#: ui/src/designs/server/FirewallRulesPage.tsx
+msgid "rules"
+msgstr ""
+
+#. Hestia: "Service"
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "service"
+msgstr ""
+
+#. Hestia: "Services"
+#: ui/src/designs/server/ServicesPage.tsx
+msgid "services"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "sign-in attempt"
+msgstr ""
+
+#: ui/src/designs/account/LogsPage.tsx
+msgid "sign-in attempts"
+msgstr ""
+
+#. Hestia: "Snapshot"
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "snapshot"
+msgstr ""
+
+#. Hestia: "Snapshots"
+#: ui/src/designs/backup/IncrementalPages.tsx
+msgid "snapshots"
+msgstr ""
+
+#. Hestia: "SSL Certificate"
+#: hostisan/internal/httpapi/mail_extras.go
+#: hostisan/internal/httpapi/web_ssl.go
+msgid "ssl certificate"
+msgstr ""
+
+#: hostisan/internal/httpapi/mail_extras.go
+#: hostisan/internal/httpapi/web_ssl.go
+msgid "ssl key"
+msgstr ""
+
+#: ui/src/designs/users/PackageFormPage.tsx
+msgid ""
+"systemd limits applied to the user's processes. Leave unlimited unless you "
+"need to cap noisy accounts."
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "user account"
+msgstr ""
+
+#: ui/src/designs/users/UsersPage.tsx
+msgid "user accounts"
+msgstr ""
+
+#. Hestia: "Web Domain"
+#: ui/src/designs/web/EditWebDomainPage.tsx
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "web domain"
+msgstr ""
+
+#. Hestia: "Web Domains"
+#: ui/src/designs/web/WebDomainsPage.tsx
+msgid "web domains"
+msgstr ""
+
+#: ui/src/designs/cron/describeCron.ts
+msgid "weekdays %s"
+msgstr ""
+
+#: ui/src/designs/cron/CronAside.tsx
+msgid "your contact address"
+msgstr ""
+
+#: ui/src/designs/users/UserForm.tsx
+msgid "“%s” isn't a valid IP address, or it's already in the list."
+msgstr ""
+
+#: ui/src/components/fields/NameServersField.tsx
+msgid "“%s” isn't a valid host name, or it's already in the list."
+msgstr ""

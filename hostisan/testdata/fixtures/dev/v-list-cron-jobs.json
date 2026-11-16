@@ -1,0 +1,58 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"MIN\": \"*/15\",\n        \"HOUR\": \"*\",\n        \"DAY\": \"*\",\n        \"MONTH\": \"*\",\n        \"WDAY\": \"*\",\n        \"CMD\": \"php /home/admin/web/example.com/public_html/cron.php >/dev/null 2>&1\",\n        \"JOB\": \"1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"06:12:44\",\n        \"DATE\": \"2026-03-02\"\n    },\n    \"2\": {\n        \"MIN\": \"30\",\n        \"HOUR\": \"3\",\n        \"DAY\": \"*\",\n        \"MONTH\": \"*\",\n        \"WDAY\": \"1,2,3,4,5\",\n        \"CMD\": \"cd /home/admin/web/example.com/public_html && php artisan schedule:run >> /dev/null 2>&1\",\n        \"JOB\": \"2\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"14:01:09\",\n        \"DATE\": \"2026-04-18\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "plain"
+    ],
+    "stdout": "1\t*/15\t*\t*\t*\t*\tphp /home/admin/web/example.com/public_html/cron.php >/dev/null 2>&1\tno\t06:12:44\t2026-03-02\n2\t30\t3\t*\t*\t1,2,3,4,5\tcd /home/admin/web/example.com/public_html && php artisan schedule:run >> /dev/null 2>&1\tyes\t14:01:09\t2026-04-18\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"MIN\": \"0\",\n        \"HOUR\": \"*/6\",\n        \"DAY\": \"*\",\n        \"MONTH\": \"*\",\n        \"WDAY\": \"*\",\n        \"CMD\": \"find /home/bob/tmp -name '*.tmp' -mtime +7 -exec rm {} \\;\",\n        \"JOB\": \"1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "plain"
+    ],
+    "stdout": "1\t0\t*/6\t*\t*\t*\tfind /home/bob/tmp -name '*.tmp' -mtime +7 -exec rm {} \\;\tno\t12:00:00\t2026-01-10\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "plain"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

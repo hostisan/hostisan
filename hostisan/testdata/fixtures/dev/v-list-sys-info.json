@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"sysinfo\": {\n        \"HOSTNAME\": \"server1.acme-hosting.net\",\n        \"OS\": \"Debian\",\n        \"VERSION\": \"12.8\",\n        \"ARCH\": \"x86_64\",\n        \"HESTIA\": \"1.10.5\",\n        \"RELEASE\": \"release\",\n        \"UPTIME\": \"41763\",\n        \"LOADAVERAGE\": \"0.42 / 0.51 / 0.47\"\n    }\n}\n",
+    "exit": 0
+  }
+]

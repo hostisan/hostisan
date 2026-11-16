@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"ANTIVIRUS\": \"yes\",\n        \"ANTISPAM\": \"yes\",\n        \"REJECT\": \"yes\",\n        \"RATE_LIMIT\": \"\",\n        \"DKIM\": \"yes\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"2\",\n        \"U_DISK\": \"37\",\n        \"SSL\": \"yes\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-14\",\n        \"WEBMAIL_ALIAS\": \"webmail\",\n        \"WEBMAIL\": \"roundcube\"\n    },\n    \"example.net\": {\n        \"ANTIVIRUS\": \"no\",\n        \"ANTISPAM\": \"no\",\n        \"REJECT\": \"\",\n        \"RATE_LIMIT\": \"100\",\n        \"DKIM\": \"no\",\n        \"CATCHALL\": \"boss@example.net\",\n        \"ACCOUNTS\": \"1\",\n        \"U_DISK\": \"0\",\n        \"SSL\": \"no\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"11:02:55\",\n        \"DATE\": \"2026-04-01\",\n        \"WEBMAIL_ALIAS\": \"webmail\",\n        \"WEBMAIL\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n        \"ANTIVIRUS\": \"yes\",\n        \"ANTISPAM\": \"yes\",\n        \"REJECT\": \"no\",\n        \"RATE_LIMIT\": \"\",\n        \"DKIM\": \"yes\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"1\",\n        \"U_DISK\": \"5\",\n        \"SSL\": \"no\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"08:30:00\",\n        \"DATE\": \"2026-05-02\",\n        \"WEBMAIL_ALIAS\": \"webmail\",\n        \"WEBMAIL\": \"snappymail\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  }
+]

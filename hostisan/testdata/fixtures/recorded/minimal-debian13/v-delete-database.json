@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "admin_recdb"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "missing_db"
+    ],
+    "stdout": "Error: db db missing_db doesn't exist\n",
+    "exit": 3
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info",
+      "/tmp/mailpass",
+      "1024"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info",
+      "/tmp/mailpass",
+      "1024"
+    ],
+    "stdout": "Error: mail account info already exists\n",
+    "exit": 4
+  }
+]

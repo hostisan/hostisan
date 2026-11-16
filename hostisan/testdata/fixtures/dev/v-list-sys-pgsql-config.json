@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"CONFIG\": {\n        \"pg_hba_path\": \"/etc/postgresql/16/main/pg_hba.conf\",\n        \"config_path\": \"/etc/postgresql/16/main/postgresql.conf\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "plain"
+    ],
+    "stdout": "/etc/postgresql/16/main/postgresql.conf\t/etc/postgresql/16/main/pg_hba.conf\n",
+    "exit": 0
+  }
+]

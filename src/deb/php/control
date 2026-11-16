@@ -1,0 +1,12 @@
+Source: hostisan-php
+Package: hostisan-php
+Priority: optional
+Version: 8.5.11
+Section: admin
+Maintainer: Hostisan <@HOSTISAN_INFO_EMAIL@>
+Homepage: @HOSTISAN_URL@
+Architecture: amd64
+Depends: hostisan, unzip, @LIBZIP_DEP@, @ONIG_DEP@
+Description: Hostisan panel PHP-FPM
+ The PHP build that runs the Hostisan file manager and the core scripts' PHP
+ helpers (mail, two-factor codes, quick installs).

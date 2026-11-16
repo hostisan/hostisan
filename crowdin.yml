@@ -1,0 +1,14 @@
+files:
+  - source: /web/locale/hestiacp.pot
+    translation: /web/locale/%two_letters_code%/LC_MESSAGES/hestiacp.po
+  # Hostisan's own messages (hostisan/locale, CONTRIBUTING.md "Translating Hostisan"),
+  # in the same language directories as Hestia's.
+  - source: /hostisan/locale/hostisan.pot
+    translation: /hostisan/locale/%two_letters_code%/LC_MESSAGES/hostisan.po
+    languages_mapping:
+      two_letters_code:
+        pt-BR: pt-br
+        zh-CN: zh-cn
+        zh-TW: zh-tw
+project_id_env: CROWDIN_PROJECT_ID
+api_token_env: CROWDIN_PERSONAL_TOKEN

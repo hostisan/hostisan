@@ -1,0 +1,14 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    \"none\",\n    \"awstats\"\n]\n",
+    "exit": 0
+  },
+  {
+    "args": [],
+    "stdout": "none\nawstats\n",
+    "exit": 0
+  }
+]

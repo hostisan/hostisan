@@ -1,0 +1,31 @@
+[
+  {
+    "args": [
+      "bob",
+      "bob_db",
+      "mysql",
+      "localhost"
+    ],
+    "stdout": "{\n    \"login\": {\n        \"user\": \"hestia_sso_Xq7Lm2Pz9K\",\n        \"password\": \"Fh3-x9Q@kd2_Lw8Z\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "mysql",
+      "localhost"
+    ],
+    "stdout": "{\n    \"login\": {\n        \"user\": \"hestia_sso_Xq7Lm2Pz9K\",\n        \"password\": \"Fh3-x9Q@kd2_Lw8Z\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "mysql"
+    ],
+    "stdout": "{\n    \"login\": {\n        \"user\": \"hestia_sso_Xq7Lm2Pz9K\",\n        \"password\": \"Fh3-x9Q@kd2_Lw8Z\"\n    }\n}\n",
+    "exit": 0
+  }
+]

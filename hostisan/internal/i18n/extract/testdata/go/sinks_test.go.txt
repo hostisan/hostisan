@@ -1,0 +1,3 @@
+package fx
+
+func g() { _ = i18n.N("Test only message") }

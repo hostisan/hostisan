@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info"
+    ],
+    "stdout": "Error: rec.example account info doesn't exist\n",
+    "exit": 3
+  }
+]

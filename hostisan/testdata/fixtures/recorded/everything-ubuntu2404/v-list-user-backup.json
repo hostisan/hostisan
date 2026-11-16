@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "admin",
+      "missing",
+      "json"
+    ],
+    "stdout": "Error: backup backup missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "admin",
+      "admin.2026-10-28_19-57-56.tar",
+      "json"
+    ],
+    "stdout": "{\n    \"admin.2026-10-28_19-57-56.tar\": {\n        \"TYPE\": \"local\",\n        \"SIZE\": \"3\",\n        \"WEB\": \"rec.hostisan.test,example.com,example.net\",\n        \"DNS\": \"example.com,example.org\",\n        \"MAIL\": \"example.com,example.net\",\n        \"DB\": \"admin_wordpress,admin_reports\",\n        \"CRON\": \"\",\n        \"UDIR\": \".bash_aliases,.bash_logout,.bashrc,.cache,.composer,.config,.local,.npm,.profile,.ssh,.vscode-server,.wp-cli\",\n        \"RUNTIME\": \"1\",\n        \"TIME\": \"19:57:56\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  }
+]

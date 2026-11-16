@@ -1,0 +1,22 @@
+[
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "info",
+      "md5"
+    ],
+    "stdout": "{SHA512-CRYPT}$6$devsalt$6h3F4aYWmAGJQrxirhIyXRggDQbnryF92SIM6pa8nAJjPCllXvq8NolAzgLrE9H/aDkTXdb4DbgkBwGKCA.sD/\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "nobody",
+      "md5"
+    ],
+    "stdout": "Error: bakery.example account nobody doesn't exist\n",
+    "exit": 3
+  }
+]

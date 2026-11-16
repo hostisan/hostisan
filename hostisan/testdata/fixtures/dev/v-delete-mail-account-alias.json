@@ -1,0 +1,22 @@
+[
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: mail domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

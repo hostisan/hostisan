@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    \"default\",\n    \"hosting-php\",\n    \"wordpress\"\n]\n",
+    "exit": 0
+  }
+]

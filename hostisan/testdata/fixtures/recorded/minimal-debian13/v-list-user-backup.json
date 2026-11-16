@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "admin",
+      "missing",
+      "json"
+    ],
+    "stdout": "Error: backup backup missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "admin",
+      "admin.2026-10-28_19-57-56.tar",
+      "json"
+    ],
+    "stdout": "Error: backup backup admin.2026-10-28_19-57-56.tar doesn't exist\n",
+    "exit": 3
+  }
+]

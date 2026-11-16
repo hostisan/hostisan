@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "bob",
+      "000000"
+    ],
+    "stdout": "Error: Invalid token\n",
+    "exit": 9
+  },
+  {
+    "args": [
+      "bob",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

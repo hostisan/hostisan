@@ -1,0 +1,3 @@
+#!/bin/bash
+# Hostisan alias - calls the underlying command
+exec "$(dirname "$0")/$(basename "$0" | sed 's/hostisan/hestia/g')" "$@"

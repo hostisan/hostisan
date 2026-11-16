@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "+++ Statistics Dump +++ (1760954100)\n++ Incoming Requests ++\n               41822 QUERY\n++ Incoming Queries ++\n               31211 A\n                4120 AAAA\n--- Statistics Dump --- (1760954100)\n",
+    "exit": 0
+  }
+]

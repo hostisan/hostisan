@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"HESTIA\": {\n        \"CRT\": \"-----BEGIN CERTIFICATE-----\\nMIIBszCCAVmgAwIBAgIUQ2V2LWNlcnQtbm90LXJlYWwwCgYIKoZIzj0EAwIwIzEh\\nMB8GA1UEAwwYc2VydmVyMS5hY21lLWhvc3RpbmcubmV0MB4XDTI2MTAxNzA5NDEx\\n-----END CERTIFICATE-----\",\n        \"KEY\": \"-----BEGIN PRIVATE KEY-----\\nMIGHAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBG0wawIBAQQgZGV2LWtleS1ub3Qt\\ncmVhbC1kZXYta2V5LW5vdC1yZWFs\\n-----END PRIVATE KEY-----\",\n        \"CA\": \"\",\n        \"SUBJECT\": \"server1.acme-hosting.net\",\n        \"ALIASES\": \"server1.acme-hosting.net\",\n        \"NOT_BEFORE\": \"Oct 17 09:41:12 2026 GMT\",\n        \"NOT_AFTER\": \"Jan 15 09:41:11 2027 GMT\",\n        \"SIGNATURE\": \"ecdsa-with-SHA256\",\n        \"PUB_KEY\": \"256 bit\",\n        \"ISSUER\": \"C = US, O = Let's Encrypt, CN = E5\"\n    }\n}\n",
+    "exit": 0
+  }
+]

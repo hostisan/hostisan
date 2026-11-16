@@ -1,0 +1,29 @@
+[
+  {
+    "args": [
+      "rec",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "recsusp",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "rec2fa",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

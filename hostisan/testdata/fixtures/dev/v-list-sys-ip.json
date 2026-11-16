@@ -1,0 +1,34 @@
+[
+  {
+    "args": [
+      "10.0.0.5",
+      "json"
+    ],
+    "stdout": "{\n    \"10.0.0.5\": {\n        \"OWNER\": \"bob\",\n        \"STATUS\": \"dedicated\",\n        \"NAME\": \"\",\n        \"U_SYS_USERS\": \"bob\",\n        \"U_WEB_DOMAINS\": \"1\",\n        \"INTERFACE\": \"eth1\",\n        \"NETMASK\": \"255.255.255.0\",\n        \"NAT\": \"198.51.100.7\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "203.0.113.10",
+      "json"
+    ],
+    "stdout": "{\n    \"203.0.113.10\": {\n        \"OWNER\": \"admin\",\n        \"STATUS\": \"shared\",\n        \"NAME\": \"main\",\n        \"U_SYS_USERS\": \"admin\",\n        \"U_WEB_DOMAINS\": \"2\",\n        \"INTERFACE\": \"eth0\",\n        \"NETMASK\": \"255.255.255.0\",\n        \"NAT\": \"\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "203.0.113.11",
+      "json"
+    ],
+    "stdout": "{\n    \"203.0.113.11\": {\n        \"OWNER\": \"admin\",\n        \"STATUS\": \"dedicated\",\n        \"NAME\": \"secondary\",\n        \"U_SYS_USERS\": \"admin\",\n        \"U_WEB_DOMAINS\": \"0\",\n        \"INTERFACE\": \"eth0\",\n        \"NETMASK\": \"255.255.255.0\",\n        \"NAT\": \"\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "Error: IP address doesn't exist\n",
+    "exit": 3
+  }
+]

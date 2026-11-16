@@ -1,0 +1,129 @@
+# Commands recorded by tools/record-fixtures.sh on a Hestia VPS.
+# One command per line: <v-command> <args...>. Never list password or hash files.
+# Server admin (Plan 4)
+v-list-sys-users json
+# Plan 4 Task 1: read-only commands only (no reboot, stop, firewall, IP or settings
+# writes). Chart ids and editor paths match the Ubuntu 24.04 recording box (Plan 6 A6):
+# apache2 + nginx, PHP-FPM 8.3/8.4, MariaDB, PostgreSQL 18, bind9, exim4 + dovecot,
+# vsftpd (no proftpd: its lines record the real error) and eth0; adjust them to any
+# other box before recording. The v-list-sys-ip 203.0.113.10 line takes the box's real
+# IP at record time; the scrubber maps it back to 203.0.113.10.
+v-list-sys-info json
+v-list-sys-services json
+v-list-sys-php json
+v-list-sys-nginx-config json
+v-list-sys-php-config json
+v-list-sys-mysql-config json
+v-list-sys-pgsql-config json
+v-list-sys-pgsql-config plain
+v-list-sys-dovecot-config json
+v-list-sys-spamd-config plain
+v-list-sys-clamd-config plain
+v-list-sys-vsftpd-config plain
+v-list-sys-proftpd-config plain
+v-open-fs-config /etc/nginx/nginx.conf
+v-open-fs-config /etc/apache2/apache2.conf
+v-open-fs-config /etc/php/8.3/fpm/php.ini
+v-open-fs-config /etc/php/8.4/fpm/php.ini
+v-open-fs-config /etc/mysql/my.cnf
+v-open-fs-config /etc/postgresql/18/main/pg_hba.conf
+v-open-fs-config /etc/postgresql/18/main/postgresql.conf
+v-open-fs-config /etc/bind/named.conf.options
+v-open-fs-config /etc/bind/named.conf
+v-open-fs-config /etc/exim4/exim4.conf.template
+v-open-fs-config /etc/fail2ban/jail.local
+v-open-fs-config /etc/spamassassin/local.cf
+v-open-fs-config /etc/clamav/clamd.conf
+v-open-fs-config /etc/vsftpd.conf
+v-open-fs-config /etc/proftpd/proftpd.conf
+v-open-fs-config /etc/ssh/sshd_config
+v-open-fs-config /etc/crontab
+v-open-fs-config /var/spool/cron/crontabs/hestiaweb
+v-open-fs-config /etc/dovecot/dovecot.conf
+v-open-fs-config /etc/dovecot/conf.d/10-auth.conf
+v-open-fs-config /etc/dovecot/conf.d/10-logging.conf
+v-open-fs-config /etc/dovecot/conf.d/10-mail.conf
+v-open-fs-config /etc/dovecot/conf.d/10-master.conf
+v-open-fs-config /etc/dovecot/conf.d/10-ssl.conf
+v-open-fs-config /etc/dovecot/conf.d/20-imap.conf
+v-open-fs-config /etc/dovecot/conf.d/20-pop3.conf
+v-open-fs-config /etc/dovecot/conf.d/auth-passwdfile.conf.ext
+v-open-fs-config /etc/missing.conf
+v-open-fs-config /etc/shadow
+v-list-sys-cpu-status
+v-list-sys-memory-status
+v-list-sys-disk-status
+v-list-sys-network-status
+v-list-sys-web-status
+v-list-sys-dns-status
+v-list-sys-mail-status
+v-list-sys-db-status
+v-list-sys-rrd json
+v-export-rrd la daily
+v-export-rrd la weekly
+v-export-rrd la monthly
+v-export-rrd la yearly
+v-export-rrd la biennially
+v-export-rrd la triennially
+v-export-rrd mem daily
+v-export-rrd mem weekly
+v-export-rrd mem monthly
+v-export-rrd mem yearly
+v-export-rrd mem biennially
+v-export-rrd mem triennially
+v-export-rrd net_eth0 daily
+v-export-rrd net_eth0 weekly
+v-export-rrd net_eth0 monthly
+v-export-rrd net_eth0 yearly
+v-export-rrd net_eth0 biennially
+v-export-rrd net_eth0 triennially
+v-export-rrd nginx daily
+v-export-rrd nginx weekly
+v-export-rrd nginx monthly
+v-export-rrd nginx yearly
+v-export-rrd nginx biennially
+v-export-rrd nginx triennially
+v-export-rrd mail daily
+v-export-rrd mail weekly
+v-export-rrd mail monthly
+v-export-rrd mail yearly
+v-export-rrd mail biennially
+v-export-rrd mail triennially
+v-export-rrd mysql_localhost daily
+v-export-rrd mysql_localhost weekly
+v-export-rrd mysql_localhost monthly
+v-export-rrd mysql_localhost yearly
+v-export-rrd mysql_localhost biennially
+v-export-rrd mysql_localhost triennially
+v-export-rrd ssh daily
+v-export-rrd ssh weekly
+v-export-rrd ssh monthly
+v-export-rrd ssh yearly
+v-export-rrd ssh biennially
+v-export-rrd ssh triennially
+v-export-rrd missing daily
+v-get-sys-timezones json
+v-list-remote-dns-hosts json
+v-list-backup-host ftp json
+v-list-backup-host sftp json
+v-list-backup-host b2 json
+v-list-backup-host rclone json
+v-list-backup-host-restic json
+# Holds the panel's private key: record on the disposable VPS only, and replace KEY
+# with a dummy before committing the fixture.
+v-list-sys-hestia-ssl json
+v-list-sys-hestia-updates json
+v-list-sys-hestia-autoupdate plain
+v-list-sys-hestia-autoupdate json
+v-list-sys-ips json
+v-list-sys-ip 203.0.113.10 json
+v-list-sys-ip 192.0.2.1 json
+v-list-sys-interfaces json
+v-list-firewall json
+v-list-firewall-rule 2 json
+v-list-firewall-rule 10 json
+v-list-firewall-rule 999 json
+v-list-firewall-ban json
+v-list-firewall-ipset json
+v-list-sys-sshd-port plain
+v-list-sys-sshd-port json

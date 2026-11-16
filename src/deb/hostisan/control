@@ -1,0 +1,15 @@
+Source: hostisan
+Package: hostisan
+Priority: optional
+Version: 1.10.5
+Section: admin
+Maintainer: Hostisan <@HOSTISAN_INFO_EMAIL@>
+Homepage: @HOSTISAN_URL@
+Architecture: amd64
+Depends: bash, awk, sed, acl, sysstat, setpriv | util-linux (>= 2.33), zstd, lsb-release, idn2, jq, bubblewrap, at, gnupg
+Breaks: hostisan-web-terminal (<< 1:2.0.0)
+Description: Hostisan control panel
+ Hostisan is an open source web hosting control panel: web, DNS, mail,
+ databases, backups and cron for many users on one server.
+ This package holds the panel (the hostisan binary with its web UI) and the
+ command line scripts it runs.

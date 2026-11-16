@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"DATE\": \"2026-10-19\",\n        \"TIME\": \"08:59:12\",\n        \"IP\": \"198.51.100.23\",\n        \"ACTION\": \"login\",\n        \"STATUS\": \"failed\",\n        \"USER_AGENT\": \"curl/8.5.0\",\n        \"SESSION\": \"0f1e2d3c4b5a69788796a5b4c3d2e1f0\",\n        \"ACTIVE\": \"no\"\n    },\n    \"2\": {\n        \"DATE\": \"2026-10-20\",\n        \"TIME\": \"09:40:55\",\n        \"IP\": \"203.0.113.5\",\n        \"ACTION\": \"login\",\n        \"STATUS\": \"success\",\n        \"USER_AGENT\": \"Mozilla/5.0 (X11; Linux x86_64) Firefox/133.0\",\n        \"SESSION\": \"6f1d2c3b4a59687776655443322110ff\",\n        \"ACTIVE\": \"no\"\n    },\n    \"3\": {\n        \"DATE\": \"2026-10-21\",\n        \"TIME\": \"08:15:02\",\n        \"IP\": \"203.0.113.5\",\n        \"ACTION\": \"login\",\n        \"STATUS\": \"success\",\n        \"USER_AGENT\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) Safari/605.1.15\",\n        \"SESSION\": \"a1b2c3d4e5f60718293a4b5c6d7e8f90\",\n        \"ACTIVE\": \"yes\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  }
+]

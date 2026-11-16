@@ -1,0 +1,42 @@
+[
+  {
+    "args": [
+      "admin",
+      "ls",
+      "-A",
+      "/home/admin/web/plain.example.org/public_html"
+    ],
+    "stdout": "index.html\nrobots.txt\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "ls",
+      "-A",
+      "/home/admin/web/secure.example.org/public_html"
+    ],
+    "stdout": "index.html\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "ls",
+      "-A",
+      "/home/admin/web/other.example.org/public_html"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "ls",
+      "-A",
+      "/home/admin/web/dirty.example.org/public_html"
+    ],
+    "stdout": "index.html\nwp-config.php\n",
+    "exit": 0
+  }
+]

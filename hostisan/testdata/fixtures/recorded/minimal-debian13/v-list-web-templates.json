@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n\t\"castopod\",\n\t\"chevereto\",\n\t\"classicpress\",\n\t\"cms_made_simple\",\n\t\"codeigniter\",\n\t\"contao_from_5\",\n\t\"contao_until_49\",\n\t\"craftcms\",\n\t\"datalife_engine\",\n\t\"default\",\n\t\"dokuwiki\",\n\t\"dolibarr\",\n\t\"drupal\",\n\t\"drupal-composer\",\n\t\"drupal-social\",\n\t\"flarum\",\n\t\"flarum-composer\",\n\t\"forgejo\",\n\t\"gitea\",\n\t\"grav\",\n\t\"joomla\",\n\t\"laravel\",\n\t\"magento\",\n\t\"mautic\",\n\t\"modx\",\n\t\"moodle\",\n\t\"no-php\",\n\t\"odoo\",\n\t\"opencart\",\n\t\"opengist\",\n\t\"openproject\",\n\t\"osticket\",\n\t\"owncloud\",\n\t\"phpbb\",\n\t\"piwik\",\n\t\"prestashop\",\n\t\"projectsend\",\n\t\"pyrocms\",\n\t\"sendy\",\n\t\"shopware\",\n\t\"suspended\",\n\t\"symfony2-3\",\n\t\"symfony4-5\",\n\t\"thunder\",\n\t\"vvveb\",\n\t\"webasyst\",\n\t\"wordpress\",\n\t\"wordpress-disable-xmlrpc\",\n\t\"wordpress-disable-xmlrpc-http3\",\n\t\"wordpress-http3\",\n\t\"wordpress_mu_subdir\",\n\t\"wordpress_mu_subdir-http3\",\n\t\"yourls\"\n]\n",
+    "exit": 0
+  }
+]

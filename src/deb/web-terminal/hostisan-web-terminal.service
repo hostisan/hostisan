@@ -1,0 +1,22 @@
+[Unit]
+Description=Hostisan web terminal
+After=network.target
+
+[Service]
+Type=simple
+User=root
+# Root-owned 0755 directory; hostisan terminal creates terminal.sock in it as
+# root:hestiaweb 0660 and checks the peer (SO_PEERCRED) is hestiaweb.
+RuntimeDirectory=hestia-web-terminal
+RuntimeDirectoryMode=0755
+ExecStart=/usr/local/hestia/hostisan/hostisan terminal
+# Every user's shell runs in this unit's cgroup (and counts against its
+# TasksMax): a restart or stop kills every open terminal session.
+Restart=on-failure
+RestartSec=2
+# No NoNewPrivileges, PrivateTmp, ProtectSystem or ProtectHome: the login
+# shells this spawns inherit them, so users would lose sudo/su, see a private
+# /tmp and a read-only system.
+
+[Install]
+WantedBy=multi-user.target

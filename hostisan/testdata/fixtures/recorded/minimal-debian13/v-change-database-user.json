@@ -1,0 +1,11 @@
+[
+  {
+    "args": [
+      "admin",
+      "admin_recdb",
+      "recdb2"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

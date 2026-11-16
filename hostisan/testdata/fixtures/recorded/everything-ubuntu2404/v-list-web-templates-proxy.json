@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n\t\"caching\",\n\t\"default\",\n\t\"hosting\",\n\t\"suspended\"\n]\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "json"
+    ],
+    "stdout": "{\n\n\t\"mail._domainkey\": {\n            \"TTL\": \"3600\",\n            \"TXT\": \"'v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzRq6ckQvBhVVoXFOfX69wi32+iKvthGiXj6xIYKWHKvHeZNpvHj9dM3PRP/AcTS6dk0TwrIm9SdoIqeecE9140ZyEGNePALXqn4ifW7B4zbPnVWjiVzE1OAxfmZXEs1QvZsDQCwZhTaMl8OsJx/F9DtwERgpuoqqvpOhROiGQIv/y5BPZnupv9yhFrfg5oDMDhN7TDc9TE4fvb0eWNaZ0g/68m21aG93kNizepabzBO3QRVFQUUR8F5HH61gfKQI04Q5p4tYimkKUlHFoC9YjryD9Bg87mJK0/xXLGbbQHJ3s6S/IWvLcZaqGsaXIOFzQ8flzB2FR2h2kdRG4ZC8PQIDAQAB'\"\n\t}\n}\n",
+    "exit": 0
+  }
+]

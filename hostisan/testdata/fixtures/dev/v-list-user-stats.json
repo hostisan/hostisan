@@ -1,0 +1,34 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"2026-08-31\": {\n        \"TIME\": \"12:00:00\",\n        \"PACKAGE\": \"system\",\n        \"IP_OWNED\": \"1\",\n        \"DISK_QUOTA\": \"unlimited\",\n        \"U_DISK\": \"6900\",\n        \"U_DISK_DIRS\": \"312\",\n        \"U_DISK_WEB\": \"3450\",\n        \"U_DISK_MAIL\": \"1024\",\n        \"U_DISK_DB\": \"886\",\n        \"BANDWIDTH\": \"unlimited\",\n        \"U_BANDWIDTH\": \"30120\",\n        \"U_WEB_DOMAINS\": \"2\",\n        \"U_WEB_SSL\": \"1\",\n        \"U_WEB_ALIASES\": \"2\",\n        \"U_DNS_DOMAINS\": \"2\",\n        \"U_DNS_RECORDS\": \"13\",\n        \"U_MAIL_DOMAINS\": \"2\",\n        \"U_MAIL_DKIM\": \"1\",\n        \"U_MAIL_ACCOUNTS\": \"3\",\n        \"U_DATABASES\": \"2\",\n        \"U_CRON_JOBS\": \"2\",\n        \"U_BACKUPS\": \"2\"\n    },\n    \"2026-09-30\": {\n        \"TIME\": \"12:00:00\",\n        \"PACKAGE\": \"system\",\n        \"IP_OWNED\": \"1\",\n        \"DISK_QUOTA\": \"unlimited\",\n        \"U_DISK\": \"7120\",\n        \"U_DISK_DIRS\": \"312\",\n        \"U_DISK_WEB\": \"3560\",\n        \"U_DISK_MAIL\": \"1024\",\n        \"U_DISK_DB\": \"886\",\n        \"BANDWIDTH\": \"unlimited\",\n        \"U_BANDWIDTH\": \"35400\",\n        \"U_WEB_DOMAINS\": \"2\",\n        \"U_WEB_SSL\": \"1\",\n        \"U_WEB_ALIASES\": \"2\",\n        \"U_DNS_DOMAINS\": \"2\",\n        \"U_DNS_RECORDS\": \"13\",\n        \"U_MAIL_DOMAINS\": \"2\",\n        \"U_MAIL_DKIM\": \"1\",\n        \"U_MAIL_ACCOUNTS\": \"3\",\n        \"U_DATABASES\": \"2\",\n        \"U_CRON_JOBS\": \"2\",\n        \"U_BACKUPS\": \"2\"\n    },\n    \"2026-10-31\": {\n        \"TIME\": \"12:00:00\",\n        \"PACKAGE\": \"system\",\n        \"IP_OWNED\": \"1\",\n        \"DISK_QUOTA\": \"unlimited\",\n        \"U_DISK\": \"7342\",\n        \"U_DISK_DIRS\": \"312\",\n        \"U_DISK_WEB\": \"3671\",\n        \"U_DISK_MAIL\": \"1024\",\n        \"U_DISK_DB\": \"886\",\n        \"BANDWIDTH\": \"unlimited\",\n        \"U_BANDWIDTH\": \"38211\",\n        \"U_WEB_DOMAINS\": \"2\",\n        \"U_WEB_SSL\": \"1\",\n        \"U_WEB_ALIASES\": \"2\",\n        \"U_DNS_DOMAINS\": \"2\",\n        \"U_DNS_RECORDS\": \"13\",\n        \"U_MAIL_DOMAINS\": \"2\",\n        \"U_MAIL_DKIM\": \"1\",\n        \"U_MAIL_ACCOUNTS\": \"3\",\n        \"U_DATABASES\": \"2\",\n        \"U_CRON_JOBS\": \"2\",\n        \"U_BACKUPS\": \"2\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"2026-08-31\": {\n        \"TIME\": \"12:00:00\",\n        \"PACKAGE\": \"default\",\n        \"IP_OWNED\": \"1\",\n        \"DISK_QUOTA\": \"1000\",\n        \"U_DISK\": \"410\",\n        \"U_DISK_DIRS\": \"312\",\n        \"U_DISK_WEB\": \"205\",\n        \"U_DISK_MAIL\": \"1024\",\n        \"U_DISK_DB\": \"886\",\n        \"BANDWIDTH\": \"1000\",\n        \"U_BANDWIDTH\": \"220\",\n        \"U_WEB_DOMAINS\": \"1\",\n        \"U_WEB_SSL\": \"1\",\n        \"U_WEB_ALIASES\": \"2\",\n        \"U_DNS_DOMAINS\": \"1\",\n        \"U_DNS_RECORDS\": \"13\",\n        \"U_MAIL_DOMAINS\": \"1\",\n        \"U_MAIL_DKIM\": \"1\",\n        \"U_MAIL_ACCOUNTS\": \"3\",\n        \"U_DATABASES\": \"1\",\n        \"U_CRON_JOBS\": \"1\",\n        \"U_BACKUPS\": \"1\"\n    },\n    \"2026-09-30\": {\n        \"TIME\": \"12:00:00\",\n        \"PACKAGE\": \"default\",\n        \"IP_OWNED\": \"1\",\n        \"DISK_QUOTA\": \"1000\",\n        \"U_DISK\": \"455\",\n        \"U_DISK_DIRS\": \"312\",\n        \"U_DISK_WEB\": \"227\",\n        \"U_DISK_MAIL\": \"1024\",\n        \"U_DISK_DB\": \"886\",\n        \"BANDWIDTH\": \"unlimited\",\n        \"U_BANDWIDTH\": \"1310\",\n        \"U_WEB_DOMAINS\": \"1\",\n        \"U_WEB_SSL\": \"1\",\n        \"U_WEB_ALIASES\": \"2\",\n        \"U_DNS_DOMAINS\": \"1\",\n        \"U_DNS_RECORDS\": \"13\",\n        \"U_MAIL_DOMAINS\": \"1\",\n        \"U_MAIL_DKIM\": \"1\",\n        \"U_MAIL_ACCOUNTS\": \"3\",\n        \"U_DATABASES\": \"1\",\n        \"U_CRON_JOBS\": \"1\",\n        \"U_BACKUPS\": \"1\"\n    },\n    \"2026-10-31\": {\n        \"TIME\": \"12:00:00\",\n        \"PACKAGE\": \"default\",\n        \"IP_OWNED\": \"1\",\n        \"DISK_QUOTA\": \"1000\",\n        \"U_DISK\": \"512\",\n        \"U_DISK_DIRS\": \"312\",\n        \"U_DISK_WEB\": \"256\",\n        \"U_DISK_MAIL\": \"1024\",\n        \"U_DISK_DB\": \"886\",\n        \"BANDWIDTH\": \"1000\",\n        \"U_BANDWIDTH\": \"640\",\n        \"U_WEB_DOMAINS\": \"1\",\n        \"U_WEB_SSL\": \"1\",\n        \"U_WEB_ALIASES\": \"2\",\n        \"U_DNS_DOMAINS\": \"1\",\n        \"U_DNS_RECORDS\": \"13\",\n        \"U_MAIL_DOMAINS\": \"1\",\n        \"U_MAIL_DKIM\": \"1\",\n        \"U_MAIL_ACCOUNTS\": \"3\",\n        \"U_DATABASES\": \"1\",\n        \"U_CRON_JOBS\": \"1\",\n        \"U_BACKUPS\": \"1\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  }
+]

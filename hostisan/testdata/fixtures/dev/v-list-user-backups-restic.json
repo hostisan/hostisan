@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "[{\"time\": \"2026-10-19T03:00:04.211873519+02:00\", \"tree\": \"9f8e7d6c5b4a\", \"paths\": [\"/home/admin\"], \"hostname\": \"server1.acme-hosting.net\", \"username\": \"root\", \"program_version\": \"restic 0.16.4\", \"id\": \"3c9b8a7e5d1f2a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3\", \"short_id\": \"3c9b8a7e\"}, {\"time\": \"2026-10-20T03:00:05.532190021+02:00\", \"parent\": \"3c9b8a7e\", \"tree\": \"b7a6c5d4e3f2\", \"paths\": [\"/home/admin\"], \"hostname\": \"server1.acme-hosting.net\", \"username\": \"root\", \"program_version\": \"restic 0.16.4\", \"id\": \"e41f0a29bc7712ab34cd56ef7890ab12cd34ef567890ab12cd34ef567890ab12\", \"short_id\": \"e41f0a29\"}]\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

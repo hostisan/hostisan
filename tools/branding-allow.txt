@@ -1,0 +1,55 @@
+# Allowed "Hestia" text for tools/check-branding.sh.
+#
+# Each entry is PATH_RE TEXT_RE (Perl regexes, separated by the first run of
+# spaces). An occurrence is allowed when its file path (relative to the scanned
+# root) matches the whole of PATH_RE and a TEXT_RE match on the same line covers
+# it. Use ".*" as PATH_RE for any file. Keep entries narrow: technical identifiers, and
+# text the panel never shows or rewrites with its brand map.
+
+# --- Technical identifiers and markers (never shown in the panel) ---
+# The API exit code header (web/api).
+.*                           Hestia-Exit-Code
+# PHP namespaces and class names of the web app installer, its CLI help, and
+# the demo-mode placeholder domain.
+bin/v-quick-install-app      \\Hestia(?:\\[A-Za-z\\]+)?|Hestiacp\\quoteshellarg|HestiaApp|"Hestia User"|demo\.hestiacp\.com
+# Marker comments the core writes into, and looks for in, system files.
+bin/v-(add|delete)-(sys|user)-sftp-jail      # Hestia SFTP Chroot
+bin/v-add-sys-ip             # Added by Hestia(?: Control Panel)?
+bin/v-add-sys-pma-sso        //Add Hestia SSO code here
+bin/v-(stop|update)-firewall     Description=Loading Hestia firewall rules
+# Let's Encrypt client identity: HTTP user agent and the CSR organisation.
+bin/v-add-letsencrypt-(domain|user)      --user-agent "HestiaCP"
+bin/v-add-letsencrypt-domain     "San Francisco" "Hestia" "IT"
+# Public IP lookup service the core calls.
+bin/v-update-sys-ip          https://ip\.hestiacp\.com/
+# The filemanager title maps Hestia's old default APP_NAME to Hostisan.
+bin/v-add-sys-filemanager    = "Hestia Control Panel" \]
+# Console output of the cPanel and DirectAdmin importers (CLI only).
+bin/v-import-cpanel          default Hestia package name|installed on HestiaCP\.
+bin/v-import-directadmin     create Hestiacp Account
+
+# --- Text the panel shows through its brand map (brand.Rewrite) ---
+# Command output and errors (httpapi commandMessage rewrites them).
+bin/v-change-sys-(web-terminal-)?port    Port is already used by Hestia
+bin/v-add-sys-ip             "Hestia backend restart failed"
+bin/v-add-sys-roundcube      "Failed to install Hestia (Roundcube configuration|password driver)"
+bin/v-add-sys-quota          Error: Hestia does not support quotas
+bin/v-(add-user-composer|delete-sys-filemanager)    Hestia environment vars not present
+bin/v-(add|delete)-sys-pma-sso   PMA Hestia-SSO plugin has been
+bin/v-add-sys-pma-restrict   restricted to Hestia Single Sign-On only"
+# Package descriptions (sys_updates.go rewrites DESCR).
+bin/v-list-sys-hestia-updates    add_package_row [a-z-]+ 'Hestia (core package|internal php interpreter|internal web server|web terminal)'
+
+# --- Activity log entries ---
+# Shown on the Logs page. NOTE: keys.go logList does not run brand.Rewrite on
+# MESSAGE yet (Plan 6 B3 report); these stay until it does.
+bin/v-change-sys-port        "Hestia Control Panel backend port
+bin/v-change-sys-web-terminal-port   "Hestia Control Panel web terminal port changed
+bin/v-add-sys-pma-restrict   "phpMyAdmin access restricted to Hestia Single Sign-On\."
+bin/v-delete-sys-quota       log_history "INFO" "Updating Hestia configuration"
+
+# --- Replaced with the product values (no entry needed) ---
+# bin/v-backup-user links HOSTISAN_DOCS_URL (the low-disk mail) and
+# bin/v-restore-user-full-restic gives a restored user without a contact
+# HOSTISAN_INFO_EMAIL, both from install/common/hostisan/product.env.
+# TODO(C7): confirm with the owner that the docs page and the address exist.

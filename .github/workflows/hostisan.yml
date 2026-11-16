@@ -1,0 +1,145 @@
+name: Hostisan
+
+# Hostisan's own checks, beside upstream Hestia's lint/test/bats workflows.
+# The package job builds the hestia and hestia-web-terminal debs the way a
+# release does ('~localsrc', Go >= 1.22 from go.mod) and runs package.bats on them.
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - "feature/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hostisan-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  go:
+    name: Go tests
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: hostisan/go.mod
+          cache-dependency-path: hostisan/go.sum
+
+      - name: Run Go tests
+        run: make go-test
+
+  ui:
+    name: UI tests
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: ui/package-lock.json
+
+      - name: Install UI packages
+        run: make ui-install
+
+      - name: Run UI tests
+        run: make ui-test
+
+  tools:
+    name: Tools and bats
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Install test tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq apt-utils gnupg nftables strace restic php-cli shellcheck
+          # vps-tools.bats checks nft rules in a private user+net namespace
+          sudo sysctl -w kernel.apparmor_restrict_unprivileged_userns=0
+
+      - name: Run bats and shellcheck
+        run: make tools-test
+
+      - name: Check branding
+        run: tools/check-branding.sh .
+
+  core-edits:
+    name: Core edits
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          # the check diffs against the fork point 94c1e760f
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Check core edits against CORE-EDITS.md
+        run: |
+          if [ -f hostisan/CORE-EDITS.md ] && git rev-parse -q --verify "94c1e760f^{commit}" >/dev/null; then
+            make core-edits-check
+          else
+            echo "Skipping core-edits check: CORE-EDITS.md not present or base commit 94c1e760f not in git history"
+          fi
+
+      - name: Run core-edits.bats as root on a fake Hestia
+        run: make core-edits-docker
+
+  package:
+    name: Package build
+    runs-on: ubuntu-24.04
+    env:
+      TERM: dumb
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+
+      - name: Set the build directory
+        run: echo "BUILD_DIR=$RUNNER_TEMP/hostisan-build" >> "$GITHUB_ENV"
+
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: hostisan/go.mod
+          cache-dependency-path: hostisan/go.sum
+
+      - name: Setup Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: ui/package-lock.json
+
+      - name: Build the hostisan and hostisan-web-terminal debs
+        run: |
+          HOSTISAN_VERSION="ci-${GITHUB_SHA::12}" bash src/hst_autocompile.sh \
+            --hestia --web-terminal --noinstall --keepbuild --dontinstalldeps '~localsrc'
+          # hst_autocompile.sh does not stop on errors: check the debs exist
+          ls -l "$BUILD_DIR"/deb/hostisan_*.deb "$BUILD_DIR"/deb/hostisan-web-terminal_*.deb
+
+      - name: Run package.bats on the debs
+        run: DEB_DIR="$BUILD_DIR/deb" test/test_helper/bats-core/bin/bats test/hostisan/package.bats
+
+      - name: Keep the debs
+        uses: actions/upload-artifact@v4
+        with:
+          name: debs-ubuntu24.04
+          path: ${{ env.BUILD_DIR }}/deb/*.deb
+          retention-days: 14

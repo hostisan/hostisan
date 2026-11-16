@@ -1,0 +1,56 @@
+[
+  {
+    "args": [
+      "*",
+      "*",
+      "x",
+      "json"
+    ],
+    "stdout": "Error: invalid comment format :: x\n",
+    "exit": 2
+  },
+  {
+    "args": [
+      "missing",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "{\n    \"ACCESS_KEY_ID\": \"Nw1Ky2Ab3Cd4Ef5Gh6Ij\",\n    \"SECRET_ACCESS_KEY\": \"DevNewSecretNotReal0123456789abcdefABCD\",\n    \"USER\": \"admin\",\n    \"PERMISSIONS\": [\n        \"mail-accounts\"\n    ],\n    \"COMMENT\": \"New key\",\n    \"TIME\": \"12:00:00\",\n    \"DATE\": \"2026-10-21\"\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

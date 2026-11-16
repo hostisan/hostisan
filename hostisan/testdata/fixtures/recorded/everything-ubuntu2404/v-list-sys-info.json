@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"sysinfo\": {\n        \"HOSTNAME\": \"rec.hostisan.test\",\n        \"OS\": \"Ubuntu\",\n        \"VERSION\": \"24.04\",\n        \"ARCH\": \"x86_64\",\n        \"HESTIA\": \"1.10.5\",\n        \"RELEASE\": \"release\",\n        \"UPTIME\": \"34\",\n        \"LOADAVERAGE\": \"1.32 / 0.49 / 0.34\"\n        }\n}\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,31 @@
+# .exclude - Non-project files identified by clean export scan
+# Auto-generated. Add new exclusions below. Rescan to discover new files.
+# Last scanned: 2026-11-16
+
+# Agent & AI
+.claude/
+.cursor/
+.agents/
+.windsurf/
+.codebuddy/
+CLAUDE.md
+
+# Plans & Documentation (only README.md ships)
+RELEASING.md
+SECURITY.md
+SIGNING-KEY.md
+CHANGELOG.md
+CONTRIBUTING.md
+docs/
+docs_backup/
+hostisan/CORE-EDITS.md
+test/hostisan/docker/README.md
+
+# Build & Dependencies
+dist/
+build/
+node_modules/
+
+# OS & Environment
+.env
+.DS_Store

@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\"admin\":{\"NAME\":\"System Administrator\",\"PACKAGE\":\"default\",\"WEB_TEMPLATE\":\"default\",\"BACKEND_TEMPLATE\":\"default\",\"PROXY_TEMPLATE\":\"default\",\"DNS_TEMPLATE\":\"default\",\"WEB_DOMAINS\":\"unlimited\",\"WEB_ALIASES\":\"unlimited\",\"DNS_DOMAINS\":\"unlimited\",\"DNS_RECORDS\":\"unlimited\",\"MAIL_DOMAINS\":\"unlimited\",\"MAIL_ACCOUNTS\":\"unlimited\",\"DATABASES\":\"unlimited\",\"CRON_JOBS\":\"unlimited\",\"DISK_QUOTA\":\"unlimited\",\"BANDWIDTH\":\"unlimited\",\"HOME\":\"/home/admin\",\"NS\":\"ns1.hostisan.test,ns2.hostisan.test\",\"SHELL\":\"bash\",\"BACKUPS\":\"1\",\"CONTACT\":\"admin@example.com\",\"CRON_REPORTS\":\"yes\",\"RKEY\":\"REDACTED\",\"TWOFA\":\"\",\"QRCODE\":\"\",\"ROLE\":\"admin\",\"SUSPENDED\":\"no\",\"SUSPENDED_USERS\":\"1\",\"SUSPENDED_WEB\":\"1\",\"SUSPENDED_DNS\":\"0\",\"SUSPENDED_MAIL\":\"0\",\"SUSPENDED_DB\":\"0\",\"SUSPENDED_CRON\":\"0\",\"IP_AVAIL\":\"1\",\"IP_OWNED\":\"1\",\"U_USERS\":\"5\",\"U_DISK\":\"0\",\"U_DISK_DIRS\":\"0\",\"U_DISK_WEB\":\"0\",\"U_DISK_MAIL\":\"0\",\"U_DISK_DB\":\"0\",\"U_BANDWIDTH\":\"0\",\"U_WEB_DOMAINS\":\"3\",\"U_WEB_SSL\":\"0\",\"U_WEB_ALIASES\":\"2\",\"U_DNS_DOMAINS\":\"0\",\"U_DNS_RECORDS\":\"0\",\"U_MAIL_DOMAINS\":\"0\",\"U_MAIL_DKIM\":\"0\",\"U_MAIL_ACCOUNTS\":\"0\",\"U_DATABASES\":\"1\",\"U_CRON_JOBS\":\"0\",\"U_BACKUPS\":\"0\",\"BACKUPS_INCREMENTAL\":\"no\",\"LANGUAGE\":\"en\",\"THEME\":\"\",\"NOTIFICATIONS\":\"yes\",\"PREF_UI_SORT\":\"name\",\"LOGIN_DISABLED\":\"no\",\"LOGIN_USE_IPLIST\":\"no\",\"LOGIN_ALLOW_IPS\":\"\",\"PHPCLI\":\"\",\"TIME\":\"08:35:12\",\"DATE\":\"2026-10-29\"}}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "nonexistent",
+      "json"
+    ],
+    "stdout": "Error: user nonexistent doesn't exist\n",
+    "exit": 3
+  }
+]

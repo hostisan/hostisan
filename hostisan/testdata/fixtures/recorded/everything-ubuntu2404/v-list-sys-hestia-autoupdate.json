@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "plain"
+    ],
+    "stdout": "Enabled\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n\t\"Enabled\"\n]\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "admin",
+      "admin_recdb",
+      "json"
+    ],
+    "stdout": "{\n    \"admin_recdb\": {\n        \"DATABASE\": \"admin_recdb\",\n        \"DBUSER\": \"admin_recdb\",\n        \"HOST\": \"localhost\",\n        \"TYPE\": \"mysql\",\n        \"CHARSET\": \"UTF8MB4\",\n        \"U_DISK\": \"0\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"08:37:31\",\n        \"DATE\": \"2026-10-29\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "missing_db",
+      "json"
+    ],
+    "stdout": "Error: db db missing_db doesn't exist\n",
+    "exit": 3
+  }
+]

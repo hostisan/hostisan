@@ -1,0 +1,28 @@
+# Accepted dev-vs-recorded shape differences (TestDevFixturesMatchRecordedShapes).
+# One per line: <cmd> <dotted.key> <reason>. "exit" is the exit code, "." the whole stdout.
+# Objects only the recording world has (scratch objects the manifests create, real
+# snapshot and backup ids): dev's "doesn't exist" fallback answers them. Their JSON
+# shape is still compared with a dev sibling of the same command.
+v-list-dns-domain exit@rec.example the recording's scratch zone
+v-list-mail-domain exit@rec.example the recording's scratch mail domain
+v-list-mail-domain-ssl exit@rec.example the recording's scratch mail domain
+v-list-mail-domain-dkim-dns exit@rec.example the recording's scratch mail domain
+v-list-mail-accounts exit@rec.example the recording's scratch mail domain
+v-list-mail-account exit@rec.example the recording's scratch mail account
+v-list-mail-account-autoreply exit@rec.example the recording's scratch mail account
+v-list-database exit@admin_recdb the recording's scratch database
+v-list-user-backup exit@admin.2026-10-28_19-57-56.tar a real backup name from the box
+v-list-user-files-restic exit@20603581 admin's real snapshot id on the box
+v-list-user-files-restic exit@ef3a6148 bob's real snapshot id on the box
+v-list-user-files-restic exit@latest dev lists files by snapshot id only
+v-delete-dns-record exit@99 dev deletes any record id; 99 is the recording's missing id
+# Per-setup variation (Ubuntu 24.04 box vs the dev world).
+v-change-dns-domain-dnssec exit@rec.example the box has no DNS_CLUSTER_SYSTEM=hestia-zone (exit 11); dev's world has DNSSEC zones
+v-open-fs-config exit@/etc/php/8.4/fpm/php.ini the box runs PHP 8.3/8.4; dev's world 8.2/8.3
+v-open-fs-config exit@/etc/postgresql/18/main/pg_hba.conf the box runs PostgreSQL 18; dev's world 16
+v-open-fs-config exit@/etc/postgresql/18/main/postgresql.conf the box runs PostgreSQL 18; dev's world 16
+v-open-fs-config exit@/etc/proftpd/proftpd.conf the box runs vsftpd (proftpd absent, exit 3); dev's world has both configs
+# Kept on purpose: upstream prints a cron command's backslash raw (bin/v-list-cron-jobs:40),
+# so bob's "-exec rm {} \;" job is invalid JSON and Hostisan falls back to plain
+# (Parity 25, TestCronListInvalidJSONFallsBack). The recording's seed lost the backslash.
+v-list-cron-jobs .@bob dev keeps the backslash job that exercises the plain fallback

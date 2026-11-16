@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"hestia\": {\n        \"VERSION\": \"1.10.5-1+ubuntu24.04\",\n        \"ARCH\": \"amd64\",\n        \"UPDATED\": \"yes\",\n        \"DESCR\": \"Hestia core package\",\n        \"TIME\": \"19:30:01\",\n        \"DATE\": \"2026-10-28\"\n    },\n    \"hestia-php\": {\n        \"VERSION\": \"8.5.12-1+ubuntu24.04\",\n        \"ARCH\": \"amd64\",\n        \"UPDATED\": \"yes\",\n        \"DESCR\": \"Hestia internal php interpreter\",\n        \"TIME\": \"19:30:14\",\n        \"DATE\": \"2026-10-28\"\n    },\n    \"hestia-nginx\": {\n        \"VERSION\": \"1.30.6-1+ubuntu24.04\",\n        \"ARCH\": \"amd64\",\n        \"UPDATED\": \"yes\",\n        \"DESCR\": \"Hestia internal web server\",\n        \"TIME\": \"19:30:21\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,52 @@
+#!/bin/bash
+# info: update all hestia packages
+# options: NONE
+#
+# example: v-update-sys-hestia-all
+#
+# This function of updating all hestia packages
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+# Hostisan: run from the web terminal, the update moves to a unit of its own
+# and this terminal follows its log (run-detached.sh). The hestia postinst
+# restarts the panel, which every terminal session goes through, and that hung
+# up this script before it updated the terminal package (rc5 P1).
+if [ -z "${HOSTISAN_DETACHED:-}" ] && "$HESTIA/install/common/hostisan/in-terminal.sh" 2> /dev/null; then
+	exec "$HESTIA/install/common/hostisan/run-detached.sh" "$BIN/v-update-sys-hestia-all"
+fi
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+# Hostisan: the Go terminal (hestia-web-terminal 2.x) is updated too when it is
+# installed. It goes last: it depends on the newer hestia, which comes first.
+packages="hestia hestia-nginx hestia-php"
+if dpkg-query -W -f='${Status}' hestia-web-terminal 2> /dev/null | grep -q '^install ok installed$'; then
+	packages="$packages hestia-web-terminal"
+fi
+
+# Starting update loop
+for package in $packages; do
+	$BIN/v-update-sys-hestia "$package"
+done
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+exit

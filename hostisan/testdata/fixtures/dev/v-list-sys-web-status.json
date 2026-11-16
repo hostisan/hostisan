@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "<h2>NGINX STATUS</h2>Active connections: 3 \nserver accepts handled requests\n 41822 41822 90311 \nReading: 0 Writing: 1 Waiting: 2 \n<br><br><br>\n<h2>APACHE2 STATUS</h2>\n<dl><dt>Server Version: Apache/2.4.62 (Debian)</dt>\n<dt>Server uptime: 30 days 2 minutes 51 seconds</dt>\n<dt>3 requests currently being processed, 72 idle workers</dt></dl>\n<table border=\"0\"><tr><th>Srv</th><th>PID</th><th>Client</th></tr>\n<tr><td>0-0</td><td>1517</td><td>127.0.0.1 &amp; co</td></tr></table>\n",
+    "exit": 0
+  }
+]

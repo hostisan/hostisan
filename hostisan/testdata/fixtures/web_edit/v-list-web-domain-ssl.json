@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "admin",
+      "legacy.example",
+      "json"
+    ],
+    "stdout": "{\n    \"legacy.example\": {\n        \"CRT\": \"-----BEGIN CERTIFICATE-----\\nMIIFweb-edit\\n-----END CERTIFICATE-----\",\n        \"KEY\": \"-----BEGIN PRIVATE KEY-----\\nMIGHwebEditKeyNotSecret\\n-----END PRIVATE KEY-----\",\n        \"CA\": \"\",\n        \"SUBJECT\": \"legacy.example\",\n        \"ALIASES\": \"legacy.example\",\n        \"NOT_BEFORE\": \"\",\n        \"NOT_AFTER\": \"\",\n        \"SIGNATURE\": \"\",\n        \"PUB_KEY\": \"2048 bit\",\n        \"ISSUER\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "upper.example",
+      "json"
+    ],
+    "stdout": "{\n    \"upper.example\": {\n        \"CRT\": \"-----BEGIN CERTIFICATE-----\\nMIIFweb-edit\\n-----END CERTIFICATE-----\",\n        \"KEY\": \"-----BEGIN PRIVATE KEY-----\\nMIGHupperKeyNotSecret\\n-----END PRIVATE KEY-----\",\n        \"CA\": \"\",\n        \"SUBJECT\": \"upper.example\",\n        \"ALIASES\": \"upper.example\",\n        \"NOT_BEFORE\": \"\",\n        \"NOT_AFTER\": \"\",\n        \"SIGNATURE\": \"\",\n        \"PUB_KEY\": \"2048 bit\",\n        \"ISSUER\": \"\"\n    }\n}\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "<h2>APACHE2 STATUS</h2>\n<style>td { color:red }</style><script>alert(1)</script><dl><dt>Server Version: Apache/2.4.62 &lt;Debian&gt;</dt><dt>Hestia Control Panel proxy</dt></dl>\n<table border=\"0\" bgcolor=\"#ffffff\"><tr><td>a &amp; b</td></tr></table>\n",
+    "exit": 0
+  }
+]

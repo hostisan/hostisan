@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "",
+    "stderr": "/usr/local/hestia/func/main.sh: line 55: /usr/local/hestia/conf/restic.conf: No such file or directory\n{\"message_type\":\"exit_error\",\"code\":1,\"message\":\"Fatal: Resolving password failed: Fatal: /usr/local/hestia/data/users/admin/restic.conf does not exist\\n\"}\n",
+    "exit": 1
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "",
+    "stderr": "/usr/local/hestia/func/main.sh: line 55: /usr/local/hestia/conf/restic.conf: No such file or directory\n{\"message_type\":\"exit_error\",\"code\":1,\"message\":\"Fatal: Resolving password failed: Fatal: /usr/local/hestia/data/users/bob/restic.conf does not exist\\n\"}\n",
+    "exit": 1
+  }
+]

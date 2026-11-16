@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "rec",
+      "json"
+    ],
+    "stdout": "{\n  \"rec\": {\n    \"NAME\": \"Rec Tester\",\n    \"CONTACT\": \"rec@acme.test\",\n    \"LANGUAGE\": \"en\",\n    \"ROLE\": \"user\",\n    \"SUSPENDED\": \"no\",\n    \"TWOFA\": \"\",\n    \"RKEY\": \"\",\n    \"PACKAGE\": \"default\"\n  }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "recsusp",
+      "json"
+    ],
+    "stdout": "{\n  \"recsusp\": {\n    \"NAME\": \"Recsusp Tester\",\n    \"CONTACT\": \"recsusp@acme.test\",\n    \"LANGUAGE\": \"en\",\n    \"ROLE\": \"user\",\n    \"SUSPENDED\": \"yes\",\n    \"TWOFA\": \"JBSWY3DPEHPK3PXP\",\n    \"RKEY\": \"\",\n    \"PACKAGE\": \"default\"\n  }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "rec2fa",
+      "json"
+    ],
+    "stdout": "{\n  \"rec2fa\": {\n    \"NAME\": \"Rec2Fa Tester\",\n    \"CONTACT\": \"rec2fa@acme.test\",\n    \"LANGUAGE\": \"en\",\n    \"ROLE\": \"user\",\n    \"SUSPENDED\": \"no\",\n    \"TWOFA\": \"JBSWY3DPEHPK3PXP\",\n    \"RKEY\": \"\",\n    \"PACKAGE\": \"default\"\n  }\n}\n",
+    "exit": 0
+  }
+]

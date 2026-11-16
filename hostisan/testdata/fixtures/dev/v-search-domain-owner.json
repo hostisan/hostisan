@@ -1,0 +1,47 @@
+[
+  {
+    "args": [
+      "example.com",
+      "mail"
+    ],
+    "stdout": "admin\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bakery.example",
+      "mail"
+    ],
+    "stdout": "bob\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "mail"
+    ],
+    "stdout": "",
+    "exit": 3
+  },
+  {
+    "args": [
+      "bakery.example"
+    ],
+    "stdout": "bob\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "example.com"
+    ],
+    "stdout": "admin\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*"
+    ],
+    "stdout": "",
+    "exit": 3
+  }
+]

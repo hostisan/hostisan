@@ -1,0 +1,30 @@
+# Commands recorded by tools/record-fixtures.sh on a Hestia VPS.
+# One command per line: <v-command> <args...>. Never list password or hash files.
+# Tools (Plan 5 Task 1): read-only commands behind the hand-written dev fixtures, run
+# on a disposable VPS with the dev users (admin, bob, susp, ops, carol) first given:
+# admin's web domain example.net; bob's bakery.example (web alias www.bakery.example,
+# DNS zone with a "www" record, mail domain with account "info") and cron job 2
+# "wget -q -O /dev/null https://bakery.example/". example.com belongs to admin (web,
+# mail, DNS) and bob never holds it. Plus a TXT/AAAA record containing "2001:" (DNS
+# record values are not searched upstream: "2001" finds nothing). Nothing that writes:
+# no restores, no SFTP keys, no access-key checks with a real secret, no temp DB users.
+# '' is the empty query.
+v-search-object '' json
+v-search-user-object admin '' json
+v-search-object example json
+v-search-object zzz-none json
+v-search-object www json
+v-search-object info json
+v-search-object bad:x json
+v-search-object 2001 json
+v-search-user-object admin example json
+v-search-user-object admin zzz-none json
+v-search-user-object admin www json
+v-search-user-object admin info json
+v-search-user-object admin bad:x json
+v-search-user-object bob example json
+v-search-user-object bob www json
+v-search-user-object bob info json
+v-search-user-object missing example json
+v-check-api-key /usr/local/hestia/data/keys/missing-key-0123456789 127.0.0.1
+v-list-user-files-restic admin latest /home/admin

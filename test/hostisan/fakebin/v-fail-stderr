@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Test double: writes to both streams and fails with exit 3.
+echo out
+echo err >&2
+exit 3

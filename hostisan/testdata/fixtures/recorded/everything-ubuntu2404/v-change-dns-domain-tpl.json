@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "child-ns",
+      "no"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

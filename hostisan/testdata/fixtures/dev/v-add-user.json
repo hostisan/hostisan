@@ -1,0 +1,170 @@
+[
+  {
+    "args": [
+      "admin",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user admin exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "admin",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user admin exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "admin",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user admin exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "admin",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user admin exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "bob",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user bob exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "bob",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user bob exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "bob",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user bob exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "bob",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user bob exists\n",
+    "exit": 4
+  },
+  {
+    "args": [
+      "missing",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "missing",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "missing",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "missing",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

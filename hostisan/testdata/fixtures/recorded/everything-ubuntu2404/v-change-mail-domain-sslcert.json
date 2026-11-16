@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "/tmp/mailssl",
+      "no"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]
