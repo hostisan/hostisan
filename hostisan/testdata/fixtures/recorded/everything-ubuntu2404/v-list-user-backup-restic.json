@@ -1,0 +1,30 @@
+[
+  {
+    "args": [
+      "admin",
+      "missing",
+      "json"
+    ],
+    "stdout": "{\n    \"/backup\": {\n\t\t\"TYPE\": \"\",\n\t\t\"WEB\": \"\",\n\t\t\"DNS\": \"\",\n\t\t\"MAIL\": \"\",\n\t\t\"DB\": \"\",\n\t\t\"CRON\": \"\",\n\t\t\"UDIR\": \"\",\n\t\t\"RUNTIME\": \"\",\n\t\t\"TIME\": \"\",\n\t\t\"DATE\": \"\"\n\t}\n}\n",
+    "stderr": "Fatal: failed to find snapshot: no matching ID found for prefix \"missing\"\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "20603581",
+      "json"
+    ],
+    "stdout": "{\n    \"snapshot\": {\n\t\t\"TYPE\": \"restic\",\n\t\t\"WEB\": \"rec.hostisan.test,example.com,example.net\",\n\t\t\"DNS\": \"example.com,example.org\",\n\t\t\"MAIL\": \"example.com,example.net\",\n\t\t\"DB\": \"admin_wordpress,admin_reports\",\n\t\t\"CRON\": \"2\",\n\t\t\"UDIR\": \"\",\n\t\t\"RUNTIME\": \"1\",\n\t\t\"TIME\": \"20:03:46\",\n\t\t\"DATE\": \"2026-10-28\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "ef3a6148",
+      "json"
+    ],
+    "stdout": "{\n    \"snapshot\": {\n\t\t\"TYPE\": \"restic\",\n\t\t\"WEB\": \"bakery.example\",\n\t\t\"DNS\": \"bakery.example\",\n\t\t\"MAIL\": \"bakery.example\",\n\t\t\"DB\": \"bob_shop\",\n\t\t\"CRON\": \"2\",\n\t\t\"UDIR\": \"\",\n\t\t\"RUNTIME\": \"1\",\n\t\t\"TIME\": \"20:03:50\",\n\t\t\"DATE\": \"2026-10-28\"\n\t}\n}\n",
+    "exit": 0
+  }
+]

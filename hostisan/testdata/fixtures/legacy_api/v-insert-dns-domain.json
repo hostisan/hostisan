@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "dns-cluster",
+      "*",
+      "server1.acme-hosting.net",
+      "",
+      "no",
+      "",
+      "",
+      ""
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

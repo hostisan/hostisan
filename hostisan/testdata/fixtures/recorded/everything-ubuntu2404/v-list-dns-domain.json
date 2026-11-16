@@ -1,0 +1,36 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "json"
+    ],
+    "stdout": "{\n    \"rec.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-28\",\n        \"SOA\": \"ns1.rec.example\",\n        \"SERIAL\": \"3000000000\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"15\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"20:08:54\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: dns domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "admin",
+      "example.com"
+    ],
+    "stdout": "DOMAIN:         example.com\nIP:             203.0.113.10\nTEMPLATE:       default\nTTL:            14400\nEXP:            2027-10-28\nSOA:            ns1.hostisan.test\nSERIAL:         3000000002\nDNSSEC:         no\nRECORDS:        17\nSUSPENDED:      no\nTIME:           19:52:07\nDATE:           2026-10-28\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example"
+    ],
+    "stdout": "DOMAIN:         bakery.example\nIP:             10.0.0.5\nTEMPLATE:       default\nTTL:            14400\nEXP:            2027-10-28\nSOA:            ns1.hostisan.test\nSERIAL:         3000000002\nDNSSEC:         no\nRECORDS:        17\nSUSPENDED:      no\nTIME:           19:52:28\nDATE:           2026-10-28\n",
+    "exit": 0
+  }
+]

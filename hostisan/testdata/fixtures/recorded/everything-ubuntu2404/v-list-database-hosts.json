@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    {\n        \"HOST\": \"localhost\",\n        \"PORT\": \"5432\",\n        \"TYPE\": \"pgsql\",\n        \"CHARSETS\": \"UTF8,LATIN1,WIN1250,WIN1251,WIN1252,WIN1256,WIN1258,KOI8\",\n        \"MAX_DB\": \"500\",\n        \"U_SYS_USERS\": \"admin\",\n        \"U_DB_BASES\": \"1\",\n        \"TPL\": \"template1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:32:29\",\n        \"DATE\": \"2026-10-28\"\n    },\n    {\n        \"HOST\": \"localhost\",\n        \"PORT\": \"3306\",\n        \"TYPE\": \"mysql\",\n        \"CHARSETS\": \"UTF8,LATIN1,WIN1250,WIN1251,WIN1252,WIN1256,WIN1258,KOI8\",\n        \"MAX_DB\": \"500\",\n        \"U_SYS_USERS\": \"admin,bob\",\n        \"U_DB_BASES\": \"1\",\n        \"TPL\": \"template1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:32:29\",\n        \"DATE\": \"2026-10-28\"\n    }\n]\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    {\n        \"HOST\": \"localhost\",\n        \"PORT\": \"5432\",\n        \"TYPE\": \"pgsql\",\n        \"CHARSETS\": \"UTF8,LATIN1,WIN1250,WIN1251,WIN1252,WIN1256,WIN1258,KOI8\",\n        \"MAX_DB\": \"500\",\n        \"U_SYS_USERS\": \"admin\",\n        \"U_DB_BASES\": \"1\",\n        \"TPL\": \"template1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:32:29\",\n        \"DATE\": \"2026-10-28\"\n    },\n    {\n        \"HOST\": \"localhost\",\n        \"PORT\": \"3306\",\n        \"TYPE\": \"mysql\",\n        \"CHARSETS\": \"UTF8,LATIN1,WIN1250,WIN1251,WIN1252,WIN1256,WIN1258,KOI8\",\n        \"MAX_DB\": \"500\",\n        \"U_SYS_USERS\": \"bob\",\n        \"U_DB_BASES\": \"1\",\n        \"TPL\": \"template1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:32:29\",\n        \"DATE\": \"2026-10-28\"\n    }\n]\n",
+    "exit": 0
+  }
+]

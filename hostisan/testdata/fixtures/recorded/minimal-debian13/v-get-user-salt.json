@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "admin",
+      "127.0.0.1",
+      "json"
+    ],
+    "stdout": "{\n    \"admin\": {\n        \"METHOD\": \"yescrypt\",\n        \"SALT\": \"WSkAMQlqGwTanmvPMmXmg.\",\n        \"TIME\": \"08:37:27\",\n        \"DATE\": \"2026-10-29\"\n        }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "nonexistent",
+      "127.0.0.1",
+      "json"
+    ],
+    "stdout": "Error: password missmatch\n",
+    "exit": 9
+  }
+]

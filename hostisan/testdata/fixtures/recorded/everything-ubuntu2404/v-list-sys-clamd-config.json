@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "plain"
+    ],
+    "stdout": "/etc/clamav/clamd.conf\n",
+    "exit": 0
+  }
+]

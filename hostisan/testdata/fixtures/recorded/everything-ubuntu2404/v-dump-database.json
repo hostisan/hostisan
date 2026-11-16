@@ -1,0 +1,22 @@
+[
+  {
+    "args": [
+      "admin",
+      "admin_recdb",
+      "file",
+      "gzip"
+    ],
+    "stdout": "/backup/admin_admin_recdb_mysql_2026-10-28_20-09-28.sql.gz\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "missing_db",
+      "file",
+      "gzip"
+    ],
+    "stdout": "Error: database missing_db doesn't exist\n",
+    "exit": 3
+  }
+]

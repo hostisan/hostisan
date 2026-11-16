@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "plain"
+    ],
+    "stdout": "/etc/vsftpd.conf\n",
+    "exit": 0
+  }
+]

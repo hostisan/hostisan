@@ -1,0 +1,11 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "boss@rec.example"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

@@ -1,0 +1,101 @@
+#!/bin/bash
+# info: sign out panel sessions
+# options: all|USER
+#
+# example: v-delete-sys-hostisan-sessions all
+# example: v-delete-sys-hostisan-sessions bob
+#
+# This function signs out every Hostisan panel session ("all"), or only
+# USER's. Without an argument it only prints its usage: signing everyone out
+# and restarting the panel takes an explicit "all".
+# The panel keeps signed-in sessions across restarts in
+# /var/lib/hostisan/sessions.json, so restarting hostisan.service no longer
+# signs anyone out. Use this after a password was set behind Hestia's back
+# (passwd, chpasswd), or to end every session at once. It stops the panel
+# (which writes the file on stop), removes the file or USER's sessions from
+# it, and starts the panel again if it was running.
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Argument definition (not $user: main.sh sets an empty one to ROOT_USER).
+# "all" is everyone: session_user stays empty.
+session_user=$1
+if [ "$session_user" = all ]; then
+	session_user=
+fi
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+state_dir=/var/lib/hostisan
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+usage() {
+	echo "Usage: $(basename "$0") all|USER"
+	echo "  all   sign out every panel session (restarts the panel)"
+	echo "  USER  sign out USER's sessions only (restarts the panel)"
+}
+# No argument (or an empty one) only shows the usage: ending every session
+# takes "all"
+if [ "$#" -ne 1 ] || [ -z "$1" ]; then
+	usage
+	check_result "$E_ARGS" "give all or a USER" > /dev/null
+fi
+# a deleted user's sessions may still be in the file: format only
+if [ -n "$session_user" ]; then
+	user=$session_user
+	is_format_valid 'user'
+fi
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+was_active=no
+if systemctl is-active --quiet hostisan.service; then
+	was_active=yes
+fi
+
+# A running panel rewrites the file from memory when it stops
+systemctl stop hostisan.service
+check_result $? "could not stop hostisan.service" "$E_RESTART"
+
+forget=(sessions forget --state-dir "$state_dir")
+if [ -n "$session_user" ]; then
+	forget+=(--user "$session_user")
+fi
+"$HESTIA/hostisan/hostisan" "${forget[@]}"
+forget_rc=$?
+
+if [ "$was_active" = yes ]; then
+	systemctl start hostisan.service
+	check_result $? "could not start hostisan.service" "$E_RESTART"
+fi
+check_result "$forget_rc" "panel sessions not ended" "$E_UPDATE"
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+# Logging
+if [ -n "$session_user" ]; then
+	$BIN/v-log-action "system" "Warning" "Security" "Panel sessions signed out (User: $session_user)."
+else
+	$BIN/v-log-action "system" "Warning" "Security" "All panel sessions signed out."
+fi
+log_event "$OK" "$ARGUMENTS"
+
+exit

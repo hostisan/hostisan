@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"2026-10-31\": {\n        \"TIME\": \"08:37:07\",\n        \"PACKAGE\": \"default\",\n        \"IP_OWNED\": \"1\",\n        \"DISK_QUOTA\": \"0\",\n        \"U_DISK\": \"0\",\n        \"U_DISK_DIRS\": \"0\",\n        \"U_DISK_WEB\": \"0\",\n        \"U_DISK_MAIL\": \"0\",\n        \"U_DISK_DB\": \"0\",\n        \"BANDWIDTH\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"U_WEB_DOMAINS\": \"4\",\n        \"U_WEB_SSL\": \"0\",\n        \"U_WEB_ALIASES\": \"3\",\n        \"U_DNS_DOMAINS\": \"0\",\n        \"U_DNS_RECORDS\": \"0\",\n        \"U_MAIL_DOMAINS\": \"0\",\n        \"U_MAIL_DKIM\": \"0\",\n        \"U_MAIL_ACCOUNTS\": \"0\",\n        \"U_DATABASES\": \"1\",\n        \"U_CRON_JOBS\": \"0\",\n        \"U_BACKUPS\": \"0\",\n        \"U_USERS\": \"5\"\n    }\n}\n",
+    "exit": 0
+  }
+]

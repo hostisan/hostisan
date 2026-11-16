@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n\t\"none\",\n\t\"awstats\"\n]\n",
+    "exit": 0
+  }
+]

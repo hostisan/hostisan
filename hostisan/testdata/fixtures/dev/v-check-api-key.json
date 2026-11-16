@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "/usr/local/hestia/data/keys/devapikey0123456789",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*"
+    ],
+    "stdout": "Error: key missmatch\n",
+    "exit": 9
+  }
+]

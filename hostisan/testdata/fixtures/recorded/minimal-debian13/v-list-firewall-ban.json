@@ -1,0 +1,10 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "stderr": "grep: /usr/local/hestia/data/firewall/banlist.conf: No such file or directory\ncat: /usr/local/hestia/data/firewall/banlist.conf: No such file or directory\n",
+    "exit": 0
+  }
+]

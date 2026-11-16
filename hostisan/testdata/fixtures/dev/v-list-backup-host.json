@@ -1,0 +1,42 @@
+[
+  {
+    "args": [
+      "sftp",
+      "json"
+    ],
+    "stdout": "{\n    \"sftp\": {\n        \"HOST\": \"backup.acme-hosting.net\",\n        \"USERNAME\": \"backup\",\n        \"PORT\": \"22\",\n        \"TYPE\": \"sftp\",\n        \"BPATH\": \"/srv/backups/server1\",\n        \"TIME\": \"03:12:44\",\n        \"DATE\": \"2026-10-01\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "ftp",
+      "json"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "b2",
+      "json"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "rclone",
+      "json"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "local",
+      "json"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

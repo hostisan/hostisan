@@ -1,0 +1,34 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"MIN\": \"*/15\",\n        \"HOUR\": \"*\",\n        \"DAY\": \"*\",\n        \"MONTH\": \"*\",\n        \"WDAY\": \"*\",\n        \"CMD\": \"php /home/admin/web/example.com/public_html/cron.php >/dev/null 2>&1\",\n        \"JOB\": \"1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:52:25\",\n        \"DATE\": \"2026-10-28\"\n    },\n    \"2\": {\n        \"MIN\": \"30\",\n        \"HOUR\": \"3\",\n        \"DAY\": \"*\",\n        \"MONTH\": \"*\",\n        \"WDAY\": \"1,2,3,4,5\",\n        \"CMD\": \"cd /home/admin/web/example.com/public_html && php artisan schedule:run >> /dev/null 2>&1\",\n        \"JOB\": \"2\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"19:52:26\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "plain"
+    ],
+    "stdout": "1\t*/15\t*\t*\t*\t*\tphp /home/admin/web/example.com/public_html/cron.php >/dev/null 2>&1\tno\t19:52:25\t2026-10-28\n2\t30\t3\t*\t*\t1,2,3,4,5\tcd /home/admin/web/example.com/public_html && php artisan schedule:run >> /dev/null 2>&1\tyes\t19:52:26\t2026-10-28\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"MIN\": \"0\",\n        \"HOUR\": \"*/6\",\n        \"DAY\": \"*\",\n        \"MONTH\": \"*\",\n        \"WDAY\": \"*\",\n        \"CMD\": \"find /home/bob/tmp -name '*.tmp' -mtime +7 -exec rm {} ;\",\n        \"JOB\": \"1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:52:34\",\n        \"DATE\": \"2026-10-28\"\n    },\n    \"2\": {\n        \"MIN\": \"15\",\n        \"HOUR\": \"4\",\n        \"DAY\": \"*\",\n        \"MONTH\": \"*\",\n        \"WDAY\": \"*\",\n        \"CMD\": \"wget -q -O /dev/null https://bakery.example/\",\n        \"JOB\": \"2\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:52:35\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "plain"
+    ],
+    "stdout": "1\t0\t*/6\t*\t*\t*\tfind /home/bob/tmp -name '*.tmp' -mtime +7 -exec rm {} ;\tno\t19:52:34\t2026-10-28\n2\t15\t4\t*\t*\t*\twget -q -O /dev/null https://bakery.example/\tno\t19:52:35\t2026-10-28\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"CONFIG\": {\n        \"config_path\": \"/etc/proftpd/proftpd.conf\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "plain"
+    ],
+    "stdout": "/etc/proftpd/proftpd.conf\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "<H2>NGINX STATUS</H2>\nActive connections: 1 \nserver accepts handled requests\n 1 1 1 \nReading: 0 Writing: 1 Waiting: 0 \n",
+    "exit": 0
+  }
+]

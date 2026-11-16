@@ -1,0 +1,56 @@
+[
+  {
+    "args": [
+      "susp",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: user susp is suspended\n",
+    "exit": 5
+  },
+  {
+    "args": [
+      "admin",
+      "*",
+      "json"
+    ],
+    "stdout": "{\n    \"admin\": {\n        \"METHOD\": \"yescrypt\",\n        \"SALT\": \"j9T$abcdefghijklmnop\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-10-17\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "*",
+      "json"
+    ],
+    "stdout": "{\n    \"bob\": {\n        \"METHOD\": \"yescrypt\",\n        \"SALT\": \"j9T$abcdefghijklmnop\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-10-17\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "ops",
+      "*",
+      "json"
+    ],
+    "stdout": "{\n    \"ops\": {\n        \"METHOD\": \"yescrypt\",\n        \"SALT\": \"j9T$abcdefghijklmnop\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-10-17\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "carol",
+      "*",
+      "json"
+    ],
+    "stdout": "{\n    \"carol\": {\n        \"METHOD\": \"yescrypt\",\n        \"SALT\": \"j9T$abcdefghijklmnop\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-10-17\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: password missmatch\n",
+    "exit": 9
+  }
+]

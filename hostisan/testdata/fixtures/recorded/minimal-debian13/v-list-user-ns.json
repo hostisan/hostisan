@@ -1,0 +1,10 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "[\n\t\"ns1.hostisan.test\",\n\t\"ns2.hostisan.test\"\n]\n",
+    "exit": 0
+  }
+]

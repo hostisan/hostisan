@@ -1,0 +1,78 @@
+{
+  "_source": "a WHMCS-style module (permission billing, API29): password through v-make-tmp-file, then create, suspend, terminate; JSON bodies (web/api/index.php line 359); replies from api_legacy (lines 182-209)",
+  "steps": [
+    {
+      "name": "password file",
+      "contentType": "application/json",
+      "body": "{\"user\": \"admin\", \"password\": \"pw\", \"returncode\": \"yes\", \"cmd\": \"v-make-tmp-file\", \"arg1\": \"N3w-Acct-pw\", \"arg2\": \"whmcs-pw-4821\"}",
+      "calls": [
+        "v-check-user-password admin <tmp> 127.0.0.1 yes",
+        "v-check-user-hash admin <tmp> 127.0.0.1"
+      ],
+      "tmpFile": {
+        "name": "whmcs-pw-4821",
+        "content": "N3w-Acct-pw\n"
+      },
+      "status": 200,
+      "exitCode": "",
+      "replyType": "text/html; charset=UTF-8",
+      "reply": ""
+    },
+    {
+      "name": "create",
+      "contentType": "application/json",
+      "body": "{\"user\": \"admin\", \"password\": \"pw\", \"returncode\": \"yes\", \"cmd\": \"v-add-user\", \"arg1\": \"whmcsuser\", \"arg2\": \"/tmp/whmcs-pw-4821\", \"arg3\": \"client@example.org\", \"arg4\": \"default\", \"arg5\": \"WHMCS Client\"}",
+      "calls": [
+        "v-check-user-password admin <tmp> 127.0.0.1 yes",
+        "v-check-user-hash admin <tmp> 127.0.0.1",
+        "v-add-user whmcsuser /tmp/whmcs-pw-4821 client@example.org default WHMCS Client"
+      ],
+      "status": 200,
+      "exitCode": "",
+      "replyType": "text/html; charset=UTF-8",
+      "reply": "0"
+    },
+    {
+      "name": "create again (data mode)",
+      "contentType": "application/json",
+      "body": "{\"user\": \"admin\", \"password\": \"pw\", \"returncode\": \"no\", \"cmd\": \"v-add-user\", \"arg1\": \"bob\", \"arg2\": \"/tmp/whmcs-pw-4821\", \"arg3\": \"client@example.org\", \"arg4\": \"default\", \"arg5\": \"WHMCS Client\"}",
+      "calls": [
+        "v-check-user-password admin <tmp> 127.0.0.1 yes",
+        "v-check-user-hash admin <tmp> 127.0.0.1",
+        "v-add-user bob /tmp/whmcs-pw-4821 client@example.org default WHMCS Client"
+      ],
+      "status": 200,
+      "exitCode": "",
+      "replyType": "text/html; charset=UTF-8",
+      "reply": "Error: user bob exists\n"
+    },
+    {
+      "name": "suspend",
+      "contentType": "application/json",
+      "body": "{\"user\": \"admin\", \"password\": \"pw\", \"returncode\": \"yes\", \"cmd\": \"v-suspend-user\", \"arg1\": \"whmcsuser\", \"arg2\": \"no\"}",
+      "calls": [
+        "v-check-user-password admin <tmp> 127.0.0.1 yes",
+        "v-check-user-hash admin <tmp> 127.0.0.1",
+        "v-suspend-user whmcsuser no"
+      ],
+      "status": 200,
+      "exitCode": "",
+      "replyType": "text/html; charset=UTF-8",
+      "reply": "0"
+    },
+    {
+      "name": "terminate",
+      "contentType": "application/json",
+      "body": "{\"user\": \"admin\", \"password\": \"pw\", \"returncode\": \"yes\", \"cmd\": \"v-delete-user\", \"arg1\": \"whmcsuser\", \"arg2\": \"no\"}",
+      "calls": [
+        "v-check-user-password admin <tmp> 127.0.0.1 yes",
+        "v-check-user-hash admin <tmp> 127.0.0.1",
+        "v-delete-user whmcsuser no"
+      ],
+      "status": 200,
+      "exitCode": "",
+      "replyType": "text/html; charset=UTF-8",
+      "reply": "0"
+    }
+  ]
+}

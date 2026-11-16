@@ -1,0 +1,228 @@
+#!/bin/bash
+# info: change service config
+# options: CONFIG SERVICE [RESTART]
+#
+# example: v-change-sys-service-config /home/admin/dovecot.conf dovecot yes
+#
+# This function for changing service configuration.
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Argument definition
+src=$1
+service=$2
+restart=$3
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+check_args '2' "$#" 'CONFIG SERVICE [RESTART]'
+is_format_valid 'service' 'restart'
+
+if [ ! -e "$src" ]; then
+	check_result "$E_NOTEXIST" "$src config doesn't exist"
+fi
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+# Defining dst config path
+case $service in
+	nginx) dst='/etc/nginx/nginx.conf' ;;
+	httpd) dst='/etc/httpd/conf/httpd.conf' ;;
+	apache2) dst='/etc/apache2/apache2.conf' ;;
+	exim) dst='/etc/exim/exim.conf' ;;
+	exim4) dst='/etc/exim4/exim4.conf.template' ;;
+	vsftpd) dst=$(find /etc/vsftpd* -name 'vsftpd.conf') ;;
+	proftpd) dst=$(find /etc/proftpd* -name 'proftpd.conf') ;;
+	php) dst=$(find /etc/php* -name php.ini) ;;
+	mysql) dst=$(find /etc/my* -name my.cnf) ;;
+	mysqld) dst=$(find /etc/my* -name my.cnf) ;;
+	mariadb) dst=$(find /etc/my* -name my.cnf) ;;
+	postgresql) dst=$($BIN/v-list-sys-pgsql-config plain | cut -f 1) ;;
+	postgresql-hba) dst=$($BIN/v-list-sys-pgsql-config plain | cut -f 2) ;;
+	dovecot) dst=$(find /etc/dovecot* -name dovecot.conf) ;;
+	dovecot-1) dst='/etc/dovecot/conf.d/10-auth.conf' ;;
+	dovecot-2) dst='/etc/dovecot/conf.d/10-logging.conf' ;;
+	dovecot-3) dst='/etc/dovecot/conf.d/10-mail.conf' ;;
+	dovecot-4) dst='/etc/dovecot/conf.d/10-master.conf' ;;
+	dovecot-5) dst='/etc/dovecot/conf.d/10-ssl.conf' ;;
+	dovecot-6) dst='/etc/dovecot/conf.d/20-imap.conf' ;;
+	dovecot-7) dst='/etc/dovecot/conf.d/20-pop3.conf' ;;
+	dovecot-8) dst='/etc/dovecot/conf.d/auth-passwdfile.conf.ext' ;;
+	named) dst='/etc/named.conf' ;;
+	bind9) dst='/etc/bind/named.conf' ;;
+	bind9-opt) dst='/etc/bind/named.conf.options' ;;
+	spamd) dst=$($BIN/v-list-sys-spamd-config plain) ;;
+	spamassassin) dst=$($BIN/v-list-sys-spamd-config plain) ;;
+	clamd) dst=$($BIN/v-list-sys-clamd-config plain) ;;
+	fail2ban) dst='/etc/fail2ban/jail.local' ;;
+	ssh) dst='/etc/ssh/sshd_config' ;;
+	hestiaweb) dst='/var/spool/cron/crontabs/hestiaweb' ;;
+	*) check_result $E_NOTEXIST "service $service doesn't exist" ;;
+esac
+
+# Checking config path
+for config in $dst; do
+	if [ ! -e "$config" ] && [ ! -L "$config" ]; then
+		check_result "$E_NOTEXIST" "$service config doesn't exist"
+	fi
+	# A dangling symlink is never written through
+	if [ ! -e "$config" ]; then
+		check_result "$E_NOTEXIST" "$service config is a dangling link :: $config"
+	fi
+done
+
+# restore_configs: put back the files this save changed, as they were right
+# before it, from its own rollback copies (same inode, owner and mode)
+restore_configs() {
+	local config
+	for config in $changed; do
+		if [ -e "$config$save_back" ]; then
+			cat "$config$save_back" > "$config"
+			rm -f "$config$save_back"
+		fi
+	done
+}
+
+# Checking diff between src and dst configs
+# Each save keeps its own rollback copies, named after this run, of only the
+# files it changes; they go after the save (kept or rolled back). A .vst.back
+# left by an older build is removed: it holds an older file.
+save_back=".vst.back.$$"
+changed=''
+for config in $dst; do
+	rm -f "$config.vst.back"
+	diff -q "$src" "$config" > /dev/null
+
+	if [ $? -ne 0 ]; then
+		# Keep a timestamped copy of the content (a symlink is followed, so
+		# the copy holds the old file, not a link to the live one), except
+		# of the panel crontab: cron would read a copy in its spool as another
+		# crontab. Old copies are pruned only after a good save.
+		if [ "$service" != 'hestiaweb' ]; then
+			backup="$config.hostisan-$(date +%Y%m%d%H%M%S)"
+			while [ -e "$backup" ] || [ -L "$backup" ]; do
+				sleep 1
+				backup="$config.hostisan-$(date +%Y%m%d%H%M%S)"
+			done
+			cp -L -p "$config" "$backup"
+			check_result $? "cannot back up $config"
+		fi
+		cp -p "$config" "$config$save_back"
+		check_result $? "cannot back up $config"
+		changed="$changed $config"
+		cp "$src" "$config"
+		rc=$?
+		if [ "$rc" -ne 0 ]; then
+			restore_configs
+			check_result "$rc" "cannot write $config"
+		fi
+		update="yes"
+	fi
+done
+log_service="$service"
+
+# Test the new files with the service's own checker, when this server has it,
+# restart or not: a reload (nginx) or a unit that forks no daemon (vsftpd) can
+# report success on a broken file, and without a restart nothing tests it. On
+# failure the old files go back and the checker's output is the error.
+check_cmd=()
+case $service in
+	nginx) check_cmd=(nginx -t -c "$dst") ;;
+	apache2) check_cmd=(apache2ctl -t) ;;
+	httpd) check_cmd=(httpd -t -f "$dst") ;;
+	exim) check_cmd=(exim -bV -C "$dst") ;;
+	exim4) check_cmd=(exim4 -bV -C "$dst") ;;
+	proftpd) check_cmd=(proftpd -t -c "$dst") ;;
+	dovecot | dovecot-[1-8]) check_cmd=(doveconf -n -c /etc/dovecot/dovecot.conf) ;;
+	named) check_cmd=(named-checkconf "$dst") ;;
+	bind9 | bind9-opt) check_cmd=(named-checkconf /etc/bind/named.conf) ;;
+	fail2ban) check_cmd=(fail2ban-client -c /etc/fail2ban -t) ;;
+	ssh) check_cmd=(sshd -t -f "$dst") ;;
+esac
+if [ "$update" = 'yes' ] && [ ${#check_cmd[@]} -gt 0 ] && command -v "${check_cmd[0]}" > /dev/null 2>&1; then
+	# sshd -t needs its privilege separation directory, which only a running
+	# ssh.service creates (socket activation leaves it out)
+	if [ "${check_cmd[0]}" = 'sshd' ] && [ "$(id -u)" = 0 ]; then
+		[ -d /run/sshd ] || mkdir -m 0755 /run/sshd
+	fi
+	check_out=$("${check_cmd[@]}" 2>&1)
+	if [ $? -ne 0 ]; then
+		restore_configs
+		check_result "$E_PARSING" "ERROR: $service configuration test failed.
+$(echo "$check_out" | tail -n 20)"
+	fi
+fi
+
+# Restarting service
+if [ "$update" = 'yes' ] && [ "$restart" != 'no' ]; then
+	if [[ "$service" =~ - ]]; then
+		service=$(echo ${service%-*})
+	fi
+
+	if [ "$service" = 'php' ]; then
+		if [ "$(multiphp_count)" -gt 0 ]; then
+			service="php-fpm"
+		elif [ "$WEB_SYSTEM" = 'apache2' ]; then
+			service="$WEB_SYSTEM"
+		fi
+	fi
+
+	if [[ "$service" != "hestiaweb" ]]; then
+		restart_failed=''
+		$BIN/v-restart-service "$service" > /dev/null 2>&1 || restart_failed='yes'
+		# A unit that forks no daemon (vsftpd is Type=simple) counts as restarted
+		# even when the new file stops it a moment later: look again
+		if [ -z "$restart_failed" ] && [ "$service" != 'php-fpm' ] && command -v systemctl > /dev/null 2>&1; then
+			sleep 1
+			case "$(systemctl is-active "$service" 2> /dev/null)" in
+				failed | activating) restart_failed='yes' ;;
+			esac
+		fi
+		if [ -n "$restart_failed" ]; then
+			# The old files are back; restarting the service again is left to
+			# the caller, as upstream does
+			restore_configs
+			check_result "$E_RESTART" "ERROR: $service failed to start with new configuration."
+		fi
+	fi
+fi
+
+# The save is kept: its rollback copies are no longer needed
+for config in $changed; do
+	rm -f "$config$save_back"
+done
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+# Keep the five newest timestamped copies of each saved file
+for config in $changed; do
+	find "$(dirname "$config")" -maxdepth 1 \( -type f -o -type l \) -name "$(basename "$config").hostisan-*" \
+		| sort -r | tail -n +6 | while read -r old; do rm -f "$old"; done
+done
+
+# Logging
+for config in $changed; do
+	$BIN/v-log-action "system" "Info" "System" "Configuration file changed (Service: $log_service, File: $config)."
+done
+log_event "$OK" "$ARGUMENTS"
+
+exit

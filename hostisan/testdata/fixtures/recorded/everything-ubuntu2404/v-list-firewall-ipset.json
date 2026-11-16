@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"blocklist\": {\n        \"IP_VERSION\": \"v4\",\n        \"AUTOUPDATE\": \"no\",\n        \"SUSPENDED\": \"no\",\n        \"SOURCE\": \"file:/root/rec/blocklist.txt\",\n        \"TIME\": \"19:57:58\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  }
+]

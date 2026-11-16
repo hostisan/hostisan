@@ -1,0 +1,131 @@
+#!/bin/bash
+# info: restore file or folder
+# options: USER SNAPSHOT path
+#
+# example: v-restore-user user snapshot path
+#
+# This function for restoring database from restic snapshot.
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Argument definition
+user=$1
+snapshot=$2
+file=$3
+notify=${4-no}
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# shellcheck source=/usr/local/hestia/func/domain.sh
+source $HESTIA/func/domain.sh
+# shellcheck source=/usr/local/hestia/func/ip.sh
+source $HESTIA/func/ip.sh
+# shellcheck source=/usr/local/hestia/func/rebuild.sh
+source $HESTIA/func/rebuild.sh
+# shellcheck source=/usr/local/hestia/func/syshealth.sh
+source $HESTIA/func/syshealth.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+args_usage='USER SNAPSHOT DOMAIN [NOTIFY]'
+check_args '3' "$#" "$args_usage"
+is_format_valid 'user' 'snapshot'
+is_object_valid 'user' 'USER' "$user"
+
+# Hostisan (PF4b): only a path inside the user's home, with no ".." part.
+if [[ "$file" != "/home/$user/"* || "/$file/" == *"/../"* ]]; then
+	check_result "$E_INVALID" "invalid path :: $file"
+fi
+
+source_conf "$HESTIA/conf/restic.conf"
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+# restic runs as root, so it restores into a fresh root-owned directory, never
+# into the user's home. The files then go into place as the user: a link the user
+# planted is followed with the user's rights only. Failures exit E_BACKUP.
+# The directory is on the /home filesystem, not /tmp: restic writes the whole
+# item there first, and /tmp is a RAM tmpfs on Debian 13. mktemp makes it 0700.
+# A restore killed with SIGKILL (v-hostisan-run, when the panel stops) never
+# runs its trap, so stale staging dirs are removed first. Each restore holds an
+# flock on its dir's .lock while it runs (the kernel drops it when the process
+# dies), so a dir is stale when it is older than an hour and its lock is free,
+# or it has no lock file; a restore running longer than an hour keeps its dir.
+# find does not follow links, and -type d skips them; a .lock that is not a
+# plain file is never opened.
+find /home -mindepth 1 -maxdepth 1 -name '.hostisan-restore.*' -type d -mmin +60 -print0 2> /dev/null \
+	| while IFS= read -r -d '' stale; do
+		if [ -L "$stale/.lock" ] || [ ! -f "$stale/.lock" ]; then
+			rm -rf -- "$stale"
+		else
+			flock -n "$stale/.lock" rm -rf -- "$stale"
+		fi
+	done 2> /dev/null
+tmpdir=$(mktemp -d -p /home .hostisan-restore.XXXXXX)
+if [ "$?" -ne 0 ] || [ ! -d "$tmpdir" ]; then
+	check_result "$E_BACKUP" "Unable to create a restore directory in /home"
+fi
+trap 'rm -rf "$tmpdir"' EXIT
+# read-only fd: the children (restic, the user's cp) inherit it.
+: > "$tmpdir/.lock" && exec {restore_lock}< "$tmpdir/.lock" && flock -n "$restore_lock"
+if [ "$?" -ne 0 ]; then
+	check_result "$E_BACKUP" "Unable to lock the restore directory $tmpdir"
+fi
+chmod 700 "$tmpdir"
+
+restic --repo "${REPO%/}/$user" --password-file "$USER_DATA/restic.conf" dump "$snapshot" "/home/$user/backup/backup.conf" > "$tmpdir/backup.conf"
+if [ "$?" -ne 0 ]; then
+	check_result "$E_NOTEXIST" "Unable to download snapshot data"
+fi
+
+restic --repo "${REPO%/}/$user" --password-file "$USER_DATA/restic.conf" restore "$snapshot" --include "$file" --target "$tmpdir/root"
+if [ "$?" -ne 0 ]; then
+	check_result "$E_BACKUP" "Unable to restore $file"
+fi
+if [ ! -e "$tmpdir/root$file" ] && [ ! -L "$tmpdir/root$file" ]; then
+	check_result "$E_BACKUP" "$file is not in snapshot $snapshot"
+fi
+
+chown -R -h "$user:" "$tmpdir/root"
+chmod 711 "$tmpdir"
+parent=$(dirname "$file")
+runuser -u "$user" -- mkdir -p -- "$parent" \
+	&& runuser -u "$user" -- cp -a --no-preserve=ownership -- "$tmpdir/root$file" "$parent/"
+if [ "$?" -ne 0 ]; then
+	check_result "$E_BACKUP" "Unable to restore $file"
+fi
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+# Update user counters
+$BIN/v-update-user-counters "$user"
+$BIN/v-update-user-counters "$ROOT_USER"
+$BIN/v-update-sys-ip-counters
+
+# Hostisan: drop this job's queue line by exact text; a sed regex broke on the "/"
+# in every path.
+pipe="$HESTIA/data/queue/backup.pipe"
+if [ -f "$pipe" ]; then
+	job="v-restore-file-restic '$user' '$snapshot' '$file' "
+	job="$job" awk 'index($0, ENVIRON["job"]) == 0' "$pipe" > "$tmpdir/backup.pipe" \
+		&& cat "$tmpdir/backup.pipe" > "$pipe"
+fi
+
+# Logging
+$BIN/v-log-action "system" "Info" "Backup" "DNS Domain successfully restored (User: $user, Snapshot: $snapshot, Databse: $database)."
+$BIN/v-log-action "$user" "Info" "Backup" "DNS Domain successfully restored (User: $user, Snapshot: $snapshot, Databse: $database)."
+log_event "$OK" "$ARGUMENTS"
+exit

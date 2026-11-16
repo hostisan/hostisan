@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"nginx\": {\n        \"SYSTEM\": \"web server\",\n        \"STATE\": \"running\",\n        \"CPU\": \"0\",\n        \"MEM\": \"18\",\n        \"RTIME\": \"1\"\n    },\n    \"php8.5-fpm\": {\n        \"SYSTEM\": \"php interpreter\",\n        \"STATE\": \"running\",\n        \"CPU\": \"0.2\",\n        \"MEM\": \"12\",\n        \"RTIME\": \"0\"\n    },\n    \"mariadb\": {\n        \"SYSTEM\": \"database server\",\n        \"STATE\": \"running\",\n        \"CPU\": \"1.1\",\n        \"MEM\": \"678\",\n        \"RTIME\": \"0\"\n    },\n    \"cron\": {\n        \"SYSTEM\": \"job scheduler\",\n        \"STATE\": \"running\",\n        \"CPU\": \"12\",\n        \"MEM\": \"0\",\n        \"RTIME\": \"0\"\n    },\n    \"ssh\": {\n        \"SYSTEM\": \"ssh server\",\n        \"STATE\": \"running\",\n        \"CPU\": \"0\",\n        \"MEM\": \"0\",\n        \"RTIME\": \"0\"\n    },\n    \"iptables\": {\n        \"SYSTEM\": \"firewall\",\n        \"STATE\": \"running\",\n        \"CPU\": \"0\",\n        \"MEM\": \"0\",\n        \"RTIME\": \"0\"\n    },\n    \"fail2ban\": {\n        \"SYSTEM\": \"brute-force protection\",\n        \"STATE\": \"running\",\n        \"CPU\": \"0.7\",\n        \"MEM\": \"103\",\n        \"RTIME\": \"1\"\n    }\n}\n",
+    "exit": 0
+  }
+]

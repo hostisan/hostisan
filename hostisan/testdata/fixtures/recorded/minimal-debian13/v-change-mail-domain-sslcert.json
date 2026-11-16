@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "/tmp/mailssl",
+      "no"
+    ],
+    "stdout": "Error: MAIL_SYSTEM is not enabled\n",
+    "exit": 11
+  }
+]

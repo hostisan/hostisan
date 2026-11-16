@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    {\n        \"HOST\": \"localhost\",\n        \"PORT\": \"3306\",\n        \"TYPE\": \"mysql\",\n        \"CHARSETS\": \"BIG5,UTF8,UTF8MB4,LATIN1\",\n        \"MAX_DB\": \"500\",\n        \"U_SYS_USERS\": \"admin,bob\",\n        \"U_DB_BASES\": \"2\",\n        \"TPL\": \"template\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:00:00\",\n        \"DATE\": \"2026-09-01\"\n    },\n    {\n        \"HOST\": \"localhost\",\n        \"PORT\": \"5432\",\n        \"TYPE\": \"pgsql\",\n        \"CHARSETS\": \"UTF8\",\n        \"MAX_DB\": \"500\",\n        \"U_SYS_USERS\": \"admin\",\n        \"U_DB_BASES\": \"1\",\n        \"TPL\": \"template1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:00:00\",\n        \"DATE\": \"2026-09-01\"\n    }\n]\n",
+    "exit": 0
+  }
+]

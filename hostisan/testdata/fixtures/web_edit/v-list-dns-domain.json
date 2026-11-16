@@ -1,0 +1,37 @@
+[
+  {
+    "args": [
+      "admin",
+      "blog.example.com",
+      "json"
+    ],
+    "stdout": "{\n    \"blog.example.com\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-17\",\n        \"SOA\": \"ns1.example.com\",\n        \"SERIAL\": \"3000000007\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"4\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "multi.example"
+    ],
+    "stdout": "{\n    \"multi.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-17\",\n        \"SOA\": \"ns1.example.com\",\n        \"SERIAL\": \"3000000007\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"4\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "multi.example",
+      "json"
+    ],
+    "stdout": "{\n    \"multi.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-17\",\n        \"SOA\": \"ns1.example.com\",\n        \"SERIAL\": \"3000000007\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"4\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "plain.example",
+      "json"
+    ],
+    "stdout": "Error: dns domain plain.example doesn't exist\n",
+    "exit": 3
+  }
+]

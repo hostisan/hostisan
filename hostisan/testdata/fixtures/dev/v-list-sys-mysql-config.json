@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"CONFIG\": {\n        \"max_user_connections\": \"100\",\n        \"max_connections\": \"300\",\n        \"wait_timeout\": \"28800\",\n        \"interactive_timeout\": \"28800\",\n        \"max_allowed_packet\": \"128M\",\n        \"config_path\": \"/etc/mysql/my.cnf\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "plain"
+    ],
+    "stdout": "/etc/mysql/my.cnf\n",
+    "exit": 0
+  }
+]

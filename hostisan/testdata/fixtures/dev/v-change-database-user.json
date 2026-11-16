@@ -1,0 +1,40 @@
+[
+  {
+    "args": [
+      "*",
+      "missing_db",
+      "*"
+    ],
+    "stdout": "Error: database missing_db doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "missing_db",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: database missing_db doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

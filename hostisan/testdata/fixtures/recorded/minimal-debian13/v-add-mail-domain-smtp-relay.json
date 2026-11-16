@@ -1,0 +1,14 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "smtp.relay.example",
+      "relayuser",
+      "/tmp/mailpass",
+      "587"
+    ],
+    "stdout": "Error: MAIL_SYSTEM is not enabled\n",
+    "exit": 11
+  }
+]

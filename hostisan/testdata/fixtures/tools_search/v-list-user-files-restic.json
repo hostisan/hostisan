@@ -1,0 +1,20 @@
+[
+ {
+  "args": [
+   "bob",
+   "7d1c0b9a",
+   "/home/bob/web/x/public_html"
+  ],
+  "stdout": "{\"time\": \"2026-10-19T03:00:04.211873519+02:00\", \"tree\": \"5a4b3c2d1e0f\", \"paths\": [\"/home/bob\"], \"hostname\": \"server1.acme-hosting.net\", \"username\": \"root\", \"program_version\": \"restic 0.16.4\", \"id\": \"7d1c0b9a8f7e6d5c4b3a29180716253443526170819a8b7c6d5e4f3a2b1c0d9e\", \"short_id\": \"7d1c0b9a\", \"struct_type\": \"snapshot\"}\n{\"name\": \"public_html\", \"type\": \"dir\", \"path\": \"/home/bob/web/x/public_html\", \"uid\": 1001, \"gid\": 1001, \"mode\": 2147484141, \"permissions\": \"drwxr-xr-x\", \"mtime\": \"2026-10-18T22:10:00+02:00\", \"atime\": \"2026-10-18T22:10:00+02:00\", \"ctime\": \"2026-10-18T22:10:00+02:00\", \"inode\": 1539508, \"struct_type\": \"node\"}\n{\"name\": \"index.php\", \"type\": \"file\", \"path\": \"/home/bob/web/x/public_html/index.php\", \"uid\": 1001, \"gid\": 1001, \"size\": 1834, \"mode\": 420, \"permissions\": \"-rw-r--r--\", \"mtime\": \"2026-10-18T22:10:00+02:00\", \"atime\": \"2026-10-18T22:10:00+02:00\", \"ctime\": \"2026-10-18T22:10:00+02:00\", \"inode\": 1528306, \"struct_type\": \"node\"}\n{\"name\": \"about.html\", \"type\": \"file\", \"path\": \"/home/bob/web/x/public_html/about.html\", \"uid\": 1001, \"gid\": 1001, \"size\": 5120, \"mode\": 420, \"permissions\": \"-rw-r--r--\", \"mtime\": \"2026-10-18T22:10:00+02:00\", \"atime\": \"2026-10-18T22:10:00+02:00\", \"ctime\": \"2026-10-18T22:10:00+02:00\", \"inode\": 1554190, \"struct_type\": \"node\"}\n{\"name\": \"contact.html\", \"type\": \"file\", \"path\": \"/home/bob/web/x/public_html/contact.html\", \"uid\": 1001, \"gid\": 1001, \"size\": 2048, \"mode\": 420, \"permissions\": \"-rw-r--r--\", \"mtime\": \"2026-10-18T22:10:00+02:00\", \"atime\": \"2026-10-18T22:10:00+02:00\", \"ctime\": \"2026-10-18T22:10:00+02:00\", \"inode\": 1521420, \"struct_type\": \"node\"}\n{\"name\": \"img\", \"type\": \"dir\", \"path\": \"/home/bob/web/x/public_html/img\", \"uid\": 1001, \"gid\": 1001, \"mode\": 2147484141, \"permissions\": \"drwxr-xr-x\", \"mtime\": \"2026-10-18T22:10:00+02:00\", \"atime\": \"2026-10-18T22:10:00+02:00\", \"ctime\": \"2026-10-18T22:10:00+02:00\", \"inode\": 1573429, \"struct_type\": \"node\"}\n",
+  "exit": 0
+ },
+ {
+  "args": [
+   "bob",
+   "7d1c0b9a",
+   "/home/bob"
+  ],
+  "stdout": "{\"time\": \"2026-10-19T03:00:04.211873519+02:00\", \"tree\": \"5a4b3c2d1e0f\", \"paths\": [\"/home/bob\"], \"hostname\": \"server1.acme-hosting.net\", \"username\": \"root\", \"program_version\": \"restic 0.16.4\", \"id\": \"7d1c0b9a8f7e6d5c4b3a29180716253443526170819a8b7c6d5e4f3a2b1c0d9e\", \"short_id\": \"7d1c0b9a\", \"struct_type\": \"snapshot\"}\n{\"name\": \"bob\", \"type\": \"dir\", \"path\": \"/home/bob\", \"uid\": 1001, \"gid\": 1001, \"mode\": 2147484141, \"permissions\": \"drwx--x--x\", \"mtime\": \"2026-10-18T22:10:00+02:00\", \"atime\": \"2026-10-18T22:10:00+02:00\", \"ctime\": \"2026-10-18T22:10:00+02:00\", \"inode\": 1538685, \"struct_type\": \"node\"}\n{\"name\": \"web\", \"type\": \"dir\", \"path\": \"/home/bob/web\", \"uid\": 1001, \"gid\": 1001, \"mode\": 2147484141, \"permissions\": \"drwxr-xr-x\", \"mtime\": \"2026-10-18T22:10:00+02:00\", \"atime\": \"2026-10-18T22:10:00+02:00\", \"ctime\": \"2026-10-18T22:10:00+02:00\", \"inode\": 1593854, \"struct_type\": \"node\"}\n{\"name\": \".profile\", \"type\": \"file\", \"path\": \"/home/bob/.profile\", \"uid\": 1001, \"gid\": 1001, \"size\": 807, \"mode\": 420, \"permissions\": \"-rw-r--r--\", \"mtime\": \"2026-10-18T22:10:00+02:00\", \"atime\": \"2026-10-18T22:10:00+02:00\", \"ctime\": \"2026-10-18T22:10:00+02:00\", \"inode\": 1589744, \"struct_type\": \"node\"}\n",
+  "exit": 0
+ }
+]

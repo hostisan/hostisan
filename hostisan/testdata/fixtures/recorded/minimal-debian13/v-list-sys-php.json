@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n\t\"8.5\"\n]\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n\t\"8.5\"\n]\n",
+    "exit": 0
+  }
+]

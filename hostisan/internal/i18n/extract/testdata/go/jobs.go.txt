@@ -1,0 +1,5 @@
+package jobs
+
+type Failure struct{ Code, Message string }
+
+func h() error { return &Failure{Code: "x", Message: "Inside jobs."} }

@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"restic\": {\n        \"REPO\": \"sftp:restic@backup.acme-hosting.net:/srv/restic/server1\",\n        \"SNAPSHOTS\": \"10\",\n        \"KEEP_DAILY\": \"7\",\n        \"KEEP_WEEKLY\": \"4\",\n        \"KEEP_MONTHLY\": \"6\",\n        \"KEEP_YEARLY\": \"1\"\n    }\n}\n",
+    "exit": 0
+  }
+]

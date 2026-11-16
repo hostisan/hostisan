@@ -1,0 +1,90 @@
+[
+  {
+    "args": [
+      "1",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"ICMP\",\n        \"PORT\": \"0\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"PING\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "2",
+      "json"
+    ],
+    "stdout": "{\n    \"2\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"TCP\",\n        \"PORT\": \"8083\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"HESTIA\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "3",
+      "json"
+    ],
+    "stdout": "{\n    \"3\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"TCP\",\n        \"PORT\": \"3306,5432\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"DB\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "4",
+      "json"
+    ],
+    "stdout": "{\n    \"4\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"TCP\",\n        \"PORT\": \"143,993\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"IMAP\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "5",
+      "json"
+    ],
+    "stdout": "{\n    \"5\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"TCP\",\n        \"PORT\": \"110,995\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"POP3\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "6",
+      "json"
+    ],
+    "stdout": "{\n    \"6\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"TCP\",\n        \"PORT\": \"25,465,587\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"SMTP\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "7",
+      "json"
+    ],
+    "stdout": "{\n    \"7\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"UDP\",\n        \"PORT\": \"53\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"DNS\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "8",
+      "json"
+    ],
+    "stdout": "{\n    \"8\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"TCP\",\n        \"PORT\": \"21,12000-12100\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"FTP\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "9",
+      "json"
+    ],
+    "stdout": "{\n    \"9\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"TCP\",\n        \"PORT\": \"80,443\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"WEB\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "10",
+      "json"
+    ],
+    "stdout": "{\n    \"10\": {\n        \"ACTION\": \"ACCEPT\",\n        \"PROTOCOL\": \"TCP\",\n        \"PORT\": \"22\",\n        \"IP\": \"0.0.0.0/0\",\n        \"COMMENT\": \"SSH\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "Error: rule doesn't exist\n",
+    "exit": 3
+  }
+]

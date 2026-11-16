@@ -1,0 +1,11 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "chief@rec.example"
+    ],
+    "stdout": "Error: MAIL_SYSTEM is not enabled\n",
+    "exit": 11
+  }
+]

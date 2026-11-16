@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    \"child-ns\",\n    \"default-nomail\",\n    \"default\",\n    \"gmail\",\n    \"office365\",\n    \"zoho\"\n]\n",
+    "exit": 0
+  }
+]

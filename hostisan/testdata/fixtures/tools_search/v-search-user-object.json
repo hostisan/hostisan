@@ -1,0 +1,11 @@
+[
+ {
+  "args": [
+   "bob",
+   "www",
+   "json"
+  ],
+  "stdout": "{\n\t\"1\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"web\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"bakery.example\",\n\t\t\"ALIAS\": \"www.bakery.example\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"bakery.example\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"12:00:00\",\n\t\t\"DATE\": \"2026-01-10\"\n\t},\n\t\"2\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"dns\",\n\t\t\"KEY\": \"RECORD\",\n\t\t\"RESULT\": \"www.bakery.example\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"5\",\n\t\t\"PARENT\": \"bakery.example\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"12:00:01\",\n\t\t\"DATE\": \"2026-01-10\"\n\t}\n}\n",
+  "exit": 0
+ }
+]

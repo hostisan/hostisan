@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    \"admin\",\n    \"bob\",\n    \"susp\",\n    \"ops\"\n]\n",
+    "exit": 0
+  }
+]

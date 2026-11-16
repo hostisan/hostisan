@@ -1,0 +1,34 @@
+[
+  {
+    "args": [
+      "ftp",
+      "json"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "sftp",
+      "json"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "b2",
+      "json"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "rclone",
+      "json"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

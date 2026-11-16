@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"admin_wordpress\": {\n        \"DATABASE\": \"admin_wordpress\",\n        \"DBUSER\": \"admin_wpuser\",\n        \"HOST\": \"localhost\",\n        \"TYPE\": \"mysql\",\n        \"CHARSET\": \"UTF8MB4\",\n        \"U_DISK\": \"12\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"10:22:41\",\n        \"DATE\": \"2026-10-01\"\n    },\n    \"admin_reports\": {\n        \"DATABASE\": \"admin_reports\",\n        \"DBUSER\": \"admin_reports\",\n        \"HOST\": \"localhost\",\n        \"TYPE\": \"pgsql\",\n        \"CHARSET\": \"UTF8\",\n        \"U_DISK\": \"0\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"08:05:12\",\n        \"DATE\": \"2026-10-09\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"bob_shop\": {\n        \"DATABASE\": \"bob_shop\",\n        \"DBUSER\": \"bob_shop\",\n        \"HOST\": \"localhost\",\n        \"TYPE\": \"mysql\",\n        \"CHARSET\": \"UTF8MB4\",\n        \"U_DISK\": \"3\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"11:30:00\",\n        \"DATE\": \"2026-10-12\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  }
+]

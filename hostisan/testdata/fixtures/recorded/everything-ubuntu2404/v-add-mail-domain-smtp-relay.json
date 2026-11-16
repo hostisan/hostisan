@@ -1,0 +1,14 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "smtp.relay.example",
+      "relayuser",
+      "/tmp/mailpass",
+      "587"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

@@ -1,0 +1,40 @@
+#!/bin/bash
+# hestia-web-terminal postinst. The unit runs "hostisan terminal" from the
+# hestia package. On a fresh install the installer enables it; on an upgrade
+# this script removes the Node terminal's leftovers and, when the terminal is
+# on (WEB_TERMINAL), enables and restarts the unit. "reenable" moves the
+# enablement link from the old unit in /etc/systemd/system to this one.
+# A restart closes every open terminal (owner decision O11).
+
+set -e
+
+if [ "$1" != "configure" ]; then
+	exit 0
+fi
+
+systemctl daemon-reload > /dev/null 2>&1 || true
+
+conf=/usr/local/hestia/conf/hestia.conf
+if [ ! -f "$conf" ]; then
+	exit 0
+fi
+
+cleanup=/usr/local/hestia/install/common/hostisan/remove-node-terminal.sh
+if [ -x "$cleanup" ]; then
+	"$cleanup" || true
+fi
+
+# Run from the web terminal itself, an in-line restart would kill this dpkg
+# run, so restart-terminal.sh (hestia package) defers it then. A terminal that
+# will not start only warns: it must not leave this package unconfigured.
+restart=/usr/local/hestia/install/common/hostisan/restart-terminal.sh
+if grep -qx "WEB_TERMINAL='true'" "$conf"; then
+	systemctl reenable hestia-web-terminal.service > /dev/null 2>&1 || true
+	if [ -x "$restart" ]; then
+		"$restart" restart || true
+	elif ! systemctl restart hestia-web-terminal.service; then
+		echo "[ ! ] Hostisan: hestia-web-terminal.service did not restart (journalctl -u hestia-web-terminal)" >&2
+	fi
+fi
+
+exit 0

@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"WEB\": {\n    },\n    \"DNS\": {\n    },\n    \"MAIL\": {\n    },\n    \"DB\": {\n    },\n    \"CRON\": {\n    },\n    \"USER\": {\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"WEB\": {\n    },\n    \"DNS\": {\n    },\n    \"MAIL\": {\n    },\n    \"DB\": {\n    },\n    \"CRON\": {\n    },\n    \"USER\": {\n    }\n}\n",
+    "exit": 0
+  }
+]

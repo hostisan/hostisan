@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "roundcube",
+      "yes"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

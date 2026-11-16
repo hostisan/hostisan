@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"TOPIC\": \"Welcome to Hostisan\",\n        \"NOTICE\": \"<p>Your panel is ready. Read the <a href='https://docs.example.org/'>documentation</a> to get started.</p>\",\n        \"TYPE\": \"info\",\n        \"ACK\": \"yes\",\n        \"PRIORITY\": \"0\",\n        \"TIME\": \"12:00:00\",\n        \"DATE\": \"2026-01-10\"\n    },\n    \"2\": {\n        \"TOPIC\": \"Backup failed\",\n        \"NOTICE\": \"<p>Backup of <b>bob</b> could not be uploaded to the SFTP host.</p>\",\n        \"TYPE\": \"error\",\n        \"ACK\": \"no\",\n        \"PRIORITY\": \"1\",\n        \"TIME\": \"03:05:12\",\n        \"DATE\": \"2026-10-20\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  }
+]

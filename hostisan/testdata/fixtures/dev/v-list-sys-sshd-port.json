@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "plain"
+    ],
+    "stdout": "22\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    \"22\"\n]\n",
+    "exit": 0
+  }
+]

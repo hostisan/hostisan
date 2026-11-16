@@ -1,0 +1,47 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"CRT\": \"-----BEGIN CERTIFICATE-----\\nMIIFdevLetsEncryptLeaf\\n-----END CERTIFICATE-----\",\n        \"KEY\": \"-----BEGIN PRIVATE KEY-----\\nMIGHdevKeyNotSecret\\n-----END PRIVATE KEY-----\",\n        \"CA\": \"-----BEGIN CERTIFICATE-----\\nMIIEdevLetsEncryptE7\\n-----END CERTIFICATE-----\",\n        \"SUBJECT\": \"example.com\",\n        \"ALIASES\": \"example.com,blog.example.com,www.example.com\",\n        \"NOT_BEFORE\": \"Mar  2 09:41:10 2026 GMT\",\n        \"NOT_AFTER\": \"May 31 09:41:09 2026 GMT\",\n        \"SIGNATURE\": \"ecdsa-with-SHA384\",\n        \"PUB_KEY\": \"256 bit\",\n        \"ISSUER\": \"C = US, O = Let's Encrypt, CN = E7\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net",
+      "json"
+    ],
+    "stdout": "{\n    \"example.net\": {\n        \"CRT\": \"\",\n        \"KEY\": \"\",\n        \"CA\": \"\",\n        \"SUBJECT\": \"\",\n        \"ALIASES\": \"\",\n        \"NOT_BEFORE\": \"\",\n        \"NOT_AFTER\": \"\",\n        \"SIGNATURE\": \"\",\n        \"PUB_KEY\": \"\",\n        \"ISSUER\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n        \"CRT\": \"-----BEGIN CERTIFICATE-----\\nMIIGdevBakeryLeaf\\n-----END CERTIFICATE-----\",\n        \"KEY\": \"-----BEGIN RSA PRIVATE KEY-----\\nMIIEdevBakeryKeyNotSecret\\n-----END RSA PRIVATE KEY-----\",\n        \"CA\": \"-----BEGIN CERTIFICATE-----\\nMIIGdevSectigoIntermediate\\n-----END CERTIFICATE-----\",\n        \"SUBJECT\": \"bakery.example\",\n        \"ALIASES\": \"bakery.example,www.bakery.example\",\n        \"NOT_BEFORE\": \"Jan 15 00:00:00 2026 GMT\",\n        \"NOT_AFTER\": \"Jan 14 23:59:59 2027 GMT\",\n        \"SIGNATURE\": \"sha256WithRSAEncryption\",\n        \"PUB_KEY\": \"2048 bit\",\n        \"ISSUER\": \"C = GB, ST = Greater Manchester, L = Salford, O = Sectigo Limited, CN = Sectigo RSA Domain Validation Secure Server CA\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: web domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: web domain doesn't exist\n",
+    "exit": 3
+  }
+]

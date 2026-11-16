@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "Exim queue status\n 41m  14K 1sAbcD-000Ab1-2X <bounce@example.com>\n          owner@northwind-shop.io\n\n------------------------------------------------------------------------------------------\n\nExim statistics from 2026-10-21 00:00:01 to 2026-10-21 12:40:02\n\nGrand total summary\n  Received   1.2MB     412\n  Delivered  1.4MB     430\n",
+    "exit": 0
+  }
+]

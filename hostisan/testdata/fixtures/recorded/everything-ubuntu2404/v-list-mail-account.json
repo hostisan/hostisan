@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info",
+      "json"
+    ],
+    "stdout": "{\n    \"info\": {\n        \"ALIAS\": \"\",\n        \"FWD\": \"\",\n        \"FWD_ONLY\": \"\",\n        \"AUTOREPLY\": \"yes\",\n        \"QUOTA\": \"1024\",\n        \"RATE_LIMIT\": \"\",\n        \"U_DISK\": \"0\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"20:09:53\",\n        \"DATE\": \"2026-10-28\",\n        \"WEBMAIL_ALIAS\": \"webmail.rec.example\"\n    }\n}\n",
+    "exit": 0
+  }
+]

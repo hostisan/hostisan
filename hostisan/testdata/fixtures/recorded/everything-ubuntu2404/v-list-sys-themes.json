@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n\t\"dark\",\n\t\"default\",\n\t\"flat\",\n\t\"vestia\"\n]\n",
+    "exit": 0
+  }
+]

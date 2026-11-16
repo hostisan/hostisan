@@ -1,0 +1,265 @@
+name: Hostisan release
+
+# On a v* tag: build every hestia* deb for each supported distro (amd64), attach
+# them to a GitHub release, and, once the owner has set it up, publish them to the
+# signed APT repo on GitHub Pages (the gh-pages branch) and check it with apt.
+# See RELEASING.md for the secrets and variables:
+#   secret HOSTISAN_APT_KEY              armored secret signing key (keygen.sh private.asc)
+#   secret HOSTISAN_APT_KEY_PASSPHRASE   only if the key has a passphrase
+#   var    HOSTISAN_APT_PUBLISH          "true" turns publishing on
+#   var    HOSTISAN_APT_KEY_FPR          fingerprint of the signing key (required to publish;
+#                                        publish.sh refuses any but the pinned one)
+#   var    HOSTISAN_APT_URL              repo URL servers use, e.g. https://apt.<HOSTISAN_DOMAIN>
+#   (HOSTISAN_DOMAIN and the other product values: install/common/hostisan/product.env)
+#   var    HOSTISAN_APT_CNAME            custom domain for Pages (optional)
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hostisan-release
+  cancel-in-progress: false
+
+jobs:
+  meta:
+    name: Version
+    runs-on: ubuntu-24.04
+    outputs:
+      build: ${{ steps.v.outputs.build }}
+    steps:
+      # The Debian revision of every package (1:1.10.5-<build>+debian13): above
+      # the local default build (105) and different for every run, so a published file name
+      # never gets other bytes (publish.sh refuses that).
+      - id: v
+        run: echo "build=$((200 + GITHUB_RUN_NUMBER))" >> "$GITHUB_OUTPUT"
+
+  build:
+    name: Build (${{ matrix.name }})
+    needs: meta
+    runs-on: ubuntu-24.04
+    container: ${{ matrix.image }}
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        # Hostisan v1 supports Ubuntu 24.04 only; the other systems come back
+        # here once they are tested.
+        include:
+          # - { image: "debian:12", name: debian12 }
+          # - { image: "debian:13", name: debian13 }
+          # - { image: "ubuntu:22.04", name: ubuntu22.04 }
+          - { image: "ubuntu:24.04", name: ubuntu24.04 }
+          # - { image: "ubuntu:26.04", name: ubuntu26.04 }
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      TERM: dumb
+      BUILD_DIR: /tmp/hostisan-build
+      HOSTISAN_BUILD: ${{ needs.meta.outputs.build }}
+    steps:
+      - name: Install git
+        run: apt-get update -qq && apt-get install -y -qq git ca-certificates curl lsb-release
+
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      # Debian 12's golang-go is 1.19; the build needs go.mod's Go (>= 1.22).
+      # Node comes from NodeSource through hst_autocompile.sh.
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: hostisan/go.mod
+          cache: false
+
+      - name: Build the debs
+        run: |
+          HOSTISAN_VERSION="$GITHUB_REF_NAME" bash src/hst_autocompile.sh \
+            --all --noinstall --keepbuild '~localsrc'
+          # hst_autocompile.sh does not stop on errors: check every deb is there
+          for p in hestia hestia-nginx hestia-php hestia-web-terminal; do
+            ls -l "$BUILD_DIR"/deb/"${p}"_*.deb
+          done
+
+      - name: Keep the debs
+        uses: actions/upload-artifact@v4
+        with:
+          name: debs-${{ matrix.name }}
+          path: /tmp/hostisan-build/deb/*.deb
+          if-no-files-found: error
+
+  # arm64 waits for the owner (O7: amd64 only for now).
+  build-arm64:
+    name: Build (arm64)
+    if: false
+    needs: meta
+    runs-on: ubuntu-24.04-arm
+    container: debian:13
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      TERM: dumb
+      BUILD_DIR: /tmp/hostisan-build
+      HOSTISAN_BUILD: ${{ needs.meta.outputs.build }}
+    steps:
+      - name: Install git
+        run: apt-get update -qq && apt-get install -y -qq git ca-certificates curl lsb-release
+
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Setup Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: hostisan/go.mod
+          cache: false
+
+      - name: Build the debs
+        run: |
+          HOSTISAN_VERSION="$GITHUB_REF_NAME" bash src/hst_autocompile.sh \
+            --all --noinstall --keepbuild '~localsrc'
+
+      - name: Keep the debs
+        uses: actions/upload-artifact@v4
+        with:
+          name: debs-debian13-arm64
+          path: /tmp/hostisan-build/deb/*.deb
+          if-no-files-found: error
+
+  github-release:
+    name: GitHub release
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    steps:
+      - name: Download the debs
+        uses: actions/download-artifact@v4
+        with:
+          pattern: debs-*
+          merge-multiple: true
+          path: debs
+
+      - name: Attach the debs to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          prerelease=()
+          [[ "$GITHUB_REF_NAME" == *-* ]] && prerelease=(--prerelease)
+          gh release create "$GITHUB_REF_NAME" --repo "$GITHUB_REPOSITORY" --verify-tag \
+            --title "Hostisan $GITHUB_REF_NAME" --generate-notes "${prerelease[@]}" debs/*.deb
+
+  publish:
+    name: Publish the APT repo
+    needs: build
+    if: vars.HOSTISAN_APT_PUBLISH == 'true'
+    runs-on: ubuntu-24.04
+    environment: apt-repo
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Install apt-ftparchive
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq apt-utils gnupg
+
+      - name: Download the debs
+        uses: actions/download-artifact@v4
+        with:
+          pattern: debs-*
+          merge-multiple: true
+          path: debs
+
+      - name: Fetch the published repo
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          remote="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          if git ls-remote --exit-code --heads "$remote" gh-pages >/dev/null; then
+            git clone -q --depth 1 --branch gh-pages "$remote" site
+            rm -rf site/.git
+          else
+            mkdir site
+          fi
+
+      - name: Add the debs and sign the repo
+        env:
+          HOSTISAN_APT_KEY: ${{ secrets.HOSTISAN_APT_KEY }}
+          HOSTISAN_APT_KEY_PASSPHRASE: ${{ secrets.HOSTISAN_APT_KEY_PASSPHRASE }}
+          HOSTISAN_APT_KEY_FPR: ${{ vars.HOSTISAN_APT_KEY_FPR }}
+          # never the test override, whatever the environment around it holds
+          HOSTISAN_APT_KEY_UNPINNED: ''
+        run: |
+          if [ -z "$HOSTISAN_APT_KEY" ] || [ -z "$HOSTISAN_APT_KEY_FPR" ]; then
+            echo "::error::set the secret HOSTISAN_APT_KEY and the variable HOSTISAN_APT_KEY_FPR (RELEASING.md)"
+            exit 1
+          fi
+          key="$RUNNER_TEMP/apt-key.asc"
+          trap 'rm -f "$key"' EXIT
+          (umask 077 && printf '%s\n' "$HOSTISAN_APT_KEY" > "$key")
+          tools/apt-repo/publish.sh --key-file "$key" debs site
+
+      - name: Push the gh-pages branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CNAME: ${{ vars.HOSTISAN_APT_CNAME }}
+        run: |
+          # the commit's address is the contact address of product.env
+          source install/common/hostisan/product.env
+          cd site
+          touch .nojekyll
+          if [ -n "$CNAME" ]; then echo "$CNAME" > CNAME; fi
+          # one commit, force-pushed: the branch never keeps old debs in history
+          git init -q -b gh-pages
+          git add -A
+          git -c user.name="Hostisan release" -c user.email="$HOSTISAN_INFO_EMAIL" \
+            commit -q -m "Publish $GITHUB_REF_NAME"
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" gh-pages
+
+  check-repo:
+    name: Check the repo (${{ matrix.image }})
+    needs: [meta, publish]
+    runs-on: ubuntu-24.04
+    container: ${{ matrix.image }}
+    strategy:
+      fail-fast: false
+      matrix:
+        image: ["ubuntu:24.04"]
+    env:
+      DEBIAN_FRONTEND: noninteractive
+      URL: ${{ vars.HOSTISAN_APT_URL }}
+      BUILD: ${{ needs.meta.outputs.build }}
+    steps:
+      # for install/common/hostisan/signing-key.sh and the pinned fingerprint
+      - name: Checkout code
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Install apt over https from the published repo
+        run: |
+          apt-get update -qq && apt-get install -y -qq ca-certificates curl gnupg
+          keyring=/usr/share/keyrings/hostisan-archive-keyring.gpg
+          curl -fsSL "$URL/hostisan-archive-keyring.gpg" -o "$keyring"
+          # the pinned release key and no other, not expired or revoked
+          if ! why=$(bash install/common/hostisan/signing-key.sh check "$keyring"); then
+            echo "::error::published keyring: $why"
+            exit 1
+          fi
+          . /etc/os-release
+          echo "deb [arch=amd64 signed-by=$keyring] $URL $VERSION_CODENAME main" > /etc/apt/sources.list.d/hostisan.list
+          # Pages takes a few minutes to serve the new branch
+          for _ in $(seq 30); do
+            if apt-get update -qq && apt-cache madison hestia | grep -q -- "-${BUILD}+"; then
+              break
+            fi
+            sleep 20
+          done
+          apt-cache policy hestia hestia-web-terminal hestia-nginx hestia-php
+          cd /tmp
+          apt-get download hestia hestia-web-terminal hestia-nginx hestia-php
+          ls -l /tmp/*.deb
+          apt-cache madison hestia | grep -q -- "-${BUILD}+"

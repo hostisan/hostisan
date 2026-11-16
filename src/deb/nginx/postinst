@@ -1,0 +1,92 @@
+#!/bin/bash
+
+set -e
+
+if [ "$1" != "configure" ]; then
+	exit 0
+fi
+
+# Run triggers only on updates
+if [ ! -e "/usr/local/hestia/data/users/" ]; then
+	exit
+fi
+
+# Prevent running and causes issues with outdated hestia version
+if ! id "hestiaweb" &> /dev/null; then
+	exit
+fi
+
+# Touch and set permisions on default log files on installation
+update-rc.d hestia defaults > /dev/null
+# Hostisan: inside an update or the web terminal the start goes to the one
+# deferred hestia restart at the end (a restart starts a stopped unit). In line
+# it started a stopped hestia mid-update, then the deferred restart ran too
+# (rc8 D). restart-unit.sh, in-update.sh and in-terminal.sh are the hestia
+# package's; without them, the start is upstream's.
+hostisan_dir=/usr/local/hestia/install/common/hostisan
+if [ -x "$hostisan_dir/restart-unit.sh" ] && [ -x "$hostisan_dir/in-update.sh" ] \
+	&& [ -x "$hostisan_dir/in-terminal.sh" ] \
+	&& { "$hostisan_dir/in-update.sh" || "$hostisan_dir/in-terminal.sh"; }; then
+	"$hostisan_dir/restart-unit.sh" hestia.service restart || true
+else
+	invoke-rc.d hestia start || true
+fi
+
+# Adapt Port Listing in HESTIA NGINX Backend
+source /usr/local/hestia/func/syshealth.sh # Load syshealth functions
+
+# Check if the function syshealth_adapt_hestia_nginx_listen_ports exists
+if ! declare -f syshealth_adapt_hestia_nginx_listen_ports > /dev/null; then
+	exit
+fi
+syshealth_adapt_hestia_nginx_listen_ports # Adapt port listing
+syshealth_adapt_nginx_resolver
+
+###############################################################
+#                Initialize functions/variables               #
+###############################################################
+
+if [ -z "$HESTIA" ]; then
+	export HESTIA='/usr/local/hestia'
+	PATH=$PATH:/usr/local/hestia/bin
+	export PATH
+fi
+
+# Check if preinstall hook exists
+if [ -e "/etc/hestiacp/hooks/nginx/pre_install.sh" ]; then
+	/etc/hestiacp/hooks/nginx/pre_install.sh
+fi
+
+# Load upgrade functions and variables
+source /usr/local/hestia/func/main.sh
+source /usr/local/hestia/func/upgrade.sh
+source /usr/local/hestia/conf/hestia.conf
+source /usr/local/hestia/install/upgrade/upgrade.conf
+
+# Reset backend port
+# Hostisan: "no" leaves the hestia restart to the end of this script, which
+# defers it in the web terminal or an update. v-change-sys-port's own restart
+# ran in line on a non-default port and hung up a raw "apt upgrade" typed in
+# the terminal. An older v-change-sys-port ignores the "no".
+if [ -n "$BACKEND_PORT" ]; then
+	/usr/local/hestia/bin/v-change-sys-port $BACKEND_PORT no
+fi
+
+if [ -e "/etc/hestiacp/hooks/nginx/post_install.sh" ]; then
+	/etc/hestiacp/hooks/nginx/post_install.sh
+fi
+
+# Restart hestia service
+# Hostisan: hestia-nginx carries every web-terminal session, so run from the
+# terminal (a raw "apt upgrade" typed there) an in-line restart hangs up the
+# shell and dpkg with it. restart-unit.sh (hestia package) then defers it until
+# dpkg is done. A hestia that will not restart only warns: it must not leave
+# this package unconfigured.
+if [ -f "/etc/init.d/hestia" ]; then
+	restart=/usr/local/hestia/install/common/hostisan/restart-unit.sh
+	if [ -x "$restart" ]; then
+		"$restart" hestia.service restart || true
+	elif ! systemctl restart hestia > /dev/null 2>&1; then
+		echo "[ ! ] Hostisan: hestia did not restart (journalctl -u hestia)" >&2
+	fi
+fi

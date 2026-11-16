@@ -1,0 +1,40 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "203.0.113.10",
+      "ns1.rec.example",
+      "ns2.rec.example",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "no",
+      "no"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "203.0.113.10",
+      "ns1.rec.example",
+      "ns2.rec.example",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "no",
+      "no"
+    ],
+    "stdout": "Error: DNS domain rec.example exists\n",
+    "exit": 4
+  }
+]

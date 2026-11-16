@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "",
+      "sel2"
+    ],
+    "stdout": "Error: MAIL_SYSTEM is not enabled\n",
+    "exit": 11
+  }
+]

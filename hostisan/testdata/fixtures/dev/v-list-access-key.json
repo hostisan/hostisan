@@ -1,0 +1,42 @@
+[
+  {
+    "args": [
+      "aB3dEfGh1JkLmN0pQrSt",
+      "json"
+    ],
+    "stdout": "{\n    \"ACCESS_KEY_ID\": \"aB3dEfGh1JkLmN0pQrSt\",\n    \"SECRET_ACCESS_KEY\": \"DevSecretNotReal000000000000000000000000\",\n    \"USER\": \"admin\",\n    \"PERMISSIONS\": [\n        \"billing\",\n        \"mail-accounts\"\n    ],\n    \"COMMENT\": \"Billing sync\",\n    \"TIME\": \"09:41:07\",\n    \"DATE\": \"2026-03-14\"\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "Zx9yWv8uTs7rQp6oNm5l",
+      "json"
+    ],
+    "stdout": "{\n    \"ACCESS_KEY_ID\": \"Zx9yWv8uTs7rQp6oNm5l\",\n    \"SECRET_ACCESS_KEY\": \"DevSecretNotReal111111111111111111111111\",\n    \"USER\": \"admin\",\n    \"PERMISSIONS\": [],\n    \"COMMENT\": \"\",\n    \"TIME\": \"10:02:55\",\n    \"DATE\": \"2026-03-15\"\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "Kp4Lm7Nq2Rs5Tv8Wx1Yz",
+      "json"
+    ],
+    "stdout": "{\n    \"ACCESS_KEY_ID\": \"Kp4Lm7Nq2Rs5Tv8Wx1Yz\",\n    \"SECRET_ACCESS_KEY\": \"DevSecretNotReal222222222222222222222222\",\n    \"USER\": \"admin\",\n    \"PERMISSIONS\": [\n        \"purge-nginx-cache\"\n    ],\n    \"COMMENT\": \"CI deploy\",\n    \"TIME\": \"16:20:00\",\n    \"DATE\": \"2026-09-01\"\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "Nw1Ky2Ab3Cd4Ef5Gh6Ij",
+      "json"
+    ],
+    "stdout": "{\n    \"ACCESS_KEY_ID\": \"Nw1Ky2Ab3Cd4Ef5Gh6Ij\",\n    \"SECRET_ACCESS_KEY\": \"DevNewSecretNotReal0123456789abcdefABCD\",\n    \"USER\": \"admin\",\n    \"PERMISSIONS\": [\n        \"mail-accounts\"\n    ],\n    \"COMMENT\": \"New key\",\n    \"TIME\": \"12:00:00\",\n    \"DATE\": \"2026-10-21\"\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "Error: access key doesn't exist\n",
+    "exit": 3
+  }
+]

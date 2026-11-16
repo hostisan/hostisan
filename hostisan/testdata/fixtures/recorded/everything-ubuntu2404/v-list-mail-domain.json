@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "json"
+    ],
+    "stdout": "{\n    \"rec.example\": {\n        \"ANTIVIRUS\": \"yes\",\n        \"ANTISPAM\": \"yes\",\n        \"DKIM\": \"yes\",\n        \"DKIM_SELECTOR\": \"mail\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"0\",\n        \"RATE_LIMIT\": \"200\",\n        \"REJECT\": \"yes\",\n        \"U_DISK\": \"0\",\n        \"SSL\": \"no\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT\": \"no\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"20:09:30\",\n        \"DATE\": \"2026-10-28\",\n        \"WEBMAIL_ALIAS\": \"webmail.rec.example\",\n        \"WEBMAIL\":\"roundcube\",\n        \"U_SMTP_RELAY\":\"\",\n        \"U_SMTP_RELAY_HOST\":\"\",\n        \"U_SMTP_RELAY_PORT\":\"\",\n        \"U_SMTP_RELAY_USERNAME\":\"\"\n        }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: mail domain missing.example doesn't exist\n",
+    "exit": 3
+  }
+]

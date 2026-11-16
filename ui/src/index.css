@@ -1,0 +1,28 @@
+@source "../node_modules/@cloudflare/kumo/dist/**/*.{js,jsx,ts,tsx}";
+@import "@cloudflare/kumo/styles/tailwind";
+@import "tailwindcss";
+@import "./theme/cloudflare.css";
+
+@theme {
+  /* Wide enough for a full list table plus the summary rail (see AppLayout). */
+  --breakpoint-3xl: 110rem;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-kumo-canvas text-base text-kumo-default antialiased;
+}
+
+@layer base {
+  /* An implicit grid column sizes to its widest child, so one long toolbar or button
+     row can push a page wider than a phone screen. Let single-column grids shrink;
+     utilities like grid-cols-2 sit in a later layer and still win. */
+  .grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

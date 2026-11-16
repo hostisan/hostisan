@@ -1,0 +1,93 @@
+[
+  {
+    "args": [
+      "admin",
+      "",
+      "json"
+    ],
+    "stdout": "{\n\n}\n",
+    "stderr": "Usage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\nUsage: grep [OPTION]... PATTERNS [FILE]...\nTry 'grep --help' for more information.\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example",
+      "json"
+    ],
+    "stdout": "{\n\t\"1\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"web\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"example.com\",\n\t\t\"ALIAS\": \"blog.example.com, www.example.com\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:03\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"2\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"web\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"example.net\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"yes\",\n\t\t\"TIME\": \"19:52:05\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"3\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"dns\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"example.com\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:07\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"4\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"dns\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"example.org\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"yes\",\n\t\t\"TIME\": \"19:52:10\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"5\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"mail\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"example.com\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:16\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"6\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"mail\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"example.net\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"yes\",\n\t\t\"TIME\": \"19:52:21\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"7\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"cron\",\n\t\t\"KEY\": \"JOB\",\n\t\t\"RESULT\": \"php /home/admin/web/example.com/public_html/cron.php >/dev/null 2>&1\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"1\",\n\t\t\"PARENT\": \"1\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:25\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"8\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"cron\",\n\t\t\"KEY\": \"JOB\",\n\t\t\"RESULT\": \"cd /home/admin/web/example.com/public_html && php artisan schedule:run >> /dev/null 2>&1\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"2\",\n\t\t\"PARENT\": \"2\",\n\t\t\"SUSPENDED\": \"yes\",\n\t\t\"TIME\": \"19:52:26\",\n\t\t\"DATE\": \"2026-10-28\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "zzz-none",
+      "json"
+    ],
+    "stdout": "{\n\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "www",
+      "json"
+    ],
+    "stdout": "{\n\t\"1\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"web\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"example.com\",\n\t\t\"ALIAS\": \"www.example.com\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"example.com\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:03\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"2\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"dns\",\n\t\t\"KEY\": \"RECORD\",\n\t\t\"RESULT\": \"www.example.com\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"10\",\n\t\t\"PARENT\": \"example.com\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:07\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"3\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"dns\",\n\t\t\"KEY\": \"RECORD\",\n\t\t\"RESULT\": \"www.example.com\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"6\",\n\t\t\"PARENT\": \"example.com\",\n\t\t\"SUSPENDED\": \"yes\",\n\t\t\"TIME\": \"19:52:10\",\n\t\t\"DATE\": \"2026-10-28\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "info",
+      "json"
+    ],
+    "stdout": "{\n\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "bad:x",
+      "json"
+    ],
+    "stdout": "Error: invalid object format :: bad:x\n",
+    "exit": 2
+  },
+  {
+    "args": [
+      "bob",
+      "example",
+      "json"
+    ],
+    "stdout": "{\n\t\"1\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"web\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"bakery.example\",\n\t\t\"ALIAS\": \"www.bakery.example\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:27\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"2\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"dns\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"bakery.example\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:28\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"3\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"mail\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"bakery.example\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:30\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"4\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"cron\",\n\t\t\"KEY\": \"JOB\",\n\t\t\"RESULT\": \"wget -q -O /dev/null https://bakery.example/\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"2\",\n\t\t\"PARENT\": \"2\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:35\",\n\t\t\"DATE\": \"2026-10-28\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "www",
+      "json"
+    ],
+    "stdout": "{\n\t\"1\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"web\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"bakery.example\",\n\t\t\"ALIAS\": \"www.bakery.example\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"bakery.example\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:27\",\n\t\t\"DATE\": \"2026-10-28\"\n\t},\n\t\"2\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"dns\",\n\t\t\"KEY\": \"RECORD\",\n\t\t\"RESULT\": \"www.bakery.example\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"10\",\n\t\t\"PARENT\": \"bakery.example\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:28\",\n\t\t\"DATE\": \"2026-10-28\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "info",
+      "json"
+    ],
+    "stdout": "{\n\t\"1\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"mail\",\n\t\t\"KEY\": \"ACCOUNT\",\n\t\t\"RESULT\": \"info@bakery.example\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"info\",\n\t\t\"PARENT\": \"bakery.example\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"19:52:34\",\n\t\t\"DATE\": \"2026-10-28\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "missing",
+      "example",
+      "json"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  }
+]

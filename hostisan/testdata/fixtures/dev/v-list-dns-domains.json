@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-17\",\n        \"SOA\": \"ns1.example.com\",\n        \"SERIAL\": \"3000000007\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"8\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\"\n    },\n    \"example.org\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"child-ns\",\n        \"TTL\": \"3600\",\n        \"EXP\": \"2027-03-01\",\n        \"SOA\": \"ns1.example.org\",\n        \"SERIAL\": \"3000000002\",\n        \"DNSSEC\": \"yes\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"5\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"10:02:55\",\n        \"DATE\": \"2026-10-18\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n        \"IP\": \"10.0.0.5\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-01-20\",\n        \"SOA\": \"ns1.example.com\",\n        \"SERIAL\": \"3000000001\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"5\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"14:20:03\",\n        \"DATE\": \"2026-10-19\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  }
+]

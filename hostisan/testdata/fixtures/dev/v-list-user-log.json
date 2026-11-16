@@ -1,0 +1,42 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"37\": {\n        \"DATE\": \"2026-10-16\",\n        \"TIME\": \"10:02:11\",\n        \"LEVEL\": \"Info\",\n        \"CATEGORY\": \"Web\",\n        \"MESSAGE\": \"Added new web domain (example.com).\"\n    },\n    \"38\": {\n        \"DATE\": \"2026-10-17\",\n        \"TIME\": \"14:20:05\",\n        \"LEVEL\": \"Info\",\n        \"CATEGORY\": \"DNS\",\n        \"MESSAGE\": \"Added DNS record (www) to example.com.\"\n    },\n    \"39\": {\n        \"DATE\": \"2026-10-18\",\n        \"TIME\": \"09:12:44\",\n        \"LEVEL\": \"Warning\",\n        \"CATEGORY\": \"Security\",\n        \"MESSAGE\": \"Password changed.\"\n    },\n    \"40\": {\n        \"DATE\": \"2026-10-19\",\n        \"TIME\": \"03:02:11\",\n        \"LEVEL\": \"Info\",\n        \"CATEGORY\": \"Backup\",\n        \"MESSAGE\": \"Backup created (admin.2026-10-19_03-00-02.tar).\"\n    },\n    \"41\": {\n        \"DATE\": \"2026-10-20\",\n        \"TIME\": \"04:15:40\",\n        \"LEVEL\": \"Error\",\n        \"CATEGORY\": \"Backup\",\n        \"MESSAGE\": \"Backup upload to SFTP host failed.\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "system",
+      "json"
+    ],
+    "stdout": "{\n    \"201\": {\n        \"DATE\": \"2026-10-19\",\n        \"TIME\": \"00:20:03\",\n        \"LEVEL\": \"Info\",\n        \"CATEGORY\": \"System\",\n        \"MESSAGE\": \"Usage statistics updated.\"\n    },\n    \"202\": {\n        \"DATE\": \"2026-10-20\",\n        \"TIME\": \"02:00:00\",\n        \"LEVEL\": \"Info\",\n        \"CATEGORY\": \"Updates\",\n        \"MESSAGE\": \"System packages are up to date.\"\n    },\n    \"203\": {\n        \"DATE\": \"2026-10-21\",\n        \"TIME\": \"06:10:30\",\n        \"LEVEL\": \"Warning\",\n        \"CATEGORY\": \"Firewall\",\n        \"MESSAGE\": \"Banned IP address 198.51.100.23 (ssh).\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"DATE\": \"2026-10-18\",\n        \"TIME\": \"11:00:00\",\n        \"LEVEL\": \"Info\",\n        \"CATEGORY\": \"Mail\",\n        \"MESSAGE\": \"Added mail account info@acme-bakery.com.\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  }
+]

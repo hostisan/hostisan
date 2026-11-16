@@ -1,0 +1,11 @@
+#!/bin/bash
+# hestia-web-terminal prerm: on removal, stop and disable the unit before its
+# file goes. Upgrades leave it running; the new postinst restarts it.
+
+set -e
+
+if [ "$1" = "remove" ]; then
+	systemctl disable --now hestia-web-terminal.service > /dev/null 2>&1 || true
+fi
+
+exit 0

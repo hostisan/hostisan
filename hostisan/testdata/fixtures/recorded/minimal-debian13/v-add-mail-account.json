@@ -1,0 +1,24 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info",
+      "/tmp/mailpass",
+      "1024"
+    ],
+    "stdout": "Error: MAIL_SYSTEM is not enabled\n",
+    "exit": 11
+  },
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info",
+      "/tmp/mailpass",
+      "1024"
+    ],
+    "stdout": "Error: MAIL_SYSTEM is not enabled\n",
+    "exit": 11
+  }
+]

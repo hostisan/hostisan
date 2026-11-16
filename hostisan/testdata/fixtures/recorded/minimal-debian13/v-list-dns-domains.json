@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "plain"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "plain"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

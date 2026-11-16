@@ -1,0 +1,144 @@
+# Generates the UI's API types from the Go wire structs: `make types`.
+packages:
+  - path: github.com/hostisan/hostisan/internal/httpapi
+    include_files:
+      - types.go
+      - types_mail.go
+      - types_web.go
+      - types_accounts.go
+      - types_sys.go
+      - types_tools.go
+      - steps.go
+    output_path: ../ui/src/api/types.gen.ts
+    # Wire types that embed Hestia's structs import them from the other generated file.
+    type_mappings:
+      hestia.DNSDomain: DNSDomain
+      hestia.DNSRecord: DNSRecord
+      hestia.DNSSECKey: DNSSECKey
+      hestia.Database: Database
+      hestia.MailDomain: MailDomain
+      hestia.MailDomainDetail: MailDomainDetail
+      hestia.MailAccount: MailAccount
+      hestia.MailAccountDetail: MailAccountDetail
+      hestia.MailSSL: MailSSL
+      hestia.WebDomain: WebDomain
+      hestia.WebDomainDetail: WebDomainDetail
+      hestia.WebSSL: WebSSL
+      hestia.UserEntry: UserEntry
+      hestia.UserDetail: UserDetail
+      hestia.PackageEntry: PackageEntry
+      hestia.Package: Package
+      hestia.CronJob: CronJob
+      hestia.Backup: Backup
+      hestia.BackupExclusions: BackupExclusions
+      hestia.ExclusionEntry: ExclusionEntry
+      hestia.Snapshot: Snapshot
+      hestia.SnapshotDetail: SnapshotDetail
+      hestia.SnapshotNode: SnapshotNode
+      hestia.SSHKey: SSHKey
+      hestia.AccessKey: AccessKey
+      hestia.APIInfo: APIInfo
+      hestia.Notification: Notification
+      hestia.LogEntry: LogEntry
+      hestia.AuthLogEntry: AuthLogEntry
+      hestia.SysIP: SysIP
+      hestia.SysInfo: SysInfo
+      hestia.SysService: SysService
+      hestia.HestiaUpdate: HestiaUpdate
+      hestia.HestiaSSL: HestiaSSL
+      hestia.BackupHost: BackupHost
+      hestia.ResticHost: ResticHost
+      hestia.RemoteDNSHost: RemoteDNSHost
+      hestia.FirewallRule: FirewallRule
+      hestia.FirewallBan: FirewallBan
+      hestia.FirewallIpset: FirewallIpset
+      hestia.RrdChart: RrdChart
+    frontmatter: |
+      import type {
+        AccessKey,
+        APIInfo,
+        AuthLogEntry,
+        Backup,
+        BackupExclusions,
+        BackupHost,
+        CronJob,
+        Database,
+        DNSDomain,
+        DNSRecord,
+        DNSSECKey,
+        ExclusionEntry,
+        FirewallBan,
+        FirewallIpset,
+        FirewallRule,
+        HestiaSSL,
+        HestiaUpdate,
+        LogEntry,
+        MailAccount,
+        MailAccountDetail,
+        MailDomain,
+        MailDomainDetail,
+        MailSSL,
+        Notification,
+        Package,
+        PackageEntry,
+        RemoteDNSHost,
+        ResticHost,
+        RrdChart,
+        Snapshot,
+        SnapshotDetail,
+        SnapshotNode,
+        SSHKey,
+        SysInfo,
+        SysIP,
+        SysService,
+        UserDetail,
+        UserEntry,
+        WebDomain,
+        WebDomainDetail,
+        WebSSL,
+      } from "./hestia.gen";
+      // The types mapped for Plans 2d, 3 and 4: naming them here keeps the import above
+      // valid under noUnusedLocals while no wire type references them yet.
+      export type MappedHestiaTypes =
+        | AccessKey
+        | APIInfo
+        | AuthLogEntry
+        | Backup
+        | BackupExclusions
+        | BackupHost
+        | CronJob
+        | ExclusionEntry
+        | FirewallBan
+        | FirewallIpset
+        | FirewallRule
+        | HestiaSSL
+        | HestiaUpdate
+        | LogEntry
+        | Notification
+        | Package
+        | PackageEntry
+        | RemoteDNSHost
+        | ResticHost
+        | RrdChart
+        | Snapshot
+        | SnapshotDetail
+        | SnapshotNode
+        | SSHKey
+        | SysInfo
+        | SysIP
+        | SysService
+        | UserDetail
+        | UserEntry
+        | WebDomain
+        | WebDomainDetail
+        | WebSSL;
+  - path: github.com/hostisan/hostisan/internal/hestia
+    include_files:
+      - dns.go
+      - db.go
+      - mail.go
+      - web.go
+      - accounts.go
+      - sys.go
+      - sysip.go
+    output_path: ../ui/src/api/hestia.gen.ts

@@ -1,0 +1,97 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-10-17\",\n        \"SOA\": \"ns1.example.com\",\n        \"SERIAL\": \"3000000007\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"8\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.org",
+      "json"
+    ],
+    "stdout": "{\n    \"example.org\": {\n        \"IP\": \"203.0.113.10\",\n        \"TPL\": \"child-ns\",\n        \"TTL\": \"3600\",\n        \"EXP\": \"2027-03-01\",\n        \"SOA\": \"ns1.example.org\",\n        \"SERIAL\": \"3000000002\",\n        \"DNSSEC\": \"yes\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"5\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"10:02:55\",\n        \"DATE\": \"2026-10-18\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n        \"IP\": \"10.0.0.5\",\n        \"TPL\": \"default\",\n        \"TTL\": \"14400\",\n        \"EXP\": \"2027-01-20\",\n        \"SOA\": \"ns1.example.com\",\n        \"SERIAL\": \"3000000001\",\n        \"DNSSEC\": \"no\",\n        \"SRC\": \"\",\n        \"RECORDS\": \"5\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"14:20:03\",\n        \"DATE\": \"2026-10-19\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "Error: dns domain bakery.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "bob",
+      "example.org",
+      "json"
+    ],
+    "stdout": "Error: dns domain example.org doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: dns domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "admin",
+      "example.com"
+    ],
+    "stdout": "DOMAIN:         example.com\nIP:             203.0.113.10\nTEMPLATE:       default\nTTL:            14400\nEXP:            2027-10-17\nSOA:            ns1.example.com\nSERIAL:         3000000007\nDNSSEC:         no\nRECORDS:        8\nSUSPENDED:      no\nTIME:           09:41:12\nDATE:           2026-10-17\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example"
+    ],
+    "stdout": "DOMAIN:         bakery.example\nIP:             10.0.0.5\nTEMPLATE:       default\nTTL:            14400\nEXP:            2027-01-20\nSOA:            ns1.example.com\nSERIAL:         3000000001\nDNSSEC:         no\nRECORDS:        5\nSUSPENDED:      no\nTIME:           14:20:03\nDATE:           2026-10-19\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example"
+    ],
+    "stdout": "Error: dns domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*"
+    ],
+    "stdout": "Error: dns domain doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: dns domain doesn't exist\n",
+    "exit": 3
+  }
+]

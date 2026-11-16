@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "rec.example"
+    ],
+    "stdout": "Error: dns rec.example is not suspended\n",
+    "exit": 6
+  }
+]

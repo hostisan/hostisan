@@ -1,0 +1,62 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "info",
+      "json"
+    ],
+    "stdout": "{\n    \"info\": {\n        \"MSG\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "sales",
+      "json"
+    ],
+    "stdout": "{\n    \"sales\": {\n        \"MSG\": \"Thanks for your message.\\nWe reply within one business day.\\nSales team\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net",
+      "contact",
+      "json"
+    ],
+    "stdout": "Error: example.net contact is suspended\n",
+    "exit": 5
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "orders",
+      "json"
+    ],
+    "stdout": "{\n    \"orders\": {\n        \"MSG\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: mail domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: mail account doesn't exist\n",
+    "exit": 3
+  }
+]

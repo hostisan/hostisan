@@ -1,0 +1,101 @@
+[
+  {
+    "args": [
+      "admin",
+      "multi.example",
+      "json"
+    ],
+    "stdout": "{\n    \"multi.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/other.example/public_html/app/sub/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"a.multi.example,b.multi.example,c.multi.example\",\n        \"STATS\": \"awstats\",\n        \"STATS_USER\": \"viewer\",\n        \"SSL\": \"no\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"admin_dev:admin_cdn\",\n        \"FTP_PATH\": \"/public_html:/assets\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,js,html\",\n        \"FASTCGI_CACHE\": \"\",\n        \"FASTCGI_DURATION\": \"\",\n        \"REDIRECT\": \"\",\n        \"REDIRECT_CODE\": \"\",\n        \"CUSTOM_DOCROOT\": \"/home/admin/web/other.example/public_html/app/sub/\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "foreign.example",
+      "json"
+    ],
+    "stdout": "{\n    \"foreign.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/foreign.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,js,html\",\n        \"FASTCGI_CACHE\": \"\",\n        \"FASTCGI_DURATION\": \"\",\n        \"REDIRECT\": \"https://elsewhere.example/page\",\n        \"REDIRECT_CODE\": \"\",\n        \"CUSTOM_DOCROOT\": \"/home/bob/web/x.example/public_html/\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "wwwredir.example",
+      "json"
+    ],
+    "stdout": "{\n    \"wwwredir.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/wwwredir.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,js,html\",\n        \"FASTCGI_CACHE\": \"\",\n        \"FASTCGI_DURATION\": \"\",\n        \"REDIRECT\": \"www.wwwredir.example\",\n        \"REDIRECT_CODE\": \"302\",\n        \"CUSTOM_DOCROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "bare.example",
+      "json"
+    ],
+    "stdout": "{\n    \"bare.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/bare.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,js,html\",\n        \"FASTCGI_CACHE\": \"\",\n        \"FASTCGI_DURATION\": \"\",\n        \"REDIRECT\": \"bare.example\",\n        \"REDIRECT_CODE\": \"301\",\n        \"CUSTOM_DOCROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "cache.example",
+      "json"
+    ],
+    "stdout": "{\n    \"cache.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/cache.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,js,html\",\n        \"FASTCGI_CACHE\": \"yes\",\n        \"FASTCGI_DURATION\": \"5m\",\n        \"REDIRECT\": \"\",\n        \"REDIRECT_CODE\": \"\",\n        \"CUSTOM_DOCROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "legacy.example",
+      "json"
+    ],
+    "stdout": "{\n    \"legacy.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/legacy.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"yes\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,js,html\",\n        \"FASTCGI_CACHE\": \"\",\n        \"FASTCGI_DURATION\": \"\",\n        \"REDIRECT\": \"\",\n        \"REDIRECT_CODE\": \"\",\n        \"CUSTOM_DOCROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "upper.example",
+      "json"
+    ],
+    "stdout": "{\n    \"upper.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/upper.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"yes\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"ECDSA\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"yes\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,js,html\",\n        \"FASTCGI_CACHE\": \"\",\n        \"FASTCGI_DURATION\": \"\",\n        \"REDIRECT\": \"\",\n        \"REDIRECT_CODE\": \"\",\n        \"CUSTOM_DOCROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "noproxy.example",
+      "json"
+    ],
+    "stdout": "{\n    \"noproxy.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/noproxy.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"\",\n        \"PROXY_EXT\": \"\",\n        \"FASTCGI_CACHE\": \"\",\n        \"FASTCGI_DURATION\": \"\",\n        \"REDIRECT\": \"\",\n        \"REDIRECT_CODE\": \"\",\n        \"CUSTOM_DOCROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "plain.example",
+      "json"
+    ],
+    "stdout": "{\n    \"plain.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/plain.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"www.plain.example\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,js,html\",\n        \"FASTCGI_CACHE\": \"\",\n        \"FASTCGI_DURATION\": \"\",\n        \"REDIRECT\": \"\",\n        \"REDIRECT_CODE\": \"\",\n        \"CUSTOM_DOCROOT\": \"\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "root.example",
+      "json"
+    ],
+    "stdout": "{\n    \"root.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/root.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,js,html\",\n        \"FASTCGI_CACHE\": \"\",\n        \"FASTCGI_DURATION\": \"\",\n        \"REDIRECT\": \"\",\n        \"REDIRECT_CODE\": \"\",\n        \"CUSTOM_DOCROOT\": \"/home/admin/web/root.example/public_html/\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "odd.example",
+      "json"
+    ],
+    "stdout": "{\n    \"odd.example\": {\n        \"IP\": \"203.0.113.10\",\n        \"IP6\": \"\",\n        \"DOCUMENT_ROOT\": \"/home/admin/web/odd.example/public_html/\",\n        \"U_DISK\": \"0\",\n        \"U_BANDWIDTH\": \"0\",\n        \"TPL\": \"default\",\n        \"ALIAS\": \"\",\n        \"STATS\": \"\",\n        \"STATS_USER\": \"\",\n        \"SSL\": \"no\",\n        \"SSL_FORCE\": \"no\",\n        \"SSL_HSTS\": \"no\",\n        \"SSL_HOME\": \"same\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT_FAIL_COUNT\": \"0\",\n        \"LETSENCRYPT\": \"no\",\n        \"FTP_USER\": \"\",\n        \"FTP_PATH\": \"\",\n        \"AUTH_USER\": \"\",\n        \"BACKEND\": \"PHP-8_2\",\n        \"PROXY\": \"default\",\n        \"PROXY_EXT\": \"css,js,html\",\n        \"FASTCGI_CACHE\": \"\",\n        \"FASTCGI_DURATION\": \"\",\n        \"REDIRECT\": \"\",\n        \"REDIRECT_CODE\": \"\",\n        \"CUSTOM_DOCROOT\": \"/home/admin/web/odd.example/public_html/../../../etc/\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-02\"\n    }\n}\n",
+    "exit": 0
+  }
+]

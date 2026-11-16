@@ -1,0 +1,10 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n            \"DATE\": \"2026-10-28\",\n            \"TIME\": \"19:46:25\",\n            \"IP\": \"198.51.100.23\",\n            \"ACTION\": \"login\",\n            \"STATUS\": \"success\",\n            \"USER_AGENT\": \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/192.0.2.156 Safari/537.36\",\n            \"SESSION\": \"40754178db965d4451746adc2b6ccec1\",\n            \"ACTIVE\": \"yes\"\n        }\n}\n",
+    "exit": 0
+  }
+]

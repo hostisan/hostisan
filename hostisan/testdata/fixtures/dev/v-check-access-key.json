@@ -1,0 +1,112 @@
+[
+  {
+    "args": [
+      "Zx9yWv8uTs7rQp6oNm5l",
+      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "{\"USER\": \"admin\", \"USER_ARG_POSITION\": 0}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "Bb0bKey0123456789abc",
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "v-list-users",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: Key Bb0bKey0123456789abc don't have permission to run the command v-list-users\n",
+    "exit": 10
+  },
+  {
+    "args": [
+      "Bb0bKey0123456789abc",
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "v-nope",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: Command v-nope not found\n",
+    "exit": 10
+  },
+  {
+    "args": [
+      "Bb0bKey0123456789abc",
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "v-make-tmp-file",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: Key Bb0bKey0123456789abc don't have permission to run the command v-make-tmp-file\n",
+    "exit": 10
+  },
+  {
+    "args": [
+      "Bb0bKey0123456789abc",
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "{\"USER\": \"bob\", \"USER_ARG_POSITION\": 1}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "Zx9yWv8uTs7rQp6oNm5l",
+      "*",
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: Invalid secret key for key Zx9yWv8uTs7rQp6oNm5l\n",
+    "exit": 9
+  },
+  {
+    "args": [
+      "Bb0bKey0123456789abc",
+      "*",
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: Invalid secret key for key Bb0bKey0123456789abc\n",
+    "exit": 9
+  },
+  {
+    "args": [
+      "Su5pKey0123456789abc",
+      "*",
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: user susp is suspended\n",
+    "exit": 9
+  },
+  {
+    "args": [
+      "bad",
+      "*",
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: invalid access_key_id format :: bad\n",
+    "exit": 9
+  },
+  {
+    "args": [
+      "Mi55ingKey0123456789",
+      "*",
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: key Mi55ingKey0123456789 doesn't exist\n",
+    "exit": 9
+  }
+]

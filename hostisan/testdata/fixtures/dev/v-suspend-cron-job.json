@@ -1,0 +1,53 @@
+[
+  {
+    "args": [
+      "*",
+      "99"
+    ],
+    "stdout": "Error: cron job 99 doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "99",
+      "*"
+    ],
+    "stdout": "Error: cron job 99 doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "missing",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"CONFIG\": {\n        \"pg_hba_path\": \"\",\n        \"config_path\": \"\"\n        }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "plain"
+    ],
+    "stdout": "\t\n",
+    "exit": 0
+  }
+]

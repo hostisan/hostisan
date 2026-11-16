@@ -1,0 +1,11 @@
+Source: hostisan-nginx
+Package: hostisan-nginx
+Priority: optional
+Version: 1.30.5
+Section: admin
+Maintainer: Hostisan <@HOSTISAN_INFO_EMAIL@>
+Homepage: @HOSTISAN_URL@
+Architecture: amd64
+Depends: hostisan
+Description: Hostisan panel web server (nginx)
+ The nginx build that serves the Hostisan control panel and its file manager.

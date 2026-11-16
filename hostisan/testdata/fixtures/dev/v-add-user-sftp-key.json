@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "susp",
+      "30"
+    ],
+    "stdout": "Error: 'setfacl' is not available.\n",
+    "exit": 1
+  },
+  {
+    "args": [
+      "*",
+      "30"
+    ],
+    "stdout": "",
+    "exit": 0
+  }
+]

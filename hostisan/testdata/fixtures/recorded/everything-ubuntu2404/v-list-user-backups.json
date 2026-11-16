@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"admin.2026-10-28_19-57-56.tar\": {\n        \"TYPE\": \"local\",\n        \"SIZE\": \"3\",\n        \"WEB\": \"rec.hostisan.test,example.com,example.net\",\n        \"DNS\": \"example.com,example.org\",\n        \"MAIL\": \"example.com,example.net\",\n        \"DB\": \"admin_wordpress,admin_reports\",\n        \"CRON\": \"\",\n        \"UDIR\": \".bash_aliases,.bash_logout,.bashrc,.cache,.composer,.config,.local,.npm,.profile,.ssh,.vscode-server,.wp-cli\",\n        \"RUNTIME\": \"1\",\n        \"TIME\": \"19:57:56\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"bob.2026-10-28_19-57-57.tar\": {\n        \"TYPE\": \"local\",\n        \"SIZE\": \"1\",\n        \"WEB\": \"bakery.example\",\n        \"DNS\": \"bakery.example\",\n        \"MAIL\": \"bakery.example\",\n        \"DB\": \"bob_shop\",\n        \"CRON\": \"\",\n        \"UDIR\": \".bash_logout,.bashrc,.cache,.composer,.config,.local,.npm,.profile,.ssh,.vscode-server,.wp-cli\",\n        \"RUNTIME\": \"1\",\n        \"TIME\": \"19:57:57\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "info",
+      "json"
+    ],
+    "stdout": "{\n\t\"info\": {\n            \"MSG\": \"Away\"\n\t}\n}\n",
+    "exit": 0
+  }
+]

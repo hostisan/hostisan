@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "3"
+    ],
+    "stdout": "",
+    "stderr": "/usr/local/hestia/bin/v-unsuspend-dns-record: line 61: rebuild_dns_domain_conf: command not found\n",
+    "exit": 0
+  }
+]

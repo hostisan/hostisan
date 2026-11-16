@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n\t\"1\": {\n\t\t\"TYPE\": \"la\",\n\t\t\"RRD\": \"la\",\n\t\t\"TITLE\": \"Load Average\",\n\t\t\"TIME\": \"\",\n\t\t\"DATE\": \"\"\n\t},\n\t\"2\": {\n\t\t\"TYPE\": \"mem\",\n\t\t\"RRD\": \"mem\",\n\t\t\"TITLE\": \"Memory Usage\",\n\t\t\"TIME\": \"\",\n\t\t\"DATE\": \"\"\n\t},\n\t\"3\": {\n\t\t\"TYPE\": \"net\",\n\t\t\"RRD\": \"eth0\",\n\t\t\"TITLE\": \"Bandwidth Usage eth0\",\n\t\t\"TIME\": \"\",\n\t\t\"DATE\": \"\"\n\t},\n\t\"4\": {\n\t\t\"TYPE\": \"web\",\n\t\t\"RRD\": \"nginx\",\n\t\t\"TITLE\": \"NGINX Usage\",\n\t\t\"TIME\": \"\",\n\t\t\"DATE\": \"\"\n\t},\n\t\"5\": {\n\t\t\"TYPE\": \"db\",\n\t\t\"RRD\": \"mysql_localhost\",\n\t\t\"TITLE\": \"MySQL Usage on localhost\",\n\t\t\"TIME\": \"\",\n\t\t\"DATE\": \"\"\n\t},\n\t\"6\": {\n\t\t\"TYPE\": \"ssh\",\n\t\t\"RRD\": \"ssh\",\n\t\t\"TITLE\": \"SSH Usage\",\n\t\t\"TIME\": \"\",\n\t\t\"DATE\": \"\"\n\t}\n}\n",
+    "exit": 0
+  }
+]

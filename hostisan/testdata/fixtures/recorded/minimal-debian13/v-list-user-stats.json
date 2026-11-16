@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"2026-10-31\": {\n        \"TIME\": \"08:35:12\",\n        \"PACKAGE\": \"default\",\n        \"IP_OWNED\": \"1\",\n        \"DISK_QUOTA\": \"unlimited\",\n        \"U_DISK\": \"0\",\n        \"U_DISK_DIRS\": \"0\",\n        \"U_DISK_WEB\": \"0\",\n        \"U_DISK_MAIL\": \"0\",\n        \"U_DISK_DB\": \"0\",\n        \"BANDWIDTH\": \"unlimited\",\n        \"U_BANDWIDTH\": \"0\",\n        \"U_WEB_DOMAINS\": \"3\",\n        \"U_WEB_SSL\": \"0\",\n        \"U_WEB_ALIASES\": \"2\",\n        \"U_DNS_DOMAINS\": \"0\",\n        \"U_DNS_RECORDS\": \"0\",\n        \"U_MAIL_DOMAINS\": \"0\",\n        \"U_MAIL_DKIM\": \"0\",\n        \"U_MAIL_ACCOUNTS\": \"0\",\n        \"U_DATABASES\": \"0\",\n        \"U_CRON_JOBS\": \"0\",\n        \"U_BACKUPS\": \"0\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "json"
+    ],
+    "stdout": "{\n    \"2026-10-31\": {\n        \"TIME\": \"08:37:03\",\n        \"PACKAGE\": \"default\",\n        \"IP_OWNED\": \"0\",\n        \"DISK_QUOTA\": \"unlimited\",\n        \"U_DISK\": \"0\",\n        \"U_DISK_DIRS\": \"0\",\n        \"U_DISK_WEB\": \"0\",\n        \"U_DISK_MAIL\": \"0\",\n        \"U_DISK_DB\": \"0\",\n        \"BANDWIDTH\": \"unlimited\",\n        \"U_BANDWIDTH\": \"0\",\n        \"U_WEB_DOMAINS\": \"1\",\n        \"U_WEB_SSL\": \"0\",\n        \"U_WEB_ALIASES\": \"1\",\n        \"U_DNS_DOMAINS\": \"0\",\n        \"U_DNS_RECORDS\": \"0\",\n        \"U_MAIL_DOMAINS\": \"0\",\n        \"U_MAIL_DKIM\": \"0\",\n        \"U_MAIL_ACCOUNTS\": \"0\",\n        \"U_DATABASES\": \"1\",\n        \"U_CRON_JOBS\": \"0\",\n        \"U_BACKUPS\": \"0\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "missing",
+      "json"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  }
+]

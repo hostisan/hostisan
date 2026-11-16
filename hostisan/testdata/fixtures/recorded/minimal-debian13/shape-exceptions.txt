@@ -1,0 +1,79 @@
+# Shape exceptions for the minimal Debian 13 recording only (Plan 6 A5): nginx +
+# PHP-FPM 8.5, MariaDB, iptables + fail2ban; no DNS, mail, FTP, PostgreSQL, Apache,
+# restic or cron jobs. Same format as ../shape-exceptions.txt.
+v-add-dns-domain exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-add-dns-record exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-add-mail-account exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-account-alias exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-account-autoreply exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-account-forward exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-account-fwd-only exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-domain exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-domain-antispam exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-domain-antivirus exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-domain-catchall exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-domain-dkim exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-domain-reject exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-domain-smtp-relay exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-domain-ssl exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-add-mail-domain-webmail exit@rec.example minimal: IMAP_SYSTEM is not enabled (exit 11)
+v-change-dns-domain-exp exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-change-dns-domain-ip exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-change-dns-domain-soa exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-change-dns-domain-tpl exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-change-dns-domain-ttl exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-change-dns-record exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-change-mail-account-password exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-change-mail-account-quota exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-change-mail-account-rate-limit exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-change-mail-domain-catchall exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-change-mail-domain-rate-limit exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-change-mail-domain-sslcert exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-dns-domain exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-delete-dns-record exit@rec.example minimal: no DNS zones (exit 3)
+v-delete-mail-account exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-account-alias exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-account-autoreply exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-account-forward exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-account-fwd-only exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-domain exit@missing.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-domain exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-domain-antispam exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-domain-antivirus exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-domain-catchall exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-domain-dkim exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-domain-reject exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-domain-smtp-relay exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-domain-ssl exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-delete-mail-domain-webmail exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-export-rrd exit@mail minimal: no mail.rrd without MAIL_SYSTEM (exit 1)
+v-list-cron-job exit@1 minimal: the seed has no cron jobs (exit 3)
+v-list-dns-domain exit@bakery.example minimal: no DNS zones (exit 3)
+v-list-dns-domain exit@example.com minimal: no DNS zones (exit 3)
+v-list-user-backups-restic exit minimal: no restic.conf, restic never set up (exit 1)
+v-open-fs-config exit@/etc/apache2/apache2.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/bind/named.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/bind/named.conf.options minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/clamav/clamd.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/dovecot/conf.d/10-auth.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/dovecot/conf.d/10-logging.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/dovecot/conf.d/10-mail.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/dovecot/conf.d/10-master.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/dovecot/conf.d/10-ssl.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/dovecot/conf.d/20-imap.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/dovecot/conf.d/20-pop3.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/dovecot/conf.d/auth-passwdfile.conf.ext minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/dovecot/dovecot.conf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/php/8.5/fpm/php.ini minimal: the box runs PHP 8.5 (upstream exit 127 after printing); dev has no 8.5
+v-open-fs-config exit@/etc/spamassassin/local.cf minimal: file absent on the box (exit 3); dev exit 127
+v-open-fs-config exit@/etc/vsftpd.conf minimal: file absent on the box (exit 3); dev exit 127
+v-rebuild-dns-domain exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-rebuild-mail-domain exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-suspend-dns-domain exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-suspend-dns-record exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-suspend-mail-account exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-suspend-mail-domain exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-unsuspend-dns-domain exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-unsuspend-dns-record exit@rec.example minimal: DNS_SYSTEM is not enabled (exit 11)
+v-unsuspend-mail-account exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)
+v-unsuspend-mail-domain exit@rec.example minimal: MAIL_SYSTEM is not enabled (exit 11)

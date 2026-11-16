@@ -1,0 +1,26 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"WEB\": {\n        \"example.com\": \"public_html/cache,public_html/tmp\",\n        \"shop.example.com\": \"\"\n    },\n    \"DNS\": {\n        \"example.org\": \"\"\n    },\n    \"MAIL\": {\n        \"example.com\": \"info,support\"\n    },\n    \"DB\": {\n        \"admin_wp\": \"\"\n    },\n    \"CRON\": {\n        \"*\": \"\"\n    },\n    \"USER\": {\n        \"Downloads\": \"\",\n        \".cache\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "missing",
+      "*"
+    ],
+    "stdout": "Error: user missing doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "{\n    \"WEB\": {\n    },\n    \"DNS\": {\n    },\n    \"MAIL\": {\n    },\n    \"DB\": {\n    },\n    \"CRON\": {\n    },\n    \"USER\": {\n    }\n}\n",
+    "exit": 0
+  }
+]

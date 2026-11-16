@@ -1,0 +1,66 @@
+[
+  {
+    "args": [
+      "example",
+      "json"
+    ],
+    "stdout": "{\n\t\"1\": {\n\t\t\"USER\": \"admin\",\n\t\t\"TYPE\": \"web\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"example.net\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"yes\",\n\t\t\"TIME\": \"11:02:55\",\n\t\t\"DATE\": \"2026-04-01\"\n\t},\n\t\"2\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"web\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"bakery.example\",\n\t\t\"ALIAS\": \"www.bakery.example\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"14:20:03\",\n\t\t\"DATE\": \"2026-10-19\"\n\t},\n\t\"3\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"dns\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"bakery.example\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"14:20:03\",\n\t\t\"DATE\": \"2026-10-19\"\n\t},\n\t\"4\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"mail\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"bakery.example\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"14:20:03\",\n\t\t\"DATE\": \"2026-10-19\"\n\t},\n\t\"5\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"cron\",\n\t\t\"KEY\": \"JOB\",\n\t\t\"RESULT\": \"wget -q -O /dev/null https://bakery.example/\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"2\",\n\t\t\"PARENT\": \"2\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"14:00:00\",\n\t\t\"DATE\": \"2026-02-03\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "www",
+      "json"
+    ],
+    "stdout": "{\n\t\"1\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"web\",\n\t\t\"KEY\": \"DOMAIN\",\n\t\t\"RESULT\": \"bakery.example\",\n\t\t\"ALIAS\": \"www.bakery.example\",\n\t\t\"LINK\": \"\",\n\t\t\"PARENT\": \"bakery.example\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"14:20:03\",\n\t\t\"DATE\": \"2026-10-19\"\n\t},\n\t\"2\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"dns\",\n\t\t\"KEY\": \"RECORD\",\n\t\t\"RESULT\": \"www.bakery.example\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"3\",\n\t\t\"PARENT\": \"bakery.example\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"12:00:01\",\n\t\t\"DATE\": \"2026-01-10\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "info",
+      "json"
+    ],
+    "stdout": "{\n\t\"1\": {\n\t\t\"USER\": \"bob\",\n\t\t\"TYPE\": \"mail\",\n\t\t\"KEY\": \"ACCOUNT\",\n\t\t\"RESULT\": \"info@bakery.example\",\n\t\t\"ALIAS\": \"\",\n\t\t\"LINK\": \"info\",\n\t\t\"PARENT\": \"bakery.example\",\n\t\t\"SUSPENDED\": \"no\",\n\t\t\"TIME\": \"12:06:00\",\n\t\t\"DATE\": \"2026-01-11\"\n\t}\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "",
+      "json"
+    ],
+    "stdout": "{\n\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "zzz-none",
+      "json"
+    ],
+    "stdout": "{\n\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bad:x",
+      "json"
+    ],
+    "stdout": "Error: invalid object format :: bad:x\n",
+    "exit": 2
+  },
+  {
+    "args": [
+      "2001",
+      "json"
+    ],
+    "stdout": "{\n\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "unreadable",
+      "json"
+    ],
+    "stdout": "Error: Invalid key value format [VALUE=a broken line]\n",
+    "exit": 2
+  }
+]

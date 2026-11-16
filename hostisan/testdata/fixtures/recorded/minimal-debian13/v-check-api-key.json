@@ -1,0 +1,10 @@
+[
+  {
+    "args": [
+      "/usr/local/hestia/data/keys/missing-key-0123456789",
+      "127.0.0.1"
+    ],
+    "stdout": "Error: key missmatch\n",
+    "exit": 9
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "admin",
+      "1",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"MIN\": \"*/15\",\n        \"HOUR\": \"*\",\n        \"DAY\": \"*\",\n        \"MONTH\": \"*\",\n        \"WDAY\": \"*\",\n        \"CMD\": \"php /home/admin/web/example.com/public_html/cron.php >/dev/null 2>&1\",\n        \"JOB\": \"1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:52:25\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "99",
+      "json"
+    ],
+    "stdout": "Error: cron job 99 doesn't exist\n",
+    "exit": 3
+  }
+]

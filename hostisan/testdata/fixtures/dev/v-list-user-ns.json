@@ -1,0 +1,10 @@
+[
+  {
+    "args": [
+      "*",
+      "json"
+    ],
+    "stdout": "[\n    \"ns1.example.com\",\n    \"ns2.example.com\"\n]\n",
+    "exit": 0
+  }
+]

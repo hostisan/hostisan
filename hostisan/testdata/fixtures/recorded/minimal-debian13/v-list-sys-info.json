@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"sysinfo\": {\n        \"HOSTNAME\": \"rec.hostisan.test\",\n        \"OS\": \"Debian\",\n        \"VERSION\": \"13.7\",\n        \"ARCH\": \"x86_64\",\n        \"HESTIA\": \"1.10.5\",\n        \"RELEASE\": \"release\",\n        \"UPTIME\": \"1027\",\n        \"LOADAVERAGE\": \"4.14 / 3.49 / 5.09\"\n        }\n}\n",
+    "exit": 0
+  }
+]

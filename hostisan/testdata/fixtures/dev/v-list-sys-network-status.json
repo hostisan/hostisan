@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "Total: 312\nTCP:   41 (estab 12, closed 9, orphaned 0, timewait 9)\n\n------------------------------------------------------------------------------------------\n\nCOMMAND    PID     USER   FD   TYPE DEVICE SIZE/OFF NODE NAME\nsshd       812     root    3u  IPv4  18321      0t0  TCP *:22 (LISTEN)\n\n------------------------------------------------------------------------------------------\n\n2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP\n    inet 203.0.113.10/24 brd 203.0.113.255 scope global eth0\n",
+    "exit": 0
+  }
+]

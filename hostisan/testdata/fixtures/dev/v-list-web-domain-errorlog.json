@@ -1,0 +1,87 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com"
+    ],
+    "stdout": "[Tue Oct 21 09:20:13.402114 2026] [core:info] [pid 1412:tid 1412] [client 192.0.2.14:51544] AH00128: File does not exist: /home/admin/web/example.com/public_html/wp-login.php\n[Tue Oct 21 09:31:58.118220 2026] [proxy_fcgi:error] [pid 1418:tid 1418] [client 198.51.100.23:40112] AH01071: Got error 'PHP message: PHP Warning:  Undefined array key \"name\" in /home/admin/web/example.com/public_html/contact.php on line 12'\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "*"
+    ],
+    "stdout": "[Tue Oct 21 09:20:13.402114 2026] [core:info] [pid 1412:tid 1412] [client 192.0.2.14:51544] AH00128: File does not exist: /home/admin/web/example.com/public_html/wp-login.php\n[Tue Oct 21 09:31:58.118220 2026] [proxy_fcgi:error] [pid 1418:tid 1418] [client 198.51.100.23:40112] AH01071: Got error 'PHP message: PHP Warning:  Undefined array key \"name\" in /home/admin/web/example.com/public_html/contact.php on line 12'\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net"
+    ],
+    "stdout": "\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net",
+      "*"
+    ],
+    "stdout": "\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example"
+    ],
+    "stdout": "\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "*"
+    ],
+    "stdout": "\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example"
+    ],
+    "stdout": "Error: web domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "*"
+    ],
+    "stdout": "Error: web domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*"
+    ],
+    "stdout": "Error: web domain doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: web domain doesn't exist\n",
+    "exit": 3
+  }
+]

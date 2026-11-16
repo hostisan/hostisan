@@ -1,0 +1,56 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"NS\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"ns1.example.com.\",\n        \"ID\": \"1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\",\n        \"TTL\": \"14400\"\n    },\n    \"2\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"NS\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"ns2.example.com.\",\n        \"ID\": \"2\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\",\n        \"TTL\": \"14400\"\n    },\n    \"9\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"A\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"203.0.113.10\",\n        \"ID\": \"9\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\",\n        \"TTL\": \"14400\"\n    },\n    \"10\": {\n        \"RECORD\": \"www\",\n        \"TYPE\": \"A\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"203.0.113.10\",\n        \"ID\": \"10\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\",\n        \"TTL\": \"14400\"\n    },\n    \"11\": {\n        \"RECORD\": \"mail\",\n        \"TYPE\": \"A\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"203.0.113.10\",\n        \"ID\": \"11\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\",\n        \"TTL\": \"14400\"\n    },\n    \"14\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"MX\",\n        \"PRIORITY\": \"0\",\n        \"VALUE\": \"mail.example.com.\",\n        \"ID\": \"14\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\",\n        \"TTL\": \"14400\"\n    },\n    \"15\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"TXT\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"\\\"v=spf1 a mx ip4:203.0.113.10 -all\\\"\",\n        \"ID\": \"15\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\",\n        \"TTL\": \"300\"\n    },\n    \"16\": {\n        \"RECORD\": \"_dmarc\",\n        \"TYPE\": \"TXT\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"\\\"v=DMARC1; p=quarantine\\\"\",\n        \"ID\": \"16\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:12\",\n        \"DATE\": \"2026-10-17\",\n        \"TTL\": \"14400\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.org",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"NS\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"ns1.example.org.\",\n        \"ID\": \"1\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"10:02:55\",\n        \"DATE\": \"2026-10-18\",\n        \"TTL\": \"3600\"\n    },\n    \"2\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"NS\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"ns2.example.org.\",\n        \"ID\": \"2\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"10:02:55\",\n        \"DATE\": \"2026-10-18\",\n        \"TTL\": \"3600\"\n    },\n    \"3\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"A\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"203.0.113.10\",\n        \"ID\": \"3\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"10:02:55\",\n        \"DATE\": \"2026-10-18\",\n        \"TTL\": \"3600\"\n    },\n    \"4\": {\n        \"RECORD\": \"www\",\n        \"TYPE\": \"A\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"203.0.113.10\",\n        \"ID\": \"4\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"10:02:55\",\n        \"DATE\": \"2026-10-18\",\n        \"TTL\": \"3600\"\n    },\n    \"5\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"MX\",\n        \"PRIORITY\": \"10\",\n        \"VALUE\": \"mail.example.org.\",\n        \"ID\": \"5\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"10:02:55\",\n        \"DATE\": \"2026-10-18\",\n        \"TTL\": \"3600\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "{\n    \"1\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"NS\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"ns1.example.com.\",\n        \"ID\": \"1\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"14:20:03\",\n        \"DATE\": \"2026-10-19\",\n        \"TTL\": \"14400\"\n    },\n    \"2\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"NS\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"ns2.example.com.\",\n        \"ID\": \"2\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"14:20:03\",\n        \"DATE\": \"2026-10-19\",\n        \"TTL\": \"14400\"\n    },\n    \"3\": {\n        \"RECORD\": \"@\",\n        \"TYPE\": \"A\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"10.0.0.5\",\n        \"ID\": \"3\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"14:20:03\",\n        \"DATE\": \"2026-10-19\",\n        \"TTL\": \"14400\"\n    },\n    \"4\": {\n        \"RECORD\": \"shop\",\n        \"TYPE\": \"A\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"10.0.0.5\",\n        \"ID\": \"4\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"14:20:03\",\n        \"DATE\": \"2026-10-19\",\n        \"TTL\": \"14400\"\n    },\n    \"5\": {\n        \"RECORD\": \"www\",\n        \"TYPE\": \"A\",\n        \"PRIORITY\": \"\",\n        \"VALUE\": \"10.0.0.5\",\n        \"ID\": \"5\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"14:20:04\",\n        \"DATE\": \"2026-10-19\",\n        \"TTL\": \"14400\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "Error: dns domain bakery.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "bob",
+      "example.org",
+      "json"
+    ],
+    "stdout": "Error: dns domain example.org doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: dns domain missing.example doesn't exist\n",
+    "exit": 3
+  }
+]

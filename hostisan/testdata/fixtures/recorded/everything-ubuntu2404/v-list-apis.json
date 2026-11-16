@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"billing\": {\"COMMANDS\": [\"v-add-user\", \"v-delete-user\", \"v-suspend-user\", \"v-unsuspend-user\", \"v-change-user-shell\", \"v-list-user\", \"v-list-users\", \"v-make-tmp-file\", \"v-add-domain\", \"v-change-user-package\", \"v-make-tmp-file\", \"v-change-user-password\"], \"ROLE\": \"admin\"},\n    \"mail-accounts\": {\"COMMANDS\": [\"v-list-mail-domains\", \"v-list-mail-domain\", \"v-list-mail-account\", \"v-list-mail-accounts\", \"v-list-mail-account-autoreply\", \"v-delete-mail-account\", \"v-delete-mail-account-alias\", \"v-delete-mail-account-autoreply\", \"v-delete-mail-account-forward\", \"v-delete-mail-account-fwd-only\", \"v-add-mail-account\", \"v-add-mail-account-alias\", \"v-add-mail-account-autoreply\", \"v-add-mail-account-forward\", \"v-add-mail-account-fwd-only\", \"v-change-mail-account-password\", \"v-change-mail-account-quota\", \"v-suspend-mail-account\", \"v-suspend-mail-accounts\", \"v-unsuspend-mail-account\", \"v-unsuspend-mail-accounts\"], \"ROLE\": \"user\"},\n    \"phpmyadmin-sso\": {\"COMMANDS\": [\"v-add-database-temp-user\", \"v-delete-database-temp-user\"], \"ROLE\": \"admin\"},\n    \"purge-nginx-cache\": {\"COMMANDS\": [\"v-purge-nginx-cache\", \"v-list-web-domains\", \"v-list-web-domain\"], \"ROLE\": \"user\"},\n    \"sync-dns-cluster\": {\"COMMANDS\": [\"v-list-users\", \"v-list-sys-config\", \"v-list-user\", \"v-add-cron-restart-job\", \"v-delete-dns-domains-src\", \"v-insert-dns-domain\", \"v-insert-dns-record\", \"v-insert-dns-records\", \"v-rebuild-dns-domains\", \"v-rebuild-dns-domain\", \"v-delete-dns-record\", \"v-make-tmp-file\", \"v-insert-dns-domain\", \"v-delete-dns-domain\"], \"ROLE\": \"admin\"},\n    \"update-dns-records\": {\"COMMANDS\": [\"v-list-dns-records\", \"v-change-dns-record\"], \"ROLE\": \"user\"}\n}\n",
+    "exit": 0
+  }
+]

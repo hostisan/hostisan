@@ -1,0 +1,16 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"CONFIG\": {\n        \"config_path\": \"/etc/spamassassin/local.cf\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "plain"
+    ],
+    "stdout": "/etc/spamassassin/local.cf\n",
+    "exit": 0
+  }
+]

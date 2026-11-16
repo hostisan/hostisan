@@ -1,0 +1,126 @@
+# Commands recorded by tools/record-fixtures.sh on a Hestia VPS.
+# One command per line: <v-command> <args...>. Never list password or hash files.
+v-list-sys-config json
+v-list-users json
+v-list-user admin json
+v-list-user nonexistent json
+v-list-sys-languages json
+v-get-user-salt admin 127.0.0.1 json
+v-get-user-salt nonexistent 127.0.0.1 json
+# DNS (Plan 2a). Records run in order on a disposable VPS: the zone is created first,
+# and the error cases follow the commands that set them up.
+v-list-dns-templates json
+v-list-user-ips admin json
+v-list-user-ns admin json
+v-list-dns-domains admin json
+v-add-dns-domain admin rec.example 203.0.113.10 ns1.rec.example ns2.rec.example '' '' '' '' '' '' no no
+v-add-dns-domain admin rec.example 203.0.113.10 ns1.rec.example ns2.rec.example '' '' '' '' '' '' no no
+v-list-dns-domains admin json
+v-list-dns-domain admin rec.example json
+v-list-dns-domain admin missing.example json
+v-list-dns-records admin rec.example json
+v-list-dns-records admin missing.example json
+v-list-dnssec-public-key admin rec.example json
+v-change-dns-domain-ip admin rec.example 203.0.113.11 no
+v-change-dns-domain-tpl admin rec.example child-ns no
+v-change-dns-domain-soa admin rec.example ns2.rec.example no
+v-change-dns-domain-exp admin rec.example 2030-01-01 no
+v-change-dns-domain-ttl admin rec.example 3600 no
+v-change-dns-domain-dnssec admin rec.example no
+v-add-dns-record admin rec.example www A 203.0.113.11 '' '' yes ''
+v-add-dns-record admin rec.example mail MX mail.rec.example 10 '' yes 300
+v-list-dns-records admin rec.example json
+v-change-dns-record admin rec.example 3 www A 203.0.113.11 '' yes ''
+v-change-dns-record admin rec.example 3 www A 203.0.113.12 '' yes ''
+v-suspend-dns-record admin rec.example 3
+v-unsuspend-dns-record admin rec.example 3
+v-delete-dns-record admin rec.example 3
+v-delete-dns-record admin rec.example 99
+v-rebuild-dns-domain admin rec.example no
+v-suspend-dns-domain admin rec.example
+v-suspend-dns-domain admin rec.example
+v-unsuspend-dns-domain admin rec.example
+v-unsuspend-dns-domain admin rec.example
+v-restart-dns
+v-delete-dns-domain admin rec.example
+v-delete-dns-domain admin rec.example
+# Databases (Plan 2b). Run in order on a disposable VPS; the password is a /tmp file path.
+v-list-database-hosts json
+v-list-databases admin json
+v-add-database admin recdb recdb /tmp/dbpass mysql localhost utf8mb4
+v-list-databases admin json
+v-list-database admin admin_recdb json
+v-list-database admin missing_db json
+v-change-database-user admin admin_recdb recdb2
+v-change-database-password admin admin_recdb /tmp/dbpass
+v-suspend-database admin admin_recdb
+v-unsuspend-database admin admin_recdb
+v-rebuild-database admin admin_recdb
+v-dump-database admin admin_recdb file gzip
+v-dump-database admin missing_db file gzip
+v-delete-database admin admin_recdb
+v-delete-database admin missing_db
+# Mail (Plan 2c). Run in order on a disposable VPS with exim4, dovecot, spamassassin,
+# clamav and roundcube; passwords are /tmp file paths, the SSL dir holds
+# rec.example.crt/.key from a self-signed pair. missing.example never exists. The
+# recorder parses shell-style quoting: '' is an empty argument (as in the DNS lines above).
+v-list-sys-webmail json
+v-list-mail-domains admin json
+v-add-mail-domain admin rec.example yes yes yes 2048 '' '' mail
+v-add-mail-domain admin rec.example yes yes yes 2048 '' '' mail
+v-add-mail-domain-reject admin rec.example yes
+v-add-mail-domain-webmail admin rec.example roundcube yes
+v-list-mail-domains admin json
+v-list-mail-domain admin rec.example json
+v-list-mail-domain admin missing.example json
+v-list-mail-domain-dkim-dns admin rec.example json
+v-list-user-ips admin json
+v-delete-mail-domain-antispam admin rec.example
+v-add-mail-domain-antispam admin rec.example
+v-delete-mail-domain-antivirus admin rec.example
+v-add-mail-domain-antivirus admin rec.example
+v-delete-mail-domain-dkim admin rec.example
+v-add-mail-domain-dkim admin rec.example '' sel2
+v-add-mail-domain-catchall admin rec.example boss@rec.example
+v-change-mail-domain-catchall admin rec.example chief@rec.example
+v-delete-mail-domain-catchall admin rec.example
+v-change-mail-domain-rate-limit admin rec.example 100
+v-change-mail-domain-rate-limit admin rec.example system
+v-delete-mail-domain-reject admin rec.example yes
+v-delete-mail-domain-webmail admin rec.example yes
+v-add-mail-domain-smtp-relay admin rec.example smtp.relay.example relayuser /tmp/mailpass 587
+v-delete-mail-domain-smtp-relay admin rec.example
+v-add-mail-domain-ssl admin rec.example /tmp/mailssl no
+v-list-mail-domain-ssl admin rec.example json
+v-change-mail-domain-sslcert admin rec.example /tmp/mailssl no
+v-delete-mail-domain-ssl admin rec.example
+# Not recorded: v-add-letsencrypt-domain / v-delete-letsencrypt-domain (no Let's
+# Encrypt requests without a real domain and an owner OK; Plan 6 VPS safety).
+v-add-mail-account admin rec.example info /tmp/mailpass 1024
+v-add-mail-account admin rec.example info /tmp/mailpass 1024
+v-add-mail-account-alias admin rec.example info hello
+v-delete-mail-account-alias admin rec.example info hello
+v-add-mail-account-forward admin rec.example info owner@example.org
+v-add-mail-account-fwd-only admin rec.example info
+v-delete-mail-account-fwd-only admin rec.example info
+v-delete-mail-account-forward admin rec.example info owner@example.org
+v-add-mail-account-forward admin rec.example info :blackhole:
+v-delete-mail-account-forward admin rec.example info :blackhole:
+v-add-mail-account-autoreply admin rec.example info Away
+v-list-mail-accounts admin rec.example json
+v-list-mail-account admin rec.example info json
+v-list-mail-account-autoreply admin rec.example info json
+v-delete-mail-account-autoreply admin rec.example info
+v-change-mail-account-password admin rec.example info /tmp/mailpass
+v-change-mail-account-quota admin rec.example info unlimited
+v-change-mail-account-rate-limit admin rec.example info 200
+v-suspend-mail-account admin rec.example info
+v-unsuspend-mail-account admin rec.example info
+v-delete-mail-account admin rec.example info
+v-delete-mail-account admin rec.example info
+v-suspend-mail-domain admin rec.example
+v-unsuspend-mail-domain admin rec.example
+v-rebuild-mail-domain admin rec.example
+v-delete-mail-domain admin rec.example
+v-delete-mail-domain admin missing.example
+# Plans 2d, 3 and 4 record from their own files: fixture-manifest-web.txt, -accounts.txt, -server.txt (run record-fixtures.sh once per file).

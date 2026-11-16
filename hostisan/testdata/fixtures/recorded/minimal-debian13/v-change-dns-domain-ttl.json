@@ -1,0 +1,12 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "3600",
+      "no"
+    ],
+    "stdout": "Error: DNS_SYSTEM is not enabled\n",
+    "exit": 11
+  }
+]

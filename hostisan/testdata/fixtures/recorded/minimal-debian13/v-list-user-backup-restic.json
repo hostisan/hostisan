@@ -1,0 +1,32 @@
+[
+  {
+    "args": [
+      "admin",
+      "missing",
+      "json"
+    ],
+    "stdout": "{\n    \"/backup\": {\n\t\t\"TYPE\": \"\",\n\t\t\"WEB\": \"\",\n\t\t\"DNS\": \"\",\n\t\t\"MAIL\": \"\",\n\t\t\"DB\": \"\",\n\t\t\"CRON\": \"\",\n\t\t\"UDIR\": \"\",\n\t\t\"RUNTIME\": \"\",\n\t\t\"TIME\": \"\",\n\t\t\"DATE\": \"\"\n\t}\n}\n",
+    "stderr": "/usr/local/hestia/func/main.sh: line 55: /usr/local/hestia/conf/restic.conf: No such file or directory\n{\"message_type\":\"exit_error\",\"code\":1,\"message\":\"Fatal: Resolving password failed: Fatal: /usr/local/hestia/data/users/admin/restic.conf does not exist\\n\"}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "20603581",
+      "json"
+    ],
+    "stdout": "{\n    \"/backup\": {\n\t\t\"TYPE\": \"\",\n\t\t\"WEB\": \"\",\n\t\t\"DNS\": \"\",\n\t\t\"MAIL\": \"\",\n\t\t\"DB\": \"\",\n\t\t\"CRON\": \"\",\n\t\t\"UDIR\": \"\",\n\t\t\"RUNTIME\": \"\",\n\t\t\"TIME\": \"\",\n\t\t\"DATE\": \"\"\n\t}\n}\n",
+    "stderr": "/usr/local/hestia/func/main.sh: line 55: /usr/local/hestia/conf/restic.conf: No such file or directory\n{\"message_type\":\"exit_error\",\"code\":1,\"message\":\"Fatal: Resolving password failed: Fatal: /usr/local/hestia/data/users/admin/restic.conf does not exist\\n\"}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "ef3a6148",
+      "json"
+    ],
+    "stdout": "{\n    \"/backup\": {\n\t\t\"TYPE\": \"\",\n\t\t\"WEB\": \"\",\n\t\t\"DNS\": \"\",\n\t\t\"MAIL\": \"\",\n\t\t\"DB\": \"\",\n\t\t\"CRON\": \"\",\n\t\t\"UDIR\": \"\",\n\t\t\"RUNTIME\": \"\",\n\t\t\"TIME\": \"\",\n\t\t\"DATE\": \"\"\n\t}\n}\n",
+    "stderr": "/usr/local/hestia/func/main.sh: line 55: /usr/local/hestia/conf/restic.conf: No such file or directory\n{\"message_type\":\"exit_error\",\"code\":1,\"message\":\"Fatal: Resolving password failed: Fatal: /usr/local/hestia/data/users/bob/restic.conf does not exist\\n\"}\n",
+    "exit": 0
+  }
+]

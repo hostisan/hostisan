@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"admin_wordpress\": {\n        \"DATABASE\": \"admin_wordpress\",\n        \"DBUSER\": \"admin_wpuser\",\n        \"HOST\": \"localhost\",\n        \"TYPE\": \"mysql\",\n        \"CHARSET\": \"UTF8MB4\",\n        \"U_DISK\": \"0\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:52:24\",\n        \"DATE\": \"2026-10-28\"\n    },\n    \"admin_reports\": {\n        \"DATABASE\": \"admin_reports\",\n        \"DBUSER\": \"admin_reports\",\n        \"HOST\": \"localhost\",\n        \"TYPE\": \"pgsql\",\n        \"CHARSET\": \"UTF8\",\n        \"U_DISK\": \"0\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"19:52:25\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "json"
+    ],
+    "stdout": "{\n    \"admin_wordpress\": {\n        \"DATABASE\": \"admin_wordpress\",\n        \"DBUSER\": \"admin_wpuser\",\n        \"HOST\": \"localhost\",\n        \"TYPE\": \"mysql\",\n        \"CHARSET\": \"UTF8MB4\",\n        \"U_DISK\": \"0\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"19:52:24\",\n        \"DATE\": \"2026-10-28\"\n    },\n    \"admin_reports\": {\n        \"DATABASE\": \"admin_reports\",\n        \"DBUSER\": \"admin_reports\",\n        \"HOST\": \"localhost\",\n        \"TYPE\": \"pgsql\",\n        \"CHARSET\": \"UTF8\",\n        \"U_DISK\": \"0\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"19:52:25\",\n        \"DATE\": \"2026-10-28\"\n    },\n    \"admin_recdb\": {\n        \"DATABASE\": \"admin_recdb\",\n        \"DBUSER\": \"admin_recdb\",\n        \"HOST\": \"localhost\",\n        \"TYPE\": \"mysql\",\n        \"CHARSET\": \"UTF8MB4\",\n        \"U_DISK\": \"0\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"20:09:24\",\n        \"DATE\": \"2026-10-28\"\n    }\n}\n",
+    "exit": 0
+  }
+]

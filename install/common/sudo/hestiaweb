@@ -1,0 +1,8 @@
+Defaults:root !requiretty
+# Keep the command lines of hestiaweb's allowed sudo calls (access keys,
+# passwords) out of syslog and auth.log; denied attempts are still logged, and
+# Hestia's own system.log still records each command.
+Defaults:hestiaweb !log_allowed
+
+# sudo is limited to hestia scripts
+hestiaweb   ALL=NOPASSWD:/usr/local/hestia/bin/*

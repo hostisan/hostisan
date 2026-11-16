@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n    \"en\",\n    \"ar\",\n    \"az\",\n    \"bg\",\n    \"bn\",\n    \"bs\",\n    \"ca\",\n    \"cs\",\n    \"da\",\n    \"de\",\n    \"el\",\n    \"es\",\n    \"et\",\n    \"fa\",\n    \"fi\",\n    \"fr\",\n    \"hr\",\n    \"hu\",\n    \"id\",\n    \"it\",\n    \"ja\",\n    \"ka\",\n    \"ko\",\n    \"ku\",\n    \"lo\",\n    \"nl\",\n    \"no\",\n    \"pl\",\n    \"pt\",\n    \"pt-br\",\n    \"ro\",\n    \"ru\",\n    \"sk\",\n    \"sq\",\n    \"sr\",\n    \"sv\",\n    \"th\",\n    \"tr\",\n    \"uk\",\n    \"ur\",\n    \"vi\",\n    \"zh-cn\",\n    \"zh-tw\"\n]\n",
+    "exit": 0
+  }
+]

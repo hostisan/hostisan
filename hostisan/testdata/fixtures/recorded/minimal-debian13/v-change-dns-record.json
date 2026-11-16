@@ -1,0 +1,32 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "3",
+      "www",
+      "A",
+      "203.0.113.11",
+      "",
+      "yes",
+      ""
+    ],
+    "stdout": "Error: DNS_SYSTEM is not enabled\n",
+    "exit": 11
+  },
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "3",
+      "www",
+      "A",
+      "203.0.113.12",
+      "",
+      "yes",
+      ""
+    ],
+    "stdout": "Error: DNS_SYSTEM is not enabled\n",
+    "exit": 11
+  }
+]

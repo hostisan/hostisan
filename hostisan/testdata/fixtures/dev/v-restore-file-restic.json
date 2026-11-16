@@ -1,0 +1,20 @@
+[
+  {
+    "args": [
+      "*",
+      "deadbeef",
+      "*"
+    ],
+    "stdout": "Error: Unable to download snapshot data\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "restoring <Snapshot 3c9b8a7e of [/home/bob] at 2026-10-19 03:00:04.211873519 +0200 CEST by root@server1.acme-hosting.net> to /\nSummary: Restored 1 files/dirs (4.112 KiB) in 0:00\n",
+    "exit": 0
+  }
+]

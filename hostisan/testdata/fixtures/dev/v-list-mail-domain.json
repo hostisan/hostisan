@@ -1,0 +1,65 @@
+[
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "json"
+    ],
+    "stdout": "{\n    \"example.com\": {\n        \"ANTIVIRUS\": \"yes\",\n        \"ANTISPAM\": \"yes\",\n        \"DKIM\": \"yes\",\n        \"DKIM_SELECTOR\": \"mail\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"2\",\n        \"RATE_LIMIT\": \"\",\n        \"REJECT\": \"yes\",\n        \"U_DISK\": \"37\",\n        \"SSL\": \"yes\",\n        \"SSL_KEY_ALGO\": \"ecdsa-256\",\n        \"LETSENCRYPT\": \"yes\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"09:41:07\",\n        \"DATE\": \"2026-03-14\",\n        \"WEBMAIL_ALIAS\": \"webmail.example.com\",\n        \"WEBMAIL\": \"roundcube\",\n        \"U_SMTP_RELAY\": \"false\",\n        \"U_SMTP_RELAY_HOST\": \"\",\n        \"U_SMTP_RELAY_PORT\": \"\",\n        \"U_SMTP_RELAY_USERNAME\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net",
+      "json"
+    ],
+    "stdout": "{\n    \"example.net\": {\n        \"ANTIVIRUS\": \"no\",\n        \"ANTISPAM\": \"no\",\n        \"DKIM\": \"no\",\n        \"DKIM_SELECTOR\": \"\",\n        \"CATCHALL\": \"boss@example.net\",\n        \"ACCOUNTS\": \"1\",\n        \"RATE_LIMIT\": \"100\",\n        \"REJECT\": \"\",\n        \"U_DISK\": \"0\",\n        \"SSL\": \"no\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT\": \"no\",\n        \"SUSPENDED\": \"yes\",\n        \"TIME\": \"11:02:55\",\n        \"DATE\": \"2026-04-01\",\n        \"WEBMAIL_ALIAS\": \"webmail.example.net\",\n        \"WEBMAIL\": \"\",\n        \"U_SMTP_RELAY\": \"\",\n        \"U_SMTP_RELAY_HOST\": \"\",\n        \"U_SMTP_RELAY_PORT\": \"\",\n        \"U_SMTP_RELAY_USERNAME\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "json"
+    ],
+    "stdout": "{\n    \"bakery.example\": {\n        \"ANTIVIRUS\": \"yes\",\n        \"ANTISPAM\": \"yes\",\n        \"DKIM\": \"yes\",\n        \"DKIM_SELECTOR\": \"mail\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"1\",\n        \"RATE_LIMIT\": \"\",\n        \"REJECT\": \"no\",\n        \"U_DISK\": \"5\",\n        \"SSL\": \"no\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT\": \"no\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"08:30:00\",\n        \"DATE\": \"2026-05-02\",\n        \"WEBMAIL_ALIAS\": \"webmail.bakery.example\",\n        \"WEBMAIL\": \"snappymail\",\n        \"U_SMTP_RELAY\": \"true\",\n        \"U_SMTP_RELAY_HOST\": \"smtp.relay.example\",\n        \"U_SMTP_RELAY_PORT\": \"587\",\n        \"U_SMTP_RELAY_USERNAME\": \"bakery\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "blank.example",
+      "json"
+    ],
+    "stdout": "{\n    \"blank.example\": {\n        \"ANTIVIRUS\": \"\",\n        \"ANTISPAM\": \"\",\n        \"DKIM\": \"\",\n        \"DKIM_SELECTOR\": \"\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"0\",\n        \"RATE_LIMIT\": \"\",\n        \"REJECT\": \"\",\n        \"U_DISK\": \"0\",\n        \"SSL\": \"no\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT\": \"no\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"10:00:00\",\n        \"DATE\": \"2026-06-01\",\n        \"WEBMAIL_ALIAS\": \"webmail.blank.example\",\n        \"WEBMAIL\": \"\",\n        \"U_SMTP_RELAY\": \"\",\n        \"U_SMTP_RELAY_HOST\": \"\",\n        \"U_SMTP_RELAY_PORT\": \"\",\n        \"U_SMTP_RELAY_USERNAME\": \"\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "relay.example",
+      "json"
+    ],
+    "stdout": "{\n    \"relay.example\": {\n        \"ANTIVIRUS\": \"yes\",\n        \"ANTISPAM\": \"yes\",\n        \"DKIM\": \"yes\",\n        \"DKIM_SELECTOR\": \"mail\",\n        \"CATCHALL\": \"\",\n        \"ACCOUNTS\": \"0\",\n        \"RATE_LIMIT\": \"\",\n        \"REJECT\": \"no\",\n        \"U_DISK\": \"0\",\n        \"SSL\": \"no\",\n        \"SSL_KEY_ALGO\": \"\",\n        \"LETSENCRYPT\": \"no\",\n        \"SUSPENDED\": \"no\",\n        \"TIME\": \"10:00:00\",\n        \"DATE\": \"2026-06-01\",\n        \"WEBMAIL_ALIAS\": \"webmail.relay.example\",\n        \"WEBMAIL\": \"\",\n        \"U_SMTP_RELAY\": \"true\",\n        \"U_SMTP_RELAY_HOST\": \"smtp.relay.example\",\n        \"U_SMTP_RELAY_PORT\": \"\",\n        \"U_SMTP_RELAY_USERNAME\": \"relayuser\"\n    }\n}\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "json"
+    ],
+    "stdout": "Error: mail domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "json"
+    ],
+    "stdout": "Error: mail domain doesn't exist\n",
+    "exit": 3
+  }
+]

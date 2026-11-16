@@ -1,0 +1,7 @@
+[
+  {
+    "args": [],
+    "stdout": "MySQL localhost status\nUptime: 71\nThreads: 1\nQuestions: 144\nSlow queries: 0\nOpens: 18\nOpen tables: 11\nQueries per second avg: 2.028\n\n+----+------+-----------+----+---------+------+----------+------------------+----------+\n| Id | User | Host      | db | Command | Time | State    | Info             | Progress |\n+----+------+-----------+----+---------+------+----------+------------------+----------+\n| 64 | root | localhost |    | Query   | 0    | starting | show processlist | 0.000    |\n+----+------+-----------+----+---------+------+----------+------------------+----------+\n\n------------------------------------------------------------------------------------------\n\n",
+    "exit": 0
+  }
+]

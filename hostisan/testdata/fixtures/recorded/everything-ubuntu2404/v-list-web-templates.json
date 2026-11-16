@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n\t\"default\"\n]\n",
+    "exit": 0
+  }
+]

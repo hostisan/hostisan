@@ -1,0 +1,13 @@
+#!/bin/bash
+# hestia-web-terminal preinst. Upgrading from the Node terminal (1.x): stop it
+# now, while its unit file still exists, so nothing keeps listening on
+# WEB_TERMINAL_PORT (8085) once its files are gone. The postinst starts the Go
+# terminal ("hostisan terminal", in the hestia package) in its place.
+
+set -e
+
+if [ "$1" = "upgrade" ] && [ -n "$2" ] && dpkg --compare-versions "$2" lt 2.0.0; then
+	systemctl stop hestia-web-terminal.service > /dev/null 2>&1 || true
+fi
+
+exit 0

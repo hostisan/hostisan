@@ -1,0 +1,32 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "yes",
+      "yes",
+      "yes",
+      "2048",
+      "",
+      "",
+      "mail"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "rec.example",
+      "yes",
+      "yes",
+      "yes",
+      "2048",
+      "",
+      "",
+      "mail"
+    ],
+    "stdout": "Error: Mail domain rec.example exists\n",
+    "exit": 4
+  }
+]

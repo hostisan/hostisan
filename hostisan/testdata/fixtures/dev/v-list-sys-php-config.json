@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "{\n    \"CONFIG\": {\n        \"memory_limit\": \"256M\",\n        \"max_execution_time\": \"30\",\n        \"max_input_time\": \"60\",\n        \"upload_max_filesize\": \"100M\",\n        \"post_max_size\": \"100M\",\n        \"display_errors\": \"Off\",\n        \"error_reporting\": \"E_ALL & ~E_DEPRECATED & ~E_STRICT\",\n        \"config_path\": \"/etc/php/8.2/fpm/php.ini\"\n    }\n}\n",
+    "exit": 0
+  }
+]

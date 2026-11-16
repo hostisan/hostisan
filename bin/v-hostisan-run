@@ -1,0 +1,74 @@
+#!/bin/bash
+# info: run a Hestia command with a time limit (Hostisan)
+# options: SECONDS COMMAND [ARG...]
+#
+# example: v-hostisan-run 60 v-list-user admin json
+#
+# The Hostisan panel runs every v-* command through this wrapper. The panel
+# runs as hestiaweb and cannot signal the root command it starts with sudo, so
+# the deadline is enforced here, as root: GNU timeout runs COMMAND in its own
+# process group and, after SECONDS, sends SIGTERM to that whole group (the
+# command's background children too), then SIGKILL 5 s later if the command
+# still runs. Once COMMAND is gone, whatever is left of its group gets the same
+# 5 s and then SIGKILL. A command that finishes in time is left alone, and so
+# is anything it started.
+#
+# COMMAND must be a regular file (not a link) named v-* in this script's own
+# directory. Arguments pass through unchanged. The exit code is COMMAND's, or
+# 124 when the deadline stopped it (137 when it took SIGKILL).
+
+timeout_bin=/usr/bin/timeout
+
+# Hestia exit codes: E_ARGS, E_INVALID, E_NOTEXIST.
+fail() {
+	echo "Error: $2" >&2
+	exit "$1"
+}
+
+[ $# -ge 2 ] || fail 1 "usage: v-hostisan-run SECONDS COMMAND [ARG...]"
+secs=$1
+cmd=$2
+shift 2
+
+# The bin dir is where this script is: sudo runs it by its absolute path.
+[[ $0 == /* ]] || fail 1 "run v-hostisan-run by its absolute path"
+bin=${0%/*}
+
+if ! [[ $secs =~ ^[1-9][0-9]{0,4}$ ]] || ((secs > 86400)); then
+	fail 2 "invalid seconds (1 to 86400)"
+fi
+if ! [[ $cmd =~ ^v-[a-z0-9-]+$ ]] || [ "$cmd" = v-hostisan-run ]; then
+	fail 2 "invalid command name"
+fi
+target=$bin/$cmd
+if [ -L "$target" ] || [ ! -f "$target" ]; then
+	fail 3 "no such command: $cmd"
+fi
+
+[ -x "$timeout_bin" ] || fail 1 "$timeout_bin is missing (GNU coreutils)"
+
+# A signal to this script (sudo relays the panel's backstop SIGTERM) stops the
+# command's whole group at once.
+pid=
+trap '[ -n "$pid" ] && kill -KILL -- "-$pid" 2>/dev/null; exit 143' HUP INT TERM
+
+# Not exec: timeout's SIGKILL hits its own group, itself included, and this
+# script has to outlive it to sweep the group and report 124/137 as an exit
+# code. "<&0" keeps stdin, which a background job would otherwise lose.
+"$timeout_bin" --kill-after=5 "$secs" "$target" "$@" <&0 &
+pid=$!
+wait "$pid"
+rc=$?
+
+# The deadline passed (a command exiting 124 in time keeps what it started):
+# give what is left of the group (timeout made it, its id is timeout's pid) the
+# same 5 s grace, then SIGKILL anything that ignored SIGTERM. The group id stays
+# reserved while any member lives.
+if { [ "$rc" -eq 124 ] || [ "$rc" -eq 137 ]; } && ((SECONDS >= secs)); then
+	for _ in {1..50}; do
+		kill -0 -- "-$pid" 2>/dev/null || break
+		sleep 0.1
+	done
+	kill -KILL -- "-$pid" 2>/dev/null
+fi
+exit "$rc"

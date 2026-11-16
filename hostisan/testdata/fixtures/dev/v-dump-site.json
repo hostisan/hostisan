@@ -1,0 +1,87 @@
+[
+  {
+    "args": [
+      "*",
+      "missing.example"
+    ],
+    "stdout": "Error: web domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "missing.example",
+      "*"
+    ],
+    "stdout": "Error: web domain missing.example doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "admin",
+      "example.com",
+      "full"
+    ],
+    "stdout": "admin_example.com_2026-10-21_09-41-07.zip\n/backup/admin_example.com_2026-10-21_09-41-07.zip\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.com"
+    ],
+    "stdout": "admin_example.com_2026-10-21_09-41-07.zip\n/backup/admin_example.com_2026-10-21_09-41-07.zip\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net",
+      "full"
+    ],
+    "stdout": "admin_example.net_2026-10-21_09-41-07.zip\n/backup/admin_example.net_2026-10-21_09-41-07.zip\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "example.net"
+    ],
+    "stdout": "admin_example.net_2026-10-21_09-41-07.zip\n/backup/admin_example.net_2026-10-21_09-41-07.zip\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example",
+      "full"
+    ],
+    "stdout": "bob_bakery.example_2026-10-21_09-41-07.zip\n/backup/bob_bakery.example_2026-10-21_09-41-07.zip\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "bob",
+      "bakery.example"
+    ],
+    "stdout": "bob_bakery.example_2026-10-21_09-41-07.zip\n/backup/bob_bakery.example_2026-10-21_09-41-07.zip\n",
+    "exit": 0
+  },
+  {
+    "args": [
+      "*",
+      "*",
+      "*"
+    ],
+    "stdout": "Error: web domain doesn't exist\n",
+    "exit": 3
+  },
+  {
+    "args": [
+      "*",
+      "*"
+    ],
+    "stdout": "Error: web domain doesn't exist\n",
+    "exit": 3
+  }
+]

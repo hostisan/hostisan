@@ -1,0 +1,114 @@
+#!/bin/bash
+# info: list system updates
+# options: [FORMAT]
+#
+# example: v-list-sys-hestia-updates
+#
+# This function checks available updates for hestia packages.
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Argument definition
+format=${1-shell}
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+fields="\$NAME \$VERSION \$ARCH \$UPDATED \$DESCR \$TIME \$DATE"
+
+# Check details of installed .deb package function
+check_installed_deb() {
+	dpkg_data=$(dpkg-query -s $1)
+	pkg_date=$(stat -c "%Y" /var/lib/dpkg/info/$1.list)
+	ARCH=$(echo "$dpkg_data" | grep Architecture | cut -f 2 -d ' ')
+	VERSION=$(echo "$dpkg_data" | grep ^Version | cut -f 2 -d ' ')
+	DATE=$(date -d @$pkg_date +"%F")
+	TIME=$(date -d @$pkg_date +"%T")
+}
+
+# JSON list function
+json_list() {
+	IFS=$'\n'
+	i=1
+	objects=$(echo -e "$data" | grep NAME | wc -l)
+	echo "{"
+	for str in $(echo -e "$data"); do
+		parse_object_kv_list "$str"
+		echo -n '    "'$NAME'": {
+        "VERSION": "'$VERSION'",
+        "ARCH": "'$ARCH'",
+        "UPDATED": "'$UPDATED'",
+        "DESCR": "'$DESCR'",
+        "TIME": "'$TIME'",
+        "DATE": "'$DATE'"
+    }'
+		if [ "$i" -lt "$objects" ]; then
+			echo ','
+		else
+			echo
+		fi
+		((i++))
+	done
+	echo '}'
+}
+
+# SHELL list function
+shell_list() {
+	IFS=$'\n'
+	echo "PKG   VER   ARCH   UPDT   DATE"
+	echo "---   ---   ----   ----   ----"
+	for str in $(echo -e "$data"); do
+		parse_object_kv_list "$str"
+		echo "$NAME $VERSION $ARCH $UPDATED $DATE"
+	done
+}
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+# Hostisan: one row per installed package, the Go terminal included. The
+# candidate is read whole (its "1:" epoch broke `cut -d ':'`) and dpkg compares
+# the versions (a string compare is not a version compare).
+add_package_row() {
+	if ! dpkg-query -W -f='${Status}' "$1" 2> /dev/null | grep -q '^install ok installed$'; then
+		return
+	fi
+	candidate=$(apt-cache policy "$1" | awk '$1 == "Candidate:" { print $2 }')
+	check_installed_deb "$1"
+	UPDATED='yes'
+	if [ -n "$candidate" ] && [ "$candidate" != '(none)' ] \
+		&& dpkg --compare-versions "$candidate" gt "$VERSION"; then
+		UPDATED='no'
+	fi
+	[ -n "$data" ] && data="$data\n"
+	data="${data}NAME='$1' VERSION='$VERSION' ARCH='$ARCH'"
+	data="$data UPDATED='$UPDATED' DESCR='$2' TIME='$TIME' DATE='$DATE'"
+}
+
+data=''
+add_package_row hestia 'Hestia core package'
+add_package_row hestia-php 'Hestia internal php interpreter'
+add_package_row hestia-nginx 'Hestia internal web server'
+add_package_row hestia-web-terminal 'Hestia web terminal'
+
+# Listing data
+case $format in
+	json) json_list ;;
+	plain) plain_list ;;
+	csv) csv_list ;;
+	shell) shell_list | column -t ;;
+esac
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+exit

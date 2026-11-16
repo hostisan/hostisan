@@ -1,0 +1,12 @@
+Source: hostisan-web-terminal
+Package: hostisan-web-terminal
+Priority: optional
+Version: 2.0.0
+Section: admin
+Maintainer: Hostisan <@HOSTISAN_INFO_EMAIL@>
+Homepage: @HOSTISAN_URL@
+Architecture: amd64
+Depends: hostisan (>= 1:1.10.5-105)
+Description: Hostisan web terminal service
+ Runs the web terminal of the Hostisan control panel: the systemd unit for
+ "hostisan terminal", which ships in the core package.

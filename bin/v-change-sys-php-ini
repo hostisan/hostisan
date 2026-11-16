@@ -1,0 +1,135 @@
+#!/bin/bash
+# info: change the php.ini of one php-fpm version
+# options: VERSION CONFIG_FILE [RESTART]
+#
+# example: v-change-sys-php-ini 8.3 /tmp/php.ini yes
+#
+# This function replaces /etc/php/VERSION/fpm/php.ini with CONFIG_FILE, a file
+# under /tmp. The old file is kept as php.ini.hostisan-<timestamp> (the five
+# newest are kept). When phpVERSION-fpm fails to restart, the old file is put
+# back.
+
+#----------------------------------------------------------#
+#                Variables & Functions                     #
+#----------------------------------------------------------#
+
+# Argument definition
+version=$1
+src=$2
+restart=${3:-yes}
+
+# Includes
+# shellcheck source=/etc/hestiacp/hestia.conf
+source /etc/hestiacp/hestia.conf
+# shellcheck source=/usr/local/hestia/func/main.sh
+source $HESTIA/func/main.sh
+# load config file
+source_conf "$HESTIA/conf/hestia.conf"
+
+#----------------------------------------------------------#
+#                    Verifications                         #
+#----------------------------------------------------------#
+
+check_args '2' "$#" 'VERSION CONFIG_FILE [RESTART]'
+is_format_valid 'restart'
+
+if ! [[ "$version" =~ ^[0-9]\.[0-9]{1,2}$ ]] || [ ! -d "/etc/php/$version/fpm/" ]; then
+	check_result "$E_NOTEXIST" "php-fpm $version is not installed"
+fi
+dst="/etc/php/$version/fpm/php.ini"
+if [ ! -f "$dst" ]; then
+	check_result "$E_NOTEXIST" "$dst doesn't exist"
+fi
+
+# The new file must resolve to a regular file under /tmp (no symlinked parent
+# or file pointing elsewhere) owned by hestiaweb or root
+real=$(realpath -e -- "$src" 2> /dev/null)
+if ! [[ "$src" =~ ^/tmp/ ]] || [[ "$src" == *../* ]] || [ -L "$src" ] || [[ "$real" != /tmp/* ]] || [ ! -f "$real" ]; then
+	check_result "$E_INVALID" "invalid config file :: $src"
+fi
+owner=$(stat -c %U -- "$real")
+if [ "$owner" != 'hestiaweb' ] && [ "$owner" != 'root' ]; then
+	check_result "$E_FORBIDEN" "config file is owned by $owner :: $src"
+fi
+
+# Perform verification if read-only mode is enabled
+check_hestia_demo_mode
+
+#----------------------------------------------------------#
+#                       Action                             #
+#----------------------------------------------------------#
+
+# Work only from a private copy, so the file cannot change after the checks
+copy=$(mktemp)
+trap 'rm -f "$copy" "$new"' EXIT
+cp -- "$real" "$copy"
+check_result $? "cannot read $src"
+
+# write_ini FILE: replace $dst with FILE in one rename (root:root 0644)
+write_ini() {
+	new=$(mktemp "$(dirname "$dst")/.php.ini.XXXXXX") \
+		&& install -m 644 -o root -g root "$1" "$new" \
+		&& mv -f "$new" "$dst"
+}
+
+changed=''
+if ! cmp -s "$copy" "$dst"; then
+	backup="$dst.hostisan-$(date +%Y%m%d%H%M%S)"
+	while [ -e "$backup" ]; do
+		sleep 1
+		backup="$dst.hostisan-$(date +%Y%m%d%H%M%S)"
+	done
+	cp -p "$dst" "$backup"
+	check_result $? "cannot back up $dst"
+	if ! write_ini "$copy" || ! cmp -s "$copy" "$dst"; then
+		write_ini "$backup"
+		check_result "$E_DISK" "cannot write $dst"
+	fi
+
+	# Test the new file with php-fpm itself, restart or not; on failure the
+	# old file goes back and php-fpm's output is the error
+	if command -v "php-fpm$version" > /dev/null 2>&1; then
+		check_out=$("php-fpm$version" -t 2>&1)
+		if [ $? -ne 0 ]; then
+			write_ini "$backup"
+			check_result "$E_PARSING" "ERROR: php$version-fpm configuration test failed.
+$(echo "$check_out" | tail -n 20)"
+		fi
+	fi
+
+	if [ "$restart" != 'no' ]; then
+		restart_failed=''
+		$BIN/v-restart-service "php$version-fpm" > /dev/null 2>&1 || restart_failed='yes'
+		# A reload reports success before the new master is up: look again
+		if [ -z "$restart_failed" ] && command -v systemctl > /dev/null 2>&1; then
+			sleep 1
+			case "$(systemctl is-active "php$version-fpm" 2> /dev/null)" in
+				failed | activating) restart_failed='yes' ;;
+			esac
+		fi
+		if [ -n "$restart_failed" ]; then
+			# The old file is back; restarting the service again is left to
+			# the caller, as v-change-sys-service-config does
+			write_ini "$backup"
+			check_result "$E_RESTART" "ERROR: php$version-fpm failed to start with new configuration."
+		fi
+	fi
+
+	# Keep the five newest backups (only after a good save, so a rolled-back
+	# one never evicts the oldest good copy)
+	find "$(dirname "$dst")" -maxdepth 1 -type f -name 'php.ini.hostisan-*' | sort -r | tail -n +6 \
+		| while read -r old; do rm -f "$old"; done
+	changed='yes'
+fi
+
+#----------------------------------------------------------#
+#                       Hestia                             #
+#----------------------------------------------------------#
+
+# Logging
+if [ "$changed" = 'yes' ]; then
+	$BIN/v-log-action "system" "Info" "System" "PHP configuration changed (Version: $version)."
+fi
+log_event "$OK" "$ARGUMENTS"
+
+exit

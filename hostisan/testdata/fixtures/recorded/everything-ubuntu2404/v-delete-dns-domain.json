@@ -1,0 +1,18 @@
+[
+  {
+    "args": [
+      "admin",
+      "rec.example"
+    ],
+    "stdout": "",
+    "exit": 0
+  },
+  {
+    "args": [
+      "admin",
+      "rec.example"
+    ],
+    "stdout": "Error: dns domain rec.example doesn't exist\n",
+    "exit": 3
+  }
+]

@@ -1,0 +1,9 @@
+[
+  {
+    "args": [
+      "json"
+    ],
+    "stdout": "[\n\t\"PHP-8_3\",\n\t\"PHP-8_4\",\n\t\"default\",\n\t\"no-php\",\n\t\"socket\"\n]\n",
+    "exit": 0
+  }
+]
